@@ -1,5 +1,5 @@
-
 source "http://10.125.60.155/asdf17128/siyuan-spec.git"
+source "http://47.96.131.244:5050/root/emas-specs.git"
 
 source 'git@github.com:CocoaPods/Specs.git'
 source 'https://github.com/aliyun/aliyun-specs.git'
