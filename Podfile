@@ -18,7 +18,8 @@ platform:ios, '8.0'
 #private dependency
 #public dependency
 #--auto--#
-  pod 'EMASFirstBundle', '1.0.2'
+
+  pod 'EMASFirstBundle', '1.2.4'
 
 
 # --热修复
