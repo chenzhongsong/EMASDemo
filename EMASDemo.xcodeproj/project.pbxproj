@@ -22,6 +22,7 @@
 		8AA117621FF5E8FE004D4D0A /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA117611FF5E8FE004D4D0A /* NotificationController.m */; };
 		8AA117641FF5E8FE004D4D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA117631FF5E8FE004D4D0A /* Assets.xcassets */; };
 		8AA117691FF5E8FE004D4D0A /* EMASWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8AA117491FF5E8FD004D4D0A /* EMASWatch.app */; };
+		8AB1A7BF1FFDDE51007C4675 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */; };
 		8ABD97DD1FF4F7C400469557 /* WXCrashAdapterHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD97DC1FF4F7C400469557 /* WXCrashAdapterHandler.m */; };
 		8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA953F1FD9309400C0EF49 /* AppDelegate.m */; };
 		8ADA95431FD9309400C0EF49 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95421FD9309400C0EF49 /* FirstViewController.m */; };
@@ -128,6 +129,7 @@
 		8AA117631FF5E8FE004D4D0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AA117651FF5E8FE004D4D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AA117661FF5E8FE004D4D0A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8ABD97DA1FF4F78700469557 /* WXCrashAdapterHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXCrashAdapterHandler.h; sourceTree = "<group>"; };
 		8ABD97DC1FF4F7C400469557 /* WXCrashAdapterHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCrashAdapterHandler.m; sourceTree = "<group>"; };
 		8ADA953B1FD9309400C0EF49 /* EMASDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMASDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AB1A7BF1FFDDE51007C4675 /* UIKit.framework in Frameworks */,
 				7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */,
 				7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */,
 				F2AEA74CFBBBDD9338DF0F3C /* libPods-EMASDemo.a in Frameworks */,
@@ -395,6 +398,7 @@
 		D270D82292708B86B2F528C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */,
 				C9D522707B463174EC727EEF /* libPods-EMASDemo.a */,
 			);
 			name = Frameworks;
