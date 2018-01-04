@@ -19,6 +19,7 @@ platform:ios, '8.0'
 #public dependency
 #--auto--#
 
+
   pod 'EMASFirstBundle', '1.2.4'
 
 
