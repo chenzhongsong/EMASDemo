@@ -20,7 +20,8 @@ platform:ios, '8.0'
 #--auto--#
 
 
-  pod 'EMASFirstBundle', '1.2.4'
+
+  pod 'EMASFirstBundle', '1.2.6'
 
 
 # --热修复
