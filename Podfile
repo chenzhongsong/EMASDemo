@@ -22,6 +22,7 @@ platform:ios, '8.0'
 
 
 
+
   pod 'EMASFirstBundle', '1.2.7-SNAPSHOT'
 
 
