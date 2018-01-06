@@ -26,7 +26,8 @@ platform:ios, '8.0'
 
 
 
-  pod 'EMASFirstBundle', '1.2.8'
+
+  pod 'EMASFirstBundle', '1.2.5'
 
 
 # --热修复
