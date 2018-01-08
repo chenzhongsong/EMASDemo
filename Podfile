@@ -1,7 +1,10 @@
 
-source 'http://47.96.131.244:5000/root/emas-specs.git'
+source 'http://47.96.131.244:5000/root/emas-specs.git' #
+
+
 source 'git@github.com:CocoaPods/Specs.git'
 source 'https://github.com/aliyun/aliyun-specs.git'
+
 
 platform :ios
 
@@ -21,9 +24,7 @@ platform:ios, '8.0'
     # --weex
     pod 'WeexSDK', '0.17.0.1-EMAS'
     pod 'ZCache', '0.0.0.6'
-    pod 'SDWebImage', '3.7.4.29'
-    pod 'WebP', '2.2.1.1'
-    pod 'RegexKitLite', '4.0-framework'
+    pod 'SDWebImage', '3.7.5'
     
     # --高可用
     pod  'AliHATBAdapter', '1.0.5.1' # 接入层
