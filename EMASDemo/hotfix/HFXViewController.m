@@ -19,7 +19,7 @@
 @end
 
 static AlicloudHotFixServiceEmas *hotfixService;
-static NSString *const testAppId = @"10000010";
+static NSString *const testAppId = @"10000053";
 static NSString *const testAppAesKey = @"";
 
 static NSArray *tableViewGroupNames;
