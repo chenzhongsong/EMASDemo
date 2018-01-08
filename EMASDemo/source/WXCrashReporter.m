@@ -27,8 +27,7 @@
  */
 - (NSDictionary *)crashReporterAdditionalInformation {
     return @{
-        // @"wx_currentUrl": [WXRecorder sharedInstance].currentURL.absoluteString ?: @"",
-        @"wx_currentUrl": @"http://mobilehubdev.taobao.com/app/feitianyewu-mingzhi/testHa.js",
+         @"wx_currentUrl": [WXRecorder sharedInstance].currentURL.absoluteString ?: @"",
     };
 }
 

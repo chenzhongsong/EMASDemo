@@ -57,7 +57,6 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    [[TBCrashReporterMonitor sharedMonitor] registerCrashLogMonitor:[[WXCrashReporter alloc] init]];
     
     [self initWeexConfig];
     
@@ -104,6 +103,7 @@
 //-- 高可用
 - (void)initHAConfig
 {
+    [[TBCrashReporterMonitor sharedMonitor] registerCrashLogMonitor:[[WXCrashReporter alloc] init]];
     [[UTAnalytics getInstance] turnOffCrashHandler];
     [[UTAnalytics getInstance] turnOnDebug];
     [[UTAnalytics getInstance] setAppKey:AppKey secret:@"hardcode-appsecret"];

@@ -14,8 +14,8 @@
 #import <WeexSDK/WXSDKManager.h>
 #import "UIViewController+WXDemoNaviBar.h"
 #import "DemoDefine.h"
-
 #import "WXAppMonitorHandler.h"
+#import "WXRecorder.h"
 
 @interface WXDemoViewController () <UIScrollViewDelegate, UIWebViewDelegate>
 @property (nonatomic, strong) WXSDKInstance *instance;
@@ -60,12 +60,21 @@
 {
     [super viewDidAppear:animated];
     [self updateInstanceState:WeexInstanceAppear];
+    
+    [WXRecorder sharedInstance].currentVC = self;
+    if (self.url) {
+        [WXRecorder sharedInstance].currentURL = self.url;
+    }
 }
 
-- (void)viewDidDisappear:(BOOL)animated
+- (void)viewWillDisappear:(BOOL)animated
 {
-    [super viewDidDisappear:animated];
-    [self updateInstanceState:WeexInstanceDisappear];
+    [super viewWillDisappear:animated];
+    
+    if ([WXRecorder sharedInstance].currentVC == self) {
+        [WXRecorder sharedInstance].currentVC = nil;
+        [WXRecorder sharedInstance].currentURL = nil;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -146,6 +155,11 @@
         WXLogError(@"error: render url is nil");
         return;
     }
+    
+    if ([WXRecorder sharedInstance].currentVC == self) {
+        [WXRecorder sharedInstance].currentURL = self.url;
+    }
+    
     NSURL *URL = [self testURL: [self.url absoluteString]];
     NSString *randomURL = [NSString stringWithFormat:@"%@%@random=%d",URL.absoluteString,URL.query?@"&":@"?",arc4random()];
     [_instance renderWithURL:[NSURL URLWithString:randomURL] options:@{@"bundleUrl":URL.absoluteString} data:nil];
