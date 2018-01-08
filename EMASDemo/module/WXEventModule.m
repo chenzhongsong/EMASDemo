@@ -16,6 +16,23 @@
 
 WX_EXPORT_METHOD(@selector(openURL:))
 
+WX_EXPORT_METHOD(@selector(makeNpe))
+
+WX_EXPORT_METHOD(@selector(makeAnr))
+
+-(void) makeNpe
+{
+    NSLog(@"makeNpe");
+    NSMutableArray *array = [[NSMutableArray alloc]init];
+    NSObject *obj = nil;
+    [array addObject:obj];
+}
+
+- (void) makeAnr
+{
+    NSLog(@"makeAnr");
+}
+
 - (void)openURL:(NSString *)url
 {
     NSString *newURL = url;

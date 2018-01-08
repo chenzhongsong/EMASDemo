@@ -29,6 +29,7 @@
 #import <NetworkSDK/NetworkCore/NWUserPolicy.h>
 
 #import <TBAccsSDK/TBAccsManager.h>
+#import <TBCrashReporter/TBCrashReporterMonitor.h>
 
 #import <ZCache/ZCache.h>
 
@@ -37,76 +38,16 @@
 #import "WXResourceRequestHandlerDemoImpl.h"
 #import "WXAppMonitorHandler.h"
 #import "WXCrashAdapterHandler.h"
+#import "WXCrashReporter.h"
+#import <TBCrashReporter/TBCrashReporterMonitor.h>
 
+
+//-- 配置信息
 #define AppKey @"10000031"
 #define AppSecret @"d4775cd6b8524dd78bbb9de472c51a88"
 #define ACCSDomain @"acs.emas-ha.cn"
 
-// 构建通道策略的delegate
-@interface MyPolicyCenter : NSObject <NWPolicyDelegate>
-@end
-
-@implementation MyPolicyCenter
-
-- (nullable NWPolicy *)queryPolicy:(nonnull NSString *)host
-                        withScheme:(nonnull NSString *)scheme
-                  withAcceleration:(BOOL)acceleration
-                  withSuccessAisle:(BOOL)success {
-    if ([host isEqualToString:ACCSDomain] && acceleration==YES) {
-        
-        NWAisle *aisle = [NWAisle new];
-        aisle.protocol = @"http2";
-        aisle.ip = @"11.163.130.35";
-        //aisle.ip = @"101.37.107.240";
-        aisle.port = 443;
-        aisle.encrypt = YES;
-        aisle.auth = YES;
-        aisle.publickey = @"acs";
-        
-        NWPolicy *policy = [NWPolicy new];
-        policy.type = kNWAislePolicy;
-        policy.host = ACCSDomain;
-        policy.aisles = @[ aisle ];
-        
-        return policy;
-    }
-    
-    return nil;
-}
-
-- (nullable NSString *)queryScheme:(nonnull NSString *)host {
-    // 如果需要对该域名的所有请求的url的scheme进行修改，可以在这里进行
-    
-    // 所有 www.abc.com 的域名使用 https
-    if ([host isEqualToString:ACCSDomain]) {
-        return @"https";
-    }
-    // 所有 www.xyz.com 的域名使用 http
-    if ([host isEqualToString:@"www.xyz.com"]) {
-        return @"http";
-    }
-    // 没有需求的直接返回nil
-    return nil;
-}
-
-- (nonnull NSString *)queryCname:(nonnull NSString *)host {
-    return host;
-}
-
-- (void)updateAisleStatus:(nonnull NWAisle *)aisle
-                 withHost:(NSString*)host
-               withStatus:(NWAisleStatus)status {
-    // do something
-}
-
-- (nullable NWPolicy *)queryPolicy:(nonnull NSString *)host {
-    return nil;
-}
-
-@end
-
 @interface AppDelegate ()
-@property(nonatomic,strong) MyPolicyCenter *policyCenter;
 @end
 
 @implementation AppDelegate
@@ -116,9 +57,10 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
+    [[TBCrashReporterMonitor sharedMonitor] registerCrashLogMonitor:[[WXCrashReporter alloc] init]];
     
     [self initWeexConfig];
-
+    
     [self initNetworkConfig];
     
     [self initMTOPConfig];
@@ -126,7 +68,7 @@
     [self initACCSConfig];
     
     [self initHAConfig];
-
+    
     [self initZcacheConfig];
     
     
@@ -155,7 +97,8 @@
     [WXSDKEngine registerHandler:[WXEventModule new] withProtocol:@protocol(WXEventModuleProtocol)];
     [WXSDKEngine registerHandler:[WXResourceRequestHandlerDemoImpl new] withProtocol:@protocol(WXResourceRequestHandler)];
     [WXSDKEngine registerHandler:[WXCrashAdapterHandler new] withProtocol:@protocol(WXJSExceptionProtocol)];
-
+    [WXSDKEngine registerModule:@"haTest" withClass:[WXEventModule class]];
+    
 }
 
 //-- 高可用
@@ -165,15 +108,15 @@
     [[UTAnalytics getInstance] turnOnDebug];
     [[UTAnalytics getInstance] setAppKey:AppKey secret:@"hardcode-appsecret"];
     [AliHAAdapter initWithAppKey:AppKey appVersion:@"1.0.0" channel:nil plugins:nil nick:nil];
-//    [[TBRestConfigData defaultInstance] setDataUploadHost:@"https://adash.emas-ha.cn/upload"];
-//    [[TBRestConfigData defaultInstance] setDataUploadHost:@"https://11.239.186.34/upload"];
+    //    [[TBRestConfigData defaultInstance] setDataUploadHost:@"https://adash.emas-ha.cn/upload"];
+    //    [[TBRestConfigData defaultInstance] setDataUploadHost:@"https://11.239.186.34/upload"];
 }
 
 //-- mtop
 - (void)initMTOPConfig
 {
     TBSDKConfiguration *config = [TBSDKConfiguration shareInstanceDisableDeviceID:YES];
-    config.environment = TBSDKEnvironmentDaily;
+    config.environment = TBSDKEnvironmentRelease;
     config.safeSecret = NO;
     config.appKey = AppKey;
     config.appSecret = AppSecret;
@@ -183,20 +126,20 @@
     openSDKSwitchLog(YES);
     
     /*
-    MtopExtRequest* request = [[MtopExtRequest alloc] initWithApiName:@"com.alibaba.emas.eweex.zcache.gate" apiVersion:@"1.0"];
-    [request addBizParameter:@"5" forKey:@"configType"];
-    [request addBizParameter:@"0" forKey:@"snapshotId"];
-    [request addBizParameter:@"0" forKey:@"snapshotN"];
-    [request addBizParameter:@"a" forKey:@"target"];
-    [request disableHttps];
-    [[MtopService getInstance] async_call:request delegate:nil];
-    */
+     MtopExtRequest* request = [[MtopExtRequest alloc] initWithApiName:@"com.alibaba.emas.eweex.zcache.gate" apiVersion:@"1.0"];
+     [request addBizParameter:@"5" forKey:@"configType"];
+     [request addBizParameter:@"0" forKey:@"snapshotId"];
+     [request addBizParameter:@"0" forKey:@"snapshotN"];
+     [request addBizParameter:@"a" forKey:@"target"];
+     [request disableHttps];
+     [[MtopService getInstance] async_call:request delegate:nil];
+     */
 }
 
 //-- 网络库
 - (void)initNetworkConfig
 {
-    [NWNetworkConfiguration setEnvironment:daily];
+    [NWNetworkConfiguration setEnvironment:release];
     NWNetworkConfiguration *configuration = [NWNetworkConfiguration shareInstance];
     // 不使用安全保镖。
     [configuration setIsUseSecurityGuard:NO];
@@ -210,10 +153,6 @@
     [NetworkDemote shareInstance].canInitWithRequest = NO;
     
     setNWLogLevel(NET_LOG_DEBUG);
-    
-    self.policyCenter =  [[MyPolicyCenter alloc] init];
-    [NWNetworkConfiguration shareInstance].policyDelegate = self.policyCenter;
-
 }
 
 //-- accs
@@ -226,19 +165,20 @@
     
     TBAccsManager *accsManager = [TBAccsManager accsManagerByHost:ACCSDomain];
     [accsManager setSupportLocalDNS:YES];
+    accsManager.slightSslPublicKeySeq = ACCS_PUBKEY_PSEQ_EMAS;
     [accsManager startAccs];
     
     [accsManager bindAppWithAppleToken: nil
-                               callBack:^(NSError *error, NSDictionary *resultsDict) {
-                                   if (error) {
-                                       NSLog(@"\n\n绑定App出错了 %@\n\n", error);
-                                   }
-                                   else {
-                                       NSLog(@"\n\n绑定App成功了\n\n");
-                                       
-                                       [self accs_bindService];
-                                   }
-                               }];
+                              callBack:^(NSError *error, NSDictionary *resultsDict) {
+                                  if (error) {
+                                      NSLog(@"\n\n绑定App出错了 %@\n\n", error);
+                                  }
+                                  else {
+                                      NSLog(@"\n\n绑定App成功了\n\n");
+                                      
+                                      [self accs_bindService];
+                                  }
+                              }];
 }
 
 - (void)accs_bindService
@@ -270,11 +210,11 @@
     NSData *data = [@"Hello, this is iOS EMASDemo" dataUsingEncoding:NSUTF8StringEncoding];
     TBAccsManager *accsManager = [TBAccsManager accsManagerByHost:ACCSDomain];
     [accsManager sendRequestWithData: data
-                            serviceId: @"demo_service"
-                               userId: nil
+                           serviceId: @"demo_service"
+                              userId: nil
                               routID:nil
-                      otherParameters: nil
-                             callBack:^(NSError *error, NSDictionary *resultsDict)
+                     otherParameters: nil
+                            callBack:^(NSError *error, NSDictionary *resultsDict)
      {
          if (error)
          {
@@ -340,3 +280,4 @@
 }
 
 @end
+

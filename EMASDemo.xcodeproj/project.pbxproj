@@ -24,6 +24,9 @@
 		8AA117691FF5E8FE004D4D0A /* EMASWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8AA117491FF5E8FD004D4D0A /* EMASWatch.app */; };
 		8AB1A7BF1FFDDE51007C4675 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */; };
 		8ABD97DD1FF4F7C400469557 /* WXCrashAdapterHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD97DC1FF4F7C400469557 /* WXCrashAdapterHandler.m */; };
+		8AC0CB6E200312CF00FD44E6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC0CB6D200312CF00FD44E6 /* MobileCoreServices.framework */; };
+		8AC0CB75200317A000FD44E6 /* WXCrashReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC0CB72200317A000FD44E6 /* WXCrashReporter.m */; };
+		8AC0CB76200317A000FD44E6 /* WXRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC0CB74200317A000FD44E6 /* WXRecorder.m */; };
 		8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA953F1FD9309400C0EF49 /* AppDelegate.m */; };
 		8ADA95431FD9309400C0EF49 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95421FD9309400C0EF49 /* FirstViewController.m */; };
 		8ADA95461FD9309400C0EF49 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95451FD9309400C0EF49 /* SecondViewController.m */; };
@@ -132,6 +135,11 @@
 		8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8ABD97DA1FF4F78700469557 /* WXCrashAdapterHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXCrashAdapterHandler.h; sourceTree = "<group>"; };
 		8ABD97DC1FF4F7C400469557 /* WXCrashAdapterHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCrashAdapterHandler.m; sourceTree = "<group>"; };
+		8AC0CB6D200312CF00FD44E6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		8AC0CB71200317A000FD44E6 /* WXRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXRecorder.h; sourceTree = "<group>"; };
+		8AC0CB72200317A000FD44E6 /* WXCrashReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCrashReporter.m; sourceTree = "<group>"; };
+		8AC0CB73200317A000FD44E6 /* WXCrashReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXCrashReporter.h; sourceTree = "<group>"; };
+		8AC0CB74200317A000FD44E6 /* WXRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXRecorder.m; sourceTree = "<group>"; };
 		8ADA953B1FD9309400C0EF49 /* EMASDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMASDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ADA953E1FD9309400C0EF49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8ADA953F1FD9309400C0EF49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -193,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AC0CB6E200312CF00FD44E6 /* MobileCoreServices.framework in Frameworks */,
 				8AB1A7BF1FFDDE51007C4675 /* UIKit.framework in Frameworks */,
 				7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */,
 				7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */,
@@ -276,6 +285,17 @@
 			path = "EMASWatch Extension";
 			sourceTree = "<group>";
 		};
+		8AC0CB70200317A000FD44E6 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				8AC0CB71200317A000FD44E6 /* WXRecorder.h */,
+				8AC0CB72200317A000FD44E6 /* WXCrashReporter.m */,
+				8AC0CB73200317A000FD44E6 /* WXCrashReporter.h */,
+				8AC0CB74200317A000FD44E6 /* WXRecorder.m */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
 		8ADA95321FD9309400C0EF49 = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +325,7 @@
 		8ADA953D1FD9309400C0EF49 /* EMASDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8AC0CB70200317A000FD44E6 /* source */,
 				8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */,
 				1A65F6231FF2534A00B4573C /* AliHA */,
 				7D6260E11FDA8C5900E856CB /* hotfix */,
@@ -398,6 +419,7 @@
 		D270D82292708B86B2F528C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8AC0CB6D200312CF00FD44E6 /* MobileCoreServices.framework */,
 				8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */,
 				C9D522707B463174EC727EEF /* libPods-EMASDemo.a */,
 			);
@@ -741,6 +763,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AC0CB76200317A000FD44E6 /* WXRecorder.m in Sources */,
 				1A65F6261FF253CF00B4573C /* AliHATestCaseViewController.mm in Sources */,
 				8ADA95461FD9309400C0EF49 /* SecondViewController.m in Sources */,
 				8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */,
@@ -758,6 +781,7 @@
 				7D6260E61FDA8C5A00E856CB /* HFXTestClass.m in Sources */,
 				8ADA95431FD9309400C0EF49 /* FirstViewController.m in Sources */,
 				8ADA95781FDA3BB000C0EF49 /* SecondTableViewController.m in Sources */,
+				8AC0CB75200317A000FD44E6 /* WXCrashReporter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

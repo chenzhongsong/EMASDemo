@@ -7,6 +7,8 @@
 //
 
 #import "AliHATestCaseViewController.h"
+#import <TRemoteDebugger/TRDManagerService.h>
+#import <TRemoteDebugger/TBClientDrivingPushTLogExec.h>
 
 @interface AliHATestCaseViewController ()
 
@@ -36,11 +38,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier"];
     
     if (!cell) {
@@ -48,40 +50,36 @@
     }
     
     switch (indexPath.row) {
-        case 0:
+            case 0:
         {
             cell.textLabel.text = @"全堆栈Crash";
             cell.textLabel.textColor = [UIColor redColor];
         }
             break;
-        case 1:
+            case 1:
         {
             cell.textLabel.text = @"Abort";
             cell.textLabel.textColor = [UIColor orangeColor];
         }
             break;
-        case 2:
+            case 2:
         {
             cell.textLabel.text = @"上报JSError";
             cell.textLabel.textColor = [UIColor blueColor];
         }
             break;
-        case 3:
+            case 3:
         {
             cell.textLabel.text = @"主动上报tlog";
             cell.textLabel.textColor = [UIColor blueColor];
         }
             break;
-        case 4:
-        {
-            cell.textLabel.text = @"主动上报trace";
-            cell.textLabel.textColor = [UIColor blueColor];
-        }
-        case 5:
+            case 4:
         {
             cell.textLabel.text = @"pull task";
             cell.textLabel.textColor = [UIColor blueColor];
         }
+            break;
         default:
             break;
     }
@@ -94,7 +92,7 @@
 {
     switch (indexPath.row) {
             
-        case 0:
+            case 0:
         {
             // full stack crash
             NSMutableArray *array = @[];
@@ -102,28 +100,31 @@
             break;
         }
             
-        case 1:
+            case 1:
         {
             // abort
-            [NSThread sleepForTimeInterval:50];
+            exit(0);
             break;
         }
             
-        case 3:
+            case 3:
         {
             // upload tlog
-            // [TBClientDrivingPushTLogExec uploadTLogAction:@{@"REASON": @"LAUNCH_TOO_SLOW"}];
+            [TBClientDrivingPushTLogExec uploadTLogAction:@{@"REASON": @"LAUNCH_TOO_SLOW"}];
             break;
         }
-        case 4:
+            case 5:
         {
-            // upload trace
-            break;
-        }
-        case 5:
-        {
-            // pull task
-            
+            [kTRDCmdServiceInstance.messageDelegate pullData:kTRDCmdServiceInstance.context.appKey deviceId:kTRDCmdServiceInstance.context.utdid resultsBlock:^(NSError *error, RemoteDebugResponse *response) {
+                if (!error && response) {
+                    RemoteDebugRequest *request = [[RemoteDebugRequest alloc] init];
+                    request.headers = response.headers;
+                    request.data = response.data;
+                    request.appId = response.appId;
+                    request.version = response.version;
+                    [kTRDCmdServiceInstance handleRemoteCommand:request];
+                }
+            }];
             break;
         }
         default:
@@ -133,3 +134,4 @@
 }
 
 @end
+
