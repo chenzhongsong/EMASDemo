@@ -95,6 +95,7 @@
     //set the log level
     [WXLog setLogLevel: WXLogLevelAll];
     
+    //-- 扩展功能
     [WXSDKEngine registerHandler:[WXAppMonitorHandler new] withProtocol:@protocol(WXAppMonitorProtocol)];
     [WXSDKEngine registerHandler:[WXImgLoaderDefaultImpl new] withProtocol:@protocol(WXImgLoaderProtocol)];
     [WXSDKEngine registerHandler:[WXEventModule new] withProtocol:@protocol(WXEventModuleProtocol)];
@@ -102,12 +103,13 @@
     [WXSDKEngine registerHandler:[WXCrashAdapterHandler new] withProtocol:@protocol(WXJSExceptionProtocol)];
     [WXSDKEngine registerModule:@"haTest" withClass:[WXEventModule class]];
     
+    // -- 监控
+    [[TBCrashReporterMonitor sharedMonitor] registerCrashLogMonitor:[[WXCrashReporter alloc] init]];
 }
 
 //-- 高可用
 - (void)initHAConfig
 {
-    [[TBCrashReporterMonitor sharedMonitor] registerCrashLogMonitor:[[WXCrashReporter alloc] init]];
     [[UTAnalytics getInstance] turnOffCrashHandler];
     [[UTAnalytics getInstance] turnOnDebug];
     [[UTAnalytics getInstance] setAppKey:AppKey secret:AppSecret];
