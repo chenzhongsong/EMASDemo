@@ -20,7 +20,7 @@
 //#import "MtopService.h"
 //#import "TBSDKLogUtil.h"
 
-#import <AliHATBAdapter/AliHAAdapter.h>
+#import <AliHAAdapter4poc/AliHAAdapter.h>
 
 #import <UT/UTAnalytics.h>
 #import <NetworkSDK/NetworkCore/NWNetworkConfiguration.h>
@@ -106,10 +106,8 @@
     [[TBCrashReporterMonitor sharedMonitor] registerCrashLogMonitor:[[WXCrashReporter alloc] init]];
     [[UTAnalytics getInstance] turnOffCrashHandler];
     [[UTAnalytics getInstance] turnOnDebug];
-    [[UTAnalytics getInstance] setAppKey:AppKey secret:@"hardcode-appsecret"];
+    [[UTAnalytics getInstance] setAppKey:AppKey secret:AppSecret];
     [AliHAAdapter initWithAppKey:AppKey appVersion:@"1.0.0" channel:nil plugins:nil nick:nil];
-    //    [[TBRestConfigData defaultInstance] setDataUploadHost:@"https://adash.emas-ha.cn/upload"];
-    //    [[TBRestConfigData defaultInstance] setDataUploadHost:@"https://11.239.186.34/upload"];
 }
 
 //-- mtop
