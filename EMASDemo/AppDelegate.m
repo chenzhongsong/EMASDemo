@@ -43,8 +43,12 @@
 
 
 //-- 配置信息
-#define AppKey @"10000031"
-#define AppSecret @"d4775cd6b8524dd78bbb9de472c51a88"
+//#define AppKey @"10000031"
+//#define AppSecret @"d4775cd6b8524dd78bbb9de472c51a88"
+
+#define AppKey @"10000040"
+#define AppSecret @"c66e5b00ff97809daac7ad60b2eebf20"
+
 #define ACCSDomain @"acs.emas-ha.cn"
 
 @interface AppDelegate ()
