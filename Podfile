@@ -13,7 +13,7 @@ target 'EMASDemo' do
 platform:ios, '8.0'
 
     pod 'EMASFirstBundle', '1.3.0'
-    pod 'dependencyProject', '1.0.3'
+    pod 'dependencyProject', '1.0.4'
     
     # --热修复
     pod 'AlicloudLua', '5.1.4.2'
