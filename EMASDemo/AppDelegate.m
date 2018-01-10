@@ -15,12 +15,8 @@
 // --weex头文件
 #import <MtopSDK/MtopSDK.h>
 #import <MtopCore/MtopService.h>
-//#import "TBSDKConfiguration.h"
-//#import "MtopExtRequest.h"
-//#import "MtopService.h"
-//#import "TBSDKLogUtil.h"
 
-#import <AliHATBAdapter/AliHAAdapter.h>
+#import <AliHAAdapter4poc/AliHAAdapter.h>
 
 #import <UT/UTAnalytics.h>
 #import <NetworkSDK/NetworkCore/NWNetworkConfiguration.h>
@@ -43,8 +39,12 @@
 
 
 //-- 配置信息
-#define AppKey @"10000031"
-#define AppSecret @"d4775cd6b8524dd78bbb9de472c51a88"
+//#define AppKey @"10000031"
+//#define AppSecret @"d4775cd6b8524dd78bbb9de472c51a88"
+
+#define AppKey @"10000040"
+#define AppSecret @"c66e5b00ff97809daac7ad60b2eebf20"
+
 #define ACCSDomain @"acs.emas-ha.cn"
 
 @interface AppDelegate ()
@@ -91,6 +91,7 @@
     //set the log level
     [WXLog setLogLevel: WXLogLevelAll];
     
+    //-- 扩展功能
     [WXSDKEngine registerHandler:[WXAppMonitorHandler new] withProtocol:@protocol(WXAppMonitorProtocol)];
     [WXSDKEngine registerHandler:[WXImgLoaderDefaultImpl new] withProtocol:@protocol(WXImgLoaderProtocol)];
     [WXSDKEngine registerHandler:[WXEventModule new] withProtocol:@protocol(WXEventModuleProtocol)];
@@ -98,18 +99,17 @@
     [WXSDKEngine registerHandler:[WXCrashAdapterHandler new] withProtocol:@protocol(WXJSExceptionProtocol)];
     [WXSDKEngine registerModule:@"haTest" withClass:[WXEventModule class]];
     
+    // -- 监控
+    [[TBCrashReporterMonitor sharedMonitor] registerCrashLogMonitor:[[WXCrashReporter alloc] init]];
 }
 
 //-- 高可用
 - (void)initHAConfig
 {
-    [[TBCrashReporterMonitor sharedMonitor] registerCrashLogMonitor:[[WXCrashReporter alloc] init]];
     [[UTAnalytics getInstance] turnOffCrashHandler];
     [[UTAnalytics getInstance] turnOnDebug];
-    [[UTAnalytics getInstance] setAppKey:AppKey secret:@"hardcode-appsecret"];
+    [[UTAnalytics getInstance] setAppKey:AppKey secret:AppSecret];
     [AliHAAdapter initWithAppKey:AppKey appVersion:@"1.0.0" channel:nil plugins:nil nick:nil];
-    //    [[TBRestConfigData defaultInstance] setDataUploadHost:@"https://adash.emas-ha.cn/upload"];
-    //    [[TBRestConfigData defaultInstance] setDataUploadHost:@"https://11.239.186.34/upload"];
 }
 
 //-- mtop
@@ -141,15 +141,10 @@
 {
     [NWNetworkConfiguration setEnvironment:release];
     NWNetworkConfiguration *configuration = [NWNetworkConfiguration shareInstance];
-    // 不使用安全保镖。
     [configuration setIsUseSecurityGuard:NO];
-    // 设置appkey，自行修改
     [configuration setAppkey:AppKey];
-    // 设置appsecret，自行修改
     [configuration setAppSecret:AppSecret];
-    // 关闭amdc调度请求
     [NWNetworkConfiguration shareInstance].isEnableAMDC = NO;
-    // 不接管请求
     [NetworkDemote shareInstance].canInitWithRequest = NO;
     
     setNWLogLevel(NET_LOG_DEBUG);

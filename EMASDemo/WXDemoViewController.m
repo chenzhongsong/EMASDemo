@@ -70,6 +70,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    [self updateInstanceState:WeexInstanceDisappear];
     
     if ([WXRecorder sharedInstance].currentVC == self) {
         [WXRecorder sharedInstance].currentVC = nil;
