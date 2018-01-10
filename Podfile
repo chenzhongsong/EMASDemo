@@ -12,7 +12,7 @@ target 'EMASDemo' do
 
 platform:ios, '8.0'
 
-    pod 'EMASFirstBundle', '1.2.5'    
+    pod 'EMASFirstBundle', '1.3.0'    
     
     # --热修复
     pod 'AlicloudLua', '5.1.4.2'
@@ -44,4 +44,3 @@ platform:ios, '8.0'
     #pod 'swiftProject', :git => 'git@10.125.60.155:zhishui.lcq/swiftProject.git'
     
 end
-
