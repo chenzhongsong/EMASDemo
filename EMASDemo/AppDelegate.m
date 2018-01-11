@@ -21,6 +21,7 @@
 //#import "TBSDKLogUtil.h"
 
 #import <AliHAAdapter4poc/AliHAAdapter.h>
+#import <TRemoteDebugger/TRDManagerService.h>
 
 #import <UT/UTAnalytics.h>
 #import <NetworkSDK/NetworkCore/NWNetworkConfiguration.h>
@@ -113,7 +114,8 @@
     [[UTAnalytics getInstance] turnOffCrashHandler];
     [[UTAnalytics getInstance] turnOnDebug];
     [[UTAnalytics getInstance] setAppKey:AppKey secret:AppSecret];
-    [AliHAAdapter initWithAppKey:AppKey appVersion:@"1.0.0" channel:nil plugins:nil nick:nil];
+    [AliHAAdapter initWithAppKey:AppKey appVersion:@"1.0.0" channel:@"1001@Test_iOS_1.0.0" plugins:nil nick:@"emas-ha"];
+    [AliHAAdapter configOSS:@"ha-remote-log"];
 }
 
 //-- mtop
@@ -179,56 +181,8 @@
                                   }
                                   else {
                                       NSLog(@"\n\n绑定App成功了\n\n");
-                                      
-                                      [self accs_bindService];
                                   }
                               }];
-}
-
-- (void)accs_bindService
-{
-    TBAccsManager *accsManager = [TBAccsManager accsManagerByHost:ACCSDomain];
-    [accsManager bindServiceWithServiceId: @"demo_service"
-                                 callBack:^(NSError *error, NSDictionary *resultsDict) {
-                                     if (error){
-                                         NSLog(@"绑定Service出错了");
-                                     }
-                                     else{
-                                         NSLog(@"绑定Service成功了");
-                                         
-                                         [self accs_sendData];
-                                     }
-                                 }
-                        receviceDataBlock:^(NSError *error, NSDictionary *resultsDict){
-                            if (error){
-                                NSLog(@"接收 Accs 数据出错 %@", error.description);
-                            }
-                            else{
-                                NSLog(@"接收 Accs 数据成功 %@", resultsDict[@"jsonString"]);
-                            }
-                        }];
-}
-
-- (void)accs_sendData
-{
-    NSData *data = [@"Hello, this is iOS EMASDemo" dataUsingEncoding:NSUTF8StringEncoding];
-    TBAccsManager *accsManager = [TBAccsManager accsManagerByHost:ACCSDomain];
-    [accsManager sendRequestWithData: data
-                           serviceId: @"demo_service"
-                              userId: nil
-                              routID:nil
-                     otherParameters: nil
-                            callBack:^(NSError *error, NSDictionary *resultsDict)
-     {
-         if (error)
-         {
-             NSLog(@"发送数据失败sendRequest: %@", error);
-         }
-         else
-         {
-             NSLog(@"发送数据成功sendRequest");
-         }
-     }];
 }
 
 //-- zache
