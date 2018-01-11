@@ -47,6 +47,8 @@
 #define AppSecret @"c66e5b00ff97809daac7ad60b2eebf20"
 
 #define ACCSDomain @"acs.emas-ha.cn"
+#define MTOPDomain @"aserver.emas-ha.cn"
+#define CHANNELID @"1001@Test_iOS_1.0.0"
 
 @interface AppDelegate ()
 @end
@@ -58,19 +60,10 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    
-    [self initWeexConfig];
-    
-    [self initNetworkConfig];
-    
-    [self initMTOPConfig];
-    
-    [self initACCSConfig];
-    
+    // 这两个顺序需要保证下
     [self initHAConfig];
     
-    [self initZcacheConfig];
-    
+    [self initWeexConfig];
     
     return YES;
 }
@@ -81,84 +74,75 @@
 //-- weex
 - (void)initWeexConfig
 {
+    // MTOP初始化部分
+    TBSDKConfiguration *config = [TBSDKConfiguration shareInstanceDisableDeviceID:YES];
+    config.environment = TBSDKEnvironmentRelease;
+    config.safeSecret = NO;
+    config.appKey = AppKey;
+    config.appSecret = AppSecret;
+    config.wapAPIURL = MTOPDomain;//设置全局自定义域名
+    config.wapTTID = CHANNELID; //渠道ID
+    openSDKSwitchLog(YES); // 打开调试日志
+    
+    // weex初始化部分
     //business configuration
-    [WXAppConfiguration setAppGroup:@"AliApp"];
+    [WXAppConfiguration setAppGroup:@"TestApp"];
     [WXAppConfiguration setAppName:@"EMASDemo"];
     [WXAppConfiguration setAppVersion:@"1.0.0"];
     
     //init sdk environment
     [WXSDKEngine initSDKEnvironment];
     
-    //set the log level
-    [WXLog setLogLevel: WXLogLevelAll];
+    [WXLog setLogLevel: WXLogLevelAll]; // 打开调试日志
     
-    //-- 扩展功能
+    // 数据上报--必选
     [WXSDKEngine registerHandler:[WXAppMonitorHandler new] withProtocol:@protocol(WXAppMonitorProtocol)];
+    
+    // 图片下载--必选
     [WXSDKEngine registerHandler:[WXImgLoaderDefaultImpl new] withProtocol:@protocol(WXImgLoaderProtocol)];
-    [WXSDKEngine registerHandler:[WXEventModule new] withProtocol:@protocol(WXEventModuleProtocol)];
+    
+    // zcache--必选
     [WXSDKEngine registerHandler:[WXResourceRequestHandlerDemoImpl new] withProtocol:@protocol(WXResourceRequestHandler)];
+    
+    // JSError监控--必选
     [WXSDKEngine registerHandler:[WXCrashAdapterHandler new] withProtocol:@protocol(WXJSExceptionProtocol)];
+    
+    // JSCrash监控--必选
+    [[TBCrashReporterMonitor sharedMonitor] registerCrashLogMonitor:[[WXCrashReporter alloc] init]];
+    
+    // 事件调用--可选
     [WXSDKEngine registerModule:@"haTest" withClass:[WXEventModule class]];
     
-    // -- 监控
-    [[TBCrashReporterMonitor sharedMonitor] registerCrashLogMonitor:[[WXCrashReporter alloc] init]];
+    // 事件调用，可选
+    [WXSDKEngine registerHandler:[WXEventModule new] withProtocol:@protocol(WXEventModuleProtocol)];
+    
+    // ZCache初始化部分
+    [ZCache defaultCommonConfig].packageZipPrefix = @"http://mobilehubdev.taobao.com/eweex/";
+    [ZCache setDebugMode:YES]; // 打开调试日志
+    [ZCache setupWithMtop];
 }
 
 //-- 高可用
 - (void)initHAConfig
 {
+    // UT初始化部分
     [[UTAnalytics getInstance] turnOffCrashHandler];
-    [[UTAnalytics getInstance] turnOnDebug];
+    [[UTAnalytics getInstance] turnOnDebug]; // 打开调试日志
     [[UTAnalytics getInstance] setAppKey:AppKey secret:AppSecret];
-    [AliHAAdapter initWithAppKey:AppKey appVersion:@"1.0.0" channel:@"1001@Test_iOS_1.0.0" plugins:nil nick:@"emas-ha"];
-    [AliHAAdapter configOSS:@"ha-remote-log"];
-}
-
-//-- mtop
-- (void)initMTOPConfig
-{
-    TBSDKConfiguration *config = [TBSDKConfiguration shareInstanceDisableDeviceID:YES];
-    config.environment = TBSDKEnvironmentRelease;
-    config.safeSecret = NO;
-    config.appKey = AppKey;
-    config.appSecret = AppSecret;
-    config.wapAPIURL = @"aserver.emas-ha.cn";//设置全局自定义域名
-    config.wapTTID = @"1001@Test_iOS_1.0.0"; //渠道ID
     
-    openSDKSwitchLog(YES);
-    
-    /*
-     MtopExtRequest* request = [[MtopExtRequest alloc] initWithApiName:@"com.alibaba.emas.eweex.zcache.gate" apiVersion:@"1.0"];
-     [request addBizParameter:@"5" forKey:@"configType"];
-     [request addBizParameter:@"0" forKey:@"snapshotId"];
-     [request addBizParameter:@"0" forKey:@"snapshotN"];
-     [request addBizParameter:@"a" forKey:@"target"];
-     [request disableHttps];
-     [[MtopService getInstance] async_call:request delegate:nil];
-     */
-}
-
-//-- 网络库
-- (void)initNetworkConfig
-{
+    // 网络库初始化部分
     [NWNetworkConfiguration setEnvironment:release];
     NWNetworkConfiguration *configuration = [NWNetworkConfiguration shareInstance];
     [configuration setIsUseSecurityGuard:NO];
     [configuration setAppkey:AppKey];
     [configuration setAppSecret:AppSecret];
-    [NWNetworkConfiguration shareInstance].isEnableAMDC = NO;
+    [configuration setIsEnableAMDC:NO];
     [NetworkDemote shareInstance].canInitWithRequest = NO;
+    setNWLogLevel(NET_LOG_DEBUG); // 打开调试日志
     
-    setNWLogLevel(NET_LOG_DEBUG);
-}
-
-//-- accs
-- (void)initACCSConfig
-{
-    // 先声明日志开关函数
+    // ACCS初始化部分
     void tbAccsSDKSwitchLog(BOOL logCtr);
-    // 打开日志
-    tbAccsSDKSwitchLog(YES);
+    tbAccsSDKSwitchLog(YES); // 打开调试日志
     
     TBAccsManager *accsManager = [TBAccsManager accsManagerByHost:ACCSDomain];
     [accsManager setSupportLocalDNS:YES];
@@ -174,17 +158,10 @@
                                       NSLog(@"\n\n绑定App成功了\n\n");
                                   }
                               }];
-}
-
-//-- zache
-- (void)initZcacheConfig
-{
-    // 设置为 EMAS 环境的预加载下载地址。
-    [ZCache defaultCommonConfig].packageZipPrefix = @"http://mobilehubdev.taobao.com/eweex/";
     
-    [ZCache setDebugMode:YES];
-    
-    [ZCache setupWithMtop];
+    // 高可用初始化部分
+    [AliHAAdapter initWithAppKey:AppKey appVersion:@"1.0.0" channel:CHANNELID plugins:nil nick:@"emas-ha"];
+    [AliHAAdapter configOSS:@"ha-remote-log"];
 }
 
 #pragma mark -

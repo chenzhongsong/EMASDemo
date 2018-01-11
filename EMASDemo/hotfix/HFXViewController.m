@@ -66,6 +66,7 @@ static NSCondition *_condition;
     // Dispose of any resources that can be recreated.
 }
 
+// 初始化热修复
 - (void)hotfixSdkInit {
     hotfixService = [AlicloudHotFixServiceEmas sharedInstance];
     [hotfixService setLogEnabled:YES];
