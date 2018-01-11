@@ -110,10 +110,10 @@
             case 3:
         {
             // upload tlog
-            [TBClientDrivingPushTLogExec uploadTLogAction:@{@"REASON": @"LAUNCH_TOO_SLOW"}];
+            [TBClientDrivingPushTLogExec uploadTLogAction:@{@"REASON": @"STARTUP_SLOW"}];
             break;
         }
-            case 5:
+            case 4:
         {
             [kTRDCmdServiceInstance.messageDelegate pullData:kTRDCmdServiceInstance.context.appKey deviceId:kTRDCmdServiceInstance.context.utdid resultsBlock:^(NSError *error, RemoteDebugResponse *response) {
                 if (!error && response) {

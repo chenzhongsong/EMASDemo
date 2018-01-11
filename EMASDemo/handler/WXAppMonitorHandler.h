@@ -35,6 +35,7 @@
 
 @interface WXAppMonitorHandler : NSObject <WXAppMonitorProtocol>
 
+// onJSDownloadedFinish回调中调用下这个方法
 + (void)monitorWithNetWorkResponse:(WXResourceResponse*)response instance:(WXSDKInstance*)instance response:(WXResourceRequest*)request data:(NSData*)data error:(NSError*)error;
 
 @end

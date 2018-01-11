@@ -1,4 +1,3 @@
-
 source 'http://47.96.131.244:5000/root/emas-specs.git' #
 
 
@@ -28,11 +27,12 @@ platform:ios, '8.0'
     pod 'SDWebImage', '3.7.5'
     
     # --高可用
-    pod  'AliHAAdapter4poc', '1.0.1.2' # 接入层
-    pod  'TRemoteDebugger',  '2.0.1.4'
+    pod  'AliHAAdapter4poc',  '1.0.1.6' # 接入层
+    pod  'TRemoteDebugger',   '2.0.1.4'
     pod  'UserTrack', '6.3.5.47'
     pod  'TBRest',  '2.0.0.1'
-    
+    pod  'AliHAPerformanceMonitor',  '1.0.5.4'
+ 
     # --网关
     pod 'MtopSDK', '1.9.3.48'
     pod 'mtopext/MtopCore', '1.8.0.93'
