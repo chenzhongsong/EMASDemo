@@ -159,8 +159,10 @@ static NSCondition *_condition;
 - (void)onLoadPatchClick {
     [hotfixService loadPatch:^(BOOL res, id data, NSError *error) {
         if (res) {
+            [self showAlert:@"Load patch success." content:nil];
             NSLog(@"Load patch success.");
         } else {
+            [self showAlert:@"Load patch failed, error: " content:error];
             NSLog(@"Load patch failed, error: %@", error);
         }
     }];
