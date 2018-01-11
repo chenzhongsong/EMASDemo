@@ -11,7 +11,8 @@ target 'EMASDemo' do
 
 platform:ios, '8.0'
 
-    pod 'EMASFirstBundle', '1.3.0'    
+    pod 'EMASFirstBundle', '1.3.2'
+    pod 'dependencyProject', '1.0.3'
     
     # --热修复
     pod 'AlicloudLua', '5.1.4.2'
@@ -38,6 +39,8 @@ platform:ios, '8.0'
     pod 'NetworkSDK', '6.2.1.32-EMAS'
     pod 'TBAccsSDK', '2.3.1.13-EMAS'
     pod 'tnet', '3.1.10.2-beta'
+    
+    
     
     
     

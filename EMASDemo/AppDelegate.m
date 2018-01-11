@@ -15,10 +15,6 @@
 // --weex头文件
 #import <MtopSDK/MtopSDK.h>
 #import <MtopCore/MtopService.h>
-//#import "TBSDKConfiguration.h"
-//#import "MtopExtRequest.h"
-//#import "MtopService.h"
-//#import "TBSDKLogUtil.h"
 
 #import <AliHAAdapter4poc/AliHAAdapter.h>
 #import <TRemoteDebugger/TRDManagerService.h>
@@ -147,15 +143,10 @@
 {
     [NWNetworkConfiguration setEnvironment:release];
     NWNetworkConfiguration *configuration = [NWNetworkConfiguration shareInstance];
-    // 不使用安全保镖。
     [configuration setIsUseSecurityGuard:NO];
-    // 设置appkey，自行修改
     [configuration setAppkey:AppKey];
-    // 设置appsecret，自行修改
     [configuration setAppSecret:AppSecret];
-    // 关闭amdc调度请求
     [NWNetworkConfiguration shareInstance].isEnableAMDC = NO;
-    // 不接管请求
     [NetworkDemote shareInstance].canInitWithRequest = NO;
     
     setNWLogLevel(NET_LOG_DEBUG);

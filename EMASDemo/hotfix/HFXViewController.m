@@ -19,8 +19,8 @@
 @end
 
 static AlicloudHotFixServiceEmas *hotfixService;
-static NSString *const testAppId = @"10000053";
-static NSString *const testAppAesKey = @"";
+static NSString *const testAppId = @"10000040";
+static NSString *const testAppSecret = @"c66e5b00ff97809daac7ad60b2eebf20";
 
 static NSArray *tableViewGroupNames;
 static NSArray *tableViewCellTitleInSection;
@@ -69,8 +69,8 @@ static NSCondition *_condition;
 - (void)hotfixSdkInit {
     hotfixService = [AlicloudHotFixServiceEmas sharedInstance];
     [hotfixService setLogEnabled:YES];
-    [hotfixService setAppVersion:@"1"];
-    [hotfixService initWithAppId:testAppId callback:^(BOOL res, id data, NSError *error) {
+    [hotfixService setAppVersion:@"1.0.1"];
+    [hotfixService initWithAppId:testAppId appSecret:testAppSecret callback:^(BOOL res, id data, NSError *error) {
         if (res) {
             NSLog(@"HotFix SDK init success.");
         } else {

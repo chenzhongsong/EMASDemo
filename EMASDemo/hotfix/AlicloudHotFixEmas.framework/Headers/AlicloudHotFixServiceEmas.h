@@ -24,9 +24,11 @@ typedef void (^HotFixCallbackHandler)(BOOL res, id data, NSError *error);
  初始化SDK
 
  @param appId           应用AppId
+ @param appSecret       应用AppSecret
  @param callback        回调
  */
 - (void)initWithAppId:(NSString *)appId
+            appSecret:(NSString *)appSecret
              callback:(HotFixCallbackHandler)callback;
 
 /**
