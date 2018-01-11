@@ -197,13 +197,3 @@
 
 @end
 
-// 测试环境抛开证书校验
-@implementation NSURLRequest(DataController)
-
-+ (BOOL)allowsAnyHTTPSCertificateForHost:(NSString *)host
-{
-    return YES;
-}
-
-@end
-
