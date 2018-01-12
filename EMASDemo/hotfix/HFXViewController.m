@@ -11,6 +11,7 @@
 #import "HFXViewController.h"
 #import <AlicloudHotFixEmas/AlicloudHotFixServiceEmas.h>
 #import "HFXTestClass.h"
+#import "EMASConstantDefine.h"
 
 @interface HFXViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -19,8 +20,8 @@
 @end
 
 static AlicloudHotFixServiceEmas *hotfixService;
-static NSString *const testAppId = @"10000064";
-static NSString *const testAppSecret = @"70c378f69aec7b295a373ef81528c8ea";
+//static NSString *const testAppId = @"10000064";
+//static NSString *const testAppSecret = @"70c378f69aec7b295a373ef81528c8ea";
 
 static NSArray *tableViewGroupNames;
 static NSArray *tableViewCellTitleInSection;
@@ -71,7 +72,7 @@ static NSCondition *_condition;
     hotfixService = [AlicloudHotFixServiceEmas sharedInstance];
     [hotfixService setLogEnabled:YES];
     [hotfixService setAppVersion:@"1.0.1"];
-    [hotfixService initWithAppId:testAppId appSecret:testAppSecret callback:^(BOOL res, id data, NSError *error) {
+    [hotfixService initWithAppId:AppKey appSecret:AppSecret callback:^(BOOL res, id data, NSError *error) {
         if (res) {
             NSLog(@"HotFix SDK init success.");
         } else {

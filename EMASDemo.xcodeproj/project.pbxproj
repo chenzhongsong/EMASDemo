@@ -14,6 +14,7 @@
 		7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */; };
 		7D8394A91FDB902900EBB60F /* fix.lua in Resources */ = {isa = PBXBuildFile; fileRef = 7D8394A81FDB902900EBB60F /* fix.lua */; };
 		7DF2AE9D1FF127E400AC670B /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DF2AE9C1FF127E400AC670B /* config.plist */; };
+		8A594DF820086D7B0006769B /* EMASConstantDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A594DF720086D7B0006769B /* EMASConstantDefine.m */; };
 		8AA1174D1FF5E8FD004D4D0A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA1174B1FF5E8FD004D4D0A /* Interface.storyboard */; };
 		8AA1174F1FF5E8FD004D4D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA1174E1FF5E8FD004D4D0A /* Assets.xcassets */; };
 		8AA117561FF5E8FE004D4D0A /* EMASWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8AA117551FF5E8FE004D4D0A /* EMASWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -117,6 +118,8 @@
 		7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudHotFixEmas.framework; sourceTree = "<group>"; };
 		7D8394A81FDB902900EBB60F /* fix.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fix.lua; sourceTree = "<group>"; };
 		7DF2AE9C1FF127E400AC670B /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = config.plist; path = AlicloudHotFixEmas.framework/config.plist; sourceTree = "<group>"; };
+		8A594DF620086D7B0006769B /* EMASConstantDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASConstantDefine.h; sourceTree = "<group>"; };
+		8A594DF720086D7B0006769B /* EMASConstantDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASConstantDefine.m; sourceTree = "<group>"; };
 		8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EMASDemo.entitlements; sourceTree = "<group>"; };
 		8AA117491FF5E8FD004D4D0A /* EMASWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMASWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA1174C1FF5E8FD004D4D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -325,6 +328,8 @@
 		8ADA953D1FD9309400C0EF49 /* EMASDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8A594DF620086D7B0006769B /* EMASConstantDefine.h */,
+				8A594DF720086D7B0006769B /* EMASConstantDefine.m */,
 				8AC0CB70200317A000FD44E6 /* source */,
 				8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */,
 				1A65F6231FF2534A00B4573C /* AliHA */,
@@ -769,6 +774,7 @@
 				8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */,
 				9A09D79E1FF27B5B00585632 /* WXImgLoaderDefaultImpl.m in Sources */,
 				8ADA95751FDA3BA300C0EF49 /* FirstTableViewController.m in Sources */,
+				8A594DF820086D7B0006769B /* EMASConstantDefine.m in Sources */,
 				9A09D7A11FF27F9F00585632 /* WXResourceRequestHandlerDemoImpl.m in Sources */,
 				9A09D78C1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m in Sources */,
 				8ABD97DD1FF4F7C400469557 /* WXCrashAdapterHandler.m in Sources */,
