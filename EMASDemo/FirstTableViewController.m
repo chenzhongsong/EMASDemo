@@ -12,6 +12,7 @@
 #import "WXDemoViewController.h"
 #import "DemoDefine.h"
 #import "AliHATestCaseViewController.h"
+#import "EMASConstantDefine.h"
 
 @interface FirstTableViewController ()
 
@@ -41,7 +42,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -66,6 +67,12 @@
             cell.textLabel.textColor = [UIColor blueColor];
         }
         break;
+        case 3:
+        {
+            cell.textLabel.text = @"应用信息";
+            cell.textLabel.textColor = [UIColor greenColor];
+        }
+            break;
         
         default:
         break;
@@ -99,6 +106,17 @@
             // 热修复demo
             HFXViewController *controller = [HFXViewController new];
             [self.navigationController pushViewController:controller animated:YES];
+            break;
+        }
+        case 3:
+        {
+            NSString *content = [NSString stringWithFormat:@"appkey=%@\r\n appsecret=%@\r\n accs域名=%@\r\n mtop域名=%@\r\n 渠道ID=%@\r\n", AppKey,AppSecret, ACCSDomain, MTOPDomain, CHANNELID];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"应用信息"
+                                                                message:content
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"确定"
+                                                      otherButtonTitles:nil, nil];
+            [alertView show];
             break;
         }
 
