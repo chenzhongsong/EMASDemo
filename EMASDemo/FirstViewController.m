@@ -10,10 +10,6 @@
 #import <WeexSDK/WXSDKInstance.h>
 
 @interface FirstViewController ()
-    
-@property (nonatomic, strong) WXSDKInstance *instance;
-@property (nonatomic, strong) UIView *weexView;
-    
 @end
 
 @implementation FirstViewController
@@ -24,25 +20,6 @@
     
     self.title = @"First";
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    
-    _instance = [[WXSDKInstance alloc] init];
-    _instance.viewController = self;
-    _instance.frame = self.view.frame;
-    __weak typeof(self) weakSelf = self;
-    _instance.onCreate = ^(UIView *view) {
-        [weakSelf.weexView removeFromSuperview];
-        weakSelf.weexView = view;
-        [weakSelf.view addSubview:weakSelf.weexView];
-    };
-    _instance.onFailed = ^(NSError *error) {
-        //process failure
-    };
-    _instance.renderFinish = ^ (UIView *view) {
-        //process renderFinish
-    };
-    NSURL *url = [NSURL URLWithString:@"http://mt2.wapa.taobao.com/core/preview/act/msgwin1.js?MultiWindow=true"];
-    [_instance renderWithURL:url];
 }
 
 
