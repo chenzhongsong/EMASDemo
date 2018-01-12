@@ -110,7 +110,7 @@
         }
         case 3:
         {
-            NSString *content = [NSString stringWithFormat:@"appkey=%@\r\n appsecret=%@\r\n accs域名=%@\r\n mtop域名=%@\r\n 渠道ID=%@\r\n", AppKey,AppSecret, ACCSDomain, MTOPDomain, CHANNELID];
+            NSString *content = [NSString stringWithFormat:@"appkey=%@\r\n appsecret=%@\r\n accs域名=%@\r\n mtop域名=%@\r\n ZCachepackageZipPrefix=%@\r\n ossBucketName=%@\r\n 渠道ID=%@\r\n", AppKey,AppSecret, ACCSDomain, MTOPDomain, ZCachepackageZipPrefix, ossBucketName, CHANNELID];
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"应用信息"
                                                                 message:content
                                                                delegate:nil

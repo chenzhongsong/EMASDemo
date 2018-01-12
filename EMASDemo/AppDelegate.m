@@ -106,7 +106,7 @@
     [WXSDKEngine registerHandler:[WXEventModule new] withProtocol:@protocol(WXEventModuleProtocol)];
     
     // ZCache初始化部分
-    [ZCache defaultCommonConfig].packageZipPrefix = @"http://mobilehubdev.taobao.com/eweex/";
+    [ZCache defaultCommonConfig].packageZipPrefix = ZCachepackageZipPrefix;
     [ZCache setDebugMode:YES]; // 打开调试日志
     [ZCache setupWithMtop];
 }
@@ -150,7 +150,7 @@
     
     // 高可用初始化部分
     [AliHAAdapter initWithAppKey:AppKey appVersion:@"1.0.0" channel:CHANNELID plugins:nil nick:@"emas-ha"];
-    [AliHAAdapter configOSS:@"ha-remote-log"];
+    [AliHAAdapter configOSS:ossBucketName];
 }
 
 #pragma mark -

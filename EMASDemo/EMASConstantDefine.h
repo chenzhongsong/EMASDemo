@@ -20,5 +20,7 @@
 #define ACCSDomain @"acs.emas-ha.cn"
 #define MTOPDomain @"aserver.emas-ha.cn"
 #define CHANNELID @"1001@Test_iOS_1.0.0"
+#define ZCachepackageZipPrefix @"http://mobilehubdev.taobao.com/eweex/"
+#define ossBucketName @"ha-remote-log"
 
 
