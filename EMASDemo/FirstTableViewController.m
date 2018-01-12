@@ -13,6 +13,7 @@
 #import "DemoDefine.h"
 #import "AliHATestCaseViewController.h"
 #import "EMASConstantDefine.h"
+#import <objc/runtime.h>
 
 @interface FirstTableViewController ()
 
@@ -110,7 +111,7 @@
         }
         case 3:
         {
-            NSString *content = [NSString stringWithFormat:@"appkey=%@\r\n appsecret=%@\r\n accs域名=%@\r\n mtop域名=%@\r\n ZCachepackageZipPrefix=%@\r\n ossBucketName=%@\r\n 渠道ID=%@\r\n", AppKey,AppSecret, ACCSDomain, MTOPDomain, ZCachepackageZipPrefix, ossBucketName, CHANNELID];
+            NSString *content = [NSString stringWithFormat:@"appkey=%@\r\n appsecret=%@\r\n accs域名=%@\r\n mtop域名=%@\r\n ZCachepackageZipPrefix=%@\r\n ossBucketName=%@\r\n 渠道ID=%@\r\n 设备ID=%@", AppKey,AppSecret, ACCSDomain, MTOPDomain, ZCachepackageZipPrefix, ossBucketName, CHANNELID, [self getUTDid]];
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"应用信息"
                                                                 message:content
                                                                delegate:nil
@@ -127,6 +128,17 @@
             break;
         }
     }
+}
+
+- (NSString *)getUTDid
+{
+    id UTDevice$Class = objc_getClass("UTDevice");
+    if ((UTDevice$Class == nil) || ![UTDevice$Class respondsToSelector: @selector(utdid)]) {
+        return @"";
+    }
+    
+    NSString *utdid = [UTDevice$Class performSelector: @selector(utdid)];
+    return utdid;
 }
 
 - (UIViewController *)demoController
