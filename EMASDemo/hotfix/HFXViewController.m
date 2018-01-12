@@ -71,7 +71,6 @@ static NSCondition *_condition;
 - (void)hotfixSdkInit {
     hotfixService = [AlicloudHotFixServiceEmas sharedInstance];
     [hotfixService setLogEnabled:YES];
-    [hotfixService setAppVersion:@"1.0.1"];
     [hotfixService initWithAppId:AppKey appSecret:AppSecret callback:^(BOOL res, id data, NSError *error) {
         if (res) {
             NSLog(@"HotFix SDK init success.");
