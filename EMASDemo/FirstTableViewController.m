@@ -14,6 +14,7 @@
 #import "AliHATestCaseViewController.h"
 #import "EMASConstantDefine.h"
 #import <objc/runtime.h>
+#import "EMASService.h"
 
 @interface FirstTableViewController ()
 
@@ -111,7 +112,7 @@
         }
         case 3:
         {
-            NSString *content = [NSString stringWithFormat:@"appkey=%@\r\n appsecret=%@\r\n accs域名=%@\r\n mtop域名=%@\r\n ZCachepackageZipPrefix=%@\r\n ossBucketName=%@\r\n 渠道ID=%@\r\n 设备ID=%@", AppKey,AppSecret, ACCSDomain, MTOPDomain, ZCachepackageZipPrefix, ossBucketName, CHANNELID, [self getUTDid]];
+            NSString *content = [NSString stringWithFormat:@"appkey=%@\r\n appsecret=%@\r\n accs域名=%@\r\n mtop域名=%@\r\n ZCachepackageZipPrefix=%@\r\n ossBucketName=%@\r\n 渠道ID=%@\r\n 设备ID=%@", [[EMASService shareInstance] appkey],[[EMASService shareInstance] appSecret], [[EMASService shareInstance] ACCSDomain], [[EMASService shareInstance] MTOPDomain], [[EMASService shareInstance] packageZipPrefixURL], [[EMASService shareInstance] OSSBucketName], [[EMASService shareInstance] ChannelID], [self getUTDid]];
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"应用信息"
                                                                 message:content
                                                                delegate:nil

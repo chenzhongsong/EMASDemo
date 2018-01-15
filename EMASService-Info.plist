@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppKey</key>
+	<string>10000040</string>
+	<key>AppSecret</key>
+	<string>c66e5b00ff97809daac7ad60b2eebf20</string>
+	<key>ACCSDomain</key>
+	<string>acs.emas-ha.cn</string>
+	<key>MTOPDomain</key>
+	<string>aserver.emas-ha.cn</string>
+	<key>ChannelID</key>
+	<string>1001@Test_iOS_1.0.0</string>
+	<key>packageZipPrefixURL</key>
+	<string>http://mobilehubdev.taobao.com/eweex/</string>
+	<key>OSSBucketName</key>
+	<string>ha-remote-log</string>
+	<key>HAReportURL</key>
+	<string>http://adash.emas-ha.cn/upload</string>
+</dict>
+</plist>

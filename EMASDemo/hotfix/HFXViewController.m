@@ -12,6 +12,7 @@
 #import <AlicloudHotFixEmas/AlicloudHotFixServiceEmas.h>
 #import "HFXTestClass.h"
 #import "EMASConstantDefine.h"
+#import "EMASService.h"
 
 @interface HFXViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -71,7 +72,7 @@ static NSCondition *_condition;
 - (void)hotfixSdkInit {
     hotfixService = [AlicloudHotFixServiceEmas sharedInstance];
     [hotfixService setLogEnabled:YES];
-    [hotfixService initWithAppId:AppKey appSecret:AppSecret callback:^(BOOL res, id data, NSError *error) {
+    [hotfixService initWithAppId:[[EMASService shareInstance] appkey] appSecret:[[EMASService shareInstance] appSecret] callback:^(BOOL res, id data, NSError *error) {
         if (res) {
             NSLog(@"HotFix SDK init success.");
         } else {

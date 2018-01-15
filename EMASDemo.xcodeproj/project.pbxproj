@@ -15,6 +15,8 @@
 		7D8394A91FDB902900EBB60F /* fix.lua in Resources */ = {isa = PBXBuildFile; fileRef = 7D8394A81FDB902900EBB60F /* fix.lua */; };
 		7DF2AE9D1FF127E400AC670B /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DF2AE9C1FF127E400AC670B /* config.plist */; };
 		8A594DF820086D7B0006769B /* EMASConstantDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A594DF720086D7B0006769B /* EMASConstantDefine.m */; };
+		8A69B607200C8E5F0073756D /* EMASService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* EMASService-Info.plist */; };
+		8A69B60A200C8F980073756D /* EMASService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69B609200C8F980073756D /* EMASService.m */; };
 		8AA1174D1FF5E8FD004D4D0A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA1174B1FF5E8FD004D4D0A /* Interface.storyboard */; };
 		8AA1174F1FF5E8FD004D4D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA1174E1FF5E8FD004D4D0A /* Assets.xcassets */; };
 		8AA117561FF5E8FE004D4D0A /* EMASWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8AA117551FF5E8FE004D4D0A /* EMASWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -120,6 +122,9 @@
 		7DF2AE9C1FF127E400AC670B /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = config.plist; path = AlicloudHotFixEmas.framework/config.plist; sourceTree = "<group>"; };
 		8A594DF620086D7B0006769B /* EMASConstantDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASConstantDefine.h; sourceTree = "<group>"; };
 		8A594DF720086D7B0006769B /* EMASConstantDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASConstantDefine.m; sourceTree = "<group>"; };
+		8A69B606200C8E5F0073756D /* EMASService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EMASService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8A69B608200C8F980073756D /* EMASService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASService.h; sourceTree = "<group>"; };
+		8A69B609200C8F980073756D /* EMASService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASService.m; sourceTree = "<group>"; };
 		8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EMASDemo.entitlements; sourceTree = "<group>"; };
 		8AA117491FF5E8FD004D4D0A /* EMASWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMASWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA1174C1FF5E8FD004D4D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -328,8 +333,11 @@
 		8ADA953D1FD9309400C0EF49 /* EMASDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8A69B606200C8E5F0073756D /* EMASService-Info.plist */,
 				8A594DF620086D7B0006769B /* EMASConstantDefine.h */,
 				8A594DF720086D7B0006769B /* EMASConstantDefine.m */,
+				8A69B608200C8F980073756D /* EMASService.h */,
+				8A69B609200C8F980073756D /* EMASService.m */,
 				8AC0CB70200317A000FD44E6 /* source */,
 				8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */,
 				1A65F6231FF2534A00B4573C /* AliHA */,
@@ -618,6 +626,7 @@
 				7D8394A91FDB902900EBB60F /* fix.lua in Resources */,
 				9A09D7961FF27A6200585632 /* index.js in Resources */,
 				8ADA95491FD9309400C0EF49 /* Main.storyboard in Resources */,
+				8A69B607200C8E5F0073756D /* EMASService-Info.plist in Resources */,
 				7DF2AE9D1FF127E400AC670B /* config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -785,6 +794,7 @@
 				8ADA95511FD9309400C0EF49 /* main.m in Sources */,
 				9A09D78F1FF2719700585632 /* WXDemoViewController.m in Sources */,
 				7D6260E61FDA8C5A00E856CB /* HFXTestClass.m in Sources */,
+				8A69B60A200C8F980073756D /* EMASService.m in Sources */,
 				8ADA95431FD9309400C0EF49 /* FirstViewController.m in Sources */,
 				8ADA95781FDA3BB000C0EF49 /* SecondTableViewController.m in Sources */,
 				8AC0CB75200317A000FD44E6 /* WXCrashReporter.m in Sources */,

@@ -38,6 +38,7 @@
 #import "WXCrashReporter.h"
 #import <TBCrashReporter/TBCrashReporterMonitor.h>
 #import "EMASConstantDefine.h"
+#import "EMASService.h"
 
 @interface AppDelegate ()
 @end
@@ -67,10 +68,10 @@
     TBSDKConfiguration *config = [TBSDKConfiguration shareInstanceDisableDeviceID:YES];
     config.environment = TBSDKEnvironmentRelease;
     config.safeSecret = NO;
-    config.appKey = AppKey;
-    config.appSecret = AppSecret;
-    config.wapAPIURL = MTOPDomain;//设置全局自定义域名
-    config.wapTTID = CHANNELID; //渠道ID
+    config.appKey = [[EMASService shareInstance] appkey];
+    config.appSecret = [[EMASService shareInstance] appSecret];
+    config.wapAPIURL = [[EMASService shareInstance] MTOPDomain];//设置全局自定义域名
+    config.wapTTID = [[EMASService shareInstance] ChannelID]; //渠道ID
     openSDKSwitchLog(YES); // 打开调试日志
     
     // weex初始化部分
@@ -106,7 +107,7 @@
     [WXSDKEngine registerHandler:[WXEventModule new] withProtocol:@protocol(WXEventModuleProtocol)];
     
     // ZCache初始化部分
-    [ZCache defaultCommonConfig].packageZipPrefix = ZCachepackageZipPrefix;
+    [ZCache defaultCommonConfig].packageZipPrefix = [[EMASService shareInstance] packageZipPrefixURL];
     [ZCache setDebugMode:YES]; // 打开调试日志
     [ZCache setupWithMtop];
 }
@@ -117,14 +118,14 @@
     // UT初始化部分
     [[UTAnalytics getInstance] turnOffCrashHandler];
     [[UTAnalytics getInstance] turnOnDebug]; // 打开调试日志
-    [[UTAnalytics getInstance] setAppKey:AppKey secret:AppSecret];
+    [[UTAnalytics getInstance] setAppKey:[[EMASService shareInstance] appkey] secret:[[EMASService shareInstance] appSecret]];
     
     // 网络库初始化部分
     [NWNetworkConfiguration setEnvironment:release];
     NWNetworkConfiguration *configuration = [NWNetworkConfiguration shareInstance];
     [configuration setIsUseSecurityGuard:NO];
-    [configuration setAppkey:AppKey];
-    [configuration setAppSecret:AppSecret];
+    [configuration setAppkey:[[EMASService shareInstance] appkey]];
+    [configuration setAppSecret:[[EMASService shareInstance] appSecret]];
     [configuration setIsEnableAMDC:NO];
     [NetworkDemote shareInstance].canInitWithRequest = NO;
     setNWLogLevel(NET_LOG_DEBUG); // 打开调试日志
@@ -133,7 +134,7 @@
     void tbAccsSDKSwitchLog(BOOL logCtr);
     tbAccsSDKSwitchLog(YES); // 打开调试日志
     
-    TBAccsManager *accsManager = [TBAccsManager accsManagerByHost:ACCSDomain];
+    TBAccsManager *accsManager = [TBAccsManager accsManagerByHost:[[EMASService shareInstance] ACCSDomain]];
     [accsManager setSupportLocalDNS:YES];
     accsManager.slightSslPublicKeySeq = ACCS_PUBKEY_PSEQ_EMAS;
     [accsManager startAccs];
@@ -149,8 +150,12 @@
                               }];
     
     // 高可用初始化部分
-    [AliHAAdapter initWithAppKey:AppKey appVersion:@"1.0.0" channel:CHANNELID plugins:nil nick:@"emas-ha"];
-    [AliHAAdapter configOSS:ossBucketName];
+    [AliHAAdapter initWithAppKey:[[EMASService shareInstance] appkey]
+                      appVersion:@"1.0.0"
+                         channel:[[EMASService shareInstance] ChannelID]
+                         plugins:nil
+                            nick:@"emas-ha"];
+    [AliHAAdapter configOSS:[[EMASService shareInstance] OSSBucketName]];
 }
 
 #pragma mark -
