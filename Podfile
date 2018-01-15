@@ -23,7 +23,7 @@ platform:ios, '8.0'
     
     # --weex
     pod 'WeexSDK', '0.17.0.1-EMAS'
-    pod 'ZCache', '0.0.0.6'
+    pod 'ZCache', '10.0.0'
     pod 'SDWebImage', '3.7.5'
     
     # --高可用
@@ -34,11 +34,11 @@ platform:ios, '8.0'
     pod  'AliHAPerformanceMonitor',  '1.0.5.4'
  
     # --网关
-    pod 'MtopSDK', '1.9.3.48'
-    pod 'mtopext/MtopCore', '1.8.0.93'
-    pod 'NetworkSDK', '6.2.1.32-EMAS'
-    pod 'TBAccsSDK', '2.3.1.13-EMAS'
-    pod 'tnet', '3.1.10.2-beta'
+    pod 'MtopSDK', '10.0.0'
+    pod 'mtopext/MtopCore', '10.0.0'
+    pod 'NetworkSDK', '10.0.0'
+    pod 'TBAccsSDK', '10.0.0'
+    pod 'tnet', '10.0.0'
     
     
     
