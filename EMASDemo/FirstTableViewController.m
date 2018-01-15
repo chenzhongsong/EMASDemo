@@ -12,7 +12,6 @@
 #import "WXDemoViewController.h"
 #import "DemoDefine.h"
 #import "AliHATestCaseViewController.h"
-#import "EMASConstantDefine.h"
 #import <objc/runtime.h>
 #import "EMASService.h"
 

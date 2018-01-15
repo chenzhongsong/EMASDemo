@@ -11,7 +11,6 @@
 #import "HFXViewController.h"
 #import <AlicloudHotFixEmas/AlicloudHotFixServiceEmas.h>
 #import "HFXTestClass.h"
-#import "EMASConstantDefine.h"
 #import "EMASService.h"
 
 @interface HFXViewController () <UITableViewDelegate, UITableViewDataSource>

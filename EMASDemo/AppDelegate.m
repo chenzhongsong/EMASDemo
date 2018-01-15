@@ -37,7 +37,6 @@
 #import "WXCrashAdapterHandler.h"
 #import "WXCrashReporter.h"
 #import <TBCrashReporter/TBCrashReporterMonitor.h>
-#import "EMASConstantDefine.h"
 #import "EMASService.h"
 
 @interface AppDelegate ()
