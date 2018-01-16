@@ -38,6 +38,7 @@
 #import "WXCrashReporter.h"
 #import <TBCrashReporter/TBCrashReporterMonitor.h>
 #import "EMASService.h"
+#import <TBRest/TBRestSendService.h>
 
 @interface AppDelegate ()
 @end
@@ -155,6 +156,14 @@
                          plugins:nil
                             nick:@"emas-ha"];
     [AliHAAdapter configOSS:[[EMASService shareInstance] OSSBucketName]];
+    
+    TBRestConfiguration *restConfiguration = [[TBRestConfiguration alloc] init];
+    restConfiguration.appkey = [[EMASService shareInstance] appkey];
+    restConfiguration.appVersion = @"1.0.0";
+    restConfiguration.channel = [[EMASService shareInstance] ChannelID];
+    restConfiguration.usernick = @"emas-ha";
+    restConfiguration.dataUploadHost = [[EMASService shareInstance] HAReportURL];
+    [[TBRestSendService shareInstance] configBasicParamWithTBConfiguration:restConfiguration];
 }
 
 #pragma mark -
