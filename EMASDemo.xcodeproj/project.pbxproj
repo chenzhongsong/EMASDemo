@@ -873,7 +873,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "EMASWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.EMASDemo.beta.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -892,7 +892,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "EMASWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.EMASDemo.beta.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -911,7 +911,7 @@
 				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = EMASWatch_Extension;
 				INFOPLIST_FILE = EMASWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.EMASDemo.beta.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -930,7 +930,7 @@
 				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = EMASWatch_Extension;
 				INFOPLIST_FILE = EMASWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.EMASDemo.beta.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -1061,7 +1061,7 @@
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.EMASDemo.beta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1086,7 +1086,7 @@
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.EMASDemo.beta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
