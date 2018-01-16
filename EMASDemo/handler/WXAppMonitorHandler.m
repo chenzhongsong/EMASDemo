@@ -105,7 +105,7 @@
                                    NETWORKTYPE,
                                    CACHETYPE
                                    ]
-                       aggregate:NO];
+                       aggregate:YES];
     
     // step3: add Constraint; 约束是对于 行（指标）来说的
     [table addConstraintWithName:JSLIBSIZE min:0 max:2000 defaultValue:0];
