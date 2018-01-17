@@ -28,7 +28,7 @@ platform:ios, '8.0'
     
     # --高可用
     pod  'AliHAAdapter4poc',  '1.0.1.6' # 接入层
-    pod  'TRemoteDebugger',   '2.0.1.4'
+    pod  'TRemoteDebugger',   '2.0.1.12'
     pod  'UserTrack', '6.3.5.47'
     pod  'TBRest',  '2.0.0.1'
     pod  'AliHAPerformanceMonitor',  '1.0.5.4'
