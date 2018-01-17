@@ -27,7 +27,7 @@ platform:ios, '8.0'
     pod 'SDWebImage', '3.7.5'
     
     # --高可用
-    pod  'AliHAAdapter4poc',  '1.0.1.6' # 接入层
+    pod  'AliHAAdapter4poc',  '1.0.1.8' # 接入层
     pod  'TRemoteDebugger',   '2.0.1.12'
     pod  'UserTrack', '6.3.5.47'
     pod  'TBRest',  '2.0.0.1'
