@@ -170,6 +170,9 @@
 {
     NSDictionary *appinfo = [[NSBundle mainBundle] infoDictionary];
     NSString *version = [appinfo objectForKey:@"CFBundleShortVersionString"];
+    if (!version) {
+        version = @"10.0.0";
+    }
     return version;
 }
 
