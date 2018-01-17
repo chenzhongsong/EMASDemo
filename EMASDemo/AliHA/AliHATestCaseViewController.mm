@@ -38,7 +38,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -78,6 +78,12 @@
         {
             cell.textLabel.text = @"pull task";
             cell.textLabel.textColor = [UIColor blueColor];
+        }
+            break;
+            case 5:
+        {
+            cell.textLabel.text = @"JANK";
+            cell.textLabel.textColor = [UIColor redColor];
         }
             break;
         default:
@@ -127,6 +133,11 @@
             }];
             break;
         }
+            case 5:
+        {
+            [NSThread sleepForTimeInterval:30];
+        }
+            break;
         default:
             break;
             

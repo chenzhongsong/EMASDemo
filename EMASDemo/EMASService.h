@@ -20,6 +20,7 @@
 - (NSString *)packageZipPrefixURL;
 - (NSString *)OSSBucketName;
 - (NSString *)HAReportURL;
+- (NSString *)HARemoteDebugURL;
 
 
 @end

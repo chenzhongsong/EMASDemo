@@ -72,4 +72,9 @@
     return [services objectForKey:@"HAReportURL"];
 }
 
+- (NSString *)HARemoteDebugURL
+{
+    return [services objectForKey:@"HARemoteDebugURL"];
+}
+
 @end

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AppKey</key>
-	<string>10000016</string>
+	<string>10000020</string>
 	<key>AppSecret</key>
 	<string>ddc1f5c8b69da5e875a04e3278203fe2</string>
 	<key>ACCSDomain</key>
@@ -17,6 +17,8 @@
 	<key>OSSBucketName</key>
 	<string>emas-ha-remote-log-poc</string>
 	<key>HAReportURL</key>
-	<string>http://emaspoc-adash.emas-ha.cn/upload</string>
+	<string>https://emaspoc-adash.emas-ha.cn/upload</string>
+	<key>HARemoteDebugURL</key>
+	<string>https://emaspoc-adash.emas-ha.cn</string>
 </dict>
 </plist>

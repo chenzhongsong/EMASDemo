@@ -156,6 +156,7 @@
                          plugins:nil
                             nick:@"emas-ha"];
     [AliHAAdapter configOSS:[[EMASService shareInstance] OSSBucketName]];
+    [AliHAAdapter configRemoteDebugURL:[[EMASService shareInstance] HARemoteDebugURL]];
     
     TBRestConfiguration *restConfiguration = [[TBRestConfiguration alloc] init];
     restConfiguration.appkey = [[EMASService shareInstance] appkey];
