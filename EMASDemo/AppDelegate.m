@@ -78,7 +78,7 @@
     //business configuration
     [WXAppConfiguration setAppGroup:@"TestApp"];
     [WXAppConfiguration setAppName:@"EMASDemo"];
-    [WXAppConfiguration setAppVersion:@"1.0.0"];
+    [WXAppConfiguration setAppVersion:[self getAppVersion]];
     
     //init sdk environment
     [WXSDKEngine initSDKEnvironment];
@@ -151,7 +151,7 @@
     
     // 高可用初始化部分
     [AliHAAdapter initWithAppKey:[[EMASService shareInstance] appkey]
-                      appVersion:@"1.0.0"
+                      appVersion:[self getAppVersion]
                          channel:[[EMASService shareInstance] ChannelID]
                          plugins:nil
                             nick:@"emas-ha"];
@@ -159,11 +159,18 @@
     
     TBRestConfiguration *restConfiguration = [[TBRestConfiguration alloc] init];
     restConfiguration.appkey = [[EMASService shareInstance] appkey];
-    restConfiguration.appVersion = @"1.0.0";
+    restConfiguration.appVersion = [self getAppVersion];
     restConfiguration.channel = [[EMASService shareInstance] ChannelID];
     restConfiguration.usernick = @"emas-ha";
     restConfiguration.dataUploadHost = [[EMASService shareInstance] HAReportURL];
     [[TBRestSendService shareInstance] configBasicParamWithTBConfiguration:restConfiguration];
+}
+
+- (NSString *)getAppVersion
+{
+    NSDictionary *appinfo = [[NSBundle mainBundle] infoDictionary];
+    NSString *version = [appinfo objectForKey:@"CFBundleShortVersionString"];
+    return version;
 }
 
 #pragma mark -
