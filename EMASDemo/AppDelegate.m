@@ -119,6 +119,8 @@
     [[UTAnalytics getInstance] turnOffCrashHandler];
     [[UTAnalytics getInstance] turnOnDebug]; // 打开调试日志
     [[UTAnalytics getInstance] setAppKey:[[EMASService shareInstance] appkey] secret:[[EMASService shareInstance] appSecret]];
+    [[UTAnalytics getInstance] setChannel:[[EMASService shareInstance] ChannelID]];
+    [[UTAnalytics getInstance] setAppVersion:[self getAppVersion]];
     
     // 网络库初始化部分
     [NWNetworkConfiguration setEnvironment:release];
