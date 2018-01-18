@@ -7,6 +7,7 @@
 //
 
 #import "AliHATestCaseViewController.h"
+#import <AliHACore/AliHA.h>
 #import <TRemoteDebugger/TRDManagerService.h>
 #import <TRemoteDebugger/TBClientDrivingPushTLogExec.h>
 
@@ -38,7 +39,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -83,6 +84,12 @@
             case 5:
         {
             cell.textLabel.text = @"JANK";
+            cell.textLabel.textColor = [UIColor redColor];
+        }
+            break;
+            case 6:
+        {
+            cell.textLabel.text = @"upload events";
             cell.textLabel.textColor = [UIColor redColor];
         }
             break;
@@ -136,6 +143,14 @@
             case 5:
         {
             [NSThread sleepForTimeInterval:30];
+        }
+            break;
+            case 6:
+        {
+            AliHA *haInstance = [AliHA shareInstance];
+            if ([haInstance respondsToSelector:NSSelectorFromString(@"scanExistingTraceFiles")]) {
+                [haInstance performSelector:NSSelectorFromString(@"scanExistingTraceFiles")];
+            }
         }
             break;
         default:
