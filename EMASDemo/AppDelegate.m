@@ -78,7 +78,7 @@
     //business configuration
     [WXAppConfiguration setAppGroup:@"TestApp"];
     [WXAppConfiguration setAppName:@"EMASDemo"];
-    [WXAppConfiguration setAppVersion:[self getAppVersion]];
+    [WXAppConfiguration setAppVersion:[[EMASService shareInstance] getAppVersion]];
     
     //init sdk environment
     [WXSDKEngine initSDKEnvironment];
@@ -120,7 +120,7 @@
     [[UTAnalytics getInstance] turnOnDebug]; // 打开调试日志
     [[UTAnalytics getInstance] setAppKey:[[EMASService shareInstance] appkey] secret:[[EMASService shareInstance] appSecret]];
     [[UTAnalytics getInstance] setChannel:[[EMASService shareInstance] ChannelID]];
-    [[UTAnalytics getInstance] setAppVersion:[self getAppVersion]];
+    [[UTAnalytics getInstance] setAppVersion:[[EMASService shareInstance] getAppVersion]];
     
     // 网络库初始化部分
     [NWNetworkConfiguration setEnvironment:release];
@@ -153,7 +153,7 @@
     
     // 高可用初始化部分
     [AliHAAdapter initWithAppKey:[[EMASService shareInstance] appkey]
-                      appVersion:[self getAppVersion]
+                      appVersion:[[EMASService shareInstance] getAppVersion]
                          channel:[[EMASService shareInstance] ChannelID]
                          plugins:nil
                             nick:@"emas-ha"];
@@ -162,21 +162,11 @@
     
     TBRestConfiguration *restConfiguration = [[TBRestConfiguration alloc] init];
     restConfiguration.appkey = [[EMASService shareInstance] appkey];
-    restConfiguration.appVersion = [self getAppVersion];
+    restConfiguration.appVersion = [[EMASService shareInstance] getAppVersion];
     restConfiguration.channel = [[EMASService shareInstance] ChannelID];
     restConfiguration.usernick = @"emas-ha";
     restConfiguration.dataUploadHost = [[EMASService shareInstance] HAReportURL];
     [[TBRestSendService shareInstance] configBasicParamWithTBConfiguration:restConfiguration];
-}
-
-- (NSString *)getAppVersion
-{
-    NSDictionary *appinfo = [[NSBundle mainBundle] infoDictionary];
-    NSString *version = [appinfo objectForKey:@"CFBundleShortVersionString"];
-    if (!version) {
-        version = @"10.0.0";
-    }
-    return version;
 }
 
 #pragma mark -

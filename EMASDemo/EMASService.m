@@ -42,6 +42,16 @@
     return [services objectForKey:@"AppSecret"];
 }
 
+- (NSString *)getAppVersion
+{
+    NSDictionary *appinfo = [[NSBundle mainBundle] infoDictionary];
+    NSString *version = [appinfo objectForKey:@"CFBundleShortVersionString"];
+    if (!version) {
+        version = @"10.0.0";
+    }
+    return version;
+}
+
 - (NSString *)ACCSDomain
 {
     return [services objectForKey:@"ACCSDomain"];

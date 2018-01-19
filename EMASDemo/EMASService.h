@@ -14,6 +14,7 @@
 
 - (NSString *)appkey;
 - (NSString *)appSecret;
+- (NSString *)getAppVersion;
 - (NSString *)ACCSDomain;
 - (NSString *)MTOPDomain;
 - (NSString *)ChannelID;
