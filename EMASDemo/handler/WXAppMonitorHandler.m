@@ -68,6 +68,11 @@
     CGFloat fsRenderTime = [[args objectForKey:FSRENDERTIME] floatValue];
     NSUInteger componentCount = [[args objectForKey:COMPONENTCOUNT] integerValue];
     
+    //fsRenderTime 为-1，代表渲染未完成，无性能数据上报。
+    if (fsRenderTime < 0) {
+        return;
+    }
+    
     AppMonitorTable * table = [AppMonitorTable monitorForScheme:@"weex" tableName:@"load"];
     
     // step2: register cols and rows； 列认为是一些可枚举的条件。行认为是在这些条件组合下的均值（必须是float类型）。
