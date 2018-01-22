@@ -20,5 +20,7 @@
 	<string>https://emaspoc-adash.emas-ha.cn/upload</string>
 	<key>HARemoteDebugURL</key>
 	<string>https://emaspoc-adash.emas-ha.cn</string>
+	<key>HATimestampURL</key>
+	<string>http://acs.m.taobao.com/gw/mtop.common.getTimestamp/*</string>
 </dict>
 </plist>

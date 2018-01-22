@@ -12,7 +12,7 @@ target 'EMASDemo' do
 platform:ios, '8.0'
 
     pod 'EMASFirstBundle', '2.0.1'
-    pod 'dependencyProject', '1.0.0'
+    pod 'dependencyProject', '2.0.2'
     
     # --热修复
     pod 'AlicloudLua', '5.1.4.2'
@@ -28,10 +28,7 @@ platform:ios, '8.0'
     
     # --高可用
     pod  'AliHAAdapter4poc',  '1.0.1.8' # 接入层
-    pod  'TRemoteDebugger',   '2.0.1.12'
-    pod  'UserTrack', '6.3.5.47'
-    pod  'TBRest',  '2.0.0.1'
-    pod  'AliHAPerformanceMonitor',  '1.0.5.4'
+    pod  'UserTrack',  '6.3.5.100001-poc'
  
     # --网关
     pod 'MtopSDK', '10.0.0'

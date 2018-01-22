@@ -22,6 +22,6 @@
 - (NSString *)OSSBucketName;
 - (NSString *)HAReportURL;
 - (NSString *)HARemoteDebugURL;
-
+- (NSString *)HATimestampURL;
 
 @end

@@ -87,4 +87,9 @@
     return [services objectForKey:@"HARemoteDebugURL"];
 }
 
+- (NSString *)HATimestampURL
+{
+    return [services objectForKey:@"HATimestampURL"];
+}
+
 @end

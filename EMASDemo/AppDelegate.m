@@ -118,6 +118,7 @@
     // UT初始化部分
     [[UTAnalytics getInstance] turnOffCrashHandler];
     [[UTAnalytics getInstance] turnOnDebug]; // 打开调试日志
+    [[UTAnalytics getInstance] setTimestampUrl:[[EMASService shareInstance] HATimestampURL]];
     [[UTAnalytics getInstance] setAppKey:[[EMASService shareInstance] appkey] secret:[[EMASService shareInstance] appSecret]];
     [[UTAnalytics getInstance] setChannel:[[EMASService shareInstance] ChannelID]];
     [[UTAnalytics getInstance] setAppVersion:[[EMASService shareInstance] getAppVersion]];
