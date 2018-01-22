@@ -65,7 +65,7 @@
 - (void)initWeexConfig
 {
     // MTOP初始化部分
-    TBSDKConfiguration *config = [TBSDKConfiguration shareInstanceDisableDeviceID:YES];
+    TBSDKConfiguration *config = [TBSDKConfiguration shareInstanceDisableDeviceID:YES andSwitchOffServerTime:YES];
     config.environment = TBSDKEnvironmentRelease;
     config.safeSecret = NO;
     config.appKey = [[EMASService shareInstance] appkey];
@@ -168,6 +168,7 @@
     restConfiguration.dataUploadHost = [[EMASService shareInstance] HAReportURL];
     [[TBRestSendService shareInstance] configBasicParamWithTBConfiguration:restConfiguration];
 }
+
 
 #pragma mark -
 #pragma mark app生命周期

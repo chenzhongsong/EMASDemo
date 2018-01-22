@@ -147,8 +147,10 @@
             weakSelf.instance.userInfo[@"weex_bundlejs_requestType"] = @"ZCache";
             weakSelf.instance.userInfo[@"weex_bundlejs_connectionType"] = @"ZCache";
             
+            // 本地更新埋点状态，但不上报
             [WXUtility customMonitorInfo:weakSelf.instance key:@"cacheType" value:@"zcache"];
         }
+        // 本地更新埋点状态，但不上报
         [WXAppMonitorHandler monitorWithNetWorkResponse:response instance:weakSelf.instance response:request data:data error:error];
     };
     

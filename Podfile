@@ -35,7 +35,7 @@ platform:ios, '8.0'
  
     # --网关
     pod 'MtopSDK', '10.0.0'
-    pod 'mtopext/MtopCore', '10.0.0'
+    pod 'mtopext/MtopCore', '10.0.1'
     pod 'NetworkSDK', '10.0.0'
     pod 'TBAccsSDK', '10.0.0'
     pod 'tnet', '10.0.0'
