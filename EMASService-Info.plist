@@ -19,6 +19,6 @@
 	<key>HAUniversalHost</key>
 	<string>emaspoc-adash.emas-ha.cn</string>
 	<key>HATimestampHost</key>
-	<string>acs.m.taobao.com</string>
+	<string>emaspoc-aserver.emas-ha.cn</string>
 </dict>
 </plist>
