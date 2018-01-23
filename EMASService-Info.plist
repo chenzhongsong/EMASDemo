@@ -16,11 +16,9 @@
 	<string>http://publish-poc.emas-ha.cn/eweex/</string>
 	<key>OSSBucketName</key>
 	<string>emas-ha-remote-log-poc</string>
-	<key>HAReportURL</key>
-	<string>https://emaspoc-adash.emas-ha.cn/upload</string>
-	<key>HARemoteDebugURL</key>
-	<string>https://emaspoc-adash.emas-ha.cn</string>
+	<key>HAUniversalHost</key>
+	<string>emaspoc-adash.emas-ha.cn</string>
 	<key>HATimestampURL</key>
-	<string>http://acs.m.taobao.com/gw/mtop.common.getTimestamp/*</string>
+	<string>https://acs.m.taobao.com/gw/mtop.common.getTimestamp/*</string>
 </dict>
 </plist>

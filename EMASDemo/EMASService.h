@@ -20,8 +20,7 @@
 - (NSString *)ChannelID;
 - (NSString *)packageZipPrefixURL;
 - (NSString *)OSSBucketName;
-- (NSString *)HAReportURL;
-- (NSString *)HARemoteDebugURL;
+- (NSString *)HAUniversalHost;
 - (NSString *)HATimestampURL;
 
 @end

@@ -40,6 +40,8 @@
 #import "EMASService.h"
 #import <TBRest/TBRestSendService.h>
 
+#define kHTTPSProtocol      @"https"
+
 @interface AppDelegate ()
 @end
 
@@ -159,14 +161,14 @@
                          plugins:nil
                             nick:@"emas-ha"];
     [AliHAAdapter configOSS:[[EMASService shareInstance] OSSBucketName]];
-    [AliHAAdapter configRemoteDebugURL:[[EMASService shareInstance] HARemoteDebugURL]];
+    [AliHAAdapter configRemoteDebugURL:[NSString stringWithFormat:@"%@://%@", kHTTPSProtocol, [[EMASService shareInstance] HAUniversalHost]]];
     
     TBRestConfiguration *restConfiguration = [[TBRestConfiguration alloc] init];
     restConfiguration.appkey = [[EMASService shareInstance] appkey];
     restConfiguration.appVersion = [[EMASService shareInstance] getAppVersion];
     restConfiguration.channel = [[EMASService shareInstance] ChannelID];
     restConfiguration.usernick = @"emas-ha";
-    restConfiguration.dataUploadHost = [[EMASService shareInstance] HAReportURL];
+    restConfiguration.dataUploadHost = [NSString stringWithFormat:@"%@://%@/upload", kHTTPSProtocol, [[EMASService shareInstance] HAUniversalHost]];
     [[TBRestSendService shareInstance] configBasicParamWithTBConfiguration:restConfiguration];
 }
 

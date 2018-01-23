@@ -77,14 +77,9 @@
     return [services objectForKey:@"OSSBucketName"];
 }
 
-- (NSString *)HAReportURL
+- (NSString *)HAUniversalHost
 {
-    return [services objectForKey:@"HAReportURL"];
-}
-
-- (NSString *)HARemoteDebugURL
-{
-    return [services objectForKey:@"HARemoteDebugURL"];
+    return [services objectForKey:@"HAUniversalHost"];
 }
 
 - (NSString *)HATimestampURL
