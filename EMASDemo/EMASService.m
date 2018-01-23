@@ -82,9 +82,9 @@
     return [services objectForKey:@"HAUniversalHost"];
 }
 
-- (NSString *)HATimestampURL
+- (NSString *)HATimestampHost
 {
-    return [services objectForKey:@"HATimestampURL"];
+    return [services objectForKey:@"HATimestampHost"];
 }
 
 @end

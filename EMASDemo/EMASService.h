@@ -21,6 +21,6 @@
 - (NSString *)packageZipPrefixURL;
 - (NSString *)OSSBucketName;
 - (NSString *)HAUniversalHost;
-- (NSString *)HATimestampURL;
+- (NSString *)HATimestampHost;
 
 @end

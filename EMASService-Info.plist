@@ -18,7 +18,7 @@
 	<string>emas-ha-remote-log-poc</string>
 	<key>HAUniversalHost</key>
 	<string>emaspoc-adash.emas-ha.cn</string>
-	<key>HATimestampURL</key>
-	<string>https://acs.m.taobao.com/gw/mtop.common.getTimestamp/*</string>
+	<key>HATimestampHost</key>
+	<string>acs.m.taobao.com</string>
 </dict>
 </plist>
