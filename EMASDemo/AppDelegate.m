@@ -120,7 +120,7 @@
     // UT初始化部分
     [[UTAnalytics getInstance] turnOffCrashHandler];
     [[UTAnalytics getInstance] turnOnDebug]; // 打开调试日志
-    [[UTAnalytics getInstance] setTimestampUrl:[NSString stringWithFormat:@"%@://%@/gw/mtop.common.getTimestamp/*", kHTTPSProtocol, [[EMASService shareInstance] HATimestampHost]]];
+    [[UTAnalytics getInstance] setTimestampHost:[[EMASService shareInstance] HATimestampHost]];
     [[UTAnalytics getInstance] setAppKey:[[EMASService shareInstance] appkey] secret:[[EMASService shareInstance] appSecret]];
     [[UTAnalytics getInstance] setChannel:[[EMASService shareInstance] ChannelID]];
     [[UTAnalytics getInstance] setAppVersion:[[EMASService shareInstance] getAppVersion]];
@@ -161,14 +161,14 @@
                          plugins:nil
                             nick:@"emas-ha"];
     [AliHAAdapter configOSS:[[EMASService shareInstance] OSSBucketName]];
-    [AliHAAdapter configRemoteDebugURL:[NSString stringWithFormat:@"%@://%@", kHTTPSProtocol, [[EMASService shareInstance] HAUniversalHost]]];
-    
+    [AliHAAdapter configRemoteDebugHost:[[EMASService shareInstance] HAUniversalHost] scheme:kHTTPSProtocol];
+
     TBRestConfiguration *restConfiguration = [[TBRestConfiguration alloc] init];
     restConfiguration.appkey = [[EMASService shareInstance] appkey];
     restConfiguration.appVersion = [[EMASService shareInstance] getAppVersion];
     restConfiguration.channel = [[EMASService shareInstance] ChannelID];
     restConfiguration.usernick = @"emas-ha";
-    restConfiguration.dataUploadHost = [NSString stringWithFormat:@"%@://%@/upload", kHTTPSProtocol, [[EMASService shareInstance] HAUniversalHost]];
+    restConfiguration.dataUploadHost = [[EMASService shareInstance] HAUniversalHost];
     [[TBRestSendService shareInstance] configBasicParamWithTBConfiguration:restConfiguration];
 }
 
