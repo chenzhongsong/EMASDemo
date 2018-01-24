@@ -28,7 +28,7 @@ platform:ios, '8.0'
     
     # --高可用
     pod  'AliHAAdapter4poc',  '1.0.1.9' # 接入层
-    pod  'UserTrack',  '6.3.5.100002-poc'
+    pod  'UserTrack',  '6.3.5.100003-poc'
  
     # --网关
     pod 'MtopSDK', '10.0.0'
