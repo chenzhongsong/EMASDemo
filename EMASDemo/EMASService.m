@@ -57,6 +57,11 @@
     return [services objectForKey:@"ACCSDomain"];
 }
 
+- (NSString *)ACCSServiceID
+{
+    return [services objectForKey:@"ACCSServiceID"];
+}
+
 - (NSString *)MTOPDomain
 {
     return [services objectForKey:@"MTOPDomain"];

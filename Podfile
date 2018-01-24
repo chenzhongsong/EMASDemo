@@ -27,7 +27,7 @@ platform:ios, '8.0'
     pod 'SDWebImage', '3.7.5'
     
     # --高可用
-    pod  'AliHAAdapter4poc',  '1.0.1.9' # 接入层
+    pod  'AliHAAdapter4poc',  '1.0.1.10' # 接入层
     pod  'UserTrack',  '6.3.5.100003-poc'
  
     # --网关

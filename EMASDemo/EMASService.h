@@ -16,6 +16,7 @@
 - (NSString *)appSecret;
 - (NSString *)getAppVersion;
 - (NSString *)ACCSDomain;
+- (NSString *)ACCSServiceID;
 - (NSString *)MTOPDomain;
 - (NSString *)ChannelID;
 - (NSString *)packageZipPrefixURL;

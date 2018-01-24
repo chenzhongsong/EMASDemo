@@ -8,6 +8,8 @@
 	<string>ddc1f5c8b69da5e875a04e3278203fe2</string>
 	<key>ACCSDomain</key>
 	<string>emaspoc-acs.emas-ha.cn</string>
+	<key>ACCSServiceID</key>
+	<string>emas-ha</string>
 	<key>MTOPDomain</key>
 	<string>emaspoc-aserver.emas-ha.cn</string>
 	<key>ChannelID</key>
