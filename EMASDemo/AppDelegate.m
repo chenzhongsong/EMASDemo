@@ -9,36 +9,37 @@
 #import "AppDelegate.h"
 
 // --weex头文件
+#import <MtopSDK/MtopSDK.h>
+#import <MtopCore/MtopService.h>
 #import <WeexSDK/WXAppConfiguration.h>
 #import <WeexSDK/WXSDKEngine.h>
 #import <WeexSDK/WXLog.h>
-// --weex头文件
-#import <MtopSDK/MtopSDK.h>
-#import <MtopCore/MtopService.h>
+#import <ZCache/ZCache.h>
 
-#import <AliHAAdapter4poc/AliHAAdapter.h>
-#import <TRemoteDebugger/TRDManagerService.h>
 
+// --高可用头文件
 #import <UT/UTAnalytics.h>
 #import <NetworkSDK/NetworkCore/NWNetworkConfiguration.h>
 #import <NetworkSDK/NetworkCore/NetworkDemote.h>
 #import <NetworkSDK/NetworkCore/NWuserLoger.h>
-#import <NetworkSDK/NetworkCore/NWUserPolicy.h>
-
 #import <TBAccsSDK/TBAccsManager.h>
+#import <AliHAAdapter4poc/AliHAAdapter.h>
+#import <TRemoteDebugger/TRDManagerService.h>
+#import <TBRest/TBRestSendService.h>
 #import <TBCrashReporter/TBCrashReporterMonitor.h>
 
-#import <ZCache/ZCache.h>
 
+// --weex默认实现
 #import "WXImgLoaderDefaultImpl.h"
 #import "WXEventModule.h"
 #import "WXResourceRequestHandlerDemoImpl.h"
 #import "WXAppMonitorHandler.h"
 #import "WXCrashAdapterHandler.h"
 #import "WXCrashReporter.h"
-#import <TBCrashReporter/TBCrashReporterMonitor.h>
+
+// --读取配置
 #import "EMASService.h"
-#import <TBRest/TBRestSendService.h>
+
 
 #define kHTTPSProtocol      @"https"
 

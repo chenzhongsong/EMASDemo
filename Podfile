@@ -24,23 +24,16 @@ platform:ios, '8.0'
     # --weex
     pod 'WeexSDK', '0.17.0.1-EMAS'
     pod 'ZCache', '10.0.0'
-    pod 'SDWebImage', '3.7.5'
-    
-    # --高可用
-    pod  'AliHAAdapter4poc',  '1.0.1.10' # 接入层
-    pod  'UserTrack',  '6.3.5.100003-poc'
- 
-    # --网关
     pod 'MtopSDK', '10.0.0'
     pod 'mtopext/MtopCore', '10.0.1'
-    pod 'NetworkSDK', '10.0.0'
-    pod 'TBAccsSDK', '10.0.0'
-    pod 'tnet', '10.0.0'
+    pod 'SDWebImage', '3.7.5'
     
     
-    
-    
-    
-    #pod 'swiftProject', :git => 'git@10.125.60.155:zhishui.lcq/swiftProject.git'
+    # --高可用
+    pod  'AliHAAdapter4poc', '1.0.1.10'
+    pod  'UserTrack',         '6.3.5.100003-poc'
+    pod  'NetworkSDK',       '10.0.0'
+    pod  'TBAccsSDK',        '10.0.0'
+    pod  'tnet',             '10.0.0'
     
 end
