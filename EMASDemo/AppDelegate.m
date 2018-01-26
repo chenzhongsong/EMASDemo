@@ -19,6 +19,7 @@
 
 // --高可用头文件
 #import <UT/UTAnalytics.h>
+#import <UT/AppMonitor.h>
 #import <NetworkSDK/NetworkCore/NWNetworkConfiguration.h>
 #import <NetworkSDK/NetworkCore/NetworkDemote.h>
 #import <NetworkSDK/NetworkCore/NWuserLoger.h>
@@ -125,6 +126,7 @@
     [[UTAnalytics getInstance] setAppKey:[[EMASService shareInstance] appkey] secret:[[EMASService shareInstance] appSecret]];
     [[UTAnalytics getInstance] setChannel:[[EMASService shareInstance] ChannelID]];
     [[UTAnalytics getInstance] setAppVersion:[[EMASService shareInstance] getAppVersion]];
+    [AppMonitor disableSample];
     
     // 网络库初始化部分
     [NWNetworkConfiguration setEnvironment:release];
