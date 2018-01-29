@@ -2,8 +2,8 @@
 //  EMASService.m
 //  EMASDemo
 //
-//  Created by zhishui.lcq on 2018/1/15.
-//  Copyright © 2018年 zhishui.lcq. All rights reserved.
+//  Created by EMAS on 2018/1/15.
+//  Copyright © 2018年 EMAS. All rights reserved.
 //
 
 #import "EMASService.h"
