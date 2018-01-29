@@ -83,7 +83,7 @@
             break;
             case 5:
         {
-            cell.textLabel.text = @"JANK";
+            cell.textLabel.text = @"卡顿";
             cell.textLabel.textColor = [UIColor redColor];
         }
             break;
@@ -142,7 +142,9 @@
         }
             case 5:
         {
-            [NSThread sleepForTimeInterval:30];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [NSThread sleepForTimeInterval:30];
+            });
         }
             break;
             case 6:
