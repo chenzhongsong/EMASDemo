@@ -2,7 +2,7 @@
 //  WXResourceRequestHandlerDemoImpl.m
 //  WeexDemo
 //
-//  Created by chenyilong on 24/11/2017.
+//  Created by EMAS on 24/11/2017.
 //  Copyright © 2017 taobao. All rights reserved.
 //
 

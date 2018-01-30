@@ -2,8 +2,8 @@
 //  ViewController.m
 //  AlicloudHotFixTestApp
 //
-//  Created by junmo on 2017/9/12.
-//  Copyright © 2017年 junmo. All rights reserved.
+//  Created by EMAS on 2017/9/12.
+//  Copyright © 2017年 EMAS. All rights reserved.
 //
 
 #import <AlicloudHotFixDebugEmas/AlicloudHotFixDebugServiceEmas.h>
@@ -71,6 +71,7 @@ static NSCondition *_condition;
 - (void)hotfixSdkInit {
     hotfixService = [AlicloudHotFixServiceEmas sharedInstance];
     [hotfixService setLogEnabled:YES];
+    [hotfixService setServerURL: @"emaspoc-hotfix-gate.emas-ha.cn"];
     [hotfixService initWithAppId:[[EMASService shareInstance] appkey] appSecret:[[EMASService shareInstance] appSecret] callback:^(BOOL res, id data, NSError *error) {
         if (res) {
             NSLog(@"HotFix SDK init success.");
