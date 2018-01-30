@@ -126,7 +126,7 @@
     [[UTAnalytics getInstance] setAppKey:[[EMASService shareInstance] appkey] secret:[[EMASService shareInstance] appSecret]];
     [[UTAnalytics getInstance] setChannel:[[EMASService shareInstance] ChannelID]];
     [[UTAnalytics getInstance] setAppVersion:[[EMASService shareInstance] getAppVersion]];
-    [AppMonitor disableSample];
+    [AppMonitor disableSample]; // 调试使用，上报不采样，建议正式发布版本不要这么做
     
     // 网络库初始化部分
     [NWNetworkConfiguration setEnvironment:release];
