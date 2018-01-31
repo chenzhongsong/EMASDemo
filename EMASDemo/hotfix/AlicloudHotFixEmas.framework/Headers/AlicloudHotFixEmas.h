@@ -6,6 +6,6 @@
 //  Copyright © 2017年 junmo. All rights reserved.
 //
 
-#define HOTFIX_IOS_SDK_VERSION  @"1.0.3"
+#define HOTFIX_IOS_SDK_VERSION  @"1.0.6"
 
 #import <AlicloudHotFixEmas/AlicloudHotFixServiceEmas.h>

@@ -11,8 +11,8 @@ target 'EMASDemo' do
 
 platform:ios, '8.0'
 
-    pod 'EMASFirstBundle', '1.3.2'
-    pod 'dependencyProject', '1.0.3'
+    pod 'EMASFirstBundle', '2.0.1'
+    pod 'dependencyProject', '2.0.2'
     
     # --热修复
     pod 'AlicloudLua', '5.1.4.2'
@@ -24,26 +24,16 @@ platform:ios, '8.0'
     # --weex
     pod 'WeexSDK', '0.17.0.1-EMAS'
     pod 'ZCache', '10.0.0'
+    pod 'MtopSDK', '10.0.0'
+    pod 'mtopext/MtopCore', '10.0.1'
     pod 'SDWebImage', '3.7.5'
     
+    
     # --高可用
-    pod  'AliHAAdapter4poc',  '1.0.1.8' # 接入层
-    pod  'TRemoteDebugger',   '2.0.1.12'
-    pod  'UserTrack', '6.3.5.47'
-    pod  'TBRest',  '2.0.0.1'
-    pod  'AliHAPerformanceMonitor',  '1.0.5.4'
- 
-    # --网关
-    pod 'MtopSDK', '10.0.0'
-    pod 'mtopext/MtopCore', '10.0.0'
-    pod 'NetworkSDK', '10.0.0'
-    pod 'TBAccsSDK', '10.0.0'
-    pod 'tnet', '10.0.0'
-    
-    
-    
-    
-    
-    #pod 'swiftProject', :git => 'git@10.125.60.155:zhishui.lcq/swiftProject.git'
+    pod  'AliHAAdapter4poc',   '10.0.0.1'
+    pod  'UserTrack',     '6.3.5.100005-poc'
+    pod  'NetworkSDK',       '10.0.0'
+    pod  'TBAccsSDK',        '10.0.0'
+    pod  'tnet',             '10.0.0'
     
 end

@@ -58,6 +58,11 @@ typedef void (^HotFixCallbackHandler)(BOOL res, id data, NSError *error);
  */
 - (void)cleanPatch;
 
+/**
+ 设置服务地址
+ */
+- (void)setServerURL:(NSString *)url;
+
 @end
 
 #endif /* AlicloudHotFixServiceEmas_h */

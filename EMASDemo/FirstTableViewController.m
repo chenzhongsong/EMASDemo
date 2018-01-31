@@ -2,8 +2,8 @@
 //  FirstTableViewController.m
 //  EMASDemo
 //
-//  Created by zhishui.lcq on 2017/12/8.
-//  Copyright © 2017年 zhishui.lcq. All rights reserved.
+//  Created by EMAS on 2017/12/8.
+//  Copyright © 2017年 EMAS. All rights reserved.
 //
 
 #import "FirstTableViewController.h"
@@ -111,7 +111,7 @@
         }
         case 3:
         {
-            NSString *content = [NSString stringWithFormat:@"appkey=%@\r\n appsecret=%@\r\n accs域名=%@\r\n mtop域名=%@\r\n ZCachepackageZipPrefix=%@\r\n ossBucketName=%@\r\n 渠道ID=%@\r\n 设备ID=%@", [[EMASService shareInstance] appkey],[[EMASService shareInstance] appSecret], [[EMASService shareInstance] ACCSDomain], [[EMASService shareInstance] MTOPDomain], [[EMASService shareInstance] packageZipPrefixURL], [[EMASService shareInstance] OSSBucketName], [[EMASService shareInstance] ChannelID], [self getUTDid]];
+            NSString *content = [NSString stringWithFormat:@"appkey=%@\r\n appsecret=%@\r\n accs域名=%@\r\n mtop域名=%@\r\n ZCachepackageZipPrefix=%@\r\n ossBucketName=%@\r\n 高可用上报地址=%@\r\n 渠道ID=%@\r\n 设备ID=%@\r\n 版本号=%@\r\n", [[EMASService shareInstance] appkey],[[EMASService shareInstance] appSecret], [[EMASService shareInstance] ACCSDomain], [[EMASService shareInstance] MTOPDomain], [[EMASService shareInstance] packageZipPrefixURL], [[EMASService shareInstance] OSSBucketName], [[EMASService shareInstance] HAUniversalHost], [[EMASService shareInstance] ChannelID], [self getUTDid], [[EMASService shareInstance] getAppVersion]];
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"应用信息"
                                                                 message:content
                                                                delegate:nil

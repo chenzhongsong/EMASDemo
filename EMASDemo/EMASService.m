@@ -2,8 +2,8 @@
 //  EMASService.m
 //  EMASDemo
 //
-//  Created by zhishui.lcq on 2018/1/15.
-//  Copyright © 2018年 zhishui.lcq. All rights reserved.
+//  Created by EMAS on 2018/1/15.
+//  Copyright © 2018年 EMAS. All rights reserved.
 //
 
 #import "EMASService.h"
@@ -42,9 +42,24 @@
     return [services objectForKey:@"AppSecret"];
 }
 
+- (NSString *)getAppVersion
+{
+    NSDictionary *appinfo = [[NSBundle mainBundle] infoDictionary];
+    NSString *version = [appinfo objectForKey:@"CFBundleShortVersionString"];
+    if (!version) {
+        version = @"10.0.0";
+    }
+    return version;
+}
+
 - (NSString *)ACCSDomain
 {
     return [services objectForKey:@"ACCSDomain"];
+}
+
+- (NSString *)ACCSServiceID
+{
+    return [services objectForKey:@"ACCSServiceID"];
 }
 
 - (NSString *)MTOPDomain
@@ -67,9 +82,14 @@
     return [services objectForKey:@"OSSBucketName"];
 }
 
-- (NSString *)HAReportURL
+- (NSString *)HAUniversalHost
 {
-    return [services objectForKey:@"HAReportURL"];
+    return [services objectForKey:@"HAUniversalHost"];
+}
+
+- (NSString *)HATimestampHost
+{
+    return [services objectForKey:@"HATimestampHost"];
 }
 
 @end

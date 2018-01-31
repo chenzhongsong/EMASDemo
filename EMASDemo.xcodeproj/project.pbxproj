@@ -13,7 +13,6 @@
 		7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6260E81FDA8C8400E856CB /* arp.framework */; };
 		7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */; };
 		7D8394A91FDB902900EBB60F /* fix.lua in Resources */ = {isa = PBXBuildFile; fileRef = 7D8394A81FDB902900EBB60F /* fix.lua */; };
-		7DF2AE9D1FF127E400AC670B /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DF2AE9C1FF127E400AC670B /* config.plist */; };
 		8A69B607200C8E5F0073756D /* EMASService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* EMASService-Info.plist */; };
 		8A69B60A200C8F980073756D /* EMASService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69B609200C8F980073756D /* EMASService.m */; };
 		8AA1174D1FF5E8FD004D4D0A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA1174B1FF5E8FD004D4D0A /* Interface.storyboard */; };
@@ -118,7 +117,6 @@
 		7D6260E81FDA8C8400E856CB /* arp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = arp.framework; sourceTree = "<group>"; };
 		7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudHotFixEmas.framework; sourceTree = "<group>"; };
 		7D8394A81FDB902900EBB60F /* fix.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fix.lua; sourceTree = "<group>"; };
-		7DF2AE9C1FF127E400AC670B /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = config.plist; path = AlicloudHotFixEmas.framework/config.plist; sourceTree = "<group>"; };
 		8A69B606200C8E5F0073756D /* EMASService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EMASService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8A69B608200C8F980073756D /* EMASService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASService.h; sourceTree = "<group>"; };
 		8A69B609200C8F980073756D /* EMASService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASService.m; sourceTree = "<group>"; };
@@ -252,7 +250,6 @@
 		7D6260E11FDA8C5900E856CB /* hotfix */ = {
 			isa = PBXGroup;
 			children = (
-				7DF2AE9C1FF127E400AC670B /* config.plist */,
 				7D8394A81FDB902900EBB60F /* fix.lua */,
 				7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */,
 				7D6260E81FDA8C8400E856CB /* arp.framework */,
@@ -622,7 +619,6 @@
 				9A09D7961FF27A6200585632 /* index.js in Resources */,
 				8ADA95491FD9309400C0EF49 /* Main.storyboard in Resources */,
 				8A69B607200C8E5F0073756D /* EMASService-Info.plist in Resources */,
-				7DF2AE9D1FF127E400AC670B /* config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,7 +869,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "EMASWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.EMASDemo.beta.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -892,7 +888,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "EMASWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.EMASDemo.beta.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -911,7 +907,7 @@
 				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = EMASWatch_Extension;
 				INFOPLIST_FILE = EMASWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.EMASDemo.beta.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -930,7 +926,7 @@
 				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = EMASWatch_Extension;
 				INFOPLIST_FILE = EMASWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.EMASDemo.beta.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -1061,7 +1057,7 @@
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.EMASDemo.beta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1086,7 +1082,7 @@
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.EMASDemo.beta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

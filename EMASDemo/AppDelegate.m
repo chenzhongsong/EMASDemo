@@ -2,42 +2,47 @@
 //  AppDelegate.m
 //  EMASDemo
 //
-//  Created by zhishui.lcq on 2017/12/7.
-//  Copyright © 2017年 zhishui.lcq. All rights reserved.
+//  Created by EMAS on 2017/12/7.
+//  Copyright © 2017年 EMAS. All rights reserved.
 //
 
 #import "AppDelegate.h"
 
 // --weex头文件
+#import <MtopSDK/MtopSDK.h>
+#import <MtopCore/MtopService.h>
 #import <WeexSDK/WXAppConfiguration.h>
 #import <WeexSDK/WXSDKEngine.h>
 #import <WeexSDK/WXLog.h>
-// --weex头文件
-#import <MtopSDK/MtopSDK.h>
-#import <MtopCore/MtopService.h>
+#import <ZCache/ZCache.h>
 
-#import <AliHAAdapter4poc/AliHAAdapter.h>
-#import <TRemoteDebugger/TRDManagerService.h>
 
+// --高可用头文件
 #import <UT/UTAnalytics.h>
+#import <UT/AppMonitor.h>
 #import <NetworkSDK/NetworkCore/NWNetworkConfiguration.h>
 #import <NetworkSDK/NetworkCore/NetworkDemote.h>
 #import <NetworkSDK/NetworkCore/NWuserLoger.h>
-#import <NetworkSDK/NetworkCore/NWUserPolicy.h>
-
 #import <TBAccsSDK/TBAccsManager.h>
+#import <AliHAAdapter4poc/AliHAAdapter.h>
+#import <TRemoteDebugger/TRDManagerService.h>
+#import <TBRest/TBRestSendService.h>
 #import <TBCrashReporter/TBCrashReporterMonitor.h>
 
-#import <ZCache/ZCache.h>
 
+// --weex默认实现
 #import "WXImgLoaderDefaultImpl.h"
 #import "WXEventModule.h"
 #import "WXResourceRequestHandlerDemoImpl.h"
 #import "WXAppMonitorHandler.h"
 #import "WXCrashAdapterHandler.h"
 #import "WXCrashReporter.h"
-#import <TBCrashReporter/TBCrashReporterMonitor.h>
+
+// --读取配置
 #import "EMASService.h"
+
+
+#define kHTTPSProtocol      @"https"
 
 @interface AppDelegate ()
 @end
@@ -64,7 +69,7 @@
 - (void)initWeexConfig
 {
     // MTOP初始化部分
-    TBSDKConfiguration *config = [TBSDKConfiguration shareInstanceDisableDeviceID:YES];
+    TBSDKConfiguration *config = [TBSDKConfiguration shareInstanceDisableDeviceID:YES andSwitchOffServerTime:YES];
     config.environment = TBSDKEnvironmentRelease;
     config.safeSecret = NO;
     config.appKey = [[EMASService shareInstance] appkey];
@@ -77,7 +82,7 @@
     //business configuration
     [WXAppConfiguration setAppGroup:@"TestApp"];
     [WXAppConfiguration setAppName:@"EMASDemo"];
-    [WXAppConfiguration setAppVersion:@"1.0.0"];
+    [WXAppConfiguration setAppVersion:[[EMASService shareInstance] getAppVersion]];
     
     //init sdk environment
     [WXSDKEngine initSDKEnvironment];
@@ -117,7 +122,11 @@
     // UT初始化部分
     [[UTAnalytics getInstance] turnOffCrashHandler];
     [[UTAnalytics getInstance] turnOnDebug]; // 打开调试日志
+    [[UTAnalytics getInstance] setTimestampHost:[[EMASService shareInstance] HATimestampHost] scheme:kHTTPSProtocol];
     [[UTAnalytics getInstance] setAppKey:[[EMASService shareInstance] appkey] secret:[[EMASService shareInstance] appSecret]];
+    [[UTAnalytics getInstance] setChannel:[[EMASService shareInstance] ChannelID]];
+    [[UTAnalytics getInstance] setAppVersion:[[EMASService shareInstance] getAppVersion]];
+    [AppMonitor disableSample]; // 调试使用，上报不采样，建议正式发布版本不要这么做
     
     // 网络库初始化部分
     [NWNetworkConfiguration setEnvironment:release];
@@ -150,12 +159,23 @@
     
     // 高可用初始化部分
     [AliHAAdapter initWithAppKey:[[EMASService shareInstance] appkey]
-                      appVersion:@"1.0.0"
+                      appVersion:[[EMASService shareInstance] getAppVersion]
                          channel:[[EMASService shareInstance] ChannelID]
                          plugins:nil
                             nick:@"emas-ha"];
     [AliHAAdapter configOSS:[[EMASService shareInstance] OSSBucketName]];
+    // [AliHAAdapter setupAccsChannel:[[EMASService shareInstance] ACCSDomain] serviceId:[[EMASService shareInstance] ACCSServiceID]];
+    [AliHAAdapter setupRemoteDebugRPCChannel:[[EMASService shareInstance] HAUniversalHost] scheme:kHTTPSProtocol];
+
+    TBRestConfiguration *restConfiguration = [[TBRestConfiguration alloc] init];
+    restConfiguration.appkey = [[EMASService shareInstance] appkey];
+    restConfiguration.appVersion = [[EMASService shareInstance] getAppVersion];
+    restConfiguration.channel = [[EMASService shareInstance] ChannelID];
+    restConfiguration.usernick = @"emas-ha";
+    restConfiguration.dataUploadHost = [[EMASService shareInstance] HAUniversalHost];
+    [[TBRestSendService shareInstance] configBasicParamWithTBConfiguration:restConfiguration];
 }
+
 
 #pragma mark -
 #pragma mark app生命周期

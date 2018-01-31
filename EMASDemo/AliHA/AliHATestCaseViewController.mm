@@ -2,11 +2,12 @@
 //  AliHATestCaseViewControllerTableViewController.m
 //  EMASDemo
 //
-//  Created by hansong.lhs on 2017/12/26.
-//  Copyright © 2017年 zhishui.lcq. All rights reserved.
+//  Created by EMAS on 2017/12/26.
+//  Copyright © 2017年 EMAS. All rights reserved.
 //
 
 #import "AliHATestCaseViewController.h"
+#import <AliHACore/AliHA.h>
 #import <TRemoteDebugger/TRDManagerService.h>
 #import <TRemoteDebugger/TBClientDrivingPushTLogExec.h>
 
@@ -38,7 +39,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -78,6 +79,18 @@
         {
             cell.textLabel.text = @"pull task";
             cell.textLabel.textColor = [UIColor blueColor];
+        }
+            break;
+            case 5:
+        {
+            cell.textLabel.text = @"卡顿";
+            cell.textLabel.textColor = [UIColor redColor];
+        }
+            break;
+            case 6:
+        {
+            cell.textLabel.text = @"upload events";
+            cell.textLabel.textColor = [UIColor redColor];
         }
             break;
         default:
@@ -127,6 +140,21 @@
             }];
             break;
         }
+            case 5:
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [NSThread sleepForTimeInterval:30];
+            });
+        }
+            break;
+            case 6:
+        {
+            AliHA *haInstance = [AliHA shareInstance];
+            if ([haInstance respondsToSelector:NSSelectorFromString(@"scanExistingTraceFiles")]) {
+                [haInstance performSelector:NSSelectorFromString(@"scanExistingTraceFiles")];
+            }
+        }
+            break;
         default:
             break;
             

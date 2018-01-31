@@ -2,7 +2,7 @@
 //  WXCrashAdapterHandler.h
 //  Core
 //
-//  Created by zechang.xzc on 2017/11/16.
+//  Created by EMAS on 2017/11/16.
 //  Copyright © 2017年 taobao. All rights reserved.
 //
 

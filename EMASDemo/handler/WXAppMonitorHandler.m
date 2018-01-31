@@ -68,10 +68,8 @@
     CGFloat fsRenderTime = [[args objectForKey:FSRENDERTIME] floatValue];
     NSUInteger componentCount = [[args objectForKey:COMPONENTCOUNT] integerValue];
     
-    //fsRenderTime 为-1，代表渲染未完成，无性能数据上报。
-    if (fsRenderTime < 0) {
-        return;
-    }
+    //fsRenderTime为-1，代表渲染失败（降级、JSError白屏），性能统计不上报。
+    if(fsRenderTime < 0) return;
     
     AppMonitorTable * table = [AppMonitorTable monitorForScheme:@"weex" tableName:@"load"];
     
@@ -110,7 +108,7 @@
                                    NETWORKTYPE,
                                    CACHETYPE
                                    ]
-                       aggregate:NO];
+                       aggregate:YES];
     
     // step3: add Constraint; 约束是对于 行（指标）来说的
     [table addConstraintWithName:JSLIBSIZE min:0 max:2000 defaultValue:0];
