@@ -1,4 +1,4 @@
-source 'http://47.96.131.244:5000/root/emas-specs.git' #
+source 'git@47.96.131.244:root/emas-specs.git'
 
 
 source 'git@github.com:CocoaPods/Specs.git'
