@@ -12,7 +12,7 @@ target 'EMASDemo' do
 
 platform:ios, '8.0'
 
-    pod 'EMASFirstBundle', '2.0.1'
+    pod 'EMASFirstBundle', '1.2.4.12'
     pod 'dependencyProject', '2.0.2'
     
     # --热修复
