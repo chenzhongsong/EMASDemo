@@ -1,4 +1,5 @@
-source 'git@47.96.131.244:root/emas-specs.git'
+source 'git@47.96.131.244:root/emas-specs.git' #中心
+source 'git@47.100.113.203:test/podSpec.git' #飞天仓库
 
 
 source 'git@github.com:CocoaPods/Specs.git'

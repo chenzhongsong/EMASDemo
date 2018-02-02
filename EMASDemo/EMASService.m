@@ -28,6 +28,8 @@
     {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"EMASService-Info" ofType:@"plist"];
         services = [NSDictionary dictionaryWithContentsOfFile:path];
+        
+        
     }
     return self;
 }
