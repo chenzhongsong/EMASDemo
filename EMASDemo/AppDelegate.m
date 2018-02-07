@@ -59,6 +59,8 @@
     
     [self initWeexConfig];
     
+    
+    
     return YES;
 }
 
