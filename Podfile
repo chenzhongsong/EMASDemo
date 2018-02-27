@@ -30,7 +30,7 @@ platform:ios, '8.0'
     
     
     # --高可用
-    pod  'AliHAAdapter4poc',   '10.0.0.1'
+    pod  'AliHAAdapter4poc',   '10.0.3'
     pod  'UserTrack',     '6.3.5.100005-poc'
     pod  'NetworkSDK',       '10.0.0'
     pod  'TBAccsSDK',        '10.0.0'

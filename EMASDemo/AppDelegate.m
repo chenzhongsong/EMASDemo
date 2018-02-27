@@ -166,7 +166,7 @@
                          plugins:nil
                             nick:@"emas-ha"];
     [AliHAAdapter configOSS:[[EMASService shareInstance] OSSBucketName]];
-    // [AliHAAdapter setupAccsChannel:[[EMASService shareInstance] ACCSDomain] serviceId:[[EMASService shareInstance] ACCSServiceID]];
+    [AliHAAdapter setupAccsChannel:[[EMASService shareInstance] ACCSDomain] serviceId:[[EMASService shareInstance] ACCSServiceID]];
     [AliHAAdapter setupRemoteDebugRPCChannel:[[EMASService shareInstance] HAUniversalHost] scheme:kHTTPSProtocol];
 
     TBRestConfiguration *restConfiguration = [[TBRestConfiguration alloc] init];
