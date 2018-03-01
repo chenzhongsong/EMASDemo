@@ -164,7 +164,7 @@
                       appVersion:[[EMASService shareInstance] getAppVersion]
                          channel:[[EMASService shareInstance] ChannelID]
                          plugins:nil
-                            nick:@"emas-ha"];
+                            nick:@"emas-ha"]; // nick根据app实际情况填写
     [AliHAAdapter configOSS:[[EMASService shareInstance] OSSBucketName]];
     [AliHAAdapter setupAccsChannel:[[EMASService shareInstance] ACCSDomain] serviceId:[[EMASService shareInstance] ACCSServiceID]];
     [AliHAAdapter setupRemoteDebugRPCChannel:[[EMASService shareInstance] HAUniversalHost] scheme:kHTTPSProtocol];
@@ -173,7 +173,7 @@
     restConfiguration.appkey = [[EMASService shareInstance] appkey];
     restConfiguration.appVersion = [[EMASService shareInstance] getAppVersion];
     restConfiguration.channel = [[EMASService shareInstance] ChannelID];
-    restConfiguration.usernick = @"emas-ha";
+    restConfiguration.usernick = @"emas-ha"; // nick根据app实际情况填写
     restConfiguration.dataUploadHost = [[EMASService shareInstance] HAUniversalHost];
     [[TBRestSendService shareInstance] configBasicParamWithTBConfiguration:restConfiguration];
 }
