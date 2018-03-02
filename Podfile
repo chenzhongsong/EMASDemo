@@ -26,7 +26,7 @@ platform:ios, '8.0'
     pod 'WeexSDK', '0.17.0.1-EMAS'
     pod 'ZCache', '10.0.3'
     pod 'MtopSDK', '10.0.3'
-    pod 'mtopext/MtopCore', '10.0.1'
+    pod 'mtopext/MtopCore', '10.0.3'
     pod 'SDWebImage', '3.7.5'
     
     
