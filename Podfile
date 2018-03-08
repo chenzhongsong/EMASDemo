@@ -36,5 +36,9 @@ platform:ios, '8.0'
     pod  'NetworkSDK',       '10.0.3'
     pod  'TBAccsSDK',        '10.0.3'
     pod  'tnet',             '10.0.3'
+
+	# -- dy
+	pod 'DynamicConfiguration', '10.0.3'
+	pod 'DynamicConfigurationAdaptor', '10.0.3'
     
 end

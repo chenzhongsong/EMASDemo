@@ -41,6 +41,9 @@
 // --读取配置
 #import "EMASService.h"
 
+// --dy 逻辑
+#import <DynamicConfigurationAdaptor/DynamicConfigurationAdaptorManager.h>
+
 
 #define kHTTPSProtocol      @"https"
 
@@ -59,6 +62,7 @@
     
     [self initWeexConfig];
     
+    [self initDyConfig];
     
     
     return YES;
@@ -178,6 +182,11 @@
     [[TBRestSendService shareInstance] configBasicParamWithTBConfiguration:restConfiguration];
 }
 
+// -- dy 初始化
+- (void)initDyConfig {
+    NSString * logicIdentifier = [NSString stringWithFormat:@"%@@%@",[[EMASService shareInstance] appkey],[self isDeviceIphone]?@"iPhone":@"iPad"];
+    [[DynamicConfigurationAdaptorManager sharedInstance] setUpWithMaxUpateTimesPerDay:10 AndIdentifier:logicIdentifier];
+}
 
 #pragma mark -
 #pragma mark app生命周期

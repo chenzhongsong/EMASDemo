@@ -16,6 +16,8 @@
 #import "DemoDefine.h"
 #import "WXAppMonitorHandler.h"
 #import "WXRecorder.h"
+#import <DynamicConfiguration/DynamicConfigurationManager.h>
+
 
 @interface WXDemoViewController () <UIScrollViewDelegate, UIWebViewDelegate>
 @property (nonatomic, strong) WXSDKInstance *instance;
@@ -130,6 +132,9 @@
             });
         }
         #endif
+        if ([error.localizedDescription containsString:@"404"]) {
+            [[DynamicConfigurationManager sharedInstance] deleteConfigurationForGoalUrl:weakSelf.resourceUrlString];
+        }
     };
     
     _instance.renderFinish = ^(UIView *view) {
@@ -268,6 +273,13 @@
 #pragma mark - notification
 - (void)notificationRefreshInstance:(NSNotification *)notification {
     [self refreshWeex];
+}
+
+#pragma mark - setter
+- (void) setUrl:(NSURL *)url {
+    self.resourceUrlString = url.absoluteString;
+    NSString * urlString = [[DynamicConfigurationManager sharedInstance] redirectUrl:[url absoluteString]];
+    _url = [NSURL URLWithString:urlString];
 }
 
 @end
