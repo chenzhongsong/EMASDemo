@@ -30,6 +30,8 @@
 
 @property (nonatomic, assign) CGFloat weexHeight;
 @property (nonatomic, weak) id<UIScrollViewDelegate> originalDelegate;
+@property (nonatomic,strong) NSString *resourceUrlString;
+
 
 @end
 
