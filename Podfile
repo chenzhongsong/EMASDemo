@@ -1,10 +1,5 @@
-source 'git@47.96.131.244:root/emas-specs.git'     #构建产物仓库
-source 'git@139.196.80.59:EMAS-iOS/emas-specs.git' #中心仓库
-
-
-source 'git@github.com:CocoaPods/Specs.git'
-source 'https://github.com/aliyun/aliyun-specs.git'
-
+source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs-thirdpart.git'     
+source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs.git'
 
 platform :ios
 
@@ -12,8 +7,8 @@ target 'EMASDemo' do
 
 platform:ios, '8.0'
 
-    pod 'EMASFirstBundle', '2.0.6'
-    pod 'dependencyProject', '1.1.4'
+    #pod 'EMASFirstBundle', '2.0.6'
+    #pod 'dependencyProject', '1.1.4'
     
     # --热修复
     pod 'AlicloudLua', '5.1.4.2'
