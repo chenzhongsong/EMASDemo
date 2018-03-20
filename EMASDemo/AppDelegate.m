@@ -41,6 +41,9 @@
 // --读取配置
 #import "EMASService.h"
 
+// --dy 逻辑
+#import <DynamicConfigurationAdaptor/DynamicConfigurationAdaptorManager.h>
+
 
 #define kHTTPSProtocol      @"https"
 
@@ -58,6 +61,9 @@
     [self initHAConfig];
     
     [self initWeexConfig];
+    
+    [self initDyConfig];
+    
     
     return YES;
 }
@@ -162,20 +168,25 @@
                       appVersion:[[EMASService shareInstance] getAppVersion]
                          channel:[[EMASService shareInstance] ChannelID]
                          plugins:nil
-                            nick:@"emas-ha"];
+                            nick:@"emas-ha"]; // nick根据app实际情况填写
     [AliHAAdapter configOSS:[[EMASService shareInstance] OSSBucketName]];
-    // [AliHAAdapter setupAccsChannel:[[EMASService shareInstance] ACCSDomain] serviceId:[[EMASService shareInstance] ACCSServiceID]];
+    [AliHAAdapter setupAccsChannel:[[EMASService shareInstance] ACCSDomain] serviceId:[[EMASService shareInstance] ACCSServiceID]];
     [AliHAAdapter setupRemoteDebugRPCChannel:[[EMASService shareInstance] HAUniversalHost] scheme:kHTTPSProtocol];
 
     TBRestConfiguration *restConfiguration = [[TBRestConfiguration alloc] init];
     restConfiguration.appkey = [[EMASService shareInstance] appkey];
     restConfiguration.appVersion = [[EMASService shareInstance] getAppVersion];
     restConfiguration.channel = [[EMASService shareInstance] ChannelID];
-    restConfiguration.usernick = @"emas-ha";
+    restConfiguration.usernick = @"emas-ha"; // nick根据app实际情况填写
     restConfiguration.dataUploadHost = [[EMASService shareInstance] HAUniversalHost];
     [[TBRestSendService shareInstance] configBasicParamWithTBConfiguration:restConfiguration];
 }
 
+// -- dy 初始化
+- (void)initDyConfig {
+    NSString * logicIdentifier = [NSString stringWithFormat:@"%@@%@",[[EMASService shareInstance] appkey],[self isDeviceIphone]?@"iPhone":@"iPad"];
+    [[DynamicConfigurationAdaptorManager sharedInstance] setUpWithMaxUpateTimesPerDay:10 AndIdentifier:logicIdentifier];
+}
 
 #pragma mark -
 #pragma mark app生命周期
@@ -207,6 +218,13 @@
 }
 
 
+#pragma mark - distinguish device
+- (BOOL) isDeviceIphone {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        return NO;
+    }
+    return YES;
+}
 
 @end
 
