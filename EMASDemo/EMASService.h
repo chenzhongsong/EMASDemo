@@ -16,12 +16,16 @@
 - (NSString *)appSecret;
 - (NSString *)getAppVersion;
 - (NSString *)ACCSDomain;
-- (NSString *)ACCSServiceID;
+- (NSDictionary *)IPStrategy;
+- (NSString *)HAServiceID;
 - (NSString *)MTOPDomain;
 - (NSString *)ChannelID;
-- (NSString *)packageZipPrefixURL;
-- (NSString *)OSSBucketName;
+- (NSString *)ZCacheURL;
+- (NSString *)HAOSSBucketName;
 - (NSString *)HAUniversalHost;
 - (NSString *)HATimestampHost;
+- (NSString *)HARSAPublicKey;
+- (NSString *)HotfixServerURL;
+- (BOOL)useHTTP;
 
 @end
