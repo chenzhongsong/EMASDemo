@@ -13,6 +13,8 @@
 		7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6260E81FDA8C8400E856CB /* arp.framework */; };
 		7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */; };
 		7D8394A91FDB902900EBB60F /* fix.lua in Resources */ = {isa = PBXBuildFile; fileRef = 7D8394A81FDB902900EBB60F /* fix.lua */; };
+		8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */; };
+		8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */; };
 		8A69B607200C8E5F0073756D /* EMASService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* EMASService-Info.plist */; };
 		8A69B60A200C8F980073756D /* EMASService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69B609200C8F980073756D /* EMASService.m */; };
 		8AA1174D1FF5E8FD004D4D0A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA1174B1FF5E8FD004D4D0A /* Interface.storyboard */; };
@@ -117,6 +119,10 @@
 		7D6260E81FDA8C8400E856CB /* arp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = arp.framework; sourceTree = "<group>"; };
 		7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudHotFixEmas.framework; sourceTree = "<group>"; };
 		7D8394A81FDB902900EBB60F /* fix.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fix.lua; sourceTree = "<group>"; };
+		8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigTableViewController.h; sourceTree = "<group>"; };
+		8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfigTableViewController.m; sourceTree = "<group>"; };
+		8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopVerifyTableViewController.h; sourceTree = "<group>"; };
+		8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtopVerifyTableViewController.m; sourceTree = "<group>"; };
 		8A69B606200C8E5F0073756D /* EMASService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EMASService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8A69B608200C8F980073756D /* EMASService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASService.h; sourceTree = "<group>"; };
 		8A69B609200C8F980073756D /* EMASService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASService.m; sourceTree = "<group>"; };
@@ -358,6 +364,10 @@
 				9A09D79B1FF27B5B00585632 /* handler */,
 				9A09D7971FF27B2300585632 /* module */,
 				9A09D7941FF27A6200585632 /* bundlejs */,
+				8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */,
+				8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */,
+				8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */,
+				8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */,
 			);
 			path = EMASDemo;
 			sourceTree = "<group>";
@@ -778,11 +788,13 @@
 				9A09D78C1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m in Sources */,
 				8ABD97DD1FF4F7C400469557 /* WXCrashAdapterHandler.m in Sources */,
 				9A09D79A1FF27B2400585632 /* WXEventModule.m in Sources */,
+				8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */,
 				7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */,
 				9A09D7A41FF356DA00585632 /* WXAppMonitorHandler.m in Sources */,
 				9A09D7891FF270D600585632 /* WXScannerVC.m in Sources */,
 				8ADA95511FD9309400C0EF49 /* main.m in Sources */,
 				9A09D78F1FF2719700585632 /* WXDemoViewController.m in Sources */,
+				8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */,
 				7D6260E61FDA8C5A00E856CB /* HFXTestClass.m in Sources */,
 				8A69B60A200C8F980073756D /* EMASService.m in Sources */,
 				8ADA95431FD9309400C0EF49 /* FirstViewController.m in Sources */,
