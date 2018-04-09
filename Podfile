@@ -20,15 +20,15 @@ platform:ios, '8.0'
     # --weex
     pod 'WeexSDK', '0.17.0.1-EMAS'
     pod 'ZCache', '10.0.3'
-    pod 'MtopSDK', '10.0.3'
-    pod 'mtopext/MtopCore', '10.0.3'
+    pod 'MtopSDK', '10.0.3.1'
+    pod 'mtopext/MtopCore', '10.0.3.1'
     pod 'SDWebImage', '3.7.5'
     
     
     # --高可用
-    pod  'AliHAAdapter4poc',   '10.0.3'
+    pod  'AliHAAdapter4poc',   '10.0.4'
     pod  'UserTrack',     '6.3.5.100005-poc'
-    pod  'NetworkSDK',       '10.0.3'
+    pod  'NetworkSDK',       '10.0.3.2'
     pod  'TBAccsSDK',        '10.0.3'
     pod  'tnet',             '10.0.3'
 

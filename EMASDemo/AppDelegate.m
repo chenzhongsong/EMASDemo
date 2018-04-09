@@ -25,6 +25,7 @@
 #import <NetworkSDK/NetworkCore/NWuserLoger.h>
 #import <TBAccsSDK/TBAccsManager.h>
 #import <AliHAAdapter4poc/AliHAAdapter.h>
+#import <AliHASecurity/AliHASecurity.h>
 #import <TRemoteDebugger/TRDManagerService.h>
 #import <TBRest/TBRestSendService.h>
 #import <TBCrashReporter/TBCrashReporterMonitor.h>
@@ -44,10 +45,77 @@
 // --dy 逻辑
 #import <DynamicConfigurationAdaptor/DynamicConfigurationAdaptorManager.h>
 
+@interface MyPolicyCenter : NSObject <NWPolicyDelegate>
+@end
 
-#define kHTTPSProtocol      @"https"
+@implementation MyPolicyCenter
+
+- (nullable NWPolicy *)queryPolicy:(nonnull NSString *)host
+                        withScheme:(nonnull NSString *)scheme
+                  withAcceleration:(BOOL)acceleration
+                  withSuccessAisle:(BOOL)success {
+    if ([host isEqualToString:[[EMASService shareInstance] ACCSDomain]] && acceleration==YES) {
+        
+        NSString *strategy = [[[EMASService shareInstance] IPStrategy] objectForKey:host];
+        NSArray *ipPort = [strategy componentsSeparatedByString:@":"];
+        if ([ipPort count] != 2)
+        {
+            return nil;
+        }
+        NSString *ip = [ipPort objectAtIndex:0];
+        NSString *port = [ipPort objectAtIndex:1];
+        NWAisle *aisle = [NWAisle new];
+        aisle.protocol = @"http2";
+        aisle.ip = ip;
+        aisle.port = [port intValue];
+        aisle.encrypt = YES;
+        aisle.auth = YES;
+        aisle.publickey = @"emas";
+        
+        NWPolicy *policy = [NWPolicy new];
+        policy.type = kNWAislePolicy;
+        policy.host = host;
+        policy.aisles = @[ aisle ];
+        
+        return policy;
+    }
+    
+    return nil;
+}
+
+- (nullable NSString *)queryScheme:(nonnull NSString *)host {
+    // 如果需要对该域名的所有请求的url的scheme进行修改，可以在这里进行
+    
+    // 所有 www.abc.com 的域名使用 https
+    if ([host isEqualToString:[[EMASService shareInstance] ACCSDomain]]) {
+        return @"https";
+    }
+    // 所有 www.xyz.com 的域名使用 http
+    if ([host isEqualToString:[[EMASService shareInstance] MTOPDomain]]) {
+        return @"http";
+    }
+    // 没有需求的直接返回nil
+    return nil;
+}
+
+- (nonnull NSString *)queryCname:(nonnull NSString *)host {
+    return host;
+}
+
+- (void)updateAisleStatus:(nonnull NWAisle *)aisle
+                 withHost:(NSString*)host
+               withStatus:(NWAisleStatus)status {
+    // do something
+}
+
+- (nullable NWPolicy *)queryPolicy:(nonnull NSString *)host {
+    return nil;
+}
+
+@end
 
 @interface AppDelegate ()
+@property(nonatomic,strong) MyPolicyCenter *policyCenter;
 @end
 
 @implementation AppDelegate
@@ -77,6 +145,10 @@
     // MTOP初始化部分
     TBSDKConfiguration *config = [TBSDKConfiguration shareInstanceDisableDeviceID:YES andSwitchOffServerTime:YES];
     config.environment = TBSDKEnvironmentRelease;
+    if ([[EMASService shareInstance] useHTTP])
+    {
+        config.enableHttps = NO;
+    }
     config.safeSecret = NO;
     config.appKey = [[EMASService shareInstance] appkey];
     config.appSecret = [[EMASService shareInstance] appSecret];
@@ -117,7 +189,7 @@
     [WXSDKEngine registerHandler:[WXEventModule new] withProtocol:@protocol(WXEventModuleProtocol)];
     
     // ZCache初始化部分
-    [ZCache defaultCommonConfig].packageZipPrefix = [[EMASService shareInstance] packageZipPrefixURL];
+    [ZCache defaultCommonConfig].packageZipPrefix = [[EMASService shareInstance] ZCacheURL];
     [ZCache setDebugMode:YES]; // 打开调试日志
     [ZCache setupWithMtop];
 }
@@ -125,10 +197,15 @@
 //-- 高可用
 - (void)initHAConfig
 {
+    NSString *scheme = @"https";
+    if ([[EMASService shareInstance] useHTTP])
+    {
+        scheme = @"http";
+    }
     // UT初始化部分
     [[UTAnalytics getInstance] turnOffCrashHandler];
     [[UTAnalytics getInstance] turnOnDebug]; // 打开调试日志
-    [[UTAnalytics getInstance] setTimestampHost:[[EMASService shareInstance] HATimestampHost] scheme:kHTTPSProtocol];
+    [[UTAnalytics getInstance] setTimestampHost:[[EMASService shareInstance] HATimestampHost] scheme:scheme];
     [[UTAnalytics getInstance] setAppKey:[[EMASService shareInstance] appkey] secret:[[EMASService shareInstance] appSecret]];
     [[UTAnalytics getInstance] setChannel:[[EMASService shareInstance] ChannelID]];
     [[UTAnalytics getInstance] setAppVersion:[[EMASService shareInstance] getAppVersion]];
@@ -143,6 +220,11 @@
     [configuration setIsEnableAMDC:NO];
     [NetworkDemote shareInstance].canInitWithRequest = NO;
     setNWLogLevel(NET_LOG_DEBUG); // 打开调试日志
+    if ([[[EMASService shareInstance] IPStrategy] count] > 0)
+    {
+        self.policyCenter =  [[MyPolicyCenter alloc] init];
+        [NWNetworkConfiguration shareInstance].policyDelegate = self.policyCenter;
+    }
     
     // ACCS初始化部分
     void tbAccsSDKSwitchLog(BOOL logCtr);
@@ -164,20 +246,30 @@
                               }];
     
     // 高可用初始化部分
+    // 如果需要重公钥，请一定要放到初始化前！！！
+    NSString *rasPublicKey = [[EMASService shareInstance] HARSAPublicKey];
+    if (rasPublicKey.length)
+    {
+        [[AliHASecurity sharedInstance] initWithRSAPublicKey:rasPublicKey];
+    }
     [AliHAAdapter initWithAppKey:[[EMASService shareInstance] appkey]
                       appVersion:[[EMASService shareInstance] getAppVersion]
                          channel:[[EMASService shareInstance] ChannelID]
                          plugins:nil
                             nick:@"emas-ha"]; // nick根据app实际情况填写
-    [AliHAAdapter configOSS:[[EMASService shareInstance] OSSBucketName]];
-    [AliHAAdapter setupAccsChannel:[[EMASService shareInstance] ACCSDomain] serviceId:[[EMASService shareInstance] ACCSServiceID]];
-    [AliHAAdapter setupRemoteDebugRPCChannel:[[EMASService shareInstance] HAUniversalHost] scheme:kHTTPSProtocol];
+    [AliHAAdapter configOSS:[[EMASService shareInstance] HAOSSBucketName]];
+    [AliHAAdapter setupAccsChannel:[[EMASService shareInstance] ACCSDomain] serviceId:[[EMASService shareInstance] HAServiceID]];
+    [AliHAAdapter setupRemoteDebugRPCChannel:[[EMASService shareInstance] HAUniversalHost] scheme:scheme];
 
     TBRestConfiguration *restConfiguration = [[TBRestConfiguration alloc] init];
     restConfiguration.appkey = [[EMASService shareInstance] appkey];
     restConfiguration.appVersion = [[EMASService shareInstance] getAppVersion];
     restConfiguration.channel = [[EMASService shareInstance] ChannelID];
     restConfiguration.usernick = @"emas-ha"; // nick根据app实际情况填写
+    if ([[EMASService shareInstance] useHTTP])
+    {
+        restConfiguration.dataUploadScheme = @"http";
+    }
     restConfiguration.dataUploadHost = [[EMASService shareInstance] HAUniversalHost];
     [[TBRestSendService shareInstance] configBasicParamWithTBConfiguration:restConfiguration];
 }

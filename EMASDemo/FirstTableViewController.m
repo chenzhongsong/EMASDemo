@@ -14,6 +14,8 @@
 #import "AliHATestCaseViewController.h"
 #import <objc/runtime.h>
 #import "EMASService.h"
+#import "AppConfigTableViewController.h"
+#import "MtopVerifyTableViewController.h"
 
 @interface FirstTableViewController ()
 
@@ -43,7 +45,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -52,25 +54,31 @@
     switch (indexPath.row) {
         case 0:
         {
-            cell.textLabel.text = @"Weex";
+            cell.textLabel.text = @"[重要] 应用配置信息检查";
             cell.textLabel.textColor = [UIColor redColor];
         }
         break;
         case 1:
         {
-            cell.textLabel.text = @"高可用";
-            cell.textLabel.textColor = [UIColor orangeColor];
+            cell.textLabel.text = @"MTOP";
+            cell.textLabel.textColor = [UIColor purpleColor];
         }
-        break;
+            break;
         case 2:
         {
-            cell.textLabel.text = @"热修复";
-            cell.textLabel.textColor = [UIColor blueColor];
+            cell.textLabel.text = @"Weex";
+            cell.textLabel.textColor = [UIColor orangeColor];
         }
         break;
         case 3:
         {
-            cell.textLabel.text = @"应用信息";
+            cell.textLabel.text = @"高可用";
+            cell.textLabel.textColor = [UIColor blueColor];
+        }
+        break;
+        case 4:
+        {
+            cell.textLabel.text = @"热修复";
             cell.textLabel.textColor = [UIColor greenColor];
         }
             break;
@@ -88,36 +96,35 @@
     switch (indexPath.row) {
             case 0:
         {
-            // 热修复demo
-            UIViewController *controller = [self demoController];
+            AppConfigTableViewController *controller = [AppConfigTableViewController new];
             [self.navigationController pushViewController:controller animated:YES];
-            
             break;
         }
         case 1:
+        {
+            MtopVerifyTableViewController *ctrl = [MtopVerifyTableViewController new];
+            [self.navigationController pushViewController:ctrl animated:YES];
+            return;
+        }
+        case 2:
+        {
+            UIViewController *controller = [self demoController];
+            [self.navigationController pushViewController:controller animated:YES];
+            break;
+        }
+        
+        case 3:
         {
             // AliHA
             AliHATestCaseViewController *controller = [[AliHATestCaseViewController alloc] initWithStyle:UITableViewStylePlain];
             [self.navigationController pushViewController:controller animated:YES];
             break;
+            
         }
-        
-        case 2:
+        case 4:
         {
-            // 热修复demo
             HFXViewController *controller = [HFXViewController new];
             [self.navigationController pushViewController:controller animated:YES];
-            break;
-        }
-        case 3:
-        {
-            NSString *content = [NSString stringWithFormat:@"appkey=%@\r\n appsecret=%@\r\n accs域名=%@\r\n mtop域名=%@\r\n ZCachepackageZipPrefix=%@\r\n ossBucketName=%@\r\n 高可用上报地址=%@\r\n 渠道ID=%@\r\n 设备ID=%@\r\n 版本号=%@\r\n", [[EMASService shareInstance] appkey],[[EMASService shareInstance] appSecret], [[EMASService shareInstance] ACCSDomain], [[EMASService shareInstance] MTOPDomain], [[EMASService shareInstance] packageZipPrefixURL], [[EMASService shareInstance] OSSBucketName], [[EMASService shareInstance] HAUniversalHost], [[EMASService shareInstance] ChannelID], [self getUTDid], [[EMASService shareInstance] getAppVersion]];
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"应用信息"
-                                                                message:content
-                                                               delegate:nil
-                                                      cancelButtonTitle:@"确定"
-                                                      otherButtonTitles:nil, nil];
-            [alertView show];
             break;
         }
 
@@ -128,17 +135,6 @@
             break;
         }
     }
-}
-
-- (NSString *)getUTDid
-{
-    id UTDevice$Class = objc_getClass("UTDevice");
-    if ((UTDevice$Class == nil) || ![UTDevice$Class respondsToSelector: @selector(utdid)]) {
-        return @"";
-    }
-    
-    NSString *utdid = [UTDevice$Class performSelector: @selector(utdid)];
-    return utdid;
 }
 
 - (UIViewController *)demoController

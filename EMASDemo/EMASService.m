@@ -59,9 +59,14 @@
     return [services objectForKey:@"ACCSDomain"];
 }
 
-- (NSString *)ACCSServiceID
+- (NSDictionary *)IPStrategy
 {
-    return [services objectForKey:@"ACCSServiceID"];
+    return [services objectForKey:@"IPStrategy"];
+}
+
+- (NSString *)HAServiceID
+{
+    return [services objectForKey:@"HAServiceID"];
 }
 
 - (NSString *)MTOPDomain
@@ -74,14 +79,14 @@
     return [services objectForKey:@"ChannelID"];
 }
 
-- (NSString *)packageZipPrefixURL
+- (NSString *)ZCacheURL
 {
-    return [services objectForKey:@"packageZipPrefixURL"];
+    return [services objectForKey:@"ZCacheURL"];
 }
 
-- (NSString *)OSSBucketName
+- (NSString *)HAOSSBucketName
 {
-    return [services objectForKey:@"OSSBucketName"];
+    return [services objectForKey:@"HAOSSBucketName"];
 }
 
 - (NSString *)HAUniversalHost
@@ -92,6 +97,21 @@
 - (NSString *)HATimestampHost
 {
     return [services objectForKey:@"HATimestampHost"];
+}
+
+- (NSString *)HARSAPublicKey
+{
+    return [services objectForKey:@"HARSAPublicKey"];
+}
+
+- (NSString *)HotfixServerURL
+{
+    return [services objectForKey:@"HotfixServerURL"];
+}
+
+- (BOOL)useHTTP
+{
+    return [[services objectForKey:@"UseHTTP"] boolValue];
 }
 
 @end

@@ -8,19 +8,27 @@
 	<string>ddc1f5c8b69da5e875a04e3278203fe2</string>
 	<key>ACCSDomain</key>
 	<string>emaspoc-acs.emas-ha.cn</string>
-	<key>ACCSServiceID</key>
-	<string>emas-ha</string>
+	<key>IPStrategy</key>
+	<dict/>
 	<key>MTOPDomain</key>
 	<string>emaspoc-aserver.emas-ha.cn</string>
 	<key>ChannelID</key>
 	<string>1001@POC_iOS_1.0.0</string>
-	<key>packageZipPrefixURL</key>
+	<key>ZCacheURL</key>
 	<string>http://publish-poc.emas-ha.cn/eweex/</string>
-	<key>OSSBucketName</key>
+	<key>HAOSSBucketName</key>
 	<string>emas-ha-remote-log-poc</string>
+	<key>HAServiceID</key>
+	<string>emas-ha</string>
 	<key>HAUniversalHost</key>
 	<string>emaspoc-adash.emas-ha.cn</string>
 	<key>HATimestampHost</key>
 	<string>emaspoc-aserver.emas-ha.cn</string>
+	<key>HARSAPublicKey</key>
+	<string></string>
+	<key>HotfixServerURL</key>
+	<string>http://emaspoc-hotfix-gate.emas-ha.cn</string>
+	<key>UseHTTP</key>
+	<false/>
 </dict>
 </plist>
