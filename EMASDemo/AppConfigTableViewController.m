@@ -79,67 +79,67 @@
     switch (indexPath.row) {
             case 0:
         {
-            return @"[全局]Appkey:";
+            return @"[Appkey字段] Appkey";
         }
             case 1:
         {
-            return @"[全局]AppSecret:";
+            return @"[AppSecret字段] AppSecret";
         }
             case 2:
         {
-            return @"[ACCS]域名:";
+            return @"[ACCSDomain字段] accs域名";
         }
             case 3:
         {
-            return @"[MTOP]域名:";
+            return @"[MTOPDomain字段] mtop域名";
         }
             case 4:
         {
-            return @"[全局]渠道ID:";
+            return @"[ChannelID字段] 渠道ID";
         }
             case 5:
         {
-            return @"[Weex]预加载地址:";
+            return @"[ZCacheURL字段] Weex 预加载地址";
         }
             case 6:
         {
-            return @"[高可用]OSS Bucket Name:";
+            return @"[HAOSSBucketName字段] HA OSS Bucket Name";
         }
             case 7:
         {
-            return @"[高可用]Service ID:";
+            return @"[HAServiceID字段] HA Service ID";
         }
             case 8:
         {
-            return @"[高可用]域名:";
+            return @"[HAUniversalHost字段] adash域名";
         }
             case 9:
         {
-            return @"[高可用]时间戳域名(同MTOP域名):";
+            return @"[HATimestampHost字段] HA时间戳域名(同MTOP域名)";
         }
             case 10:
         {
-            return @"[高可用]公钥:";
+            return @"[HARSAPublicKey字段] HA公钥";
         }
             case 11:
         {
-            return @"[热修复]地址:";
+            return @"[HotfixServerURL字段] 热修复地址";
         }
             case 12:
         {
-            return @"[全局]是否使用HTTP发请求:";
+            return @"[UseHTTP字段] 是否使用HTTP发请求";
         }
             case 13:
         {
-            return @"[全局]设备ID:";
+            return @"[全局] 设备ID";
         }
             case 14:
         {
-            return @"[全局]App版本号:";
+            return @"[全局] App版本号";
         }
             case 15:
         {
-            return @"[Network]IP策略:";
+            return @"[IPStrategy字段] IP策略";
         }
             
         default:
