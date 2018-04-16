@@ -15,7 +15,7 @@
 		7D8394A91FDB902900EBB60F /* fix.lua in Resources */ = {isa = PBXBuildFile; fileRef = 7D8394A81FDB902900EBB60F /* fix.lua */; };
 		8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */; };
 		8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */; };
-		8A69B607200C8E5F0073756D /* EMASService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* EMASService-Info.plist */; };
+		8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */; };
 		8A69B60A200C8F980073756D /* EMASService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69B609200C8F980073756D /* EMASService.m */; };
 		8AA1174D1FF5E8FD004D4D0A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA1174B1FF5E8FD004D4D0A /* Interface.storyboard */; };
 		8AA1174F1FF5E8FD004D4D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA1174E1FF5E8FD004D4D0A /* Assets.xcassets */; };
@@ -123,7 +123,7 @@
 		8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfigTableViewController.m; sourceTree = "<group>"; };
 		8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopVerifyTableViewController.h; sourceTree = "<group>"; };
 		8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtopVerifyTableViewController.m; sourceTree = "<group>"; };
-		8A69B606200C8E5F0073756D /* EMASService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EMASService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8A69B608200C8F980073756D /* EMASService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASService.h; sourceTree = "<group>"; };
 		8A69B609200C8F980073756D /* EMASService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASService.m; sourceTree = "<group>"; };
 		8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EMASDemo.entitlements; sourceTree = "<group>"; };
@@ -333,7 +333,7 @@
 		8ADA953D1FD9309400C0EF49 /* EMASDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8A69B606200C8E5F0073756D /* EMASService-Info.plist */,
+				8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */,
 				8A69B608200C8F980073756D /* EMASService.h */,
 				8A69B609200C8F980073756D /* EMASService.m */,
 				8AC0CB70200317A000FD44E6 /* source */,
@@ -628,7 +628,7 @@
 				7D8394A91FDB902900EBB60F /* fix.lua in Resources */,
 				9A09D7961FF27A6200585632 /* index.js in Resources */,
 				8ADA95491FD9309400C0EF49 /* Main.storyboard in Resources */,
-				8A69B607200C8E5F0073756D /* EMASService-Info.plist in Resources */,
+				8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
