@@ -27,7 +27,8 @@
     if (self = [super init])
     {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"EMASService-Info" ofType:@"plist"];
-        services = [NSDictionary dictionaryWithContentsOfFile:path];
+        NSDictionary *root = [NSDictionary dictionaryWithContentsOfFile:path];
+        services = [root objectForKey:@"private_cloud_config"];
     }
     return self;
 }
