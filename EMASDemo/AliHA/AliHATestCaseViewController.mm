@@ -123,7 +123,7 @@ TestObjectClass(7)
             break;
             case 7:
         {
-            cell.textLabel.text = @"检查循环引用（切后台上报）";
+            cell.textLabel.text = @"检查循环引用（切后台上报，针对iOS11以下设备）";
             cell.textLabel.textColor = [UIColor redColor];
         }
             break;
@@ -155,7 +155,7 @@ TestObjectClass(7)
         }
             case 2:
         {
-            [self handleJsError:[[WXJSExceptionInfo alloc] initWithInstanceId:@"001" bundleUrl:@"www.taobao.com/demo.js" errorCode:@"500" functionName:@"sayHello" exception:@"undefined function sayHello" userInfo:nil]];
+            [self handleJsError:[[WXJSExceptionInfo alloc] initWithInstanceId:@"001" bundleUrl:@"www.taobao.com/demo.js" errorCode:@"www.taobao.com/demo.js" functionName:@"sayHello" exception:@"undefined function sayHello" userInfo:nil]];
         }
             break;
             
@@ -249,7 +249,7 @@ TestObjectClass(7)
         bundleUrl = @"UnKnown";
     }
     exceptionModule.exceptionDetail = bundleUrl;
-    NSString* code = @"500";
+    NSString* code = @"www.taobao.com/demo.js";
     exceptionModule.exceptionCode = code;
     
     NSString * sdkVersion = exception.sdkVersion;
