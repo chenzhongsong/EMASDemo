@@ -10,6 +10,13 @@
 #import <AliHACore/AliHA.h>
 #import <TRemoteDebugger/TRDManagerService.h>
 #import <TRemoteDebugger/TBClientDrivingPushTLogExec.h>
+#import <BizErrorReporter4iOS/BizErrorReporter.h>
+#import <WeexSDK/WeexSDK.h>
+
+static NSString* INSTANCE_ID        = @"instanceId";
+static NSString* FRAMEWORK_VERSION  = @"frameWorkVersion";
+static NSString* ERROR_CODE         = @"errorCode";
+static NSString* PAGE_USER_PATH     = @"pageUserPath";
 
 @interface TestCycleRootObject : NSObject
 
@@ -116,7 +123,7 @@ TestObjectClass(7)
             break;
             case 7:
         {
-            cell.textLabel.text = @"检查循环引用";
+            cell.textLabel.text = @"检查循环引用（切后台上报）";
             cell.textLabel.textColor = [UIColor redColor];
         }
             break;
@@ -146,6 +153,11 @@ TestObjectClass(7)
             exit(0);
             break;
         }
+            case 2:
+        {
+            [self handleJsError:[[WXJSExceptionInfo alloc] initWithInstanceId:@"001" bundleUrl:@"www.taobao.com/demo.js" errorCode:@"500" functionName:@"sayHello" exception:@"undefined function sayHello" userInfo:nil]];
+        }
+            break;
             
             case 3:
         {
@@ -221,6 +233,63 @@ TestObjectClass(7)
         testObject7.object = testObject2;
         [strongArray addObject:testObject1];
     }
+}
+
+- (void)handleJsError:(WXJSExceptionInfo *)exception {
+    MotuReportAdapteHandler* handler = [[MotuReportAdapteHandler alloc]init];
+    
+    AdapterExceptionModule* exceptionModule = [[AdapterExceptionModule alloc] init];
+    exceptionModule.customizeBusinessType = @"WEEX_ERROR";
+    exceptionModule.aggregationType = ADAPTER_CONTENT;
+    
+    //统计维度, weex不要按errorcode聚合，没关系，我把url设置到errcode里去
+    NSString * bundleUrl = exception.bundleUrl;
+    if (bundleUrl == nil) {
+        //这个不能为空
+        bundleUrl = @"UnKnown";
+    }
+    exceptionModule.exceptionDetail = bundleUrl;
+    NSString* code = @"500";
+    exceptionModule.exceptionCode = code;
+    
+    NSString * sdkVersion = exception.sdkVersion;
+    if (sdkVersion != nil) {
+        exceptionModule.exceptionVersion = sdkVersion;
+    }
+    NSString * exceptionContent = exception.exception;
+    if (exceptionContent != nil) {
+        exceptionModule.exceptionArg1 = exceptionContent;
+    }
+    NSString * functionName = exception.functionName;
+    if (functionName != nil) {
+        exceptionModule.exceptionArg2 = functionName;
+    }
+    
+    NSMutableDictionary* dic = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary * userInfo = exception.userInfo;
+    if (userInfo != nil) {
+        [dic addEntriesFromDictionary:userInfo];
+    }
+    NSString* instanceId = exception.instanceId;
+    if (instanceId != nil) {
+        [dic setObject:instanceId forKey:INSTANCE_ID];
+    }
+    NSString * errorCode = exception.errorCode;
+    if (errorCode != nil) {
+        [dic setObject:errorCode forKey:ERROR_CODE];
+    }
+    NSString * jsfmVersion = exception.jsfmVersion;
+    if (jsfmVersion != nil) {
+        [dic setObject:jsfmVersion forKey:FRAMEWORK_VERSION];
+    }
+    //增加用户轨迹
+    NSString * userPage = @"DemoPage";
+    if(userPage != nil){
+        [dic setObject:userPage forKey:PAGE_USER_PATH];
+    }
+    exceptionModule.exceptionArgs = dic;
+    
+    [handler adapterWithExceptionModule:exceptionModule];
 }
 
 @end
