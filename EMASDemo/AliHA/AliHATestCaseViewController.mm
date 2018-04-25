@@ -11,6 +11,27 @@
 #import <TRemoteDebugger/TRDManagerService.h>
 #import <TRemoteDebugger/TBClientDrivingPushTLogExec.h>
 
+@interface TestCycleRootObject : NSObject
+
+@end
+
+
+#define  TestObjectClass(x) \
+@interface TestObject##x : TestCycleRootObject \
+@property (nonatomic, strong) id object;\
+@property (nonatomic, strong) id secondObject;\
+@end\
+@implementation TestObject##x\
+@end\
+
+TestObjectClass(1)
+TestObjectClass(2)
+TestObjectClass(3)
+TestObjectClass(4)
+TestObjectClass(5)
+TestObjectClass(6)
+TestObjectClass(7)
+
 @interface AliHATestCaseViewController ()
 
 @end
@@ -39,7 +60,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 7;
+    return 8;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -77,19 +98,25 @@
             break;
             case 4:
         {
-            cell.textLabel.text = @"pull task";
+            cell.textLabel.text = @"检查远程日志任务";
             cell.textLabel.textColor = [UIColor blueColor];
         }
             break;
             case 5:
         {
-            cell.textLabel.text = @"卡顿";
+            cell.textLabel.text = @"触发卡顿";
             cell.textLabel.textColor = [UIColor redColor];
         }
             break;
             case 6:
         {
-            cell.textLabel.text = @"upload events";
+            cell.textLabel.text = @"上报Full Trace";
+            cell.textLabel.textColor = [UIColor redColor];
+        }
+            break;
+            case 7:
+        {
+            cell.textLabel.text = @"检查循环引用";
             cell.textLabel.textColor = [UIColor redColor];
         }
             break;
@@ -155,9 +182,44 @@
             }
         }
             break;
+            case 7:
+        {
+            [self testCycle];
+            NSLog(@"xxxxxxxxxxxx");
+        }
+            break;
         default:
             break;
             
+    }
+}
+
+- (void)testCycle{
+    static NSMutableArray *strongArray = nil;
+    if(!strongArray){
+        strongArray = [[NSMutableArray alloc] init];
+    }
+    for (int i = 0; i < 6; ++i) {
+        TestObject1 *testObject1 = [TestObject1 new];
+        TestObject2 *testObject2 = [TestObject2 new];
+        TestObject3 *testObject3 = [TestObject3 new];
+        TestObject4 *testObject4 = [TestObject4 new];
+        TestObject5 *testObject5 = [TestObject5 new];
+        TestObject6 *testObject6 = [TestObject6 new];
+        TestObject7 *testObject7 = [[TestObject7 alloc] init];
+        
+        
+        
+        testObject1.object = testObject2;
+        testObject1.secondObject = testObject3;
+        testObject2.object = testObject4;
+        testObject2.secondObject = testObject5;
+        testObject3.object = testObject1;
+        testObject5.object = testObject6;
+        testObject4.object = testObject1;
+        testObject5.secondObject = testObject7;
+        testObject7.object = testObject2;
+        [strongArray addObject:testObject1];
     }
 }
 
