@@ -66,7 +66,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MtopResultViewController *resultVc = [[MtopResultViewController alloc] init];
+    MtopResultViewController *resultVc = [[MtopResultViewController alloc] initWithRowPath:indexPath];
     if (indexPath.row == 0) {
         // GET请求
         NSLog(@"GET");
