@@ -9,6 +9,7 @@
 #import "MtopVerifyTableViewController.h"
 #import <mtopext/MtopCore/MtopService.h>
 #import <mtopext/MtopCore/MtopExtRequest.h>
+#import "MtopResultViewController.h"
 
 #import <TBAccsSDK/TBAccsManager.h>
 #import "EMASService.h"
@@ -44,7 +45,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 2;
 }
 
 
@@ -54,32 +55,49 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:TableSampleIdentifier];
     }
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"点击验证GET请求";
+    }else if(indexPath.row == 1){
+        cell.textLabel.text = @"点击验证POST请求";
+    }
     
-    cell.textLabel.text = @"点击验证";
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MtopExtRequest *request = [[MtopExtRequest alloc] initWithApiName:@"com.alibaba.emas.eweex.zcache.gate" apiVersion: @"1.0"];
-    // 添加预加载请求参数。
-    [request addBizParameter:@"0" forKey:@"configType"];
-    [request addBizParameter:@"0" forKey:@"snapshotId"];
-    [request addBizParameter:@"0" forKey:@"snapshotN"];
-    [request addBizParameter:@"a" forKey:@"target"];
+    MtopResultViewController *resultVc = [[MtopResultViewController alloc] init];
+    if (indexPath.row == 0) {
+        // GET请求
+        NSLog(@"GET");
+        [self.navigationController pushViewController:resultVc animated:YES];
+    } else {
+        // POST请求
+        NSLog(@"POST");
+        [self.navigationController pushViewController:resultVc animated:YES];
+    }
+//    MtopExtRequest *request = [[MtopExtRequest alloc] initWithApiName:@"com.alibaba.emas.eweex.zcache.gate" apiVersion: @"1.0"];
+//    // 添加预加载请求参数。
+//    [request addBizParameter:@"0" forKey:@"configType"];
+//    [request addBizParameter:@"0" forKey:@"snapshotId"];
+//    [request addBizParameter:@"0" forKey:@"snapshotN"];
+//    [request addBizParameter:@"a" forKey:@"target"];
+//
+//    typedef void (^MtopExtRequestSucceed)(MtopExtResponse* response);
+//    request.succeedBlock = ^(MtopExtResponse* response){
+//        [self showAlert:YES desc:nil];
+//    };
+//
+//    typedef void (^MtopExtRequestFailed)(MtopExtResponse* response);
+//    request.failedBlock = ^(MtopExtResponse* response){
+//        [self showAlert:NO desc:response.error.code];
+//    };
+//
+//    [[MtopService getInstance] async_call: request delegate: nil];
     
-    typedef void (^MtopExtRequestSucceed)(MtopExtResponse* response);
-    request.succeedBlock = ^(MtopExtResponse* response){
-        [self showAlert:YES desc:nil];
-    };
-    
-    typedef void (^MtopExtRequestFailed)(MtopExtResponse* response);
-    request.failedBlock = ^(MtopExtResponse* response){
-        [self showAlert:NO desc:response.error.code];
-    };
-    
-    [[MtopService getInstance] async_call: request delegate: nil];
 }
+
+
 
 - (void)showAlert:(BOOL)isSuccess desc:(NSString *)desc
 {
