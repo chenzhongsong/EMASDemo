@@ -33,7 +33,7 @@ static NSString* mtopDescription(MtopExtResponse *response){
     else
     {
         [mStr appendString:[NSString stringWithFormat:@"\n\n||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n服务器没有返回数据\n||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n\n"]];
-        
+        [mStr appendString:[NSString stringWithFormat:@"\n\n||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nmappincCode:%@\n||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n\n",response.error.mappingCode]];
     }
     
     return mStr;
@@ -112,13 +112,13 @@ static NSString* mtopDescription(MtopExtResponse *response){
     [request addBizParameter:[NSNumber numberWithBool:true] forKey:@"testBool"];
     [request addBizParameter:[NSNumber numberWithInteger:2] forKey:@"testInteger"];
     [request addBizParameter:[NSNumber numberWithBool:false]  forKey:@"testBoolean"];
-    [request addBizParameter:[NSNumber numberWithDouble:1.1] forKey:@"testDoub"];
+    [request addBizParameter:[NSDecimalNumber numberWithDouble:1.1] forKey:@"testDoub"];
     [request addBizParameter:@"test" forKey:@"testStr"];
     [request addBizParameter:[NSNumber numberWithInt:1] forKey:@"testInt"];
-    [request addBizParameter:[NSNumber numberWithDouble:1.2] forKey:@"testDouble"];
+    [request addBizParameter:[NSDecimalNumber numberWithDouble:1.2] forKey:@"testDouble"];
     TBSDKConfiguration *config = [TBSDKConfiguration shareInstance];
-    config.latitude = 120.19;
-    config.longitude = 30.26;
+    config.latitude = 30.26;
+    config.longitude = 120.19;
     request.protocolType = MtopProtocolTypeEmas;
     if (indexPath.row == 1) {
        // Post请求
