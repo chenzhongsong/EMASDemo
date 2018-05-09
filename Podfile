@@ -19,10 +19,8 @@ platform:ios, '8.0'
     pod  'TBAccsSDK',        '10.0.3'
     
     # --网关(通用库-> 网关)
-    #pod  'MtopSDK',          '10.0.3.1'
-    #pod  'mtopext/MtopCore', '10.0.3.1'
-    pod  'MtopSDK',          '10.0.0.1-SNAPSHOT'
-    pod  'mtopext/MtopCore','10.0.0.1-SNAPSHOT'
+    pod  'MtopSDK',          '10.0.4'
+    pod  'mtopext/MtopCore', '10.0.4'
     
     # --高可用(通用库-> ACCS -> 高可用)
     pod  'AliHAAdapter4poc',   '10.0.4'
