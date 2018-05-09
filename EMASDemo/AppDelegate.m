@@ -28,6 +28,7 @@
 // --网关头文件
 #import <MtopSDK/MtopSDK.h>
 #import <MtopCore/MtopService.h>
+#import <MtopCore/TBSDKConfiguration.h>
 
 // --weex头文件
 #import <WeexSDK/WXAppConfiguration.h>
