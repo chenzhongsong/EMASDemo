@@ -10,6 +10,6 @@
 
 @interface MtopResultViewController : UIViewController
 
-- (instancetype)initWithRowPath:(NSIndexPath *) indexPath;
+- (instancetype)initWithRowPath:(NSIndexPath *) indexPath andUrl:(NSString *)url;
 
 @end

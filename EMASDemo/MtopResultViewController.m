@@ -42,16 +42,18 @@ static NSString* mtopDescription(MtopExtResponse *response){
 @interface MtopResultViewController ()
 @property (strong,nonatomic) NSIndexPath *indexPath;
 @property (strong,nonatomic) UITextView *requestText;
+@property (strong,nonatomic) NSString *url;
 //@property (strong,nonatomic) UITextView *responseText;
 
 @end
 
 @implementation MtopResultViewController
 
-- (instancetype)initWithRowPath:(NSIndexPath *)indexPath {
+- (instancetype)initWithRowPath:(NSIndexPath *)indexPath andUrl:(NSString *)url {
     self = [super init];
     if (self) {
         _indexPath = indexPath;
+        _url = url;
     }
     return self;
 }
@@ -120,6 +122,8 @@ static NSString* mtopDescription(MtopExtResponse *response){
     config.latitude = 30.26;
     config.longitude = 120.19;
     request.protocolType = MtopProtocolTypeEmas;
+    request.customHost = self.url;
+    [request disableHttps];
     if (indexPath.row == 1) {
        // Post请求
         [request useHttpPost];

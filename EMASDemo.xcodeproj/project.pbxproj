@@ -33,6 +33,7 @@
 		8ADA95661FD9309400C0EF49 /* EMASDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95651FD9309400C0EF49 /* EMASDemoUITests.m */; };
 		8ADA95751FDA3BA300C0EF49 /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95741FDA3BA300C0EF49 /* FirstTableViewController.m */; };
 		8ADA95781FDA3BB000C0EF49 /* SecondTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95771FDA3BB000C0EF49 /* SecondTableViewController.m */; };
+		9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9815F23820A2F73F00F0F70D /* MtopCustomCell.m */; };
 		981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981DC5D720998B53006472AF /* MtopResultViewController.m */; };
 		9A09D7891FF270D600585632 /* WXScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D7881FF270D600585632 /* WXScannerVC.m */; };
 		9A09D78C1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D78A1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m */; };
@@ -137,6 +138,8 @@
 		8ADA95761FDA3BB000C0EF49 /* SecondTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondTableViewController.h; sourceTree = "<group>"; };
 		8ADA95771FDA3BB000C0EF49 /* SecondTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondTableViewController.m; sourceTree = "<group>"; };
 		97BD7DEF55A6F7A44C7420EE /* Pods-EMASDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMASDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9815F23720A2F73F00F0F70D /* MtopCustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopCustomCell.h; sourceTree = "<group>"; };
+		9815F23820A2F73F00F0F70D /* MtopCustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtopCustomCell.m; sourceTree = "<group>"; };
 		981DC5D620998B53006472AF /* MtopResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopResultViewController.h; sourceTree = "<group>"; };
 		981DC5D720998B53006472AF /* MtopResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtopResultViewController.m; sourceTree = "<group>"; };
 		9A09D7871FF270D600585632 /* WXScannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXScannerVC.h; sourceTree = "<group>"; };
@@ -321,6 +324,8 @@
 				8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */,
 				981DC5D620998B53006472AF /* MtopResultViewController.h */,
 				981DC5D720998B53006472AF /* MtopResultViewController.m */,
+				9815F23720A2F73F00F0F70D /* MtopCustomCell.h */,
+				9815F23820A2F73F00F0F70D /* MtopCustomCell.m */,
 			);
 			path = EMASDemo;
 			sourceTree = "<group>";
@@ -664,6 +669,7 @@
 				8ADA95461FD9309400C0EF49 /* SecondViewController.m in Sources */,
 				8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */,
 				9A09D79E1FF27B5B00585632 /* WXImgLoaderDefaultImpl.m in Sources */,
+				9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */,
 				8ADA95751FDA3BA300C0EF49 /* FirstTableViewController.m in Sources */,
 				9A09D7A11FF27F9F00585632 /* WXResourceRequestHandlerDemoImpl.m in Sources */,
 				9A09D78C1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m in Sources */,

@@ -255,7 +255,6 @@
         config.enableHttps = NO;
     }
     config.safeSecret = NO;
-    config.protocolType = MtopProtocolTypeEmas;
     config.appKey = [[EMASService shareInstance] appkey];
     config.appSecret = [[EMASService shareInstance] appSecret];
     config.wapAPIURL = [[EMASService shareInstance] MTOPDomain];//设置全局自定义域名

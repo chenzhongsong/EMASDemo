@@ -10,9 +10,13 @@
 #import <mtopext/MtopCore/MtopService.h>
 #import <mtopext/MtopCore/MtopExtRequest.h>
 #import "MtopResultViewController.h"
-
+#import "MtopCustomCell.h"
 #import <TBAccsSDK/TBAccsManager.h>
 #import "EMASService.h"
+
+
+static NSString *TableSampleIdentifier = @"TableSampleIdentifier";
+static NSString *LabelIdentifier = @"LabelIdentifier";
 
 @interface MtopVerifyTableViewController () <MtopExtRequestDelegate>
 
@@ -25,6 +29,8 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"验证MTOP";
+    [self.tableView registerClass:[MtopCustomCell class] forCellReuseIdentifier:TableSampleIdentifier];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:LabelIdentifier];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -41,24 +47,47 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 2;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *TableSampleIdentifier = @"TableSampleIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableSampleIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:TableSampleIdentifier];
-    }
-    if (indexPath.row == 0) {
-        cell.textLabel.text = @"点击验证GET请求";
-    }else if(indexPath.row == 1){
-        cell.textLabel.text = @"点击验证POST请求";
+    
+    UITableViewCell *cell = nil;
+    
+    if (indexPath.section == 0) {
+        cell = (MtopCustomCell *)[tableView dequeueReusableCellWithIdentifier:TableSampleIdentifier];
+        if (cell == nil) {
+            cell = (MtopCustomCell *)[[MtopCustomCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:TableSampleIdentifier];
+        }
+        
+        if (indexPath.row == 0) {
+             ((MtopCustomCell *)cell).textFiled.placeholder = @"输入网关IP";
+        }
+        if (indexPath.row == 1) {
+            ((MtopCustomCell *)cell).textFiled.placeholder = @"输入网关PORT";
+        }
+    
+    }else if (indexPath.section == 1){
+        cell = [tableView dequeueReusableCellWithIdentifier:LabelIdentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:LabelIdentifier];
+        }
+        if (indexPath.row == 0) {
+            cell.textLabel.text = @"点击验证GET请求";
+        }
+        
+        if (indexPath.row == 1) {
+            cell.textLabel.text = @"点击验证POST请求";
+        }
     }
     
     return cell;
@@ -66,7 +95,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MtopResultViewController *resultVc = [[MtopResultViewController alloc] initWithRowPath:indexPath];
+    NSIndexPath *indexPath1 = [NSIndexPath indexPathForRow:0 inSection:0];
+    NSIndexPath *indexPaht2 = [NSIndexPath indexPathForRow:1 inSection:0];
+    
+    MtopCustomCell *cell1 = [tableView cellForRowAtIndexPath:indexPath1];
+    MtopCustomCell *cell2 = [tableView cellForRowAtIndexPath:indexPaht2];
+    
+    NSString *url = [NSString stringWithFormat:@"%@:%@",cell1.textFiled.text,cell2.textFiled.text];
+    
+    MtopResultViewController *resultVc = [[MtopResultViewController alloc] initWithRowPath:indexPath andUrl:url];
     if (indexPath.row == 0) {
         // GET请求
         NSLog(@"GET");
@@ -76,25 +113,6 @@
         NSLog(@"POST");
         [self.navigationController pushViewController:resultVc animated:YES];
     }
-//    MtopExtRequest *request = [[MtopExtRequest alloc] initWithApiName:@"com.alibaba.emas.eweex.zcache.gate" apiVersion: @"1.0"];
-//    // 添加预加载请求参数。
-//    [request addBizParameter:@"0" forKey:@"configType"];
-//    [request addBizParameter:@"0" forKey:@"snapshotId"];
-//    [request addBizParameter:@"0" forKey:@"snapshotN"];
-//    [request addBizParameter:@"a" forKey:@"target"];
-//
-//    typedef void (^MtopExtRequestSucceed)(MtopExtResponse* response);
-//    request.succeedBlock = ^(MtopExtResponse* response){
-//        [self showAlert:YES desc:nil];
-//    };
-//
-//    typedef void (^MtopExtRequestFailed)(MtopExtResponse* response);
-//    request.failedBlock = ^(MtopExtResponse* response){
-//        [self showAlert:NO desc:response.error.code];
-//    };
-//
-//    [[MtopService getInstance] async_call: request delegate: nil];
-    
 }
 
 
