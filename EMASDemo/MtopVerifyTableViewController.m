@@ -100,8 +100,9 @@ static NSString *LabelIdentifier = @"LabelIdentifier";
     
     MtopCustomCell *cell1 = [tableView cellForRowAtIndexPath:indexPath1];
     MtopCustomCell *cell2 = [tableView cellForRowAtIndexPath:indexPaht2];
+   
     
-    NSString *url = [NSString stringWithFormat:@"%@:%@",cell1.textFiled.text,cell2.textFiled.text];
+    NSString *url = [NSString stringWithFormat:@"%@:%@",cell1.textFiled.text.length ? cell1.textFiled.text :[[EMASService shareInstance] MTOPDomain], cell2.textFiled.text.length ? cell2.textFiled.text:@"80"];
     
     MtopResultViewController *resultVc = [[MtopResultViewController alloc] initWithRowPath:indexPath andUrl:url];
     if (indexPath.row == 0) {
