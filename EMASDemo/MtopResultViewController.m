@@ -12,6 +12,29 @@
 #import <mtopext/MtopCore/MtopService.h>
 #import <MtopSDK/TBSDKConnection.h>
 
+typedef NS_ENUM(NSUInteger,MtopParamType){
+    MtopParamType_Int = 1,
+    MtopParamType_Double,
+    MtopParamType_Integer,
+    MtopParamType_String,
+    MtopParamType_Bool
+};
+
+static MtopParamType filterType(NSString *typeString) {
+    if ([typeString hasPrefix:@"Sting"]) {
+        return MtopParamType_String;
+    }else if ([typeString hasPrefix:@"Bool"]) {
+        return MtopParamType_Bool;
+    }else if ([typeString hasPrefix:@"Int"]){
+        return MtopParamType_Int;
+    }else if ([typeString hasPrefix:@"Double"]){
+        return MtopParamType_Double;
+    }else if ([typeString hasPrefix:@"Integer"]){
+        return MtopParamType_Integer;
+    }
+    return 0;
+}
+
 static NSString* mtopDescription(MtopExtResponse *response){
    
     NSMutableString *mStr = [NSMutableString stringWithFormat:@"\n\n||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n请求的网络地址= %@\n\n||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n\n",response.request.mrequest.request.url];
@@ -40,20 +63,17 @@ static NSString* mtopDescription(MtopExtResponse *response){
 }
 
 @interface MtopResultViewController ()
-@property (strong,nonatomic) NSIndexPath *indexPath;
+@property (strong,nonatomic) NSDictionary *requestData;
 @property (strong,nonatomic) UITextView *requestText;
-@property (strong,nonatomic) NSString *url;
-//@property (strong,nonatomic) UITextView *responseText;
+
 
 @end
 
 @implementation MtopResultViewController
-
-- (instancetype)initWithRowPath:(NSIndexPath *)indexPath andUrl:(NSString *)url {
+- (instancetype)initWithRequestData:(NSDictionary *)requestData {
     self = [super init];
     if (self) {
-        _indexPath = indexPath;
-        _url = url;
+        _requestData = requestData;
     }
     return self;
 }
@@ -62,8 +82,7 @@ static NSString* mtopDescription(MtopExtResponse *response){
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setupUI];
-    [self sendMtopRequest:self.indexPath];
-    
+    [self sendMtopRequest:self.requestData];
 }
 
 - (void)setupUI {
@@ -109,25 +128,82 @@ static NSString* mtopDescription(MtopExtResponse *response){
     
 }
 
-- (void)sendMtopRequest:(NSIndexPath *)indexPath {
-    MtopExtRequest* request = [[MtopExtRequest alloc] initWithApiName: @"mtop.bizmock.test.simpleparam" apiVersion: @"2.0"];
-    [request addBizParameter:[NSNumber numberWithBool:true] forKey:@"testBool"];
-    [request addBizParameter:[NSNumber numberWithInteger:2] forKey:@"testInteger"];
-    [request addBizParameter:[NSNumber numberWithBool:false]  forKey:@"testBoolean"];
-    [request addBizParameter:[NSDecimalNumber numberWithDouble:1.1] forKey:@"testDoub"];
-    [request addBizParameter:@"test" forKey:@"testStr"];
-    [request addBizParameter:[NSNumber numberWithInt:1] forKey:@"testInt"];
-    [request addBizParameter:[NSDecimalNumber numberWithDouble:1.2] forKey:@"testDouble"];
+- (void)sendMtopRequest:(NSDictionary *)requestData {
+    
+    NSString *domain = [requestData objectForKey:@"Domain"];
+    NSString *origianlApiMsg = [requestData objectForKey:@"API"];
+    NSArray *apiMsg = [origianlApiMsg componentsSeparatedByString:@"/"];
+    NSString *apiName = @"";
+    NSString *apiVersion = @"";
+    if ([apiMsg isKindOfClass:[NSArray class]] && apiMsg.count == 2) {
+        apiName = [apiMsg objectAtIndex:0];
+        apiVersion = [apiMsg objectAtIndex:1];
+    }
+    MtopExtRequest* request = [[MtopExtRequest alloc] initWithApiName: apiName apiVersion: apiVersion];
+    [request setCustomHost:domain];
     TBSDKConfiguration *config = [TBSDKConfiguration shareInstance];
     config.latitude = 30.26;
     config.longitude = 120.19;
     request.protocolType = MtopProtocolTypeEmas;
-    request.customHost = self.url;
     [request disableHttps];
-    if (indexPath.row == 1) {
-       // Post请求
+    
+    if ([(NSString *)[requestData objectForKey:@"Mtheod"] hasPrefix:@"POST"]) {
         [request useHttpPost];
+    }else {
+        // 默认GET请求
     }
+    
+    NSArray *paramArray = [requestData objectForKey:@"Data"];
+    if ([paramArray isKindOfClass:[NSArray class]] && paramArray.count > 0) {
+        for (NSDictionary *dict in paramArray) {
+            NSString *paramName = [dict objectForKey:@"paramName"];
+            NSString *paramType = [dict objectForKey:@"paramType"];
+            NSString *paramValue = [dict objectForKey:@"paramValue"];
+            
+            MtopParamType type = filterType(paramType);
+            switch (type) {
+                case MtopParamType_Int:{
+                    [request addBizParameter:[NSNumber numberWithInt:paramValue.intValue] forKey:paramName];
+                }
+                    
+                    break;
+                    
+                case MtopParamType_Bool:{
+                    [request addBizParameter:[NSNumber numberWithBool:paramValue.boolValue] forKey:paramName];
+                }
+                    
+                    break;
+                    
+                case MtopParamType_Double:{
+                    [request addBizParameter:[NSDecimalNumber numberWithDouble:paramValue.doubleValue] forKey:paramName];
+                }
+                    
+                    break;
+                
+                case MtopParamType_String:{
+                    [request addBizParameter:paramValue forKey:paramName];
+                }
+                    
+                    break;
+                    
+                case MtopParamType_Integer:{
+                    [request addBizParameter:[NSNumber numberWithInteger:paramValue.integerValue] forKey:paramName];
+                }
+                    
+                    break;
+            }
+        }
+    }
+    
+    
+//    [request addBizParameter:[NSNumber numberWithBool:true] forKey:@"testBool"];
+//    [request addBizParameter:[NSNumber numberWithInteger:2] forKey:@"testInteger"];
+//    [request addBizParameter:[NSNumber numberWithBool:false]  forKey:@"testBoolean"];
+//    [request addBizParameter:[NSDecimalNumber numberWithDouble:1.1] forKey:@"testDoub"];
+//    [request addBizParameter:@"test" forKey:@"testStr"];
+//    [request addBizParameter:[NSNumber numberWithInt:1] forKey:@"testInt"];
+//    [request addBizParameter:[NSDecimalNumber numberWithDouble:1.2] forKey:@"testDouble"];
+    
     
     request.succeedBlock = ^(MtopExtResponse *response) {
         // 成功回调
@@ -142,20 +218,5 @@ static NSString* mtopDescription(MtopExtResponse *response){
     
     [[MtopService getInstance] async_call:request delegate:nil];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
