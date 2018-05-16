@@ -31,7 +31,7 @@
 		<key>HotfixServerURL</key>
 		<string>http://emaspoc-hotfix-gate.emas-ha.cn</string>
 		<key>UseHTTP</key>
-		<true/>
+		<false/>
 	</dict>
 </dict>
 </plist>
