@@ -12,6 +12,7 @@
 #import <TRemoteDebugger/TBClientDrivingPushTLogExec.h>
 #import <BizErrorReporter4iOS/BizErrorReporter.h>
 #import <WeexSDK/WeexSDK.h>
+#import <UT/AppMonitorStat.h>
 
 static NSString* INSTANCE_ID        = @"instanceId";
 static NSString* FRAMEWORK_VERSION  = @"frameWorkVersion";
@@ -67,7 +68,7 @@ TestObjectClass(7)
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 8;
+    return 9;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -125,6 +126,11 @@ TestObjectClass(7)
         {
             cell.textLabel.text = @"检查循环引用（切后台上报，针对iOS11以下设备）";
             cell.textLabel.textColor = [UIColor redColor];
+        }
+            break;
+            case 8:
+        {
+            cell.textLabel.text = @"上报埋点";
         }
             break;
         default:
@@ -198,6 +204,11 @@ TestObjectClass(7)
         {
             [self testCycle];
             NSLog(@"xxxxxxxxxxxx");
+        }
+            break;
+            case 8:
+        {
+            [self testPointReport];
         }
             break;
         default:
@@ -290,6 +301,50 @@ TestObjectClass(7)
     exceptionModule.exceptionArgs = dic;
     
     [handler adapterWithExceptionModule:exceptionModule];
+}
+
+- (void)testPointReport
+{
+    // 定义维度集合
+    AppMonitorDimensionSet  *dimensionSet = [[AppMonitorDimensionSet alloc] init];
+    [dimensionSet addDimensionWithName:@"isVip"];
+    
+    // 定义指标集合
+    AppMonitorMeasureSet    *measureSet = [[AppMonitorMeasureSet alloc] init];
+    //添加指标，默认取值范围大于等于0
+    [measureSet   addMeasureWithName:@"tokenLost"];
+    
+    //注册埋点 "network"对应埋点配置-模块；"responseTime"对应埋点配置-监控点
+    [AppMonitorStat registerWithModule:@"vipmonitor" monitorPoint:@"tokenerror" measureSet:measureSet dimensionSet:dimensionSet];
+    
+    for (int i = 0; i < 2000; i++)
+    {
+        NSString *isVip = nil;
+        double tokenLost;
+        if (i % 4 == 0) {
+            isVip = @"true";
+            tokenLost = 1;
+        } else if (i % 4 == 1){
+            isVip = @"false";
+            tokenLost = 1;
+        } else if (i % 4 == 2) {
+            isVip = @"false";
+            tokenLost = 0;
+        } else {
+            isVip = @"true";
+            tokenLost = 0;
+        }
+        // 增加setValue添加维度、指标
+        AppMonitorDimensionValueSet *dimensionValues = [[AppMonitorDimensionValueSet alloc] init];
+        [dimensionValues setValue:isVip forName:@"isVip"];
+        
+        AppMonitorMeasureValueSet  *measureValues = [[AppMonitorMeasureValueSet alloc] init];
+        AppMonitorMeasureValue *measureValue = [[AppMonitorMeasureValue alloc] initWithValue:[NSNumber numberWithDouble:tokenLost]];
+        [measureValues setValue:measureValue forName:@"tokenLost"];
+        
+        // 多维度多指标，最通用
+        [AppMonitorStat commitWithModule:@"vipmonitor" monitorPoint:@"tokenerror" dimensionValueSet:dimensionValues measureValueSet:measureValues];
+    }
 }
 
 @end
