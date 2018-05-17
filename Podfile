@@ -1,5 +1,6 @@
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs-thirdpart.git'     
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs.git'
+source 'git@gitlab.emas-ha.cn:root/emas-specs.git'
 
 platform :ios
 
@@ -39,5 +40,9 @@ platform:ios, '8.0'
     pod 'AlicloudUtils', '1.2.1'
     pod 'ZipArchive', '~> 1.4.0'
     pod 'AlicloudHotFixDebugEmas', '~> 1.0.3'
+    
+    
+    
+    pod 'EMASFirstBundle', '3.0.0'
     
 end
