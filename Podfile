@@ -43,6 +43,6 @@ platform:ios, '8.0'
     
     
     
-    pod 'EMASFirstBundle', '3.0.0'
+    pod 'EMASFirstBundle', '3.0.1'
     
 end
