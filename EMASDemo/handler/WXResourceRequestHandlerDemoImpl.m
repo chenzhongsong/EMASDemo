@@ -33,7 +33,7 @@
     NSDictionary *header;
     NSData* zcache = [ZCache resourceContentForURL:theRequest.URL.absoluteString     withHeader:&header error:nil];
     if (zcache && [zcache length] > 0) {
-        NSLog(@"🔴类名与方法名：%@（在第%@行），描述：%@", @(__PRETTY_FUNCTION__), @(__LINE__), zcache);
+        NSLog(@"ZCache-Hit：%@(%@ line),desc：%@", @(__PRETTY_FUNCTION__), @(__LINE__), zcache);
         NSMutableDictionary * newHeader = [NSMutableDictionary dictionaryWithDictionary:header];
         newHeader[@"X-RequestType"] = @"ZCache";
         NSHTTPURLResponse * response = [[NSHTTPURLResponse alloc] initWithURL:theRequest.URL statusCode:200 HTTPVersion:@"1.1" headerFields:[newHeader copy]];
