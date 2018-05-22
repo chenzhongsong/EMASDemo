@@ -55,12 +55,14 @@
 
 - (NSString *)ACCSDomain
 {
-    return [services objectForKey:@"ACCSDomain"];
+    NSDictionary *dict = [services objectForKey:@"ACCS"];
+    return [dict objectForKey:@"Domain"];
 }
 
 - (NSDictionary *)IPStrategy
 {
-    return [services objectForKey:@"IPStrategy"];
+    NSDictionary *dict = [services objectForKey:@"Network"];
+    return [dict objectForKey:@"IPStrategy"];
 }
 
 - (NSString *)HAServiceID
@@ -70,7 +72,8 @@
 
 - (NSString *)MTOPDomain
 {
-    return [services objectForKey:@"MTOPDomain"];
+    NSDictionary *dict = [services objectForKey:@"MTOP"];
+    return [dict objectForKey:@"Domain"];
 }
 
 - (NSString *)ChannelID
@@ -80,32 +83,38 @@
 
 - (NSString *)ZCacheURL
 {
-    return [services objectForKey:@"ZCacheURL"];
+    NSDictionary *dict = [services objectForKey:@"ZCache"];
+    return [dict objectForKey:@"URL"];
 }
 
 - (NSString *)HAOSSBucketName
 {
-    return [services objectForKey:@"HAOSSBucketName"];
+    NSDictionary *dict = [services objectForKey:@"HA"];
+    return [dict objectForKey:@"OSSBucketName"];
 }
 
 - (NSString *)HAUniversalHost
 {
-    return [services objectForKey:@"HAUniversalHost"];
+    NSDictionary *dict = [services objectForKey:@"HA"];
+    return [dict objectForKey:@"UniversalHost"];
 }
 
 - (NSString *)HATimestampHost
 {
-    return [services objectForKey:@"HATimestampHost"];
+    NSDictionary *dict = [services objectForKey:@"HA"];
+    return [dict objectForKey:@"TimestampHost"];
 }
 
 - (NSString *)HARSAPublicKey
 {
-    return [services objectForKey:@"HARSAPublicKey"];
+    NSDictionary *dict = [services objectForKey:@"HA"];
+    return [dict objectForKey:@"RSAPublicKey"];
 }
 
 - (NSString *)HotfixServerURL
 {
-    return [services objectForKey:@"HotfixServerURL"];
+    NSDictionary *dict = [services objectForKey:@"Hotfix"];
+    return [dict objectForKey:@"URL"];
 }
 
 - (BOOL)useHTTP
