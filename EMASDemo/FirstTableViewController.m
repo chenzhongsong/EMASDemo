@@ -45,7 +45,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -60,7 +60,7 @@
         break;
         case 1:
         {
-            cell.textLabel.text = @"MTOP";
+            cell.textLabel.text = @"API网关";
             cell.textLabel.textColor = [UIColor purpleColor];
         }
             break;
@@ -82,6 +82,13 @@
             cell.textLabel.textColor = [UIColor greenColor];
         }
             break;
+        
+        case 5:
+        {
+            cell.textLabel.text = @"远程配置";
+            cell.textLabel.textColor = [UIColor lightGrayColor];
+        }
+        break;
         
         default:
         break;

@@ -33,6 +33,16 @@
 		8ADA95661FD9309400C0EF49 /* EMASDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95651FD9309400C0EF49 /* EMASDemoUITests.m */; };
 		8ADA95751FDA3BA300C0EF49 /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95741FDA3BA300C0EF49 /* FirstTableViewController.m */; };
 		8ADA95781FDA3BB000C0EF49 /* SecondTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95771FDA3BB000C0EF49 /* SecondTableViewController.m */; };
+		980F856820BECC49002156A2 /* OrangeFeatureSecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F855A20BECC48002156A2 /* OrangeFeatureSecondVC.m */; };
+		980F856920BECC49002156A2 /* OrangeRemoteConfigRootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980F855C20BECC48002156A2 /* OrangeRemoteConfigRootVC.xib */; };
+		980F856A20BECC49002156A2 /* OrangeRemotConfigDebugVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F855D20BECC48002156A2 /* OrangeRemotConfigDebugVC.m */; };
+		980F856B20BECC49002156A2 /* OrangeFeatureSecondVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980F855E20BECC48002156A2 /* OrangeFeatureSecondVC.xib */; };
+		980F856C20BECC49002156A2 /* OrangeFeatureFirstVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980F855F20BECC48002156A2 /* OrangeFeatureFirstVC.xib */; };
+		980F856D20BECC49002156A2 /* OrangeFeatureFirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F856120BECC49002156A2 /* OrangeFeatureFirstVC.m */; };
+		980F856E20BECC49002156A2 /* OrangeRemotConfigDebugVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980F856220BECC49002156A2 /* OrangeRemotConfigDebugVC.xib */; };
+		980F856F20BECC49002156A2 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980F856320BECC49002156A2 /* CustomCell.xib */; };
+		980F857020BECC49002156A2 /* OrangeRemoteConfigRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F856520BECC49002156A2 /* OrangeRemoteConfigRootVC.m */; };
+		980F857120BECC49002156A2 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F856620BECC49002156A2 /* CustomCell.m */; };
 		9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9815F23820A2F73F00F0F70D /* MtopCustomCell.m */; };
 		981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981DC5D720998B53006472AF /* MtopResultViewController.m */; };
 		9A09D7891FF270D600585632 /* WXScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D7881FF270D600585632 /* WXScannerVC.m */; };
@@ -138,6 +148,22 @@
 		8ADA95761FDA3BB000C0EF49 /* SecondTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondTableViewController.h; sourceTree = "<group>"; };
 		8ADA95771FDA3BB000C0EF49 /* SecondTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondTableViewController.m; sourceTree = "<group>"; };
 		97BD7DEF55A6F7A44C7420EE /* Pods-EMASDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMASDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		980F855820BECC48002156A2 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		980F855920BECC48002156A2 /* OrangeRemoteConfigRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrangeRemoteConfigRootVC.h; sourceTree = "<group>"; };
+		980F855A20BECC48002156A2 /* OrangeFeatureSecondVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrangeFeatureSecondVC.m; sourceTree = "<group>"; };
+		980F855B20BECC48002156A2 /* OrangeFeatureFirstVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrangeFeatureFirstVC.h; sourceTree = "<group>"; };
+		980F855C20BECC48002156A2 /* OrangeRemoteConfigRootVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrangeRemoteConfigRootVC.xib; sourceTree = "<group>"; };
+		980F855D20BECC48002156A2 /* OrangeRemotConfigDebugVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrangeRemotConfigDebugVC.m; sourceTree = "<group>"; };
+		980F855E20BECC48002156A2 /* OrangeFeatureSecondVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrangeFeatureSecondVC.xib; sourceTree = "<group>"; };
+		980F855F20BECC48002156A2 /* OrangeFeatureFirstVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrangeFeatureFirstVC.xib; sourceTree = "<group>"; };
+		980F856020BECC49002156A2 /* OrangeTestConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrangeTestConstants.h; sourceTree = "<group>"; };
+		980F856120BECC49002156A2 /* OrangeFeatureFirstVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrangeFeatureFirstVC.m; sourceTree = "<group>"; };
+		980F856220BECC49002156A2 /* OrangeRemotConfigDebugVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrangeRemotConfigDebugVC.xib; sourceTree = "<group>"; };
+		980F856320BECC49002156A2 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		980F856420BECC49002156A2 /* OrangeRemotConfigDebugVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrangeRemotConfigDebugVC.h; sourceTree = "<group>"; };
+		980F856520BECC49002156A2 /* OrangeRemoteConfigRootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrangeRemoteConfigRootVC.m; sourceTree = "<group>"; };
+		980F856620BECC49002156A2 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		980F856720BECC49002156A2 /* OrangeFeatureSecondVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrangeFeatureSecondVC.h; sourceTree = "<group>"; };
 		9815F23720A2F73F00F0F70D /* MtopCustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopCustomCell.h; sourceTree = "<group>"; };
 		9815F23820A2F73F00F0F70D /* MtopCustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtopCustomCell.m; sourceTree = "<group>"; };
 		981DC5D620998B53006472AF /* MtopResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopResultViewController.h; sourceTree = "<group>"; };
@@ -317,6 +343,7 @@
 				9A09D7901FF2721000585632 /* DemoDefine.h */,
 				9A09D79B1FF27B5B00585632 /* handler */,
 				9A09D7971FF27B2300585632 /* module */,
+				980F855720BECB8A002156A2 /* Orange */,
 				9A09D7941FF27A6200585632 /* bundlejs */,
 				8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */,
 				8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */,
@@ -346,6 +373,29 @@
 				8ADA95671FD9309400C0EF49 /* Info.plist */,
 			);
 			path = EMASDemoUITests;
+			sourceTree = "<group>";
+		};
+		980F855720BECB8A002156A2 /* Orange */ = {
+			isa = PBXGroup;
+			children = (
+				980F855820BECC48002156A2 /* CustomCell.h */,
+				980F856620BECC49002156A2 /* CustomCell.m */,
+				980F856320BECC49002156A2 /* CustomCell.xib */,
+				980F855B20BECC48002156A2 /* OrangeFeatureFirstVC.h */,
+				980F856120BECC49002156A2 /* OrangeFeatureFirstVC.m */,
+				980F855F20BECC48002156A2 /* OrangeFeatureFirstVC.xib */,
+				980F856720BECC49002156A2 /* OrangeFeatureSecondVC.h */,
+				980F855A20BECC48002156A2 /* OrangeFeatureSecondVC.m */,
+				980F855E20BECC48002156A2 /* OrangeFeatureSecondVC.xib */,
+				980F856420BECC49002156A2 /* OrangeRemotConfigDebugVC.h */,
+				980F855D20BECC48002156A2 /* OrangeRemotConfigDebugVC.m */,
+				980F856220BECC49002156A2 /* OrangeRemotConfigDebugVC.xib */,
+				980F855920BECC48002156A2 /* OrangeRemoteConfigRootVC.h */,
+				980F856520BECC49002156A2 /* OrangeRemoteConfigRootVC.m */,
+				980F855C20BECC48002156A2 /* OrangeRemoteConfigRootVC.xib */,
+				980F856020BECC49002156A2 /* OrangeTestConstants.h */,
+			);
+			path = Orange;
 			sourceTree = "<group>";
 		};
 		9A09D7861FF270D600585632 /* Scanner */ = {
@@ -519,11 +569,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ADA954E1FD9309400C0EF49 /* LaunchScreen.storyboard in Resources */,
+				980F856F20BECC49002156A2 /* CustomCell.xib in Resources */,
+				980F856C20BECC49002156A2 /* OrangeFeatureFirstVC.xib in Resources */,
 				8ADA954B1FD9309400C0EF49 /* Assets.xcassets in Resources */,
 				7D8394A91FDB902900EBB60F /* fix.lua in Resources */,
+				980F856920BECC49002156A2 /* OrangeRemoteConfigRootVC.xib in Resources */,
 				9A09D7961FF27A6200585632 /* index.js in Resources */,
 				8ADA95491FD9309400C0EF49 /* Main.storyboard in Resources */,
 				8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */,
+				980F856E20BECC49002156A2 /* OrangeRemotConfigDebugVC.xib in Resources */,
+				980F856B20BECC49002156A2 /* OrangeFeatureSecondVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,6 +721,7 @@
 				8AC0CB76200317A000FD44E6 /* WXRecorder.m in Sources */,
 				1A65F6261FF253CF00B4573C /* AliHATestCaseViewController.mm in Sources */,
 				981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */,
+				980F856820BECC49002156A2 /* OrangeFeatureSecondVC.m in Sources */,
 				8ADA95461FD9309400C0EF49 /* SecondViewController.m in Sources */,
 				8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */,
 				9A09D79E1FF27B5B00585632 /* WXImgLoaderDefaultImpl.m in Sources */,
@@ -674,18 +730,22 @@
 				9A09D7A11FF27F9F00585632 /* WXResourceRequestHandlerDemoImpl.m in Sources */,
 				9A09D78C1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m in Sources */,
 				8ABD97DD1FF4F7C400469557 /* WXCrashAdapterHandler.m in Sources */,
+				980F857020BECC49002156A2 /* OrangeRemoteConfigRootVC.m in Sources */,
 				9A09D79A1FF27B2400585632 /* WXEventModule.m in Sources */,
 				8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */,
 				7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */,
 				9A09D7A41FF356DA00585632 /* WXAppMonitorHandler.m in Sources */,
+				980F856A20BECC49002156A2 /* OrangeRemotConfigDebugVC.m in Sources */,
 				9A09D7891FF270D600585632 /* WXScannerVC.m in Sources */,
 				8ADA95511FD9309400C0EF49 /* main.m in Sources */,
+				980F857120BECC49002156A2 /* CustomCell.m in Sources */,
 				9A09D78F1FF2719700585632 /* WXDemoViewController.m in Sources */,
 				8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */,
 				7D6260E61FDA8C5A00E856CB /* HFXTestClass.m in Sources */,
 				8A69B60A200C8F980073756D /* EMASService.m in Sources */,
 				8ADA95431FD9309400C0EF49 /* FirstViewController.m in Sources */,
 				8ADA95781FDA3BB000C0EF49 /* SecondTableViewController.m in Sources */,
+				980F856D20BECC49002156A2 /* OrangeFeatureFirstVC.m in Sources */,
 				8AC0CB75200317A000FD44E6 /* WXCrashReporter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
