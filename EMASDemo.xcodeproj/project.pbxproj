@@ -17,14 +17,6 @@
 		8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */; };
 		8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */; };
 		8A69B60A200C8F980073756D /* EMASService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69B609200C8F980073756D /* EMASService.m */; };
-		8AA1174D1FF5E8FD004D4D0A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA1174B1FF5E8FD004D4D0A /* Interface.storyboard */; };
-		8AA1174F1FF5E8FD004D4D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA1174E1FF5E8FD004D4D0A /* Assets.xcassets */; };
-		8AA117561FF5E8FE004D4D0A /* EMASWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8AA117551FF5E8FE004D4D0A /* EMASWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		8AA1175C1FF5E8FE004D4D0A /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA1175B1FF5E8FE004D4D0A /* InterfaceController.m */; };
-		8AA1175F1FF5E8FE004D4D0A /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA1175E1FF5E8FE004D4D0A /* ExtensionDelegate.m */; };
-		8AA117621FF5E8FE004D4D0A /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA117611FF5E8FE004D4D0A /* NotificationController.m */; };
-		8AA117641FF5E8FE004D4D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA117631FF5E8FE004D4D0A /* Assets.xcassets */; };
-		8AA117691FF5E8FE004D4D0A /* EMASWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8AA117491FF5E8FD004D4D0A /* EMASWatch.app */; };
 		8AB1A7BF1FFDDE51007C4675 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */; };
 		8ABD97DD1FF4F7C400469557 /* WXCrashAdapterHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD97DC1FF4F7C400469557 /* WXCrashAdapterHandler.m */; };
 		8AC0CB6E200312CF00FD44E6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC0CB6D200312CF00FD44E6 /* MobileCoreServices.framework */; };
@@ -41,6 +33,8 @@
 		8ADA95661FD9309400C0EF49 /* EMASDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95651FD9309400C0EF49 /* EMASDemoUITests.m */; };
 		8ADA95751FDA3BA300C0EF49 /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95741FDA3BA300C0EF49 /* FirstTableViewController.m */; };
 		8ADA95781FDA3BB000C0EF49 /* SecondTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95771FDA3BB000C0EF49 /* SecondTableViewController.m */; };
+		9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9815F23820A2F73F00F0F70D /* MtopCustomCell.m */; };
+		981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981DC5D720998B53006472AF /* MtopResultViewController.m */; };
 		9A09D7891FF270D600585632 /* WXScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D7881FF270D600585632 /* WXScannerVC.m */; };
 		9A09D78C1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D78A1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m */; };
 		9A09D78F1FF2719700585632 /* WXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D78E1FF2719700585632 /* WXDemoViewController.m */; };
@@ -53,20 +47,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8AA117571FF5E8FE004D4D0A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8ADA95331FD9309400C0EF49 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8AA117541FF5E8FE004D4D0A;
-			remoteInfo = "EMASWatch Extension";
-		};
-		8AA117671FF5E8FE004D4D0A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8ADA95331FD9309400C0EF49 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8AA117481FF5E8FD004D4D0A;
-			remoteInfo = EMASWatch;
-		};
 		8ADA95571FD9309400C0EF49 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8ADA95331FD9309400C0EF49 /* Project object */;
@@ -84,24 +64,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8AA1176D1FF5E8FE004D4D0A /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				8AA117561FF5E8FE004D4D0A /* EMASWatch Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8ABD97BD1FF4D55700469557 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				8AA117691FF5E8FE004D4D0A /* EMASWatch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,11 +95,9 @@
 		8A69B608200C8F980073756D /* EMASService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASService.h; sourceTree = "<group>"; };
 		8A69B609200C8F980073756D /* EMASService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASService.m; sourceTree = "<group>"; };
 		8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EMASDemo.entitlements; sourceTree = "<group>"; };
-		8AA117491FF5E8FD004D4D0A /* EMASWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMASWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA1174C1FF5E8FD004D4D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		8AA1174E1FF5E8FD004D4D0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AA117501FF5E8FD004D4D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8AA117551FF5E8FE004D4D0A /* EMASWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EMASWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA1175A1FF5E8FE004D4D0A /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
 		8AA1175B1FF5E8FE004D4D0A /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
 		8AA1175D1FF5E8FE004D4D0A /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
@@ -172,6 +138,10 @@
 		8ADA95761FDA3BB000C0EF49 /* SecondTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondTableViewController.h; sourceTree = "<group>"; };
 		8ADA95771FDA3BB000C0EF49 /* SecondTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondTableViewController.m; sourceTree = "<group>"; };
 		97BD7DEF55A6F7A44C7420EE /* Pods-EMASDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMASDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9815F23720A2F73F00F0F70D /* MtopCustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopCustomCell.h; sourceTree = "<group>"; };
+		9815F23820A2F73F00F0F70D /* MtopCustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtopCustomCell.m; sourceTree = "<group>"; };
+		981DC5D620998B53006472AF /* MtopResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopResultViewController.h; sourceTree = "<group>"; };
+		981DC5D720998B53006472AF /* MtopResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtopResultViewController.m; sourceTree = "<group>"; };
 		9A09D7871FF270D600585632 /* WXScannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXScannerVC.h; sourceTree = "<group>"; };
 		9A09D7881FF270D600585632 /* WXScannerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXScannerVC.m; sourceTree = "<group>"; };
 		9A09D78A1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WXDemoNaviBar.m"; sourceTree = "<group>"; };
@@ -192,20 +162,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7DCA6AECD533289A602A088B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AA117521FF5E8FE004D4D0A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8ADA95381FD9309400C0EF49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,8 +280,6 @@
 				8ADA953B1FD9309400C0EF49 /* EMASDemo.app */,
 				8ADA95561FD9309400C0EF49 /* EMASDemoTests.xctest */,
 				8ADA95611FD9309400C0EF49 /* EMASDemoUITests.xctest */,
-				8AA117491FF5E8FD004D4D0A /* EMASWatch.app */,
-				8AA117551FF5E8FE004D4D0A /* EMASWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -368,6 +322,10 @@
 				8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */,
 				8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */,
 				8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */,
+				981DC5D620998B53006472AF /* MtopResultViewController.h */,
+				981DC5D720998B53006472AF /* MtopResultViewController.m */,
+				9815F23720A2F73F00F0F70D /* MtopCustomCell.h */,
+				9815F23820A2F73F00F0F70D /* MtopCustomCell.m */,
 			);
 			path = EMASDemo;
 			sourceTree = "<group>";
@@ -444,41 +402,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8AA117481FF5E8FD004D4D0A /* EMASWatch */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8AA1176E1FF5E8FE004D4D0A /* Build configuration list for PBXNativeTarget "EMASWatch" */;
-			buildPhases = (
-				8AA117471FF5E8FD004D4D0A /* Resources */,
-				8AA1176D1FF5E8FE004D4D0A /* Embed App Extensions */,
-				7DCA6AECD533289A602A088B /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8AA117581FF5E8FE004D4D0A /* PBXTargetDependency */,
-			);
-			name = EMASWatch;
-			productName = EMASWatch;
-			productReference = 8AA117491FF5E8FD004D4D0A /* EMASWatch.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		8AA117541FF5E8FE004D4D0A /* EMASWatch Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8AA1176A1FF5E8FE004D4D0A /* Build configuration list for PBXNativeTarget "EMASWatch Extension" */;
-			buildPhases = (
-				8AA117511FF5E8FE004D4D0A /* Sources */,
-				8AA117521FF5E8FE004D4D0A /* Frameworks */,
-				8AA117531FF5E8FE004D4D0A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "EMASWatch Extension";
-			productName = "EMASWatch Extension";
-			productReference = 8AA117551FF5E8FE004D4D0A /* EMASWatch Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
 		8ADA953A1FD9309400C0EF49 /* EMASDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8ADA956A1FD9309400C0EF49 /* Build configuration list for PBXNativeTarget "EMASDemo" */;
@@ -498,7 +421,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				8AA117681FF5E8FE004D4D0A /* PBXTargetDependency */,
 			);
 			name = EMASDemo;
 			productName = EMASDemo;
@@ -550,17 +472,9 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = zhishui.lcq;
 				TargetAttributes = {
-					8AA117481FF5E8FD004D4D0A = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Manual;
-					};
-					8AA117541FF5E8FE004D4D0A = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Manual;
-					};
 					8ADA953A1FD9309400C0EF49 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -595,30 +509,11 @@
 				8ADA953A1FD9309400C0EF49 /* EMASDemo */,
 				8ADA95551FD9309400C0EF49 /* EMASDemoTests */,
 				8ADA95601FD9309400C0EF49 /* EMASDemoUITests */,
-				8AA117481FF5E8FD004D4D0A /* EMASWatch */,
-				8AA117541FF5E8FE004D4D0A /* EMASWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8AA117471FF5E8FD004D4D0A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8AA1174F1FF5E8FD004D4D0A /* Assets.xcassets in Resources */,
-				8AA1174D1FF5E8FD004D4D0A /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AA117531FF5E8FE004D4D0A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8AA117641FF5E8FE004D4D0A /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8ADA95391FD9309400C0EF49 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -706,7 +601,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		AA85B2CA3C2F5806D1BDF7DB /* [CP] Copy Pods Resources */ = {
@@ -764,25 +659,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8AA117511FF5E8FE004D4D0A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8AA1175F1FF5E8FE004D4D0A /* ExtensionDelegate.m in Sources */,
-				8AA1175C1FF5E8FE004D4D0A /* InterfaceController.m in Sources */,
-				8AA117621FF5E8FE004D4D0A /* NotificationController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8ADA95371FD9309400C0EF49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8AC0CB76200317A000FD44E6 /* WXRecorder.m in Sources */,
 				1A65F6261FF253CF00B4573C /* AliHATestCaseViewController.mm in Sources */,
+				981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */,
 				8ADA95461FD9309400C0EF49 /* SecondViewController.m in Sources */,
 				8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */,
 				9A09D79E1FF27B5B00585632 /* WXImgLoaderDefaultImpl.m in Sources */,
+				9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */,
 				8ADA95751FDA3BA300C0EF49 /* FirstTableViewController.m in Sources */,
 				9A09D7A11FF27F9F00585632 /* WXResourceRequestHandlerDemoImpl.m in Sources */,
 				9A09D78C1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m in Sources */,
@@ -822,16 +709,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8AA117581FF5E8FE004D4D0A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8AA117541FF5E8FE004D4D0A /* EMASWatch Extension */;
-			targetProxy = 8AA117571FF5E8FE004D4D0A /* PBXContainerItemProxy */;
-		};
-		8AA117681FF5E8FE004D4D0A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8AA117481FF5E8FD004D4D0A /* EMASWatch */;
-			targetProxy = 8AA117671FF5E8FE004D4D0A /* PBXContainerItemProxy */;
-		};
 		8ADA95581FD9309400C0EF49 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8ADA953A1FD9309400C0EF49 /* EMASDemo */;
@@ -872,82 +749,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8AA1176B1FF5E8FE004D4D0A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "EMASWatch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
-			};
-			name = Debug;
-		};
-		8AA1176C1FF5E8FE004D4D0A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "EMASWatch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
-			};
-			name = Release;
-		};
-		8AA1176F1FF5E8FE004D4D0A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				IBSC_MODULE = EMASWatch_Extension;
-				INFOPLIST_FILE = EMASWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
-			};
-			name = Debug;
-		};
-		8AA117701FF5E8FE004D4D0A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				IBSC_MODULE = EMASWatch_Extension;
-				INFOPLIST_FILE = EMASWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
-			};
-			name = Release;
-		};
 		8ADA95681FD9309400C0EF49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1059,8 +860,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57JW9832YF;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1069,7 +870,7 @@
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1084,8 +885,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57JW9832YF;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1094,7 +895,7 @@
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1159,24 +960,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8AA1176A1FF5E8FE004D4D0A /* Build configuration list for PBXNativeTarget "EMASWatch Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8AA1176B1FF5E8FE004D4D0A /* Debug */,
-				8AA1176C1FF5E8FE004D4D0A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8AA1176E1FF5E8FE004D4D0A /* Build configuration list for PBXNativeTarget "EMASWatch" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8AA1176F1FF5E8FE004D4D0A /* Debug */,
-				8AA117701FF5E8FE004D4D0A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8ADA95361FD9309400C0EF49 /* Build configuration list for PBXProject "EMASDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

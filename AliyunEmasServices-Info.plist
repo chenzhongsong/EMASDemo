@@ -5,49 +5,31 @@
 	<key>private_cloud_config</key>
 	<dict>
 		<key>AppKey</key>
-		<string>10000016</string>
+		<string>10000008</string>
 		<key>AppSecret</key>
-		<string>ddc1f5c8b69da5e875a04e3278203fe2</string>
+		<string>886eb01424cda17f997bb14e60abc5dc</string>
+		<key>ACCSDomain</key>
+		<string>emaspoc-acs.emas-ha.cn</string>
+		<key>IPStrategy</key>
+		<dict/>
+		<key>MTOPDomain</key>
+		<string>mnaas-k8s.emas-poc.com</string>
 		<key>ChannelID</key>
 		<string>1001@POC_iOS_1.0.0</string>
-		<key>ACCS</key>
-		<dict>
-			<key>Domain</key>
-			<string>emaspoc-acs.emas-ha.cn</string>
-		</dict>
-		<key>Network</key>
-		<dict>
-			<key>IPStrategy</key>
-			<dict/>
-		</dict>
-		<key>MTOP</key>
-		<dict>
-			<key>Domain</key>
-			<string>emaspoc-aserver.emas-ha.cn</string>
-		</dict>
-		<key>ZCache</key>
-		<dict>
-			<key>URL</key>
-			<string>http://publish-poc.emas-ha.cn/eweex/</string>
-		</dict>
-		<key>HA</key>
-		<dict>
-			<key>RSAPublicKey</key>
-			<string></string>
-			<key>OSSBucketName</key>
-			<string>emas-ha-remote-log-poc</string>
-			<key>ServiceID</key>
-			<string>emas-ha</string>
-			<key>UniversalHost</key>
-			<string>emaspoc-adash.emas-ha.cn</string>
-			<key>TimestampHost</key>
-			<string>emaspoc-aserver.emas-ha.cn</string>
-		</dict>
-		<key>Hotfix</key>
-		<dict>
-			<key>URL</key>
-			<string>http://emaspoc-hotfix-gate.emas-ha.cn</string>
-		</dict>
+		<key>ZCacheURL</key>
+		<string>http://publish-poc.emas-ha.cn/eweex/</string>
+		<key>HAOSSBucketName</key>
+		<string>emas-ha-remote-log-poc</string>
+		<key>HAServiceID</key>
+		<string>emas-ha</string>
+		<key>HAUniversalHost</key>
+		<string>emaspoc-adash.emas-ha.cn</string>
+		<key>HATimestampHost</key>
+		<string>emaspoc-aserver.emas-ha.cn</string>
+		<key>HARSAPublicKey</key>
+		<string></string>
+		<key>HotfixServerURL</key>
+		<string>http://emaspoc-hotfix-gate.emas-ha.cn</string>
 		<key>UseHTTP</key>
 		<false/>
 	</dict>
