@@ -21,7 +21,7 @@
 @property (strong,nonatomic) UITextField *paramValue;
 @property (strong,nonatomic) UITextField *paramName;
 @property (strong,nonatomic) UIPickerView *pickView;
-@property (copy,nonatomic) NSString *selectedType;
+@property (copy,nonatomic)   NSString *selectedType;
 
 @end
 

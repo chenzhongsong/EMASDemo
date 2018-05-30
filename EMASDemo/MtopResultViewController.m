@@ -21,7 +21,7 @@ typedef NS_ENUM(NSUInteger,MtopParamType){
 };
 
 static MtopParamType filterType(NSString *typeString) {
-    if ([typeString hasPrefix:@"Sting"]) {
+    if ([typeString hasPrefix:@"String"]) {
         return MtopParamType_String;
     }else if ([typeString hasPrefix:@"Bool"]) {
         return MtopParamType_Bool;
@@ -189,7 +189,6 @@ static NSString* mtopDescription(MtopExtResponse *response){
                 case MtopParamType_Integer:{
                     [request addBizParameter:[NSNumber numberWithInteger:paramValue.integerValue] forKey:paramName];
                 }
-                    
                     break;
             }
         }

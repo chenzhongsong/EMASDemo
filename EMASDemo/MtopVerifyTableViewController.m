@@ -20,11 +20,15 @@ static NSString *TableSampleIdentifier2 = @"TableSampleIdentifier2";
 static NSString *TableSampleIdentifier3 = @"TableSampleIdentifier3";
 static NSString *TableSampleIdentifier4 = @"TableSampleIdentifier4";
 
-static int paramRowsInSection = 2;
+//static int paramRowsInSection = 7;
+//static BOOL isFirstLoad = YES;
 
 @interface MtopVerifyTableViewController () <MtopExtRequestDelegate>
 
 @property (nonatomic,strong) NSMutableDictionary *requestData;
+@property (nonatomic,strong) NSMutableArray *defaultParamData;
+@property (nonatomic,assign) int paramRowsInSection;
+
 
 @end
 
@@ -32,11 +36,18 @@ static int paramRowsInSection = 2;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _paramRowsInSection = 7;
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"验证MTOP";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addParamDataSource)];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    _defaultParamData = @[@{@"testBool":@[@"true",@"Bool"]},
+                          @{@"testInteger":@[@"2",@"Integer"]},
+                          @{@"testBoolean":@[@"false",@"Bool"]},
+                          @{@"testDoub":@[@"1.1",@"Double"]},
+                          @{@"testStr":@[@"testStr",@"String"]},
+                          @{@"testInt":@[@"1",@"Int"]},
+                          @{@"testDouble":@[@"1.2",@"Double"]}].mutableCopy;
     [self registerCustomCell];
     
 }
@@ -56,7 +67,7 @@ static int paramRowsInSection = 2;
 }
 
 - (void)addParamDataSource {
-    paramRowsInSection += 1;
+    self.paramRowsInSection += 1;
     [self.tableView reloadData];
 }
 
@@ -76,7 +87,10 @@ static int paramRowsInSection = 2;
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 1) {
-        paramRowsInSection -= 1 ;
+        self.paramRowsInSection -= 1 ;
+        if (self.defaultParamData.count >= (indexPath.row + 1) ) {
+            [self.defaultParamData removeObjectAtIndex:indexPath.row];
+        }
         // 刷新
         MtopCustomCell2 *cell2 = [tableView cellForRowAtIndexPath:indexPath];
         // 清空cell数据
@@ -109,7 +123,7 @@ static int paramRowsInSection = 2;
     if (section == 0) {
         return 2;
     }else if (section == 1){
-        return paramRowsInSection;
+        return self.paramRowsInSection;
     }
     return 1;
 }
@@ -131,19 +145,33 @@ static int paramRowsInSection = 2;
             }
             if (indexPath.row == 0) {
                 ((MtopCustomCell1 *)cell).textFiled.placeholder = @"输入网关IP和PORT (IP地址:端口号)";
+                ((MtopCustomCell1 *)cell).textFiled.text = @"mnaas-k8s.emas-poc.com"; // 设置默认值
             }
             if (indexPath.row == 1) {
                 ((MtopCustomCell1 *)cell).textFiled.placeholder = @"输入API名称及版本 (apiName/apiVersion)";
+                ((MtopCustomCell1 *)cell).textFiled.text = @"mtop.bizmock.test.simpleparam/2.0";
             }
         }
             break;
             
         case 1: {
-            cell = (MtopCustomCell2 *)[tableView dequeueReusableCellWithIdentifier:TableSampleIdentifier2];
+            cell = [tableView dequeueReusableCellWithIdentifier:TableSampleIdentifier2];
             if (cell == nil) {
-                cell = [(MtopCustomCell2 *)[MtopCustomCell2 alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableSampleIdentifier2];
+                cell = [[MtopCustomCell2 alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableSampleIdentifier2];
             }
             
+            MtopCustomCell2 *cell2 = (MtopCustomCell2 *)cell;
+            
+            if (self.defaultParamData.count >= (indexPath.row + 1)) {
+                NSDictionary *dict = [self.defaultParamData objectAtIndex:indexPath.row];
+                for (NSString *key in dict.allKeys) {
+                    cell2.paramName.text = key;
+                    NSArray *result = dict[key];
+                    cell2.paramType.text = [result objectAtIndex:1];
+                    cell2.paramValue.text = [result objectAtIndex:0];
+                    cell2.selectedType = [result objectAtIndex:1];
+                }
+            }
         }
             break;
             
@@ -211,7 +239,7 @@ static int paramRowsInSection = 2;
     }
     
     NSMutableArray *dataArray = [NSMutableArray arrayWithCapacity:2];
-    for (int i = 0; i < paramRowsInSection ; i++) {
+    for (int i = 0; i < self.paramRowsInSection ; i++) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:1];
         MtopCustomCell2 *cell = [tableView cellForRowAtIndexPath:indexPath];
         if (cell.paramType.text.length != 0 &&
