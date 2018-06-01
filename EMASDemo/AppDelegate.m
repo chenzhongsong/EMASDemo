@@ -47,6 +47,10 @@
 #import "WXCrashAdapterHandler.h"
 #import "WXCrashReporter.h"
 
+// --远程配置
+#import <orange/orange.h>
+#import <orange/OrangeLog.h>
+
 // --读取配置
 #import "EMASService.h"
 
@@ -137,7 +141,8 @@
     [self initAccsConfig];
     [self initHAConfig];
     
-    // 3. 初始化Weex，Weex依赖基础库、网关和高可用，因此Weex的初始化顺序为，基础库->高可用->网关->Weex
+    // 3. 初始化Weex，Weex依赖基础库、网关和高可用，因此Weex的初始化顺序为，基础库->高可用->网关->远程配置->Weex
+    [self initRemoteConfig];
     [self initMtopConfig];
     [self initWeexConfig];
     [self initDyConfig];
@@ -308,6 +313,18 @@
 {
     NSString * logicIdentifier = [NSString stringWithFormat:@"%@@%@",[[EMASService shareInstance] appkey],[self isDeviceIphone]?@"iphoneos":@"iPad"];
     [[DynamicConfigurationAdaptorManager sharedInstance] setUpWithMaxUpateTimesPerDay:10 AndIdentifier:logicIdentifier];
+}
+
+// 初始化Orange
+
+- (void)initRemoteConfig {
+    EMASService *service = [EMASService shareInstance];
+    openOrangeLog(OrangeLogLevel_ALL);
+    [Orange setOrangeDataCenterOnlineHost:service.RemoteConfigHost debugHost:service.RemoteConfigHost dailyHost:service.RemoteConfigHost];
+    [Orange setOrangeBetaModeAccsHost:@[service.ACCSDomain,service.ACCSDomain,service.ACCSDomain]];
+    [Orange runMode:OrangeUpateModeEvent];
+
+    
 }
 
 #pragma mark -

@@ -122,4 +122,10 @@
     return [[services objectForKey:@"UseHTTP"] boolValue];
 }
 
+- (NSString *)RemoteConfigHost
+{
+    NSDictionary *dict = [services objectForKey:@"RemoteConfig"];
+    return [dict objectForKey:@"host"];
+}
+
 @end

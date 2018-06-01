@@ -1,8 +1,7 @@
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs-thirdpart.git'     
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs.git'
 source 'git@gitlab.emas-ha.cn:root/emas-specs.git'
-source 'git@gitlab.alibaba-inc.com:alipods/specs.git'
-source 'git@gitlab.alibaba-inc.com:alipods/specs-mirror.git'
+
 
 platform :ios
 
@@ -16,16 +15,19 @@ platform:ios, '8.0'
     pod  'Reachability',     '3.2'
     pod  'FMDB',             '2.7.2'
     # pod  'NetworkSDK',       '10.0.3.2'
-    pod  'NetworkSDK','10.0.3.3-EMAS'
+    pod  'NetworkSDK','10.0.3.3'
     pod  'tnet',             '10.0.3.1'
 
     # --ACCS(通用库 -> ACCS)
     #pod  'TBAccsSDK',        '10.0.3'
-    pod  'TBAccsSDK','10.0.4-EMAS'
+    pod  'TBAccsSDK','10.0.4'
     
     # --网关(通用库-> 网关)
     pod  'MtopSDK',          '10.0.4'
     pod  'mtopext/MtopCore', '10.0.4'
+    
+    # --远程配置
+    pod 'orange','10.0.0'
     
     # --高可用(通用库-> ACCS -> 高可用)
     pod  'AliHAAdapter4poc',   '10.0.5.1'

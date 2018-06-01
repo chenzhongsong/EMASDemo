@@ -26,6 +26,7 @@
 - (NSString *)HATimestampHost;
 - (NSString *)HARSAPublicKey;
 - (NSString *)HotfixServerURL;
+- (NSString *)RemoteConfigHost;
 - (BOOL)useHTTP;
 
 @end

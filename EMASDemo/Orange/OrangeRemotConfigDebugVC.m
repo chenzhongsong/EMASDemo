@@ -8,8 +8,8 @@
 
 #import "OrangeRemotConfigDebugVC.h"
 #import "CustomCell.h"
-#import "OrangeTest.h"
-#import "OrangeConfigModel.h"
+#import <orange/OrangeConfigModel.h>
+#import <orange/OrangeTest.h>
 
 static NSString* cellIdentity =   @"CustomCell";//cell的标识
 

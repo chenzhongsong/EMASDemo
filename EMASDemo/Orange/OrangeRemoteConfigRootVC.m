@@ -8,13 +8,19 @@
 
 #import "OrangeRemoteConfigRootVC.h"
 #import "OrangeRemotConfigDebugVC.h"
-#import <NWNetworkConfiguration.h>
+//#import <NWNetworkConfiguration.h>
+#import <NetworkCore/NWNetworkConfiguration.h>
 #import "OrangeFeatureSecondVC.h"
-#import "Orange.h"
-#import "OrangeLog.h"
-#import "OrangeConfigCenter.h"
-#import "TBAccsManager.h"
-#import "OrangeAccsCenter.h"
+#import <orange/Orange.h>
+#import <orange/OrangeLog.h>
+#import <orange/OrangeConfigCenter.h>
+#import <orange/OrangeAccsCenter.h>
+#import <TBAccsSDK/TBAccsManager.h>
+//#import "Orange.h"
+//#import "OrangeLog.h"
+//#import "OrangeConfigCenter.h"
+//#import "TBAccsManager.h"
+//#import "OrangeAccsCenter.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wdeprecated-declarations"

@@ -16,6 +16,7 @@
 #import "EMASService.h"
 #import "AppConfigTableViewController.h"
 #import "MtopVerifyTableViewController.h"
+#import "OrangeRemoteConfigRootVC.h"
 
 @interface FirstTableViewController ()
 
@@ -132,6 +133,13 @@
         {
             HFXViewController *controller = [HFXViewController new];
             [self.navigationController pushViewController:controller animated:YES];
+            break;
+        }
+        
+        case 5:
+        {
+            OrangeRemoteConfigRootVC *configVC = [[OrangeRemoteConfigRootVC alloc] init];
+            [self.navigationController pushViewController:configVC animated:YES];
             break;
         }
 

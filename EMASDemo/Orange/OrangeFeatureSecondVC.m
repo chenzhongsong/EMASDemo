@@ -8,7 +8,7 @@
 
 #import "OrangeFeatureSecondVC.h"
 #import "OrangeFeatureFirstVC.h"
-#import "Orange.h"
+#import <orange/orange.h>
 #import "OrangeTestConstants.h"
 
 

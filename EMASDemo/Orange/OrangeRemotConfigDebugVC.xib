@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XPI-yL-ujD">
-                    <rect key="frame" x="0.0" y="20" width="375" height="260"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="260" id="wid-Ln-M3d"/>
@@ -57,16 +56,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="y39-Ne-FdN" firstAttribute="trailing" secondItem="k2m-BM-Lie" secondAttribute="trailing" constant="20" id="7Dw-KE-7mw"/>
+                            <constraint firstAttribute="trailing" secondItem="k2m-BM-Lie" secondAttribute="trailing" constant="20" id="7Dw-KE-7mw"/>
                             <constraint firstItem="QkY-Jp-dMK" firstAttribute="centerY" secondItem="aP7-ey-aWu" secondAttribute="centerY" id="JAO-d8-Mjj"/>
                             <constraint firstItem="QkY-Jp-dMK" firstAttribute="leading" secondItem="aP7-ey-aWu" secondAttribute="leading" constant="12" id="YBx-kC-6Az"/>
                             <constraint firstItem="k2m-BM-Lie" firstAttribute="centerY" secondItem="QkY-Jp-dMK" secondAttribute="centerY" id="otk-5e-huh"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="y39-Ne-FdN"/>
                     </view>
                 </tableView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eNi-cG-YJM">
-                    <rect key="frame" x="0.0" y="310" width="375" height="327"/>
+                    <rect key="frame" x="0.0" y="290" width="375" height="347"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -74,15 +72,14 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="XPI-yL-ujD" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="7Lu-dx-SAi"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="eNi-cG-YJM" secondAttribute="trailing" id="FHB-AH-ypX"/>
-                <constraint firstItem="eNi-cG-YJM" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="PM4-oc-DJ6"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="XPI-yL-ujD" secondAttribute="trailing" id="Rs1-jX-C2R"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="eNi-cG-YJM" secondAttribute="bottom" constant="30" id="S8q-EJ-oVm"/>
+                <constraint firstItem="XPI-yL-ujD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7Lu-dx-SAi"/>
+                <constraint firstAttribute="trailing" secondItem="eNi-cG-YJM" secondAttribute="trailing" id="FHB-AH-ypX"/>
+                <constraint firstItem="eNi-cG-YJM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PM4-oc-DJ6"/>
+                <constraint firstAttribute="trailing" secondItem="XPI-yL-ujD" secondAttribute="trailing" id="Rs1-jX-C2R"/>
+                <constraint firstAttribute="bottom" secondItem="eNi-cG-YJM" secondAttribute="bottom" constant="30" id="S8q-EJ-oVm"/>
                 <constraint firstItem="eNi-cG-YJM" firstAttribute="top" secondItem="XPI-yL-ujD" secondAttribute="bottom" constant="30" id="TML-yE-N4c"/>
-                <constraint firstItem="XPI-yL-ujD" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="ilf-Od-wYB"/>
+                <constraint firstItem="XPI-yL-ujD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ilf-Od-wYB"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="-1330" y="-416"/>
         </view>
     </objects>
