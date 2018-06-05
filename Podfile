@@ -14,13 +14,11 @@ platform:ios, '8.0'
     pod  'UserTrack',        '6.3.5.100005-poc'
     pod  'Reachability',     '3.2'
     pod  'FMDB',             '2.7.2'
-    # pod  'NetworkSDK',       '10.0.3.2'
-    pod  'NetworkSDK','10.0.3.3'
+    pod  'NetworkSDK',       '10.0.3.4'
     pod  'tnet',             '10.0.3.1'
 
     # --ACCS(通用库 -> ACCS)
-    #pod  'TBAccsSDK',        '10.0.3'
-    pod  'TBAccsSDK','10.0.4'
+    pod  'TBAccsSDK',         '10.0.6'
     
     # --网关(通用库-> 网关)
     pod  'MtopSDK',          '10.0.4'
@@ -38,8 +36,8 @@ platform:ios, '8.0'
     pod 'ZCache', '10.0.3'
     #pod 'ZipArchive', '~> 1.4.0'
     pod 'SDWebImage', '3.7.5'
-    pod 'DynamicConfiguration', '10.0.3'
-    pod 'DynamicConfigurationAdaptor', '10.0.3'
+    pod 'DynamicConfiguration', '10.0.4'
+    pod 'DynamicConfigurationAdaptor', '10.0.4'
 
     # --热修复
     pod 'AlicloudLua', '5.1.4.2'

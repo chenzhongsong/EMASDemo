@@ -50,7 +50,7 @@
 		</dict>
 		<key>RemoteConfig</key>
 		<dict>
-			<key>host</key>
+			<key>Domain</key>
 			<string>aserver-pre-k8s.emas-poc.com:30430</string>
 		</dict>
 		<key>UseHTTP</key>

@@ -125,7 +125,7 @@
 - (NSString *)RemoteConfigHost
 {
     NSDictionary *dict = [services objectForKey:@"RemoteConfig"];
-    return [dict objectForKey:@"host"];
+    return [dict objectForKey:@"Domain"];
 }
 
 @end
