@@ -1,6 +1,6 @@
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs-thirdpart.git'     
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs.git'
-source 'git@gitlab.emas-ha.cn:root/emas-specs.git'
+#source 'git@gitlab.emas-ha.cn:root/emas-specs.git'
 
 
 platform :ios
@@ -47,6 +47,6 @@ platform:ios, '8.0'
     
     
     
-    pod 'EMASFirstBundle', '3.0.1'
+    #pod 'EMASFirstBundle', '3.0.1'
     
 end
