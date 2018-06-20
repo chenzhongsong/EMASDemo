@@ -66,7 +66,6 @@
                                                object: nil];
     
     // 设置环境: 线上 release, 预发 releaseDebug, 日常：daily
-    [NWNetworkConfiguration setEnvironment:release];
     [[NWNetworkConfiguration shareInstance] setIsEnableAMDC:NO];
     
     TBAccsConfiguration *ac = [[TBAccsConfiguration alloc] initWithHost:config.host];
