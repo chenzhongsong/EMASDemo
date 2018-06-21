@@ -13,6 +13,8 @@
 		7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6260E81FDA8C8400E856CB /* arp.framework */; };
 		7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */; };
 		7D8394A91FDB902900EBB60F /* fix.lua in Resources */ = {isa = PBXBuildFile; fileRef = 7D8394A81FDB902900EBB60F /* fix.lua */; };
+		8628395A20D8B58B009E31BB /* EMASWeexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8628395920D8B58B009E31BB /* EMASWeexViewController.m */; };
+		8689306620D2644600D8AA79 /* EMASWeexWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8689306520D2644600D8AA79 /* EMASWeexWrapper.m */; };
 		8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */; };
 		8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */; };
 		8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */; };
@@ -97,6 +99,10 @@
 		7D6260E81FDA8C8400E856CB /* arp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = arp.framework; sourceTree = "<group>"; };
 		7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudHotFixEmas.framework; sourceTree = "<group>"; };
 		7D8394A81FDB902900EBB60F /* fix.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fix.lua; sourceTree = "<group>"; };
+		8628395820D8B58B009E31BB /* EMASWeexViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASWeexViewController.h; sourceTree = "<group>"; };
+		8628395920D8B58B009E31BB /* EMASWeexViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWeexViewController.m; sourceTree = "<group>"; };
+		8689306420D2644600D8AA79 /* EMASWeexWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASWeexWrapper.h; sourceTree = "<group>"; };
+		8689306520D2644600D8AA79 /* EMASWeexWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWeexWrapper.m; sourceTree = "<group>"; };
 		8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigTableViewController.h; sourceTree = "<group>"; };
 		8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfigTableViewController.m; sourceTree = "<group>"; };
 		8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopVerifyTableViewController.h; sourceTree = "<group>"; };
@@ -249,6 +255,19 @@
 			path = hotfix;
 			sourceTree = "<group>";
 		};
+		8689306720D2646B00D8AA79 /* weex */ = {
+			isa = PBXGroup;
+			children = (
+				8689306420D2644600D8AA79 /* EMASWeexWrapper.h */,
+				8689306520D2644600D8AA79 /* EMASWeexWrapper.m */,
+				8628395820D8B58B009E31BB /* EMASWeexViewController.h */,
+				8628395920D8B58B009E31BB /* EMASWeexViewController.m */,
+				9A09D79B1FF27B5B00585632 /* handler */,
+				9A09D7971FF27B2300585632 /* module */,
+			);
+			path = weex;
+			sourceTree = "<group>";
+		};
 		8AA1174A1FF5E8FD004D4D0A /* EMASWatch */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,15 +294,15 @@
 			path = "EMASWatch Extension";
 			sourceTree = "<group>";
 		};
-		8AC0CB70200317A000FD44E6 /* source */ = {
+		8AC0CB70200317A000FD44E6 /* crashReporter */ = {
 			isa = PBXGroup;
 			children = (
 				8AC0CB71200317A000FD44E6 /* WXRecorder.h */,
-				8AC0CB72200317A000FD44E6 /* WXCrashReporter.m */,
-				8AC0CB73200317A000FD44E6 /* WXCrashReporter.h */,
 				8AC0CB74200317A000FD44E6 /* WXRecorder.m */,
+				8AC0CB73200317A000FD44E6 /* WXCrashReporter.h */,
+				8AC0CB72200317A000FD44E6 /* WXCrashReporter.m */,
 			);
-			path = source;
+			path = crashReporter;
 			sourceTree = "<group>";
 		};
 		8ADA95321FD9309400C0EF49 = {
@@ -316,8 +335,8 @@
 				8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */,
 				8A69B608200C8F980073756D /* EMASService.h */,
 				8A69B609200C8F980073756D /* EMASService.m */,
-				8AC0CB70200317A000FD44E6 /* source */,
 				8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */,
+				8689306720D2646B00D8AA79 /* weex */,
 				1A65F6231FF2534A00B4573C /* AliHA */,
 				7D6260E11FDA8C5900E856CB /* hotfix */,
 				8ADA953E1FD9309400C0EF49 /* AppDelegate.h */,
@@ -341,8 +360,6 @@
 				9A09D78D1FF2719600585632 /* WXDemoViewController.h */,
 				9A09D78E1FF2719700585632 /* WXDemoViewController.m */,
 				9A09D7901FF2721000585632 /* DemoDefine.h */,
-				9A09D79B1FF27B5B00585632 /* handler */,
-				9A09D7971FF27B2300585632 /* module */,
 				980F855720BECB8A002156A2 /* Orange */,
 				9A09D7941FF27A6200585632 /* bundlejs */,
 				8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */,
@@ -435,6 +452,7 @@
 				9A09D79F1FF27F9F00585632 /* WXResourceRequestHandlerDemoImpl.m */,
 				9A09D79C1FF27B5B00585632 /* WXImgLoaderDefaultImpl.h */,
 				9A09D79D1FF27B5B00585632 /* WXImgLoaderDefaultImpl.m */,
+				8AC0CB70200317A000FD44E6 /* crashReporter */,
 			);
 			path = handler;
 			sourceTree = "<group>";
@@ -462,9 +480,7 @@
 				8ADA95371FD9309400C0EF49 /* Sources */,
 				8ADA95381FD9309400C0EF49 /* Frameworks */,
 				8ADA95391FD9309400C0EF49 /* Resources */,
-				D47B822F9483FC07D73F6724 /* [CP] Embed Pods Frameworks */,
 				AA85B2CA3C2F5806D1BDF7DB /* [CP] Copy Pods Resources */,
-				15906AA9638B4256D860D7CE /* 📦 Embed Pods Frameworks */,
 				67DAC7CF7E1FB0DDB324BBC0 /* 📦 Copy Pods Resources */,
 				8ABD97BD1FF4D55700469557 /* Embed Watch Content */,
 			);
@@ -520,7 +536,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0900;
-				ORGANIZATIONNAME = zhishui.lcq;
+				ORGANIZATIONNAME = EMAS;
 				TargetAttributes = {
 					8ADA953A1FD9309400C0EF49 = {
 						CreatedOnToolsVersion = 9.0;
@@ -599,21 +615,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15906AA9638B4256D860D7CE /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		579AA850E8214768859E3DFA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -650,13 +651,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EMASDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AA85B2CA3C2F5806D1BDF7DB /* [CP] Copy Pods Resources */ = {
@@ -666,31 +670,36 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh",
-				"${PODS_ROOT}/WeexSDK/pre-build/native-bundle-main.js",
-				"${PODS_ROOT}/WeexSDK/ios/sdk/WeexSDK/Resources/wx_load_error@3x.png",
+				"${PODS_ROOT}/AliHAAdapter4poc/AliHAAdapter4poc.framework/alihaadapter4poc_bundle.plist",
+				"${PODS_ROOT}/AliHACore/AliHACore.framework/alihacore_bundle.plist",
+				"${PODS_ROOT}/AliHADeviceEvaluation/AliHADeviceEvaluation.framework/alihadeviceevaluation_bundle.plist",
+				"${PODS_ROOT}/AliHAPerformanceMonitor/AliHAPerformanceMonitor.framework/alihaperformancemonitor_bundle.plist",
+				"${PODS_ROOT}/AliHASecurity/AliHASecurity.framework/alihasecurity_bundle.plist",
+				"${PODS_ROOT}/JDYThreadTrace/JDYThreadTrace.framework/.gitkeep",
+				"${PODS_ROOT}/JDYThreadTrace/JDYThreadTrace.framework/JDYThreadTrace.podspec",
+				"${PODS_ROOT}/TBRest/TBRest.framework/TBRest.podspec",
+				"${PODS_ROOT}/TBRest/TBRest.framework/.gitkeep",
+				"${PODS_ROOT}/UserTrack/UT.framework/Resources/UserTrack-Info.plist",
+				"${PODS_ROOT}/WeexSDK/WeexSDK.framework/native-bundle-main.js",
+				"${PODS_ROOT}/WeexSDK/WeexSDK.framework/wx_load_error@3x.png",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihaadapter4poc_bundle.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihacore_bundle.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihadeviceevaluation_bundle.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihaperformancemonitor_bundle.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihasecurity_bundle.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/.gitkeep",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JDYThreadTrace.podspec",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TBRest.podspec",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UserTrack-Info.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/native-bundle-main.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/wx_load_error@3x.png",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D47B822F9483FC07D73F6724 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D784AF3C3C4686A8D23CC66A /* [CP] Check Pods Manifest.lock */ = {
@@ -735,6 +744,7 @@
 				8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */,
 				7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */,
 				9A09D7A41FF356DA00585632 /* WXAppMonitorHandler.m in Sources */,
+				8628395A20D8B58B009E31BB /* EMASWeexViewController.m in Sources */,
 				980F856A20BECC49002156A2 /* OrangeRemotConfigDebugVC.m in Sources */,
 				9A09D7891FF270D600585632 /* WXScannerVC.m in Sources */,
 				8ADA95511FD9309400C0EF49 /* main.m in Sources */,
@@ -746,6 +756,7 @@
 				8ADA95431FD9309400C0EF49 /* FirstViewController.m in Sources */,
 				8ADA95781FDA3BB000C0EF49 /* SecondTableViewController.m in Sources */,
 				980F856D20BECC49002156A2 /* OrangeFeatureFirstVC.m in Sources */,
+				8689306620D2644600D8AA79 /* EMASWeexWrapper.m in Sources */,
 				8AC0CB75200317A000FD44E6 /* WXCrashReporter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -921,7 +932,7 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57JW9832YF;
+				DEVELOPMENT_TEAM = 2H2CAWW468;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -946,7 +957,7 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57JW9832YF;
+				DEVELOPMENT_TEAM = 2H2CAWW468;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

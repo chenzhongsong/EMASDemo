@@ -23,29 +23,16 @@
 #import <AliHASecurity/AliHASecurity.h>
 #import <TRemoteDebugger/TRDManagerService.h>
 #import <TBRest/TBRestSendService.h>
-#import <TBCrashReporter/TBCrashReporterMonitor.h>
 
 // --网关头文件
 #import <MtopSDK/MtopSDK.h>
 #import <MtopCore/MtopService.h>
 #import <MtopCore/TBSDKConfiguration.h>
 
-// --weex头文件
-#import <WeexSDK/WXAppConfiguration.h>
-#import <WeexSDK/WXSDKEngine.h>
-#import <WeexSDK/WXLog.h>
-#import <ZCache/ZCache.h>
+#import "EMASWeexWrapper.h"
 
 // --weex灰度头文件
 #import <DynamicConfigurationAdaptor/DynamicConfigurationAdaptorManager.h>
-
-// --weex默认实现
-#import "WXImgLoaderDefaultImpl.h"
-#import "WXEventModule.h"
-#import "WXResourceRequestHandlerDemoImpl.h"
-#import "WXAppMonitorHandler.h"
-#import "WXCrashAdapterHandler.h"
-#import "WXCrashReporter.h"
 
 // --远程配置
 #import <orange/orange.h>
@@ -144,7 +131,11 @@
     // 3. 初始化Weex，Weex依赖基础库、网关和高可用，因此Weex的初始化顺序为，基础库->高可用->网关->远程配置->Weex
     [self initRemoteConfig];
     [self initMtopConfig];
-    [self initWeexConfig];
+    //[self initWeexConfig];
+    
+    [EMASWeexWrapper initWeexDefaultConfigWithAppGroup:@"TestApp"
+                                               appName:@"EMASDemo"
+                                            appVersion:[[EMASService shareInstance] getAppVersion]];
     [self initDyConfig];
     
     
@@ -267,7 +258,7 @@
     openSDKSwitchLog(YES); // 打开调试日志
 }
 
-//-- weex
+/*
 - (void)initWeexConfig
 {
     // weex初始化部分
@@ -307,7 +298,7 @@
     [ZCache setDebugMode:YES]; // 打开调试日志
     [ZCache setupWithMtop];
 }
-
+*/
 // -- dy 初始化
 - (void)initDyConfig
 {

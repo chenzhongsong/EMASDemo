@@ -14,6 +14,7 @@
 //#import "WXAppConfiguration.h"
 //#import <AlicloudHttpDNS/AlicloudHttpDNS.h>
 #import <ZCache/ZCache.h>
+#import "EMASService.h"
 
 @interface WXResourceRequestHandlerDemoImpl () <NSURLSessionDataDelegate>
 
@@ -24,6 +25,22 @@
 @implementation WXResourceRequestHandlerDemoImpl {
     NSURLSession *_session;
     NSMutableDictionary<NSURLSessionDataTask *, id<WXResourceRequestDelegate>> *_delegates;
+}
+
+- (void)dealloc
+{
+    
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [ZCache defaultCommonConfig].packageZipPrefix = [[EMASService shareInstance] ZCacheURL];
+        [ZCache setDebugMode:YES]; // 打开调试日志
+        [ZCache setupWithMtop];
+    }
+    return self;
 }
 
 #pragma mark - WXResourceRequestHandler

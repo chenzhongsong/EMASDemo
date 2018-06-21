@@ -8,14 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <SRWebSocket.h>
+#import "EMASWeexViewController.h"
 
-@interface WXDemoViewController : UIViewController<SRWebSocketDelegate>
-
-@property (nonatomic, strong) NSString *script;
-@property (nonatomic, strong) NSURL *url;
+@interface WXDemoViewController : EMASWeexViewController<SRWebSocketDelegate>
 
 @property (nonatomic, strong) SRWebSocket *hotReloadSocket;
-@property (nonatomic, strong) NSString *source;
+@property (nonatomic, copy) NSString *source;
 
 @end
 
