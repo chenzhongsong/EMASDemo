@@ -145,7 +145,7 @@ static NSString *TableSampleIdentifier4 = @"TableSampleIdentifier4";
             }
             if (indexPath.row == 0) {
                 ((MtopCustomCell1 *)cell).textFiled.placeholder = @"输入网关IP和PORT (IP地址:端口号)";
-                ((MtopCustomCell1 *)cell).textFiled.text = @"mnaas-k8s.emas-poc.com"; // 设置默认值
+                ((MtopCustomCell1 *)cell).textFiled.text = @"aserver-k8s-poc.emas-poc.com:30080"; // 设置默认值
             }
             if (indexPath.row == 1) {
                 ((MtopCustomCell1 *)cell).textFiled.placeholder = @"输入API名称及版本 (apiName/apiVersion)";

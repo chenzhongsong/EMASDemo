@@ -13,7 +13,7 @@
 		<key>ACCS</key>
 		<dict>
 			<key>Domain</key>
-			<string>emaspoc-acs.emas-ha.cn</string>
+			<string>accs-k8s-poc.emas-poc.com:30080</string>
 		</dict>
 		<key>Network</key>
 		<dict>
@@ -39,14 +39,14 @@
 			<key>ServiceID</key>
 			<string>emas-ha</string>
 			<key>UniversalHost</key>
-			<string>emaspoc-adash.emas-ha.cn</string>
+			<string>adash-k8s-poc.emas-poc.com:32080</string>
 			<key>TimestampHost</key>
-			<string>emaspoc-aserver.emas-ha.cn</string>
+			<string>aserver-k8s-poc.emas-poc.com:30080</string>
 		</dict>
 		<key>Hotfix</key>
 		<dict>
 			<key>URL</key>
-			<string>http://emaspoc-hotfix-gate.emas-ha.cn</string>
+			<string>http://hotfix-gate-demo-poc.emas-poc.com</string>
 		</dict>
 		<key>RemoteConfig</key>
 		<dict>
