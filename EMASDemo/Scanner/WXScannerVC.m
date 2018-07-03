@@ -101,7 +101,7 @@
         return;
     }
     [self jsReplace:url];
-    WXDemoViewController * controller = [[WXDemoViewController alloc] initWithSourceURL:url];
+    WXDemoViewController * controller = [[WXDemoViewController alloc] initWithNavigatorURL:url];
     controller.source = @"scan";
     
     NSURLComponents *components = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:NO];

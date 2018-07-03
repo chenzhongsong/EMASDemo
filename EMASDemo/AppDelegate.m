@@ -29,7 +29,7 @@
 #import <MtopCore/MtopService.h>
 #import <MtopCore/TBSDKConfiguration.h>
 
-#import "EMASWeexWrapper.h"
+#import "ExEMASWXSDKEngine.h"
 
 // --weex灰度头文件
 #import <DynamicConfigurationAdaptor/DynamicConfigurationAdaptorManager.h>
@@ -125,18 +125,16 @@
     [self initCommonConfig];
     
     // 2. 初始化高可用，高可用依赖基础库和ACCS，因此高可用的初始化顺序为，基础库->ACCS->高可用
-    [self initAccsConfig];
-    [self initHAConfig];
+    //[self initAccsConfig];
+    //[self initHAConfig];
     
     // 3. 初始化Weex，Weex依赖基础库、网关和高可用，因此Weex的初始化顺序为，基础库->高可用->网关->远程配置->Weex
-    [self initRemoteConfig];
-    [self initMtopConfig];
-    //[self initWeexConfig];
+    //[self initRemoteConfig];
+   // [self initMtopConfig];
     
-    [EMASWeexWrapper initWeexDefaultConfigWithAppGroup:@"TestApp"
-                                               appName:@"EMASDemo"
-                                            appVersion:[[EMASService shareInstance] getAppVersion]];
-    [self initDyConfig];
+    [ExEMASWXSDKEngine setup];
+    
+    //[self initDyConfig];
     
     
     return YES;
@@ -258,47 +256,6 @@
     openSDKSwitchLog(YES); // 打开调试日志
 }
 
-/*
-- (void)initWeexConfig
-{
-    // weex初始化部分
-    //business configuration
-    [WXAppConfiguration setAppGroup:@"TestApp"];
-    [WXAppConfiguration setAppName:@"EMASDemo"];
-    [WXAppConfiguration setAppVersion:[[EMASService shareInstance] getAppVersion]];
-    
-    //init sdk environment
-    [WXSDKEngine initSDKEnvironment];
-    
-    [WXLog setLogLevel: WXLogLevelAll]; // 打开调试日志
-    
-    // 数据上报--必选
-    [WXSDKEngine registerHandler:[WXAppMonitorHandler new] withProtocol:@protocol(WXAppMonitorProtocol)];
-    
-    // 图片下载--必选
-    [WXSDKEngine registerHandler:[WXImgLoaderDefaultImpl new] withProtocol:@protocol(WXImgLoaderProtocol)];
-    
-    // zcache--必选
-    [WXSDKEngine registerHandler:[WXResourceRequestHandlerDemoImpl new] withProtocol:@protocol(WXResourceRequestHandler)];
-    
-    // JSError监控--必选
-    [WXSDKEngine registerHandler:[WXCrashAdapterHandler new] withProtocol:@protocol(WXJSExceptionProtocol)];
-    
-    // JSCrash监控--必选
-    [[TBCrashReporterMonitor sharedMonitor] registerCrashLogMonitor:[[WXCrashReporter alloc] init]];
-    
-    // 事件调用--可选
-    [WXSDKEngine registerModule:@"haTest" withClass:[WXEventModule class]];
-    
-    // 事件调用，可选
-    [WXSDKEngine registerHandler:[WXEventModule new] withProtocol:@protocol(WXEventModuleProtocol)];
-    
-    // ZCache初始化部分
-    [ZCache defaultCommonConfig].packageZipPrefix = [[EMASService shareInstance] ZCacheURL];
-    [ZCache setDebugMode:YES]; // 打开调试日志
-    [ZCache setupWithMtop];
-}
-*/
 // -- dy 初始化
 - (void)initDyConfig
 {

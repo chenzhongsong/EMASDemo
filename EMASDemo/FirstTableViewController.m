@@ -154,7 +154,7 @@
 
 - (UIViewController *)demoController
 {
-    UIViewController *demo = [[WXDemoViewController alloc] initWithSourceURL:[NSURL URLWithString:HOME_URL]];
+    UIViewController *demo = [[WXDemoViewController alloc] initWithNavigatorURL:[NSURL URLWithString:HOME_URL]];
     
 //#if DEBUG
     //If you are debugging in device , please change the host to current IP of your computer.
