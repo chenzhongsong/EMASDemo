@@ -9,7 +9,6 @@
 #import "ExEMASWXSDKEngine.h"
 #import <WeexSDK/WXAppConfiguration.h>
 #import "EMASService.h"
-#import <ZCache/ZCache.h>
 #import "WXEventModule.h"
 
 @implementation ExEMASWXSDKEngine
@@ -27,8 +26,6 @@
     [WXAppConfiguration setAppGroup:@"TestApp"];
     [WXAppConfiguration setAppName:@"EMASDemo"];
     [WXAppConfiguration setAppVersion:[[EMASService shareInstance] getAppVersion]];
-    [ZCache defaultCommonConfig].packageZipPrefix = [[EMASService shareInstance] ZCacheURL];
-
 }
 
 + (void)registerHandler {

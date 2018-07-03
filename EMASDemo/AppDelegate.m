@@ -41,6 +41,9 @@
 // --读取配置
 #import "EMASService.h"
 
+// --ZCache
+#import <ZCache/ZCache.h>
+
 @interface MyPolicyCenter : NSObject <NWPolicyDelegate>
 @end
 
@@ -125,16 +128,16 @@
     [self initCommonConfig];
     
     // 2. 初始化高可用，高可用依赖基础库和ACCS，因此高可用的初始化顺序为，基础库->ACCS->高可用
-    //[self initAccsConfig];
-    //[self initHAConfig];
+    [self initAccsConfig];
+    [self initHAConfig];
     
-    // 3. 初始化Weex，Weex依赖基础库、网关和高可用，因此Weex的初始化顺序为，基础库->高可用->网关->远程配置->Weex
-    //[self initRemoteConfig];
-   // [self initMtopConfig];
-    
+    // 3. 初始化Weex，Weex依赖基础库、网关和高可用，因此Weex的初始化顺序为，基础库->高可用->网关->远程配置->ZCache->Weex
+    [self initRemoteConfig];
+    [self initMtopConfig];
+    [self initZCacheConfig];
     [ExEMASWXSDKEngine setup];
     
-    //[self initDyConfig];
+    [self initDyConfig];
     
     
     return YES;
@@ -254,6 +257,15 @@
     config.wapAPIURL = [[EMASService shareInstance] MTOPDomain];//设置全局自定义域名
     config.wapTTID = [[EMASService shareInstance] ChannelID]; //渠道ID
     openSDKSwitchLog(YES); // 打开调试日志
+}
+
+- (void)initZCacheConfig
+{
+#ifdef DEBUG
+    [ZCache setDebugMode:YES]; // 打开调试日志
+#endif
+    [ZCache setupWithMtop];
+    [ZCache defaultCommonConfig].packageZipPrefix = [[EMASService shareInstance] ZCacheURL];
 }
 
 // -- dy 初始化
