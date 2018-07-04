@@ -25,7 +25,7 @@
 		862839AD20E4E509009E31BB /* ExEMASWXSDKEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 862839AC20E4E509009E31BB /* ExEMASWXSDKEngine.m */; };
 		862839B020E4E53A009E31BB /* ExEMASWXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862839AF20E4E53A009E31BB /* ExEMASWXViewController.m */; };
 		862839B320E50DB0009E31BB /* WXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862839B220E50DB0009E31BB /* WXDemoViewController.m */; };
-		868E72E920EC68850016619F /* WXEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 868E72E720EC68850016619F /* WXEventModule.m */; };
+		868E72F120ECB2CD0016619F /* WXEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 868E72EC20ECB2CC0016619F /* WXEventModule.m */; };
 		8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */; };
 		8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */; };
 		8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */; };
@@ -121,8 +121,8 @@
 		862839AF20E4E53A009E31BB /* ExEMASWXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExEMASWXViewController.m; sourceTree = "<group>"; };
 		862839B120E50DB0009E31BB /* WXDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDemoViewController.h; sourceTree = "<group>"; };
 		862839B220E50DB0009E31BB /* WXDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXDemoViewController.m; sourceTree = "<group>"; };
-		868E72E620EC68850016619F /* WXEventModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXEventModule.h; sourceTree = "<group>"; };
-		868E72E720EC68850016619F /* WXEventModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXEventModule.m; sourceTree = "<group>"; };
+		868E72EB20ECB2CC0016619F /* WXEventModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXEventModule.h; sourceTree = "<group>"; };
+		868E72EC20ECB2CC0016619F /* WXEventModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXEventModule.m; sourceTree = "<group>"; };
 		8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigTableViewController.h; sourceTree = "<group>"; };
 		8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfigTableViewController.m; sourceTree = "<group>"; };
 		8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopVerifyTableViewController.h; sourceTree = "<group>"; };
@@ -285,19 +285,18 @@
 				862839AC20E4E509009E31BB /* ExEMASWXSDKEngine.m */,
 				862839AE20E4E53A009E31BB /* ExEMASWXViewController.h */,
 				862839AF20E4E53A009E31BB /* ExEMASWXViewController.m */,
-				868E72E520EC68850016619F /* module */,
+				868E72EA20ECB2CC0016619F /* module */,
 			);
 			path = weex;
 			sourceTree = "<group>";
 		};
-		868E72E520EC68850016619F /* module */ = {
+		868E72EA20ECB2CC0016619F /* module */ = {
 			isa = PBXGroup;
 			children = (
-				868E72E620EC68850016619F /* WXEventModule.h */,
-				868E72E720EC68850016619F /* WXEventModule.m */,
+				868E72EB20ECB2CC0016619F /* WXEventModule.h */,
+				868E72EC20ECB2CC0016619F /* WXEventModule.m */,
 			);
-			name = module;
-			path = ../../../weex/module;
+			path = module;
 			sourceTree = "<group>";
 		};
 		8AA1174A1FF5E8FD004D4D0A /* EMASWatch */ = {
@@ -763,7 +762,7 @@
 				980F857020BECC49002156A2 /* OrangeRemoteConfigRootVC.m in Sources */,
 				8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */,
 				7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */,
-				868E72E920EC68850016619F /* WXEventModule.m in Sources */,
+				868E72F120ECB2CD0016619F /* WXEventModule.m in Sources */,
 				980F856A20BECC49002156A2 /* OrangeRemotConfigDebugVC.m in Sources */,
 				9A09D7891FF270D600585632 /* WXScannerVC.m in Sources */,
 				8ADA95511FD9309400C0EF49 /* main.m in Sources */,
