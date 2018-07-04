@@ -110,9 +110,4 @@
     // JS Bundle下载回调
 }
 
-- (BOOL)wxJSBundleCanUseCache:(NSURL *)URL callback:(void (^)(NSString *))callback {
-    // JS Bundle是否可以使用本地缓存，例如zcache或本地cache的场景，callback输入参数为完整的JS Bundle，返回后会直接进入模版渲染，不再进行网络请求。
-    return NO;
-}
-
 @end
