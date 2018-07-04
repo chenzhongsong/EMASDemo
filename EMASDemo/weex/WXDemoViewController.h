@@ -15,7 +15,7 @@
 @property (nonatomic, strong) SRWebSocket *hotReloadSocket;
 @property (nonatomic, copy) NSString *source;
 
-@property(nonatomic, strong) EMASWXViewController *wxViewController;
+@property(nonatomic, strong) ExEMASWXViewController *wxViewController;
 
 - (id)initWithNavigatorURL:(NSURL *)URL;
 

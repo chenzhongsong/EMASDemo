@@ -11,6 +11,7 @@
 #import <WeexSDK/WXDebugTool.h>
 #import "UIViewController+WXDemoNaviBar.h"
 #import <DynamicConfiguration/DynamicConfigurationManager.h>
+#import "ExEMASWXViewController.h"
 
 @interface WXDemoViewController()
 
@@ -32,7 +33,7 @@
         self.resourceUrlString = URL.absoluteString;
         NSString * urlString = [[DynamicConfigurationManager sharedInstance] redirectUrl:[URL absoluteString]];
 
-        self.wxViewController = [[EMASWXViewController alloc] initWithNavigatorURL:[NSURL URLWithString:urlString] withCustomOptions:@{@"bundleUrl":urlString} withInitData:nil withViewController:self];
+        self.wxViewController = [[ExEMASWXViewController alloc] initWithNavigatorURL:[NSURL URLWithString:urlString] withCustomOptions:@{@"bundleUrl":urlString} withInitData:nil withViewController:self];
         //渲染容器的外部代理。
         self.wxViewController.delegate = self;
     }
