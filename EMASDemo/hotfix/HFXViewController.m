@@ -71,7 +71,7 @@ static NSCondition *_condition;
 - (void)hotfixSdkInit {
     hotfixService = [AlicloudHotFixServiceEmas sharedInstance];
     [hotfixService setLogEnabled:YES];
-    [hotfixService setServerURL: @"http://emaspoc-hotfix-gate.emas-ha.cn"];
+    [hotfixService setServerURL:[[EMASService shareInstance] HotfixServerURL]];
     [hotfixService initWithAppId:[[EMASService shareInstance] appkey] appSecret:[[EMASService shareInstance] appSecret] callback:^(BOOL res, id data, NSError *error) {
         if (res) {
             NSLog(@"HotFix SDK init success.");
