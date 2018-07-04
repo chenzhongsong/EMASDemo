@@ -23,29 +23,16 @@
 #import <AliHASecurity/AliHASecurity.h>
 #import <TRemoteDebugger/TRDManagerService.h>
 #import <TBRest/TBRestSendService.h>
-#import <TBCrashReporter/TBCrashReporterMonitor.h>
 
 // --网关头文件
 #import <MtopSDK/MtopSDK.h>
 #import <MtopCore/MtopService.h>
 #import <MtopCore/TBSDKConfiguration.h>
 
-// --weex头文件
-#import <WeexSDK/WXAppConfiguration.h>
-#import <WeexSDK/WXSDKEngine.h>
-#import <WeexSDK/WXLog.h>
-#import <ZCache/ZCache.h>
+#import "ExEMASWXSDKEngine.h"
 
 // --weex灰度头文件
 #import <DynamicConfigurationAdaptor/DynamicConfigurationAdaptorManager.h>
-
-// --weex默认实现
-#import "WXImgLoaderDefaultImpl.h"
-#import "WXEventModule.h"
-#import "WXResourceRequestHandlerDemoImpl.h"
-#import "WXAppMonitorHandler.h"
-#import "WXCrashAdapterHandler.h"
-#import "WXCrashReporter.h"
 
 // --远程配置
 #import <orange/orange.h>
@@ -53,6 +40,9 @@
 
 // --读取配置
 #import "EMASService.h"
+
+// --ZCache
+#import <ZCache/ZCache.h>
 
 @interface MyPolicyCenter : NSObject <NWPolicyDelegate>
 @end
@@ -141,10 +131,12 @@
     [self initAccsConfig];
     [self initHAConfig];
     
-    // 3. 初始化Weex，Weex依赖基础库、网关和高可用，因此Weex的初始化顺序为，基础库->高可用->网关->远程配置->Weex
+    // 3. 初始化Weex，Weex依赖基础库、网关和高可用，因此Weex的初始化顺序为，基础库->高可用->网关->远程配置->ZCache->Weex
     [self initRemoteConfig];
     [self initMtopConfig];
-    [self initWeexConfig];
+    [self initZCacheConfig];
+    [ExEMASWXSDKEngine setup];
+    
     [self initDyConfig];
     
     
@@ -267,45 +259,13 @@
     openSDKSwitchLog(YES); // 打开调试日志
 }
 
-//-- weex
-- (void)initWeexConfig
+- (void)initZCacheConfig
 {
-    // weex初始化部分
-    //business configuration
-    [WXAppConfiguration setAppGroup:@"TestApp"];
-    [WXAppConfiguration setAppName:@"EMASDemo"];
-    [WXAppConfiguration setAppVersion:[[EMASService shareInstance] getAppVersion]];
-    
-    //init sdk environment
-    [WXSDKEngine initSDKEnvironment];
-    
-    [WXLog setLogLevel: WXLogLevelAll]; // 打开调试日志
-    
-    // 数据上报--必选
-    [WXSDKEngine registerHandler:[WXAppMonitorHandler new] withProtocol:@protocol(WXAppMonitorProtocol)];
-    
-    // 图片下载--必选
-    [WXSDKEngine registerHandler:[WXImgLoaderDefaultImpl new] withProtocol:@protocol(WXImgLoaderProtocol)];
-    
-    // zcache--必选
-    [WXSDKEngine registerHandler:[WXResourceRequestHandlerDemoImpl new] withProtocol:@protocol(WXResourceRequestHandler)];
-    
-    // JSError监控--必选
-    [WXSDKEngine registerHandler:[WXCrashAdapterHandler new] withProtocol:@protocol(WXJSExceptionProtocol)];
-    
-    // JSCrash监控--必选
-    [[TBCrashReporterMonitor sharedMonitor] registerCrashLogMonitor:[[WXCrashReporter alloc] init]];
-    
-    // 事件调用--可选
-    [WXSDKEngine registerModule:@"haTest" withClass:[WXEventModule class]];
-    
-    // 事件调用，可选
-    [WXSDKEngine registerHandler:[WXEventModule new] withProtocol:@protocol(WXEventModuleProtocol)];
-    
-    // ZCache初始化部分
-    [ZCache defaultCommonConfig].packageZipPrefix = [[EMASService shareInstance] ZCacheURL];
+#ifdef DEBUG
     [ZCache setDebugMode:YES]; // 打开调试日志
+#endif
     [ZCache setupWithMtop];
+    [ZCache defaultCommonConfig].packageZipPrefix = [[EMASService shareInstance] ZCacheURL];
 }
 
 // -- dy 初始化
