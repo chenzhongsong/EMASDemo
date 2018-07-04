@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1A65F6261FF253CF00B4573C /* AliHATestCaseViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A65F6251FF253CF00B4573C /* AliHATestCaseViewController.mm */; };
+		33D18D4B20DA06CE00ACF0C7 /* AccsConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D18D4A20DA06CE00ACF0C7 /* AccsConfiguration.m */; };
+		33D18D5620DA2CFB00ACF0C7 /* ACCSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D18D5420DA2CFB00ACF0C7 /* ACCSViewController.m */; };
+		33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D5520DA2CFB00ACF0C7 /* ACCSViewController.xib */; };
+		33D18D5B20DA30DC00ACF0C7 /* ACCSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D18D5920DA30DC00ACF0C7 /* ACCSSettingViewController.m */; };
+		33D18D5C20DA30DC00ACF0C7 /* ACCSSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D5A20DA30DC00ACF0C7 /* ACCSSettingViewController.xib */; };
+		33D18D5E20DA31C500ACF0C7 /* btn_qr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D5D20DA31C400ACF0C7 /* btn_qr@2x.png */; };
+		33D18D6120DA330100ACF0C7 /* WQCodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D18D5F20DA330100ACF0C7 /* WQCodeScanner.m */; };
+		33D18D6420DA331700ACF0C7 /* wq_code_scanner_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D6220DA331700ACF0C7 /* wq_code_scanner_back@2x.png */; };
+		33D18D6520DA331700ACF0C7 /* wq_code_scanner_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D6320DA331700ACF0C7 /* wq_code_scanner_line@2x.png */; };
 		7D6260E61FDA8C5A00E856CB /* HFXTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6260E31FDA8C5900E856CB /* HFXTestClass.m */; };
 		7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6260E51FDA8C5900E856CB /* HFXViewController.m */; };
 		7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6260E81FDA8C8400E856CB /* arp.framework */; };
@@ -16,6 +25,7 @@
 		862839AD20E4E509009E31BB /* ExEMASWXSDKEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 862839AC20E4E509009E31BB /* ExEMASWXSDKEngine.m */; };
 		862839B020E4E53A009E31BB /* ExEMASWXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862839AF20E4E53A009E31BB /* ExEMASWXViewController.m */; };
 		862839B320E50DB0009E31BB /* WXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862839B220E50DB0009E31BB /* WXDemoViewController.m */; };
+		868E72E920EC68850016619F /* WXEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 868E72E720EC68850016619F /* WXEventModule.m */; };
 		8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */; };
 		8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */; };
 		8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */; };
@@ -48,7 +58,6 @@
 		9A09D7891FF270D600585632 /* WXScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D7881FF270D600585632 /* WXScannerVC.m */; };
 		9A09D78C1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D78A1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m */; };
 		9A09D7961FF27A6200585632 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 9A09D7951FF27A6200585632 /* index.js */; };
-		9A09D79A1FF27B2400585632 /* WXEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D7991FF27B2300585632 /* WXEventModule.m */; };
 		F2AEA74CFBBBDD9338DF0F3C /* libPods-EMASDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D522707B463174EC727EEF /* libPods-EMASDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +95,19 @@
 		0841F49C85C633B167F1BB45 /* Pods-EMASDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMASDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo.release.xcconfig"; sourceTree = "<group>"; };
 		1A65F6241FF253CF00B4573C /* AliHATestCaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliHATestCaseViewController.h; sourceTree = "<group>"; };
 		1A65F6251FF253CF00B4573C /* AliHATestCaseViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AliHATestCaseViewController.mm; sourceTree = "<group>"; };
+		33D18D4920DA06CE00ACF0C7 /* AccsConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccsConfiguration.h; sourceTree = "<group>"; };
+		33D18D4A20DA06CE00ACF0C7 /* AccsConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccsConfiguration.m; sourceTree = "<group>"; };
+		33D18D5320DA2CFB00ACF0C7 /* ACCSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACCSViewController.h; sourceTree = "<group>"; };
+		33D18D5420DA2CFB00ACF0C7 /* ACCSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACCSViewController.m; sourceTree = "<group>"; };
+		33D18D5520DA2CFB00ACF0C7 /* ACCSViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ACCSViewController.xib; sourceTree = "<group>"; };
+		33D18D5820DA30DC00ACF0C7 /* ACCSSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACCSSettingViewController.h; sourceTree = "<group>"; };
+		33D18D5920DA30DC00ACF0C7 /* ACCSSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACCSSettingViewController.m; sourceTree = "<group>"; };
+		33D18D5A20DA30DC00ACF0C7 /* ACCSSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ACCSSettingViewController.xib; sourceTree = "<group>"; };
+		33D18D5D20DA31C400ACF0C7 /* btn_qr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_qr@2x.png"; path = "accs/btn_qr@2x.png"; sourceTree = "<group>"; };
+		33D18D5F20DA330100ACF0C7 /* WQCodeScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCodeScanner.m; sourceTree = "<group>"; };
+		33D18D6020DA330100ACF0C7 /* WQCodeScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCodeScanner.h; sourceTree = "<group>"; };
+		33D18D6220DA331700ACF0C7 /* wq_code_scanner_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wq_code_scanner_back@2x.png"; path = "accs/wq_code_scanner_back@2x.png"; sourceTree = "<group>"; };
+		33D18D6320DA331700ACF0C7 /* wq_code_scanner_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wq_code_scanner_line@2x.png"; path = "accs/wq_code_scanner_line@2x.png"; sourceTree = "<group>"; };
 		7D6260E21FDA8C5900E856CB /* HFXTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXTestClass.h; sourceTree = "<group>"; };
 		7D6260E31FDA8C5900E856CB /* HFXTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXTestClass.m; sourceTree = "<group>"; };
 		7D6260E41FDA8C5900E856CB /* HFXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXViewController.h; sourceTree = "<group>"; };
@@ -99,6 +121,8 @@
 		862839AF20E4E53A009E31BB /* ExEMASWXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExEMASWXViewController.m; sourceTree = "<group>"; };
 		862839B120E50DB0009E31BB /* WXDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDemoViewController.h; sourceTree = "<group>"; };
 		862839B220E50DB0009E31BB /* WXDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXDemoViewController.m; sourceTree = "<group>"; };
+		868E72E620EC68850016619F /* WXEventModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXEventModule.h; sourceTree = "<group>"; };
+		868E72E720EC68850016619F /* WXEventModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXEventModule.m; sourceTree = "<group>"; };
 		8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigTableViewController.h; sourceTree = "<group>"; };
 		8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfigTableViewController.m; sourceTree = "<group>"; };
 		8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopVerifyTableViewController.h; sourceTree = "<group>"; };
@@ -170,8 +194,6 @@
 		9A09D78B1FF270FD00585632 /* UIViewController+WXDemoNaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WXDemoNaviBar.h"; sourceTree = "<group>"; };
 		9A09D7901FF2721000585632 /* DemoDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoDefine.h; sourceTree = "<group>"; };
 		9A09D7951FF27A6200585632 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
-		9A09D7981FF27B2300585632 /* WXEventModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXEventModule.h; sourceTree = "<group>"; };
-		9A09D7991FF27B2300585632 /* WXEventModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXEventModule.m; sourceTree = "<group>"; };
 		C9D522707B463174EC727EEF /* libPods-EMASDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EMASDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -223,6 +245,23 @@
 			path = AliHA;
 			sourceTree = "<group>";
 		};
+		33D18D4220DA04C000ACF0C7 /* accs */ = {
+			isa = PBXGroup;
+			children = (
+				33D18D6020DA330100ACF0C7 /* WQCodeScanner.h */,
+				33D18D5F20DA330100ACF0C7 /* WQCodeScanner.m */,
+				33D18D4920DA06CE00ACF0C7 /* AccsConfiguration.h */,
+				33D18D4A20DA06CE00ACF0C7 /* AccsConfiguration.m */,
+				33D18D5320DA2CFB00ACF0C7 /* ACCSViewController.h */,
+				33D18D5420DA2CFB00ACF0C7 /* ACCSViewController.m */,
+				33D18D5520DA2CFB00ACF0C7 /* ACCSViewController.xib */,
+				33D18D5820DA30DC00ACF0C7 /* ACCSSettingViewController.h */,
+				33D18D5920DA30DC00ACF0C7 /* ACCSSettingViewController.m */,
+				33D18D5A20DA30DC00ACF0C7 /* ACCSSettingViewController.xib */,
+			);
+			path = accs;
+			sourceTree = "<group>";
+		};
 		7D6260E11FDA8C5900E856CB /* hotfix */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,9 +285,19 @@
 				862839AC20E4E509009E31BB /* ExEMASWXSDKEngine.m */,
 				862839AE20E4E53A009E31BB /* ExEMASWXViewController.h */,
 				862839AF20E4E53A009E31BB /* ExEMASWXViewController.m */,
-				9A09D7971FF27B2300585632 /* module */,
+				868E72E520EC68850016619F /* module */,
 			);
 			path = weex;
+			sourceTree = "<group>";
+		};
+		868E72E520EC68850016619F /* module */ = {
+			isa = PBXGroup;
+			children = (
+				868E72E620EC68850016619F /* WXEventModule.h */,
+				868E72E720EC68850016619F /* WXEventModule.m */,
+			);
+			name = module;
+			path = ../../../weex/module;
 			sourceTree = "<group>";
 		};
 		8AA1174A1FF5E8FD004D4D0A /* EMASWatch */ = {
@@ -320,6 +369,9 @@
 				9A09D7861FF270D600585632 /* Scanner */,
 				8ADA95471FD9309400C0EF49 /* Main.storyboard */,
 				8ADA954A1FD9309400C0EF49 /* Assets.xcassets */,
+				33D18D6220DA331700ACF0C7 /* wq_code_scanner_back@2x.png */,
+				33D18D6320DA331700ACF0C7 /* wq_code_scanner_line@2x.png */,
+				33D18D5D20DA31C400ACF0C7 /* btn_qr@2x.png */,
 				8ADA954C1FD9309400C0EF49 /* LaunchScreen.storyboard */,
 				8ADA954F1FD9309400C0EF49 /* Info.plist */,
 				8ADA95501FD9309400C0EF49 /* main.m */,
@@ -330,6 +382,7 @@
 				9A09D78B1FF270FD00585632 /* UIViewController+WXDemoNaviBar.h */,
 				9A09D78A1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m */,
 				9A09D7901FF2721000585632 /* DemoDefine.h */,
+				33D18D4220DA04C000ACF0C7 /* accs */,
 				980F855720BECB8A002156A2 /* Orange */,
 				9A09D7941FF27A6200585632 /* bundlejs */,
 				8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */,
@@ -400,15 +453,6 @@
 				9A09D7951FF27A6200585632 /* index.js */,
 			);
 			path = bundlejs;
-			sourceTree = "<group>";
-		};
-		9A09D7971FF27B2300585632 /* module */ = {
-			isa = PBXGroup;
-			children = (
-				9A09D7981FF27B2300585632 /* WXEventModule.h */,
-				9A09D7991FF27B2300585632 /* WXEventModule.m */,
-			);
-			path = module;
 			sourceTree = "<group>";
 		};
 		D270D82292708B86B2F528C3 /* Frameworks */ = {
@@ -495,7 +539,7 @@
 				TargetAttributes = {
 					8ADA953A1FD9309400C0EF49 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -540,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ADA954E1FD9309400C0EF49 /* LaunchScreen.storyboard in Resources */,
+				33D18D5C20DA30DC00ACF0C7 /* ACCSSettingViewController.xib in Resources */,
 				980F856F20BECC49002156A2 /* CustomCell.xib in Resources */,
 				980F856C20BECC49002156A2 /* OrangeFeatureFirstVC.xib in Resources */,
 				8ADA954B1FD9309400C0EF49 /* Assets.xcassets in Resources */,
@@ -547,9 +592,13 @@
 				980F856920BECC49002156A2 /* OrangeRemoteConfigRootVC.xib in Resources */,
 				9A09D7961FF27A6200585632 /* index.js in Resources */,
 				8ADA95491FD9309400C0EF49 /* Main.storyboard in Resources */,
+				33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */,
+				33D18D6520DA331700ACF0C7 /* wq_code_scanner_line@2x.png in Resources */,
+				33D18D5E20DA31C500ACF0C7 /* btn_qr@2x.png in Resources */,
 				8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */,
 				980F856E20BECC49002156A2 /* OrangeRemotConfigDebugVC.xib in Resources */,
 				980F856B20BECC49002156A2 /* OrangeFeatureSecondVC.xib in Resources */,
+				33D18D6420DA331700ACF0C7 /* wq_code_scanner_back@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,22 +748,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D18D4B20DA06CE00ACF0C7 /* AccsConfiguration.m in Sources */,
 				1A65F6261FF253CF00B4573C /* AliHATestCaseViewController.mm in Sources */,
 				981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */,
 				980F856820BECC49002156A2 /* OrangeFeatureSecondVC.m in Sources */,
 				8ADA95461FD9309400C0EF49 /* SecondViewController.m in Sources */,
 				8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */,
 				862839B320E50DB0009E31BB /* WXDemoViewController.m in Sources */,
+				33D18D5620DA2CFB00ACF0C7 /* ACCSViewController.m in Sources */,
 				9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */,
 				8ADA95751FDA3BA300C0EF49 /* FirstTableViewController.m in Sources */,
 				9A09D78C1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m in Sources */,
+				33D18D5B20DA30DC00ACF0C7 /* ACCSSettingViewController.m in Sources */,
 				980F857020BECC49002156A2 /* OrangeRemoteConfigRootVC.m in Sources */,
-				9A09D79A1FF27B2400585632 /* WXEventModule.m in Sources */,
 				8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */,
 				7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */,
+				868E72E920EC68850016619F /* WXEventModule.m in Sources */,
 				980F856A20BECC49002156A2 /* OrangeRemotConfigDebugVC.m in Sources */,
 				9A09D7891FF270D600585632 /* WXScannerVC.m in Sources */,
 				8ADA95511FD9309400C0EF49 /* main.m in Sources */,
+				33D18D6120DA330100ACF0C7 /* WQCodeScanner.m in Sources */,
 				980F857120BECC49002156A2 /* CustomCell.m in Sources */,
 				8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */,
 				862839AD20E4E509009E31BB /* ExEMASWXSDKEngine.m in Sources */,
@@ -896,9 +949,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2H2CAWW468;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -906,9 +960,9 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = EMASDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc12xjc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -922,9 +976,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2H2CAWW468;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -932,9 +987,9 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = EMASDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc12xjc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

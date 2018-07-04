@@ -13,7 +13,7 @@
 		<key>ACCS</key>
 		<dict>
 			<key>Domain</key>
-			<string>emaspoc-acs.emas-ha.cn</string>
+			<string>accs.emas-poc.com</string>
 		</dict>
 		<key>Network</key>
 		<dict>
@@ -23,7 +23,7 @@
 		<key>MTOP</key>
 		<dict>
 			<key>Domain</key>
-			<string>emaspoc-aserver.emas-ha.cn</string>
+			<string>aserver.emas-poc.com</string>
 		</dict>
 		<key>ZCache</key>
 		<dict>
@@ -39,19 +39,19 @@
 			<key>ServiceID</key>
 			<string>emas-ha</string>
 			<key>UniversalHost</key>
-			<string>emaspoc-adash.emas-ha.cn</string>
+			<string>adash.emas-poc.com</string>
 			<key>TimestampHost</key>
-			<string>emaspoc-aserver.emas-ha.cn</string>
+			<string>aserver.emas-poc.com</string>
 		</dict>
 		<key>Hotfix</key>
 		<dict>
 			<key>URL</key>
-			<string>http://emaspoc-hotfix-gate.emas-ha.cn</string>
+			<string>http://hotfix-gate.emas-poc.com</string>
 		</dict>
 		<key>RemoteConfig</key>
 		<dict>
 			<key>Domain</key>
-			<string>aserver-pre-k8s.emas-poc.com:30430</string>
+			<string>aserver.emas-poc.com</string>
 		</dict>
 		<key>UseHTTP</key>
 		<true/>
