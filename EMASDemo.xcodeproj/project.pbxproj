@@ -281,6 +281,10 @@
 			children = (
 				862839B120E50DB0009E31BB /* WXDemoViewController.h */,
 				862839B220E50DB0009E31BB /* WXDemoViewController.m */,
+				9A09D7871FF270D600585632 /* WXScannerVC.h */,
+				9A09D7881FF270D600585632 /* WXScannerVC.m */,
+				9A09D78B1FF270FD00585632 /* UIViewController+WXDemoNaviBar.h */,
+				9A09D78A1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m */,
 				862839AB20E4E509009E31BB /* ExEMASWXSDKEngine.h */,
 				862839AC20E4E509009E31BB /* ExEMASWXSDKEngine.m */,
 				862839AE20E4E53A009E31BB /* ExEMASWXViewController.h */,
@@ -365,7 +369,6 @@
 				8ADA95421FD9309400C0EF49 /* FirstViewController.m */,
 				8ADA95441FD9309400C0EF49 /* SecondViewController.h */,
 				8ADA95451FD9309400C0EF49 /* SecondViewController.m */,
-				9A09D7861FF270D600585632 /* Scanner */,
 				8ADA95471FD9309400C0EF49 /* Main.storyboard */,
 				8ADA954A1FD9309400C0EF49 /* Assets.xcassets */,
 				33D18D6220DA331700ACF0C7 /* wq_code_scanner_back@2x.png */,
@@ -378,8 +381,6 @@
 				8ADA95741FDA3BA300C0EF49 /* FirstTableViewController.m */,
 				8ADA95761FDA3BB000C0EF49 /* SecondTableViewController.h */,
 				8ADA95771FDA3BB000C0EF49 /* SecondTableViewController.m */,
-				9A09D78B1FF270FD00585632 /* UIViewController+WXDemoNaviBar.h */,
-				9A09D78A1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m */,
 				9A09D7901FF2721000585632 /* DemoDefine.h */,
 				33D18D4220DA04C000ACF0C7 /* accs */,
 				980F855720BECB8A002156A2 /* Orange */,
@@ -435,15 +436,6 @@
 				980F856020BECC49002156A2 /* OrangeTestConstants.h */,
 			);
 			path = Orange;
-			sourceTree = "<group>";
-		};
-		9A09D7861FF270D600585632 /* Scanner */ = {
-			isa = PBXGroup;
-			children = (
-				9A09D7871FF270D600585632 /* WXScannerVC.h */,
-				9A09D7881FF270D600585632 /* WXScannerVC.m */,
-			);
-			path = Scanner;
 			sourceTree = "<group>";
 		};
 		9A09D7941FF27A6200585632 /* bundlejs */ = {
@@ -538,7 +530,7 @@
 				TargetAttributes = {
 					8ADA953A1FD9309400C0EF49 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -950,8 +942,8 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2H2CAWW468;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -961,7 +953,7 @@
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc12xjc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc12xjc1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -977,8 +969,8 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2H2CAWW468;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -988,7 +980,7 @@
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc12xjc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc12xjc1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
