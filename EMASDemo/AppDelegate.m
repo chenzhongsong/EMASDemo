@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+// --自初始化头文件
+#import <AliEMASConfigure/AliEMASConfigure.h>
+
 // --基础库头文件
 #import <UT/UTAnalytics.h>
 #import <UT/AppMonitor.h>
@@ -122,6 +125,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [AliEMASConfigure configure];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     
     // 1. 先初始化基础库
@@ -164,21 +169,6 @@
     [[UTAnalytics getInstance] setChannel:[[EMASService shareInstance] ChannelID]];
     [[UTAnalytics getInstance] setAppVersion:[[EMASService shareInstance] getAppVersion]];
     [AppMonitor disableSample]; // 调试使用，上报不采样，建议正式发布版本不要这么做
-    
-    // 网络库初始化部分
-    [NWNetworkConfiguration setEnvironment:release];
-    NWNetworkConfiguration *configuration = [NWNetworkConfiguration shareInstance];
-    [configuration setIsUseSecurityGuard:NO];
-    [configuration setAppkey:[[EMASService shareInstance] appkey]];
-    [configuration setAppSecret:[[EMASService shareInstance] appSecret]];
-    [configuration setIsEnableAMDC:NO];
-    [NetworkDemote shareInstance].canInitWithRequest = NO;
-    setNWLogLevel(NET_LOG_DEBUG); // 打开调试日志
-    if ([[[EMASService shareInstance] IPStrategy] count] > 0)
-    {
-        self.policyCenter =  [[MyPolicyCenter alloc] init];
-        [NWNetworkConfiguration shareInstance].policyDelegate = self.policyCenter;
-    }
 }
 
 // ACCS
@@ -188,7 +178,12 @@
     void tbAccsSDKSwitchLog(BOOL logCtr);
     tbAccsSDKSwitchLog(YES); // 打开调试日志
     
-    TBAccsManager *accsManager = [TBAccsManager accsManagerByHost:[[EMASService shareInstance] ACCSDomain]];
+    TBAccsConfiguration *ac = [[TBAccsConfiguration alloc] initWithHost:[[EMASService shareInstance] ACCSDomain]];
+    ac.appkey = [[EMASService shareInstance] appkey];
+    ac.appsecret = [[EMASService shareInstance] appSecret];
+    
+    TBAccsManager *accsManager = [TBAccsManager createAccsWithConfiguration:ac];
+    
     [accsManager setSupportLocalDNS:YES];
     accsManager.slightSslPublicKeySeq = ACCS_PUBKEY_PSEQ_EMAS;
     [accsManager startAccs];

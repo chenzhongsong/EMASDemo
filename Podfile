@@ -13,8 +13,9 @@ platform:ios, '8.0'
     pod  'UserTrack',        '6.3.5.100005-poc'
     pod  'Reachability',     '3.2'
     pod  'FMDB',             '2.7.2'
-    pod  'NetworkSDK',       '>=10.0.4.1'
-    pod  'tnet',             '>=10.1.0'
+    pod  'NetworkSDK',       '10.0.4.1'
+    pod  'tnet',             '10.1.0'
+
 
     # --ACCS(通用库 -> ACCS)
     pod  'TBAccsSDK',         '10.0.6'
