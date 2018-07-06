@@ -169,7 +169,7 @@ static NSString* mtopDescription(MtopExtResponse *response){
                     break;
                     
                 case MtopParamType_Bool:{
-                    [request addBizParameter:[NSNumber numberWithBool:paramValue.boolValue] forKey:paramName];
+                    [request addBizParameter:paramValue.boolValue?@"true":@"false" forKey:paramName];
                 }
                     
                     break;
