@@ -7,12 +7,13 @@
 //
 
 #import "AccsConfiguration.h"
+#import "EMASService.h"
 
-#define EMAS_DEFAULT_APPKEY         @"accs_4272_mock";
-#define EMAS_DEFAULT_APPSECRET      @"257461a8005f538382640d4894dd193a04d18e1b4a7a5ee214b6d660778d3943"
+#define EMAS_DEFAULT_APPKEY         @"10000016";
+#define EMAS_DEFAULT_APPSECRET      @"ddc1f5c8b69da5e875a04e3278203fe2"
 #define EMAS_DEFAULT_SERVICEID      @"4272_mock"
-#define EMAS_DEFAULT_HOST           @"acs.alibaba-inc.com"
-#define EMAS_DEFAULT_IP             @"11.163.130.35"
+#define EMAS_DEFAULT_HOST           @"accs.emas-poc.com"
+#define EMAS_DEFAULT_IP             @""
 #define EMAS_DEFAULT_PORT           80
 
 @implementation AccsConfiguration
@@ -49,8 +50,10 @@
         _appsecret = EMAS_DEFAULT_APPSECRET;
         _serviceId = EMAS_DEFAULT_SERVICEID;
         _host = EMAS_DEFAULT_HOST;
-        _port = EMAS_DEFAULT_PORT;
-        _ip = EMAS_DEFAULT_IP;
+        if (EMAS_DEFAULT_IP.length > 0) {
+            _ip = EMAS_DEFAULT_IP;
+            _port = EMAS_DEFAULT_PORT;
+        }
         
         return;
     }

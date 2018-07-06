@@ -43,8 +43,7 @@ WX_EXPORT_METHOD(@selector(makeAnr))
         newURL = [NSURL URLWithString:url relativeToURL:weexInstance.scriptURL].absoluteString;
     }
     
-    UIViewController *controller = [[WXDemoViewController alloc] init];
-    ((WXDemoViewController *)controller).url = [NSURL URLWithString:newURL];
+    UIViewController *controller = [[WXDemoViewController alloc] initWithNavigatorURL:[NSURL URLWithString:newURL]];
     
     [[weexInstance.viewController navigationController] pushViewController:controller animated:YES];
 }

@@ -2,7 +2,6 @@ source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs-thirdpart.git'
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs.git'
 #source 'git@gitlab.emas-ha.cn:root/emas-specs.git'
 
-
 platform :ios
 
 target 'EMASDemo' do
@@ -14,8 +13,9 @@ platform:ios, '8.0'
     pod  'UserTrack',        '6.3.5.100005-poc'
     pod  'Reachability',     '3.2'
     pod  'FMDB',             '2.7.2'
-    pod  'NetworkSDK',       '10.0.3.4'
-    pod  'tnet',             '10.0.3.1'
+    pod  'NetworkSDK',       '10.0.4.1'
+    pod  'tnet',             '10.1.0'
+
 
     # --ACCS(通用库 -> ACCS)
     pod  'TBAccsSDK',         '10.0.6'
@@ -48,5 +48,8 @@ platform:ios, '8.0'
     
     
     #pod 'EMASFirstBundle', '3.0.1'
+    
+    # EMASWeex
+    pod 'EMASWeex', '1.0.0'
     
 end

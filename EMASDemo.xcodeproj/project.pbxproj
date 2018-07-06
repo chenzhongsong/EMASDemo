@@ -22,15 +22,16 @@
 		7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6260E81FDA8C8400E856CB /* arp.framework */; };
 		7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */; };
 		7D8394A91FDB902900EBB60F /* fix.lua in Resources */ = {isa = PBXBuildFile; fileRef = 7D8394A81FDB902900EBB60F /* fix.lua */; };
+		862839AD20E4E509009E31BB /* ExEMASWXSDKEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 862839AC20E4E509009E31BB /* ExEMASWXSDKEngine.m */; };
+		862839B020E4E53A009E31BB /* ExEMASWXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862839AF20E4E53A009E31BB /* ExEMASWXViewController.m */; };
+		862839B320E50DB0009E31BB /* WXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862839B220E50DB0009E31BB /* WXDemoViewController.m */; };
+		868E72F120ECB2CD0016619F /* WXEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 868E72EC20ECB2CC0016619F /* WXEventModule.m */; };
 		8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */; };
 		8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */; };
 		8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */; };
 		8A69B60A200C8F980073756D /* EMASService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69B609200C8F980073756D /* EMASService.m */; };
 		8AB1A7BF1FFDDE51007C4675 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */; };
-		8ABD97DD1FF4F7C400469557 /* WXCrashAdapterHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD97DC1FF4F7C400469557 /* WXCrashAdapterHandler.m */; };
 		8AC0CB6E200312CF00FD44E6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC0CB6D200312CF00FD44E6 /* MobileCoreServices.framework */; };
-		8AC0CB75200317A000FD44E6 /* WXCrashReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC0CB72200317A000FD44E6 /* WXCrashReporter.m */; };
-		8AC0CB76200317A000FD44E6 /* WXRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC0CB74200317A000FD44E6 /* WXRecorder.m */; };
 		8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA953F1FD9309400C0EF49 /* AppDelegate.m */; };
 		8ADA95431FD9309400C0EF49 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95421FD9309400C0EF49 /* FirstViewController.m */; };
 		8ADA95461FD9309400C0EF49 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95451FD9309400C0EF49 /* SecondViewController.m */; };
@@ -56,12 +57,7 @@
 		981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981DC5D720998B53006472AF /* MtopResultViewController.m */; };
 		9A09D7891FF270D600585632 /* WXScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D7881FF270D600585632 /* WXScannerVC.m */; };
 		9A09D78C1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D78A1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m */; };
-		9A09D78F1FF2719700585632 /* WXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D78E1FF2719700585632 /* WXDemoViewController.m */; };
 		9A09D7961FF27A6200585632 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 9A09D7951FF27A6200585632 /* index.js */; };
-		9A09D79A1FF27B2400585632 /* WXEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D7991FF27B2300585632 /* WXEventModule.m */; };
-		9A09D79E1FF27B5B00585632 /* WXImgLoaderDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D79D1FF27B5B00585632 /* WXImgLoaderDefaultImpl.m */; };
-		9A09D7A11FF27F9F00585632 /* WXResourceRequestHandlerDemoImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D79F1FF27F9F00585632 /* WXResourceRequestHandlerDemoImpl.m */; };
-		9A09D7A41FF356DA00585632 /* WXAppMonitorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D7A31FF356DA00585632 /* WXAppMonitorHandler.m */; };
 		F2AEA74CFBBBDD9338DF0F3C /* libPods-EMASDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D522707B463174EC727EEF /* libPods-EMASDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +115,14 @@
 		7D6260E81FDA8C8400E856CB /* arp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = arp.framework; sourceTree = "<group>"; };
 		7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudHotFixEmas.framework; sourceTree = "<group>"; };
 		7D8394A81FDB902900EBB60F /* fix.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fix.lua; sourceTree = "<group>"; };
+		862839AB20E4E509009E31BB /* ExEMASWXSDKEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExEMASWXSDKEngine.h; sourceTree = "<group>"; };
+		862839AC20E4E509009E31BB /* ExEMASWXSDKEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExEMASWXSDKEngine.m; sourceTree = "<group>"; };
+		862839AE20E4E53A009E31BB /* ExEMASWXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExEMASWXViewController.h; sourceTree = "<group>"; };
+		862839AF20E4E53A009E31BB /* ExEMASWXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExEMASWXViewController.m; sourceTree = "<group>"; };
+		862839B120E50DB0009E31BB /* WXDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDemoViewController.h; sourceTree = "<group>"; };
+		862839B220E50DB0009E31BB /* WXDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXDemoViewController.m; sourceTree = "<group>"; };
+		868E72EB20ECB2CC0016619F /* WXEventModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXEventModule.h; sourceTree = "<group>"; };
+		868E72EC20ECB2CC0016619F /* WXEventModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXEventModule.m; sourceTree = "<group>"; };
 		8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigTableViewController.h; sourceTree = "<group>"; };
 		8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfigTableViewController.m; sourceTree = "<group>"; };
 		8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopVerifyTableViewController.h; sourceTree = "<group>"; };
@@ -140,13 +144,7 @@
 		8AA117651FF5E8FE004D4D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AA117661FF5E8FE004D4D0A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		8ABD97DA1FF4F78700469557 /* WXCrashAdapterHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXCrashAdapterHandler.h; sourceTree = "<group>"; };
-		8ABD97DC1FF4F7C400469557 /* WXCrashAdapterHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCrashAdapterHandler.m; sourceTree = "<group>"; };
 		8AC0CB6D200312CF00FD44E6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		8AC0CB71200317A000FD44E6 /* WXRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXRecorder.h; sourceTree = "<group>"; };
-		8AC0CB72200317A000FD44E6 /* WXCrashReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCrashReporter.m; sourceTree = "<group>"; };
-		8AC0CB73200317A000FD44E6 /* WXCrashReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXCrashReporter.h; sourceTree = "<group>"; };
-		8AC0CB74200317A000FD44E6 /* WXRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXRecorder.m; sourceTree = "<group>"; };
 		8ADA953B1FD9309400C0EF49 /* EMASDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMASDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ADA953E1FD9309400C0EF49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8ADA953F1FD9309400C0EF49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -194,18 +192,8 @@
 		9A09D7881FF270D600585632 /* WXScannerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXScannerVC.m; sourceTree = "<group>"; };
 		9A09D78A1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WXDemoNaviBar.m"; sourceTree = "<group>"; };
 		9A09D78B1FF270FD00585632 /* UIViewController+WXDemoNaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WXDemoNaviBar.h"; sourceTree = "<group>"; };
-		9A09D78D1FF2719600585632 /* WXDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDemoViewController.h; sourceTree = "<group>"; };
-		9A09D78E1FF2719700585632 /* WXDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDemoViewController.m; sourceTree = "<group>"; };
 		9A09D7901FF2721000585632 /* DemoDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoDefine.h; sourceTree = "<group>"; };
 		9A09D7951FF27A6200585632 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
-		9A09D7981FF27B2300585632 /* WXEventModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXEventModule.h; sourceTree = "<group>"; };
-		9A09D7991FF27B2300585632 /* WXEventModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXEventModule.m; sourceTree = "<group>"; };
-		9A09D79C1FF27B5B00585632 /* WXImgLoaderDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXImgLoaderDefaultImpl.h; sourceTree = "<group>"; };
-		9A09D79D1FF27B5B00585632 /* WXImgLoaderDefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXImgLoaderDefaultImpl.m; sourceTree = "<group>"; };
-		9A09D79F1FF27F9F00585632 /* WXResourceRequestHandlerDemoImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXResourceRequestHandlerDemoImpl.m; sourceTree = "<group>"; };
-		9A09D7A01FF27F9F00585632 /* WXResourceRequestHandlerDemoImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXResourceRequestHandlerDemoImpl.h; sourceTree = "<group>"; };
-		9A09D7A21FF356D900585632 /* WXAppMonitorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXAppMonitorHandler.h; sourceTree = "<group>"; };
-		9A09D7A31FF356DA00585632 /* WXAppMonitorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXAppMonitorHandler.m; sourceTree = "<group>"; };
 		C9D522707B463174EC727EEF /* libPods-EMASDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EMASDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -288,6 +276,33 @@
 			path = hotfix;
 			sourceTree = "<group>";
 		};
+		8689306720D2646B00D8AA79 /* weex */ = {
+			isa = PBXGroup;
+			children = (
+				862839B120E50DB0009E31BB /* WXDemoViewController.h */,
+				862839B220E50DB0009E31BB /* WXDemoViewController.m */,
+				9A09D7871FF270D600585632 /* WXScannerVC.h */,
+				9A09D7881FF270D600585632 /* WXScannerVC.m */,
+				9A09D78B1FF270FD00585632 /* UIViewController+WXDemoNaviBar.h */,
+				9A09D78A1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m */,
+				862839AB20E4E509009E31BB /* ExEMASWXSDKEngine.h */,
+				862839AC20E4E509009E31BB /* ExEMASWXSDKEngine.m */,
+				862839AE20E4E53A009E31BB /* ExEMASWXViewController.h */,
+				862839AF20E4E53A009E31BB /* ExEMASWXViewController.m */,
+				868E72EA20ECB2CC0016619F /* module */,
+			);
+			path = weex;
+			sourceTree = "<group>";
+		};
+		868E72EA20ECB2CC0016619F /* module */ = {
+			isa = PBXGroup;
+			children = (
+				868E72EB20ECB2CC0016619F /* WXEventModule.h */,
+				868E72EC20ECB2CC0016619F /* WXEventModule.m */,
+			);
+			path = module;
+			sourceTree = "<group>";
+		};
 		8AA1174A1FF5E8FD004D4D0A /* EMASWatch */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,17 +327,6 @@
 				8AA117661FF5E8FE004D4D0A /* PushNotificationPayload.apns */,
 			);
 			path = "EMASWatch Extension";
-			sourceTree = "<group>";
-		};
-		8AC0CB70200317A000FD44E6 /* source */ = {
-			isa = PBXGroup;
-			children = (
-				8AC0CB71200317A000FD44E6 /* WXRecorder.h */,
-				8AC0CB72200317A000FD44E6 /* WXCrashReporter.m */,
-				8AC0CB73200317A000FD44E6 /* WXCrashReporter.h */,
-				8AC0CB74200317A000FD44E6 /* WXRecorder.m */,
-			);
-			path = source;
 			sourceTree = "<group>";
 		};
 		8ADA95321FD9309400C0EF49 = {
@@ -355,8 +359,8 @@
 				8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */,
 				8A69B608200C8F980073756D /* EMASService.h */,
 				8A69B609200C8F980073756D /* EMASService.m */,
-				8AC0CB70200317A000FD44E6 /* source */,
 				8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */,
+				8689306720D2646B00D8AA79 /* weex */,
 				1A65F6231FF2534A00B4573C /* AliHA */,
 				7D6260E11FDA8C5900E856CB /* hotfix */,
 				8ADA953E1FD9309400C0EF49 /* AppDelegate.h */,
@@ -365,7 +369,6 @@
 				8ADA95421FD9309400C0EF49 /* FirstViewController.m */,
 				8ADA95441FD9309400C0EF49 /* SecondViewController.h */,
 				8ADA95451FD9309400C0EF49 /* SecondViewController.m */,
-				9A09D7861FF270D600585632 /* Scanner */,
 				8ADA95471FD9309400C0EF49 /* Main.storyboard */,
 				8ADA954A1FD9309400C0EF49 /* Assets.xcassets */,
 				33D18D6220DA331700ACF0C7 /* wq_code_scanner_back@2x.png */,
@@ -378,14 +381,8 @@
 				8ADA95741FDA3BA300C0EF49 /* FirstTableViewController.m */,
 				8ADA95761FDA3BB000C0EF49 /* SecondTableViewController.h */,
 				8ADA95771FDA3BB000C0EF49 /* SecondTableViewController.m */,
-				9A09D78B1FF270FD00585632 /* UIViewController+WXDemoNaviBar.h */,
-				9A09D78A1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m */,
-				9A09D78D1FF2719600585632 /* WXDemoViewController.h */,
-				9A09D78E1FF2719700585632 /* WXDemoViewController.m */,
 				9A09D7901FF2721000585632 /* DemoDefine.h */,
 				33D18D4220DA04C000ACF0C7 /* accs */,
-				9A09D79B1FF27B5B00585632 /* handler */,
-				9A09D7971FF27B2300585632 /* module */,
 				980F855720BECB8A002156A2 /* Orange */,
 				9A09D7941FF27A6200585632 /* bundlejs */,
 				8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */,
@@ -441,45 +438,12 @@
 			path = Orange;
 			sourceTree = "<group>";
 		};
-		9A09D7861FF270D600585632 /* Scanner */ = {
-			isa = PBXGroup;
-			children = (
-				9A09D7871FF270D600585632 /* WXScannerVC.h */,
-				9A09D7881FF270D600585632 /* WXScannerVC.m */,
-			);
-			path = Scanner;
-			sourceTree = "<group>";
-		};
 		9A09D7941FF27A6200585632 /* bundlejs */ = {
 			isa = PBXGroup;
 			children = (
 				9A09D7951FF27A6200585632 /* index.js */,
 			);
 			path = bundlejs;
-			sourceTree = "<group>";
-		};
-		9A09D7971FF27B2300585632 /* module */ = {
-			isa = PBXGroup;
-			children = (
-				9A09D7981FF27B2300585632 /* WXEventModule.h */,
-				9A09D7991FF27B2300585632 /* WXEventModule.m */,
-			);
-			path = module;
-			sourceTree = "<group>";
-		};
-		9A09D79B1FF27B5B00585632 /* handler */ = {
-			isa = PBXGroup;
-			children = (
-				8ABD97DA1FF4F78700469557 /* WXCrashAdapterHandler.h */,
-				8ABD97DC1FF4F7C400469557 /* WXCrashAdapterHandler.m */,
-				9A09D7A21FF356D900585632 /* WXAppMonitorHandler.h */,
-				9A09D7A31FF356DA00585632 /* WXAppMonitorHandler.m */,
-				9A09D7A01FF27F9F00585632 /* WXResourceRequestHandlerDemoImpl.h */,
-				9A09D79F1FF27F9F00585632 /* WXResourceRequestHandlerDemoImpl.m */,
-				9A09D79C1FF27B5B00585632 /* WXImgLoaderDefaultImpl.h */,
-				9A09D79D1FF27B5B00585632 /* WXImgLoaderDefaultImpl.m */,
-			);
-			path = handler;
 			sourceTree = "<group>";
 		};
 		D270D82292708B86B2F528C3 /* Frameworks */ = {
@@ -505,11 +469,10 @@
 				8ADA95371FD9309400C0EF49 /* Sources */,
 				8ADA95381FD9309400C0EF49 /* Frameworks */,
 				8ADA95391FD9309400C0EF49 /* Resources */,
-				D47B822F9483FC07D73F6724 /* [CP] Embed Pods Frameworks */,
 				AA85B2CA3C2F5806D1BDF7DB /* [CP] Copy Pods Resources */,
-				15906AA9638B4256D860D7CE /* 📦 Embed Pods Frameworks */,
 				67DAC7CF7E1FB0DDB324BBC0 /* 📦 Copy Pods Resources */,
 				8ABD97BD1FF4D55700469557 /* Embed Watch Content */,
+				8ABB6903BBB5C9EC38BAB4BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -563,7 +526,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0900;
-				ORGANIZATIONNAME = zhishui.lcq;
+				ORGANIZATIONNAME = EMAS;
 				TargetAttributes = {
 					8ADA953A1FD9309400C0EF49 = {
 						CreatedOnToolsVersion = 9.0;
@@ -647,21 +610,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15906AA9638B4256D860D7CE /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		579AA850E8214768859E3DFA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -698,35 +646,19 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EMASDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		AA85B2CA3C2F5806D1BDF7DB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh",
-				"${PODS_ROOT}/WeexSDK/pre-build/native-bundle-main.js",
-				"${PODS_ROOT}/WeexSDK/ios/sdk/WeexSDK/Resources/wx_load_error@3x.png",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D47B822F9483FC07D73F6724 /* [CP] Embed Pods Frameworks */ = {
+		8ABB6903BBB5C9EC38BAB4BB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -739,6 +671,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA85B2CA3C2F5806D1BDF7DB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh",
+				"${PODS_ROOT}/AliHAAdapter4poc/AliHAAdapter4poc.framework/alihaadapter4poc_bundle.plist",
+				"${PODS_ROOT}/AliHACore/AliHACore.framework/alihacore_bundle.plist",
+				"${PODS_ROOT}/AliHADeviceEvaluation/AliHADeviceEvaluation.framework/alihadeviceevaluation_bundle.plist",
+				"${PODS_ROOT}/AliHAPerformanceMonitor/AliHAPerformanceMonitor.framework/alihaperformancemonitor_bundle.plist",
+				"${PODS_ROOT}/AliHASecurity/AliHASecurity.framework/alihasecurity_bundle.plist",
+				"${PODS_ROOT}/EMASWeex/EMASWeex.framework/EMASWeex-Info.plist",
+				"${PODS_ROOT}/JDYThreadTrace/JDYThreadTrace.framework/.gitkeep",
+				"${PODS_ROOT}/JDYThreadTrace/JDYThreadTrace.framework/JDYThreadTrace.podspec",
+				"${PODS_ROOT}/TBRest/TBRest.framework/TBRest.podspec",
+				"${PODS_ROOT}/TBRest/TBRest.framework/.gitkeep",
+				"${PODS_ROOT}/UserTrack/UT.framework/Resources/UserTrack-Info.plist",
+				"${PODS_ROOT}/WeexSDK/WeexSDK.framework/native-bundle-main.js",
+				"${PODS_ROOT}/WeexSDK/WeexSDK.framework/wx_load_error@3x.png",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihaadapter4poc_bundle.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihacore_bundle.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihadeviceevaluation_bundle.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihaperformancemonitor_bundle.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihasecurity_bundle.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EMASWeex-Info.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/.gitkeep",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JDYThreadTrace.podspec",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TBRest.podspec",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UserTrack-Info.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/native-bundle-main.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/wx_load_error@3x.png",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D784AF3C3C4686A8D23CC66A /* [CP] Check Pods Manifest.lock */ = {
@@ -767,38 +740,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				33D18D4B20DA06CE00ACF0C7 /* AccsConfiguration.m in Sources */,
-				8AC0CB76200317A000FD44E6 /* WXRecorder.m in Sources */,
 				1A65F6261FF253CF00B4573C /* AliHATestCaseViewController.mm in Sources */,
 				981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */,
 				980F856820BECC49002156A2 /* OrangeFeatureSecondVC.m in Sources */,
 				8ADA95461FD9309400C0EF49 /* SecondViewController.m in Sources */,
 				8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */,
-				9A09D79E1FF27B5B00585632 /* WXImgLoaderDefaultImpl.m in Sources */,
+				862839B320E50DB0009E31BB /* WXDemoViewController.m in Sources */,
 				33D18D5620DA2CFB00ACF0C7 /* ACCSViewController.m in Sources */,
 				9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */,
 				8ADA95751FDA3BA300C0EF49 /* FirstTableViewController.m in Sources */,
-				9A09D7A11FF27F9F00585632 /* WXResourceRequestHandlerDemoImpl.m in Sources */,
 				9A09D78C1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m in Sources */,
 				33D18D5B20DA30DC00ACF0C7 /* ACCSSettingViewController.m in Sources */,
-				8ABD97DD1FF4F7C400469557 /* WXCrashAdapterHandler.m in Sources */,
 				980F857020BECC49002156A2 /* OrangeRemoteConfigRootVC.m in Sources */,
-				9A09D79A1FF27B2400585632 /* WXEventModule.m in Sources */,
 				8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */,
 				7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */,
-				9A09D7A41FF356DA00585632 /* WXAppMonitorHandler.m in Sources */,
+				868E72F120ECB2CD0016619F /* WXEventModule.m in Sources */,
 				980F856A20BECC49002156A2 /* OrangeRemotConfigDebugVC.m in Sources */,
 				9A09D7891FF270D600585632 /* WXScannerVC.m in Sources */,
 				8ADA95511FD9309400C0EF49 /* main.m in Sources */,
 				33D18D6120DA330100ACF0C7 /* WQCodeScanner.m in Sources */,
 				980F857120BECC49002156A2 /* CustomCell.m in Sources */,
-				9A09D78F1FF2719700585632 /* WXDemoViewController.m in Sources */,
 				8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */,
+				862839AD20E4E509009E31BB /* ExEMASWXSDKEngine.m in Sources */,
 				7D6260E61FDA8C5A00E856CB /* HFXTestClass.m in Sources */,
+				862839B020E4E53A009E31BB /* ExEMASWXViewController.m in Sources */,
 				8A69B60A200C8F980073756D /* EMASService.m in Sources */,
 				8ADA95431FD9309400C0EF49 /* FirstViewController.m in Sources */,
 				8ADA95781FDA3BB000C0EF49 /* SecondTableViewController.m in Sources */,
 				980F856D20BECC49002156A2 /* OrangeFeatureFirstVC.m in Sources */,
-				8AC0CB75200317A000FD44E6 /* WXCrashReporter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -979,11 +948,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EMASDemo/hotfix",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc12xjc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc12xjc1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1005,11 +975,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EMASDemo/hotfix",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc12xjc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc12xjc1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
