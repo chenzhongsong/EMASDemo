@@ -21,8 +21,8 @@ platform:ios, '8.0'
     pod  'TBAccsSDK',         '10.0.6'
     
     # --网关(通用库-> 网关)
-    pod  'MtopSDK',          '10.0.4'
-    pod  'mtopext/MtopCore', '10.0.4'
+    pod  'MtopSDK',          '10.0.6'
+    pod  'mtopext/MtopCore', '10.0.6'
     
     # --远程配置
     pod 'orange','10.0.0'
