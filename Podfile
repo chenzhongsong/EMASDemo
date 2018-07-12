@@ -14,7 +14,7 @@ platform:ios, '8.0'
     pod  'Reachability',     '3.2'
     pod  'FMDB',             '2.7.2'
     pod  'NetworkSDK',       '10.0.4.1'
-    pod  'tnet',             '10.1.0'
+    pod  'tnet',             '10.2.0'
 
 
     # --ACCS(通用库 -> ACCS)
@@ -32,7 +32,7 @@ platform:ios, '8.0'
     #pod  'ZipArchive', '~> 1.4.0'
     
     # --Weex(通用库-> 高可用 -> 网关 -> Weex)
-    pod 'WeexSDK', '0.17.0.1-EMAS'
+    pod 'WeexSDK', '0.17.10.1-EMAS'
     pod 'ZCache', '10.0.3'
     #pod 'ZipArchive', '~> 1.4.0'
     pod 'SDWebImage', '3.7.5'
@@ -41,9 +41,9 @@ platform:ios, '8.0'
 
     # --热修复
     pod 'AlicloudLua', '5.1.4.2'
-    pod 'AlicloudUtils', '1.2.1'
+    pod 'AlicloudUtils', '1.3.4'
     pod 'ZipArchive', '~> 1.4.0'
-    pod 'AlicloudHotFixDebugEmas', '~> 1.0.3'
+    pod 'AlicloudHotFixDebugEmas', '~> 1.0.5'
     
     
     
