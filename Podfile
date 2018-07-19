@@ -1,7 +1,7 @@
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs-thirdpart.git'     
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs.git'
 #source 'git@gitlab.emas-ha.cn:root/emas-specs.git'
-source 'git@gitlab.alibaba-inc.com:alipods/specs.git'
+#source 'git@gitlab.alibaba-inc.com:alipods/specs.git'
 
 platform :ios
 
@@ -16,8 +16,7 @@ platform:ios, '8.0'
     pod  'FMDB',             '2.7.2'
     pod  'NetworkSDK',       '10.0.4.2'
     pod  'tnet',             '10.2.0'
-    pod  'AliEMASConfigure',  '0.0.1.11'
-
+    #pod  'AliEMASConfigure',  '0.0.1.11'
 
     # --ACCS(通用库 -> ACCS)
     pod  'TBAccsSDK',         '10.0.7'
@@ -39,7 +38,7 @@ platform:ios, '8.0'
     #pod  'ZipArchive', '~> 1.4.0'
     
     # --Weex(通用库-> 高可用 -> 网关 -> Weex)
-    pod 'WeexSDK', '0.17.0.1-EMAS'
+    pod 'WeexSDK', '0.17.10.1-EMAS'
     pod 'ZCache', '10.0.3'
     #pod 'ZipArchive', '~> 1.4.0'
     pod 'SDWebImage', '3.7.5'
@@ -48,11 +47,12 @@ platform:ios, '8.0'
 
     # --热修复
     pod 'AlicloudLua', '5.1.4.2'
-    pod 'AlicloudUtils', '1.2.1'
+    pod 'AlicloudUtils', '1.3.4'
     pod 'ZipArchive', '~> 1.4.0'
-    pod 'AlicloudHotFixDebugEmas', '~> 1.0.3'
+    pod 'AlicloudHotFixDebugEmas', '~> 1.0.5'
     
-    
+    # 数据分析
+    pod 'EMASMAN', '10.0.0'    
     
     #pod 'EMASFirstBundle', '3.0.1'
     

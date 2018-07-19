@@ -19,6 +19,7 @@
 #import "OrangeRemoteConfigRootVC.h"
 #import "ACCSViewController.h"
 #import "PushViewController.h"
+#import "MANViewController.h"
 
 @interface FirstTableViewController ()
 
@@ -48,7 +49,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 8;
+    return 9;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -102,6 +103,12 @@
         {
             cell.textLabel.text = @"PUSH";
             cell.textLabel.textColor = [UIColor magentaColor];
+        }
+            break;
+        case 8:
+        {
+            cell.textLabel.text = @"数据分析";
+            cell.textLabel.textColor = [UIColor purpleColor];
         }
             break;
         default:
@@ -162,14 +169,18 @@
             [self.navigationController pushViewController:avc animated:YES];
             break;
         }
-        
         case 7:
         {
             PushViewController *pvc = [[PushViewController alloc] init];
             [self.navigationController pushViewController:pvc animated:YES];
             break;
         }
-            
+        case 8:
+        {
+            MANViewController *mvc = [[MANViewController alloc] init];
+            [self.navigationController pushViewController:mvc animated:YES];
+            break;
+        }
         default:
         {
             FirstViewController *controller = [FirstViewController new];
