@@ -56,7 +56,7 @@
 - (NSString *)ACCSDomain
 {
     NSDictionary *dict = [services objectForKey:@"ACCS"];
-    return [dict objectForKey:@"Domain"];
+    return [dict objectForKey:@"Host"];
 }
 
 - (NSDictionary *)IPStrategy

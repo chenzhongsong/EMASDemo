@@ -9,7 +9,7 @@
 		<key>LogLevel</key>
 		<string>none</string>
 		<key>AppKey</key>
-		<string>10000016</string>
+		<string>10000031</string>
 		<key>AppSecret</key>
 		<string>ddc1f5c8b69da5e875a04e3278203fe2</string>
 		<key>UseSecurityGuard</key>
@@ -18,8 +18,18 @@
 		<string>1001@POC_iOS_1.0.0</string>
 		<key>ACCS</key>
 		<dict>
-			<key>Domain</key>
-			<string>accs.emas-poc.com</string>
+			<key>Host</key>
+			<string>acs.alibaba-inc.com</string>
+			<key>DefaultIP</key>
+			<string>11.163.130.35</string>
+			<key>DefaultPort</key>
+			<integer>443</integer>
+			<key>CustomAppVersion</key>
+			<string>123</string>
+			<key>SlightSSLPublickeyIndex</key>
+			<integer>12</integer>
+			<key>SupportLocalDnsWhenNoPolicy</key>
+			<true/>
 		</dict>
 		<key>Network</key>
 		<dict>

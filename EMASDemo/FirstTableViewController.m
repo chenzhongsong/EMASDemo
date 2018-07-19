@@ -18,6 +18,7 @@
 #import "MtopVerifyTableViewController.h"
 #import "OrangeRemoteConfigRootVC.h"
 #import "ACCSViewController.h"
+#import "PushViewController.h"
 
 @interface FirstTableViewController ()
 
@@ -47,7 +48,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 7;
+    return 8;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -95,6 +96,12 @@
         {
             cell.textLabel.text = @"ACCS";
             cell.textLabel.textColor = [UIColor brownColor];
+        }
+        break;
+        case 7:
+        {
+            cell.textLabel.text = @"PUSH";
+            cell.textLabel.textColor = [UIColor magentaColor];
         }
             break;
         default:
@@ -153,6 +160,13 @@
         {
             ACCSViewController *avc = [[ACCSViewController alloc] init];
             [self.navigationController pushViewController:avc animated:YES];
+            break;
+        }
+        
+        case 7:
+        {
+            PushViewController *pvc = [[PushViewController alloc] init];
+            [self.navigationController pushViewController:pvc animated:YES];
             break;
         }
             

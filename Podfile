@@ -1,6 +1,7 @@
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs-thirdpart.git'     
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs.git'
 #source 'git@gitlab.emas-ha.cn:root/emas-specs.git'
+source 'git@gitlab.alibaba-inc.com:alipods/specs.git'
 
 platform :ios
 
@@ -13,12 +14,18 @@ platform:ios, '8.0'
     pod  'UserTrack',        '6.3.5.100005-poc'
     pod  'Reachability',     '3.2'
     pod  'FMDB',             '2.7.2'
-    pod  'NetworkSDK',       '10.0.4.1'
-    pod  'tnet',             '10.1.0'
+    pod  'NetworkSDK',       '10.0.4.2'
+    pod  'tnet',             '10.2.0'
+    pod  'AliEMASConfigure',  '0.0.1.11'
 
 
     # --ACCS(通用库 -> ACCS)
-    pod  'TBAccsSDK',         '10.0.6'
+    pod  'TBAccsSDK',         '10.0.7'
+    #pod  'TBAccsSDK',  :path=>  '/Users/wuchen.xj/gitemas/tbaccssdk/'
+    
+    # --PUSH(通用库 -> PUSH)
+    pod  'PushCenterSDK',     '10.0.1'
+    #pod  'PushCenterSDK',  :path=>  '/Users/wuchen.xj/gitemas/pushcentersdk/'
     
     # --网关(通用库-> 网关)
     pod  'MtopSDK',          '10.0.6'

@@ -17,9 +17,14 @@
 #import <NetworkSDK/NetworkCore/NWNetworkConfiguration.h>
 #import <NetworkSDK/NetworkCore/NetworkDemote.h>
 #import <NetworkSDK/NetworkCore/NWuserLoger.h>
+#import <NetworkSDK/AliReachability/NWLog.h>
 
 // --ACCS头文件
 #import <TBAccsSDK/TBAccsManager.h>
+
+// --PUSH头文件
+#import <PushCenterSDK/TBSDKPushCenterConfiguration.h>
+#import <PushCenterSDK/TBSDKPushCenterEngine.h>
 
 // --高可用头文件
 #import <AliHAAdapter4poc/AliHAAdapter.h>
@@ -129,6 +134,9 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     
+    // 0. 打开网络库日志
+    [NWLog setLogLevel:NW_LOG_DEBUG];
+    
     // 1. 先初始化基础库
     [self initCommonConfig];
     
@@ -138,9 +146,13 @@
     
     // 3. 初始化Weex，Weex依赖基础库、网关和高可用，因此Weex的初始化顺序为，基础库->高可用->网关->远程配置->ZCache->Weex
     //mtop和zcache已在EMASWXSDKEngine初始化，也可在下方重新配置
-    [self initRemoteConfig];
+    //[self initRemoteConfig];
     [self initMtopConfig];
     [self initZCacheConfig];
+    
+    // 4. 初始化PUSH
+    [self initPushConfig];
+    
     [ExEMASWXSDKEngine setup];
     
     [self initDyConfig];
@@ -178,14 +190,8 @@
     void tbAccsSDKSwitchLog(BOOL logCtr);
     tbAccsSDKSwitchLog(YES); // 打开调试日志
     
-    TBAccsConfiguration *ac = [[TBAccsConfiguration alloc] initWithHost:[[EMASService shareInstance] ACCSDomain]];
-    ac.appkey = [[EMASService shareInstance] appkey];
-    ac.appsecret = [[EMASService shareInstance] appSecret];
-    
-    TBAccsManager *accsManager = [TBAccsManager createAccsWithConfiguration:ac];
-    
-    [accsManager setSupportLocalDNS:YES];
-    accsManager.slightSslPublicKeySeq = ACCS_PUBKEY_PSEQ_EMAS;
+    // ACCS 通过配置文件自初始化
+    TBAccsManager *accsManager = [TBAccsManager accsManagerByConfigureName:nil];
     [accsManager startAccs];
     
     [accsManager bindAppWithAppleToken: nil
@@ -197,6 +203,28 @@
                                       NSLog(@"\n\n绑定App成功了\n\n");
                                   }
                               }];
+}
+
+// PUSH
+- (void)initPushConfig
+{
+    // PUSH 通过配置文件自初始化
+    TBSDKPushCenterEngine *pce = [TBSDKPushCenterEngine sharedInstanceWithDefaultConfigure];
+    [pce start];
+    
+    // register notification setting
+    [self registerNotificationSetting];
+}
+
+- (void)registerNotificationSetting {
+    //registerUserNotificationSettings function must be used from main thread only
+    [[UIApplication sharedApplication] registerUserNotificationSettings:
+         [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge)
+                                           categories:nil]];
+    
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    
+    NSLog(@"[APNS] registerNotificationSetting");
 }
 
 //-- 高可用
@@ -312,6 +340,24 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // 收到APNS token时回调
+    NSLog(@"[APNS] device token: %@", deviceToken);
+    
+    TBSDKPushCenterEngine *pce = [TBSDKPushCenterEngine sharedInstanceWithDefaultConfigure];
+    [pce upLoaderDeviceToken:deviceToken userInfo:nil callback:^(NSDictionary *result, NSError *error){
+        if ( error ) {
+            NSLog(@"[APNS] update token error: %@", error);
+        }
+        else {
+            NSLog(@"[APNS] update token successfully!");
+        }
+    }];
+}
+
+- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"[APNS] register error: %@", error);
+}
 
 #pragma mark - distinguish device
 - (BOOL) isDeviceIphone {
