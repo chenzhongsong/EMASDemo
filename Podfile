@@ -15,7 +15,7 @@ platform:ios, '8.0'
     pod  'FMDB',             '2.7.2'
     pod  'NetworkSDK',       '10.0.4.1'
     pod  'tnet',             '10.2.0'
-
+    pod  'AliEMASConfigure',  '0.0.1.9'
 
     # --ACCS(通用库 -> ACCS)
     pod  'TBAccsSDK',         '10.0.6'
