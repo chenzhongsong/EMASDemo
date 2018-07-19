@@ -46,7 +46,7 @@ platform:ios, '8.0'
     pod 'AlicloudHotFixDebugEmas', '~> 1.0.5'
     
     # 数据分析
-    pod 'EMASMAN', '1.0.0'    
+    pod 'EMASMAN', '10.0.0'    
     
     #pod 'EMASFirstBundle', '3.0.1'
     
