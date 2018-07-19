@@ -18,6 +18,7 @@
 #import "MtopVerifyTableViewController.h"
 #import "OrangeRemoteConfigRootVC.h"
 #import "ACCSViewController.h"
+#import "MANViewController.h"
 
 @interface FirstTableViewController ()
 
@@ -47,7 +48,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 7;
+    return 8;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -95,6 +96,12 @@
         {
             cell.textLabel.text = @"ACCS";
             cell.textLabel.textColor = [UIColor brownColor];
+        }
+            break;
+        case 7:
+        {
+            cell.textLabel.text = @"数据分析";
+            cell.textLabel.textColor = [UIColor purpleColor];
         }
             break;
         default:
@@ -155,7 +162,12 @@
             [self.navigationController pushViewController:avc animated:YES];
             break;
         }
-            
+        case 7:
+        {
+            MANViewController *mvc = [[MANViewController alloc] init];
+            [self.navigationController pushViewController:mvc animated:YES];
+            break;
+        }
         default:
         {
             FirstViewController *controller = [FirstViewController new];
