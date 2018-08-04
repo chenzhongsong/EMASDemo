@@ -19,13 +19,7 @@
 		<key>ACCS</key>
 		<dict>
 			<key>Host</key>
-			<string>acs.alibaba-inc.com</string>
-			<key>DefaultIP</key>
-			<string>11.163.130.35</string>
-			<key>DefaultPort</key>
-			<integer>443</integer>
-			<key>CustomAppVersion</key>
-			<string>123</string>
+			<string>accs.emas-poc.com</string>
 			<key>SlightSSLPublickeyIndex</key>
 			<integer>12</integer>
 			<key>SupportLocalDnsWhenNoPolicy</key>
