@@ -6,15 +6,11 @@
 //  Copyright © 2018年 zhishui.lcq. All rights reserved.
 //
 
+#import <AliEMASConfigure/AliEMASConfigure.h>
 #import "AccsConfiguration.h"
 #import "EMASService.h"
 
-#define EMAS_DEFAULT_APPKEY         @"10000016";
-#define EMAS_DEFAULT_APPSECRET      @"ddc1f5c8b69da5e875a04e3278203fe2"
 #define EMAS_DEFAULT_SERVICEID      @"4272_mock"
-#define EMAS_DEFAULT_HOST           @"accs.emas-poc.com"
-#define EMAS_DEFAULT_IP             @""
-#define EMAS_DEFAULT_PORT           80
 
 @implementation AccsConfiguration
 
@@ -46,14 +42,14 @@
     if (!fileData || [fileData length] == 0) {
         NSLog(@"[FileUtils] NO configuration file, path = %@", path);
         
-        _appkey = EMAS_DEFAULT_APPKEY;
-        _appsecret = EMAS_DEFAULT_APPSECRET;
+        // 从配置文件中读取
+        AliEMASOptions *options = [AliEMASConfigure defaultConfigure].options;
+        _appkey = options.appKey;
+        _appsecret = options.appSecret;
         _serviceId = EMAS_DEFAULT_SERVICEID;
-        _host = EMAS_DEFAULT_HOST;
-        if (EMAS_DEFAULT_IP.length > 0) {
-            _ip = EMAS_DEFAULT_IP;
-            _port = EMAS_DEFAULT_PORT;
-        }
+        _host = options.accsOptions.host;
+        _ip = options.accsOptions.defaultIP;
+        _port = options.accsOptions.defaultPort;
         
         return;
     }
