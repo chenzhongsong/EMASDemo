@@ -40,6 +40,5 @@ platform:ios, '8.0'
     pod 'ZipArchive', '~> 1.4.0'
     pod 'AlicloudHotFixDebugEmas', '~> 1.0.3'
     
-    pod 'EMASFirstBundle', '3.0.5-SNAPSHOT'
     
 end
