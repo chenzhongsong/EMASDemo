@@ -54,7 +54,7 @@ platform:ios, '8.0'
     # 数据分析
     pod 'EMASMAN', '10.0.0'    
     
-    pod 'EMASFirstBundle', '3.0.1'
+    #pod 'EMASFirstBundle', '3.0.1'
     
     # EMASWeex
     pod 'EMASWeex', '1.0.0'
