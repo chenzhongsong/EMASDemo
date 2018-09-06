@@ -1,6 +1,8 @@
 source 'git@github.com:CocoaPods/Specs.git'
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs-thirdpart.git'
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs.git'
+#source 'git@gitlab.emas-ha.cn:root/emas-specs.git'
+#source 'git@gitlab.alibaba-inc.com:alipods/specs.git'
 
 # WeexAceChart
 source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-chart.git'
@@ -10,7 +12,7 @@ source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-chart.git'
 source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-common.git'
 source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-common.git'
 
-project 'EMASDemo.xcodeproj'
+#project 'EMASDemo.xcodeproj'
 
 platform :ios
 
@@ -47,7 +49,7 @@ platform:ios, '8.0'
     #pod  'ZipArchive', '~> 1.4.0'
     
     # --Weex(通用库-> 高可用 -> 网关 -> Weex)
-    pod 'WeexSDK', '0.18.0.3'
+    pod 'WeexSDK', '0.17.10.1-EMAS'
     pod 'ZCache', '10.0.3'
     #pod 'ZipArchive', '~> 1.4.0'
     pod 'SDWebImage', '3.7.5'
