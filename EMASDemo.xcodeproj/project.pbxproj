@@ -27,10 +27,17 @@
 		7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6260E81FDA8C8400E856CB /* arp.framework */; };
 		7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */; };
 		7D8394A91FDB902900EBB60F /* fix.lua in Resources */ = {isa = PBXBuildFile; fileRef = 7D8394A81FDB902900EBB60F /* fix.lua */; };
-		862839AD20E4E509009E31BB /* ExEMASWXSDKEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 862839AC20E4E509009E31BB /* ExEMASWXSDKEngine.m */; };
-		862839B020E4E53A009E31BB /* ExEMASWXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862839AF20E4E53A009E31BB /* ExEMASWXViewController.m */; };
-		862839B320E50DB0009E31BB /* WXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862839B220E50DB0009E31BB /* WXDemoViewController.m */; };
-		868E72F120ECB2CD0016619F /* WXEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 868E72EC20ECB2CC0016619F /* WXEventModule.m */; };
+		869B55CA2140068400809084 /* UIViewController+EMASWXNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */; };
+		869B55CB2140068400809084 /* EMASHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BF2140068300809084 /* EMASHostViewController.m */; };
+		869B55CC2140068400809084 /* EMASWXRenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55C12140068300809084 /* EMASWXRenderViewController.m */; };
+		869B55CD2140068400809084 /* EMASWXSubSDKEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55C32140068300809084 /* EMASWXSubSDKEngine.m */; };
+		869B55CE2140068400809084 /* EMASWXNavigationImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55C62140068300809084 /* EMASWXNavigationImpl.m */; };
+		869B55CF2140068400809084 /* EMASScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55C92140068300809084 /* EMASScannerViewController.m */; };
+		869B55D1214009EB00809084 /* WeexContainer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 869B55D0214009EB00809084 /* WeexContainer-Info.plist */; };
+		869B55D421400A0700809084 /* EMASWeexContainerService.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55D321400A0600809084 /* EMASWeexContainerService.m */; };
+		869B55D721400A1700809084 /* EMASTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55D621400A1700809084 /* EMASTabBarController.m */; };
+		869B55DC21400A2100809084 /* EMASNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55D921400A2100809084 /* EMASNativeViewController.m */; };
+		869B55DD21400A2100809084 /* EMASBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55DA21400A2100809084 /* EMASBaseNavigationController.m */; };
 		8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */; };
 		8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */; };
 		8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */; };
@@ -60,8 +67,6 @@
 		980F857120BECC49002156A2 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F856620BECC49002156A2 /* CustomCell.m */; };
 		9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9815F23820A2F73F00F0F70D /* MtopCustomCell.m */; };
 		981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981DC5D720998B53006472AF /* MtopResultViewController.m */; };
-		9A09D7891FF270D600585632 /* WXScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D7881FF270D600585632 /* WXScannerVC.m */; };
-		9A09D78C1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09D78A1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m */; };
 		9A09D7961FF27A6200585632 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 9A09D7951FF27A6200585632 /* index.js */; };
 		F2AEA74CFBBBDD9338DF0F3C /* libPods-EMASDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D522707B463174EC727EEF /* libPods-EMASDemo.a */; };
 /* End PBXBuildFile section */
@@ -129,14 +134,27 @@
 		7D6260E81FDA8C8400E856CB /* arp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = arp.framework; sourceTree = "<group>"; };
 		7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudHotFixEmas.framework; sourceTree = "<group>"; };
 		7D8394A81FDB902900EBB60F /* fix.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fix.lua; sourceTree = "<group>"; };
-		862839AB20E4E509009E31BB /* ExEMASWXSDKEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExEMASWXSDKEngine.h; sourceTree = "<group>"; };
-		862839AC20E4E509009E31BB /* ExEMASWXSDKEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExEMASWXSDKEngine.m; sourceTree = "<group>"; };
-		862839AE20E4E53A009E31BB /* ExEMASWXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExEMASWXViewController.h; sourceTree = "<group>"; };
-		862839AF20E4E53A009E31BB /* ExEMASWXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExEMASWXViewController.m; sourceTree = "<group>"; };
-		862839B120E50DB0009E31BB /* WXDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDemoViewController.h; sourceTree = "<group>"; };
-		862839B220E50DB0009E31BB /* WXDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXDemoViewController.m; sourceTree = "<group>"; };
-		868E72EB20ECB2CC0016619F /* WXEventModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXEventModule.h; sourceTree = "<group>"; };
-		868E72EC20ECB2CC0016619F /* WXEventModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXEventModule.m; sourceTree = "<group>"; };
+		869B55BC2140068300809084 /* UIViewController+EMASWXNaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EMASWXNaviBar.h"; sourceTree = "<group>"; };
+		869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EMASWXNaviBar.m"; sourceTree = "<group>"; };
+		869B55BE2140068300809084 /* EMASHostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASHostViewController.h; sourceTree = "<group>"; };
+		869B55BF2140068300809084 /* EMASHostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASHostViewController.m; sourceTree = "<group>"; };
+		869B55C02140068300809084 /* EMASWXRenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASWXRenderViewController.h; sourceTree = "<group>"; };
+		869B55C12140068300809084 /* EMASWXRenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASWXRenderViewController.m; sourceTree = "<group>"; };
+		869B55C22140068300809084 /* EMASWXSubSDKEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASWXSubSDKEngine.h; sourceTree = "<group>"; };
+		869B55C32140068300809084 /* EMASWXSubSDKEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASWXSubSDKEngine.m; sourceTree = "<group>"; };
+		869B55C52140068300809084 /* EMASWXNavigationImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASWXNavigationImpl.h; sourceTree = "<group>"; };
+		869B55C62140068300809084 /* EMASWXNavigationImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASWXNavigationImpl.m; sourceTree = "<group>"; };
+		869B55C82140068300809084 /* EMASScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASScannerViewController.h; sourceTree = "<group>"; };
+		869B55C92140068300809084 /* EMASScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASScannerViewController.m; sourceTree = "<group>"; };
+		869B55D0214009EB00809084 /* WeexContainer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WeexContainer-Info.plist"; sourceTree = "<group>"; };
+		869B55D221400A0600809084 /* EMASWeexContainerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASWeexContainerService.h; sourceTree = "<group>"; };
+		869B55D321400A0600809084 /* EMASWeexContainerService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASWeexContainerService.m; sourceTree = "<group>"; };
+		869B55D521400A1700809084 /* EMASTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASTabBarController.h; sourceTree = "<group>"; };
+		869B55D621400A1700809084 /* EMASTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASTabBarController.m; sourceTree = "<group>"; };
+		869B55D821400A2100809084 /* EMASBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASBaseNavigationController.h; sourceTree = "<group>"; };
+		869B55D921400A2100809084 /* EMASNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASNativeViewController.m; sourceTree = "<group>"; };
+		869B55DA21400A2100809084 /* EMASBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASBaseNavigationController.m; sourceTree = "<group>"; };
+		869B55DB21400A2100809084 /* EMASNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASNativeViewController.h; sourceTree = "<group>"; };
 		8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigTableViewController.h; sourceTree = "<group>"; };
 		8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfigTableViewController.m; sourceTree = "<group>"; };
 		8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopVerifyTableViewController.h; sourceTree = "<group>"; };
@@ -202,10 +220,6 @@
 		9815F23820A2F73F00F0F70D /* MtopCustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtopCustomCell.m; sourceTree = "<group>"; };
 		981DC5D620998B53006472AF /* MtopResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopResultViewController.h; sourceTree = "<group>"; };
 		981DC5D720998B53006472AF /* MtopResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtopResultViewController.m; sourceTree = "<group>"; };
-		9A09D7871FF270D600585632 /* WXScannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXScannerVC.h; sourceTree = "<group>"; };
-		9A09D7881FF270D600585632 /* WXScannerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXScannerVC.m; sourceTree = "<group>"; };
-		9A09D78A1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WXDemoNaviBar.m"; sourceTree = "<group>"; };
-		9A09D78B1FF270FD00585632 /* UIViewController+WXDemoNaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WXDemoNaviBar.h"; sourceTree = "<group>"; };
 		9A09D7901FF2721000585632 /* DemoDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoDefine.h; sourceTree = "<group>"; };
 		9A09D7951FF27A6200585632 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		C9D522707B463174EC727EEF /* libPods-EMASDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EMASDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -313,31 +327,56 @@
 			path = hotfix;
 			sourceTree = "<group>";
 		};
-		8689306720D2646B00D8AA79 /* weex */ = {
+		869B55BA2140068300809084 /* Weex */ = {
 			isa = PBXGroup;
 			children = (
-				862839B120E50DB0009E31BB /* WXDemoViewController.h */,
-				862839B220E50DB0009E31BB /* WXDemoViewController.m */,
-				9A09D7871FF270D600585632 /* WXScannerVC.h */,
-				9A09D7881FF270D600585632 /* WXScannerVC.m */,
-				9A09D78B1FF270FD00585632 /* UIViewController+WXDemoNaviBar.h */,
-				9A09D78A1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m */,
-				862839AB20E4E509009E31BB /* ExEMASWXSDKEngine.h */,
-				862839AC20E4E509009E31BB /* ExEMASWXSDKEngine.m */,
-				862839AE20E4E53A009E31BB /* ExEMASWXViewController.h */,
-				862839AF20E4E53A009E31BB /* ExEMASWXViewController.m */,
-				868E72EA20ECB2CC0016619F /* module */,
+				869B55BB2140068300809084 /* Categroy */,
+				869B55C42140068300809084 /* Handler */,
+				869B55C72140068300809084 /* Scan */,
+				869B55BE2140068300809084 /* EMASHostViewController.h */,
+				869B55BF2140068300809084 /* EMASHostViewController.m */,
+				869B55C02140068300809084 /* EMASWXRenderViewController.h */,
+				869B55C12140068300809084 /* EMASWXRenderViewController.m */,
+				869B55C22140068300809084 /* EMASWXSubSDKEngine.h */,
+				869B55C32140068300809084 /* EMASWXSubSDKEngine.m */,
+				869B55D0214009EB00809084 /* WeexContainer-Info.plist */,
+				869B55D221400A0600809084 /* EMASWeexContainerService.h */,
+				869B55D321400A0600809084 /* EMASWeexContainerService.m */,
+				869B55D521400A1700809084 /* EMASTabBarController.h */,
+				869B55D621400A1700809084 /* EMASTabBarController.m */,
+				869B55D821400A2100809084 /* EMASBaseNavigationController.h */,
+				869B55DA21400A2100809084 /* EMASBaseNavigationController.m */,
+				869B55DB21400A2100809084 /* EMASNativeViewController.h */,
+				869B55D921400A2100809084 /* EMASNativeViewController.m */,
 			);
-			path = weex;
+			path = Weex;
 			sourceTree = "<group>";
 		};
-		868E72EA20ECB2CC0016619F /* module */ = {
+		869B55BB2140068300809084 /* Categroy */ = {
 			isa = PBXGroup;
 			children = (
-				868E72EB20ECB2CC0016619F /* WXEventModule.h */,
-				868E72EC20ECB2CC0016619F /* WXEventModule.m */,
+				869B55BC2140068300809084 /* UIViewController+EMASWXNaviBar.h */,
+				869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */,
 			);
-			path = module;
+			path = Categroy;
+			sourceTree = "<group>";
+		};
+		869B55C42140068300809084 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				869B55C52140068300809084 /* EMASWXNavigationImpl.h */,
+				869B55C62140068300809084 /* EMASWXNavigationImpl.m */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		869B55C72140068300809084 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				869B55C82140068300809084 /* EMASScannerViewController.h */,
+				869B55C92140068300809084 /* EMASScannerViewController.m */,
+			);
+			path = Scan;
 			sourceTree = "<group>";
 		};
 		8AA1174A1FF5E8FD004D4D0A /* EMASWatch */ = {
@@ -397,8 +436,8 @@
 				8A69B608200C8F980073756D /* EMASService.h */,
 				8A69B609200C8F980073756D /* EMASService.m */,
 				8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */,
+				869B55BA2140068300809084 /* Weex */,
 				4A017CEB21006E59001FF027 /* man */,
-				8689306720D2646B00D8AA79 /* weex */,
 				1A65F6231FF2534A00B4573C /* AliHA */,
 				7D6260E11FDA8C5900E856CB /* hotfix */,
 				8ADA953E1FD9309400C0EF49 /* AppDelegate.h */,
@@ -511,6 +550,7 @@
 				AA85B2CA3C2F5806D1BDF7DB /* [CP] Copy Pods Resources */,
 				67DAC7CF7E1FB0DDB324BBC0 /* 📦 Copy Pods Resources */,
 				8ABD97BD1FF4D55700469557 /* Embed Watch Content */,
+				F4FCA1556D861474F87E39BC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -627,6 +667,7 @@
 				980F856920BECC49002156A2 /* OrangeRemoteConfigRootVC.xib in Resources */,
 				9A09D7961FF27A6200585632 /* index.js in Resources */,
 				8ADA95491FD9309400C0EF49 /* Main.storyboard in Resources */,
+				869B55D1214009EB00809084 /* WeexContainer-Info.plist in Resources */,
 				33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */,
 				33D18D6520DA331700ACF0C7 /* wq_code_scanner_line@2x.png in Resources */,
 				33D18D5E20DA31C500ACF0C7 /* btn_qr@2x.png in Resources */,
@@ -700,7 +741,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		AA85B2CA3C2F5806D1BDF7DB /* [CP] Copy Pods Resources */ = {
@@ -768,6 +809,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		F4FCA1556D861474F87E39BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -775,36 +831,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				869B55D421400A0700809084 /* EMASWeexContainerService.m in Sources */,
 				33D18D4B20DA06CE00ACF0C7 /* AccsConfiguration.m in Sources */,
 				1A65F6261FF253CF00B4573C /* AliHATestCaseViewController.mm in Sources */,
+				869B55DD21400A2100809084 /* EMASBaseNavigationController.m in Sources */,
 				981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */,
 				980F856820BECC49002156A2 /* OrangeFeatureSecondVC.m in Sources */,
 				8ADA95461FD9309400C0EF49 /* SecondViewController.m in Sources */,
 				8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */,
-				862839B320E50DB0009E31BB /* WXDemoViewController.m in Sources */,
 				33D18D5620DA2CFB00ACF0C7 /* ACCSViewController.m in Sources */,
 				4A017CF321006EC7001FF027 /* BaseUIViewController.m in Sources */,
+				869B55DC21400A2100809084 /* EMASNativeViewController.m in Sources */,
+				869B55CE2140068400809084 /* EMASWXNavigationImpl.m in Sources */,
 				9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */,
 				4A017CF421006EC7001FF027 /* MANViewController.m in Sources */,
+				869B55CA2140068400809084 /* UIViewController+EMASWXNaviBar.m in Sources */,
 				8ADA95751FDA3BA300C0EF49 /* FirstTableViewController.m in Sources */,
-				9A09D78C1FF270FD00585632 /* UIViewController+WXDemoNaviBar.m in Sources */,
 				33D18D5B20DA30DC00ACF0C7 /* ACCSSettingViewController.m in Sources */,
+				869B55CB2140068400809084 /* EMASHostViewController.m in Sources */,
 				980F857020BECC49002156A2 /* OrangeRemoteConfigRootVC.m in Sources */,
 				8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */,
 				4A017CF221006EC7001FF027 /* TestUIViewController.m in Sources */,
 				7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */,
-				868E72F120ECB2CD0016619F /* WXEventModule.m in Sources */,
 				980F856A20BECC49002156A2 /* OrangeRemotConfigDebugVC.m in Sources */,
-				9A09D7891FF270D600585632 /* WXScannerVC.m in Sources */,
 				8ADA95511FD9309400C0EF49 /* main.m in Sources */,
+				869B55CD2140068400809084 /* EMASWXSubSDKEngine.m in Sources */,
 				33D18D6120DA330100ACF0C7 /* WQCodeScanner.m in Sources */,
+				869B55CC2140068400809084 /* EMASWXRenderViewController.m in Sources */,
+				869B55D721400A1700809084 /* EMASTabBarController.m in Sources */,
 				980F857120BECC49002156A2 /* CustomCell.m in Sources */,
 				8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */,
-				862839AD20E4E509009E31BB /* ExEMASWXSDKEngine.m in Sources */,
 				7D6260E61FDA8C5A00E856CB /* HFXTestClass.m in Sources */,
-				862839B020E4E53A009E31BB /* ExEMASWXViewController.m in Sources */,
 				8A69B60A200C8F980073756D /* EMASService.m in Sources */,
 				33A2550F20FDE37000C3F673 /* PushViewController.m in Sources */,
+				869B55CF2140068400809084 /* EMASScannerViewController.m in Sources */,
 				8ADA95431FD9309400C0EF49 /* FirstViewController.m in Sources */,
 				8ADA95781FDA3BB000C0EF49 /* SecondTableViewController.m in Sources */,
 				980F856D20BECC49002156A2 /* OrangeFeatureFirstVC.m in Sources */,

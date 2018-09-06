@@ -18,7 +18,7 @@
 
 #define DEMO_URL(path) [NSString stringWithFormat:@"http://%@:12580/%s", DEMO_HOST, #path]
 
-#define HOME_URL  @"http://mobilehubdev.taobao.com/app/taobao-mk8/fdsffds.js"
+#define HOME_URL  @"http://publish-poc.emas-ha.cn/app/taobao-mobile-EMASPOC/show_1.js?wh_weex=true"
 
 #define BUNDLE_URL [NSString stringWithFormat:@"file://%@/bundlejs/index.js",[NSBundle mainBundle].bundlePath]
 

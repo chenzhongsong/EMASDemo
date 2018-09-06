@@ -37,7 +37,7 @@
 #import <MtopCore/MtopService.h>
 #import <MtopCore/TBSDKConfiguration.h>
 
-#import "ExEMASWXSDKEngine.h"
+#import "EMASWXSubSDKEngine.h"
 
 // --weex灰度头文件
 #import <DynamicConfigurationAdaptor/DynamicConfigurationAdaptorManager.h>
@@ -51,6 +51,13 @@
 
 // --ZCache
 #import <ZCache/ZCache.h>
+
+// --ViewController
+#import "EMASHostViewController.h"
+#import "EMASTabBarController.h"
+#import "EMASNativeViewController.h"
+#import "EMASBaseNavigationController.h"
+#import "EMASWeexContainerService.h"
 
 @interface MyPolicyCenter : NSObject <NWPolicyDelegate>
 @end
@@ -153,12 +160,58 @@
     // 4. 初始化PUSH
     [self initPushConfig];
     
-    [ExEMASWXSDKEngine setup];
+    [EMASWXSubSDKEngine setup];
     
     [self initDyConfig];
     
+    [self showMainViewController];
     
     return YES;
+}
+
+#pragma mark -
+#pragma mark 显示视图
+
+- (void)showMainViewController
+{
+    NSNumber *tabSize = [[EMASWeexContainerService shareInstance] tabSize];
+    NSInteger tabSizeInt = tabSize.integerValue;
+    if (!tabSize) {
+        //Native脚手架
+    } else if (tabSizeInt == 0) {
+        [self showBlankViewController];
+    } else if (tabSizeInt == 1) {
+        [self showSingleViewController];
+    } else {
+        [self showTabBarViewController];
+    }
+}
+
+- (void)showSingleViewController
+{
+    NSDictionary *jsSourceDic = [[EMASWeexContainerService shareInstance] jsSource];
+    NSString *url = [jsSourceDic objectForKey:@"0"];
+    
+    EMASHostViewController *viewController = [[EMASHostViewController alloc] initWithNavigatorURL:[NSURL URLWithString:url]];
+    self.window.rootViewController = [[WXRootViewController alloc] initWithRootViewController:viewController];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+}
+
+- (void)showTabBarViewController
+{
+    EMASTabBarController *tabBarViewController = [[EMASTabBarController alloc] init];
+    [self.window setRootViewController:tabBarViewController];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+}
+
+- (void)showBlankViewController
+{
+    EMASNativeViewController *viewController = [[EMASNativeViewController alloc] init];
+    self.window.rootViewController = [[EMASBaseNavigationController alloc] initWithRootViewController:viewController];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
 }
 
 #pragma mark -

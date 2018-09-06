@@ -9,7 +9,7 @@
 #import "FirstTableViewController.h"
 #import "FirstViewController.h"
 #import "HFXViewController.h"
-#import "WXDemoViewController.h"
+#import "EMASHostViewController.h"
 #import "DemoDefine.h"
 #import "AliHATestCaseViewController.h"
 #import <objc/runtime.h>
@@ -20,6 +20,7 @@
 #import "ACCSViewController.h"
 #import "PushViewController.h"
 #import "MANViewController.h"
+#import "EMASNativeViewController.h"
 
 @interface FirstTableViewController ()
 
@@ -192,7 +193,7 @@
 
 - (UIViewController *)demoController
 {
-    UIViewController *demo = [[WXDemoViewController alloc] initWithNavigatorURL:[NSURL URLWithString:HOME_URL]];
+    UIViewController *demo = [[EMASNativeViewController alloc] init];
     
 //#if DEBUG
     //If you are debugging in device , please change the host to current IP of your computer.
