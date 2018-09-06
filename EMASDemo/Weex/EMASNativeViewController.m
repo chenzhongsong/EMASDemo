@@ -20,6 +20,7 @@
     
     [self setupNaviBar];
     
+    self.view.backgroundColor = [UIColor whiteColor];
     if (!self.navigationItem.rightBarButtonItem) {
         UIBarButtonItem *item = [self leftBarButtonItem];
         self.navigationItem.rightBarButtonItem = item;
