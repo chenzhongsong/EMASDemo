@@ -10,7 +10,6 @@
 #import <WeexSDK/WeexSDK.h>
 #import "EMASService.h"
 #import "EMASWXNavigationImpl.h"
-#import <EmasWeexComponents/EmasWeexComponents.h>
 
 @implementation EMASWXSubSDKEngine
 
@@ -32,8 +31,7 @@
     [WXDebugTool setDebug:NO];
     [WXLog setLogLevel:WXLogLevelError];
 #endif
-    
-    [EmasWeexComponents setup];
+
 }
 
 + (void)appConfig {
