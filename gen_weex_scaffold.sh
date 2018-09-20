@@ -146,78 +146,61 @@ modifyNativeSDk() {
 modifyWeexSDK() {
     echo "开始修改weex外围SDK相关配置..."
 
-    GRADLE_PATH="app/build.gradle"
+    PODFILE_PATH="Podfile"
 
     #weex-ui sdk（bindingx)
     if [ "$WEEX_UI_SDK" == "" ]; then
-        #注释：将complie替换成 //complie
-        sed -i "/com.alibaba.android:bindingx-core/{ s/compile/\/\/compile/g }" $GRADLE_PATH
-        sed -i "/com.alibaba.android:bindingx_weex_plugin/{ s/compile/\/\/compile/g }" $GRADLE_PATH
+        #注释：将pod替换成#pod
+        sed -i "/pod 'BindingX'/{ s/pod/#pod/g }" $PODFILE_PATH
     else
-        #取消注释：将//替换掉成""
-        sed -i "/com.alibaba.android:bindingx-core/{ s/\///g }" $GRADLE_PATH
-        sed -i "/com.alibaba.android:bindingx_weex_plugin/{ s/\///g }" $GRADLE_PATH
-        mv app/src/BindingXInit.java.out app/src/main/java/com/taobao/demo/BindingXInit.java
+        #取消注释：将#替换掉成""
+        sed -i "/pod 'BindingX'/{ s/#//g }" $PODFILE_PATH
     fi
 
     #商业组件SDK
     if [ "$WEEX_BUSINESS_COMPONENTS" == "" ]; then
-        #注释：将complie替换成 //complie
-        sed -i "/com.alibaba.emas.xcomponent:xbase/{ s/compile/\/\/compile/g }" $GRADLE_PATH
-        sed -i "/com.emas.weex:weex-libs/{ s/compile/\/\/compile/g }" $GRADLE_PATH
-        sed -i "/com.emas.weex:weex-base/{ s/compile/\/\/compile/g }" $GRADLE_PATH
-        sed -i "/com.emas.weex:fingerprint/{ s/compile/\/\/compile/g }" $GRADLE_PATH
-        sed -i "/com.emas.weex:patternlock/{ s/compile/\/\/compile/g }" $GRADLE_PATH
-        sed -i "/com.alibaba.emas.xcomponent:umeng-social/{ s/compile/\/\/compile/g }" $GRADLE_PATH
-        sed -i "/com.amap.api:location/{ s/compile/\/\/compile/g }" $GRADLE_PATH
+        #source注释规则：# WeexComponents下两行注释掉
+        sed -i "/# WeexComponents/{ n; s/source/#source/g }" $PODFILE_PATH
+        sed -i "/# WeexComponents/{ n;n; s/source/#source/g }" $PODFILE_PATH
+        #Podfile注释
+        sed -i "/pod 'EmasWeexComponents'/{ s/pod/#pod/g }" $PODFILE_PATH
+        #移动文件
+        mv Resource/BusinessSDK/EMASWXSubSDKEngine.m EMASDemo/Weex/EMASWXSubSDKEngine.m
     else
-        #取消注释：将/替换掉成""
-        sed -i "/com.alibaba.emas.xcomponent:xbase/{ s/\///g }" $GRADLE_PATH
-        sed -i "/com.emas.weex:weex-libs/{ s/\///g }" $GRADLE_PATH
-        sed -i "/com.emas.weex:weex-base/{ s/\///g }" $GRADLE_PATH
-        sed -i "/com.emas.weex:fingerprint/{ s/\///g }" $GRADLE_PATH
-        sed -i "/com.emas.weex:patternlock/{ s/\///g }" $GRADLE_PATH
-        sed -i "/com.alibaba.emas.xcomponent:umeng-social/{ s/\///g }" $GRADLE_PATH
-        sed -i "/com.amap.api:location/{ s/\///g }" $GRADLE_PATH
-    fi
-    #选中商业组件需要同时修改gradle.properties信息
-    if [ "$WEEX_PUBLIC_REPOSITORY_URL" != "" ]; then
-        #参数中可能包含/，所以使用@代替/当分隔符
-        sed -i "s@WEEX_PUBLIC_REPOSITORY_URL =.*@WEEX_PUBLIC_REPOSITORY_URL = $WEEX_PUBLIC_REPOSITORY_URL@g" gradle.properties
+        #取消注释：将#替换掉成""
+        #取消source注释规则：# WeexComponents下两行注释掉
+        sed -i "/# WeexComponents/{ n; s/#//g }" $PODFILE_PATH
+        sed -i "/# WeexComponents/{ n;n; s/#//g }" $PODFILE_PATH
+        #取消Podfile注释
+        sed -i "/pod 'EmasWeexComponents'/{ s/#//g }" $PODFILE_PATH
     fi
 
-    if [ "$WEEX_REPOSITORY_USERNAME" != "" ]; then
-        sed -i "s/WEEX_REPOSITORY_USERNAME =.*/WEEX_REPOSITORY_USERNAME = $WEEX_REPOSITORY_USERNAME/g" gradle.properties
-    fi
-
-    if [ "$WEEX_REPOSITORY_PASSWORD" != "" ]; then
-        sed -i "s/WEEX_REPOSITORY_PASSWORD =.*/WEEX_REPOSITORY_PASSWORD = $WEEX_REPOSITORY_PASSWORD/g" gradle.properties
-    fi
-
-    #商业图标SDK
+    #商业图表SDK
     if [ "$WEEX_BUSINESS_CHARTS" == "" ]; then
-        #注释：将complie替换成 //complie
-        sed -i "/org.weex.plugin.weexacechart/{ s/compile/\/\/compile/g }" $GRADLE_PATH
-        sed -i "/com.alibaba.dt:acechart/{ s/compile/\/\/compile/g }" $GRADLE_PATH
-        sed -i "/com.android.support:support-annotations/{ s/compile/\/\/compile/g }" $GRADLE_PATH
-        sed -i "/compile .*org.weex.plugin:processor/{ s/compile/\/\/compile/g }" $GRADLE_PATH
-        sed -i "/annotationProcessor .*org.weex.plugin:processor/{ s/annotationProcessor/\/\/annotationProcessor/g }" $GRADLE_PATH
+        #source注释
+        sed -i "/# WeexAceChart/{ n; s/source/#source/g }" $PODFILE_PATH
+        sed -i "/# WeexAceChart/{ n;n; s/source/#source/g }" $PODFILE_PATH
+        #Podfile注释
+        sed -i "/pod 'WeexAceChart'/{ s/pod/#pod/g }" $PODFILE_PATH
     else
-        #取消注释：将/替换掉成""
-        sed -i "/org.weex.plugin.weexacechart/{ s/\///g }" $GRADLE_PATH
-        sed -i "/com.alibaba.dt:acechart/{ s/\///g }" $GRADLE_PATH
-        sed -i "/com.android.support:support-annotations/{ s/\///g }" $GRADLE_PATH
-        sed -i "/compile .*org.weex.plugin:processor/{ s/\///g }" $GRADLE_PATH
-        sed -i "/annotationProcessor .*org.weex.plugin:processor/{ s/\///g }" $GRADLE_PATH
-        mv app/src/WeexChartInit.java.out app/src/main/java/com/taobao/demo/WeexChart.java
+        #取消注释：将#替换掉成""
+        #取消source注释
+        sed -i "/# WeexAceChart/{ n; s/#//g }" $PODFILE_PATH
+        sed -i "/# WeexAceChart/{ n;n; s/#//g }" $PODFILE_PATH
+        #取消Podfile注释
+        sed -i "/pod 'WeexAceChart'/{ s/#//g }" $PODFILE_PATH
     fi
+
+    #最后删除Resource文件夹
+    rm -rf Resource
+
     echo "修改weex外围SDK相关配置完成."
 }
 
 modifyWeexNativePage() {
     echo "开始修改Weex启动页配置..."
     if [ "$WEEX_PAGE_TAB_SIZE" != "" ]; then
-        sed -i "s/\"TabSize\".*/\"TabSize\": \"$WEEX_PAGE_TAB_SIZE\",/g" app/src/main/assets/weex-container.json
+        sed -i "/>TabSize</{n; s/<integer>.*/<integer>$WEEX_PAGE_TAB_SIZE<\/integer>/g; }" EMASDemo/Weex/WeexContainer-Info.plist
     fi
     echo "修改Weex启动页配置完成."
 }
@@ -249,7 +232,7 @@ modifyNativeSDk
 #2. 发布包名修改(IOS暂不支持)
 
 #3. weex外围sdk相关配置
-#modifyWeexSDK
+modifyWeexSDK
 
 #4. Weex Native页面配置
-#modifyWeexNativePage
+modifyWeexNativePage
