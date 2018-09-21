@@ -155,8 +155,6 @@ modifyWeexSDK() {
         sed -i "/# WeexComponents/{ n;n; s/source/#source/g }" $PODFILE_PATH
         #Podfile注释
         sed -i "/pod 'EmasWeexComponents'/{ s/pod/#pod/g }" $PODFILE_PATH
-        #移动文件
-        mv Resource/BusinessSDK/EMASWXSubSDKEngine.m EMASDemo/Weex/EMASWXSubSDKEngine.m
     else
         #取消注释：将#替换掉成""
         #取消source注释规则：# WeexComponents下两行注释掉
@@ -164,6 +162,8 @@ modifyWeexSDK() {
         sed -i "/# WeexComponents/{ n;n; s/#//g }" $PODFILE_PATH
         #取消Podfile注释
         sed -i "/pod 'EmasWeexComponents'/{ s/#//g }" $PODFILE_PATH
+        #移动文件
+        mv Resource/BusinessSDK/EMASWXSubSDKEngine.m EMASDemo/Weex/EMASWXSubSDKEngine.m
     fi
 
     #商业图表SDK
