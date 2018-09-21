@@ -28,11 +28,6 @@ WEEX_UI_SDK=""
 WEEX_BUSINESS_COMPONENTS=""
 WEEX_BUSINESS_CHARTS=""
 
-#WEEX商业组件仓库(仅勾选了商业组件或商业图表选项的WEEX脚手架需要添加)
-WEEX_PUBLIC_REPOSITORY_URL=""
-WEEX_REPOSITORY_USERNAME=""
-WEEX_REPOSITORY_PASSWORD=""
-
 #Weex Native页面配置
 WEEX_PAGE_TAB_SIZE=""
 
@@ -57,13 +52,9 @@ printHelp() {
     echo "   -SDK_CONFIG_HA_PUBLIC_KEY          HA.RSAPublicKey，从控制台读取。可选"
 
     echo "   -WEEX_UI_SDK                       启用weex-ui SDK时设置为1。可选"
-
     echo "   -WEEX_BUSINESS_COMPONENTS          启用商业组件SDK时设置为1。可选"
-    echo "   -WEEX_PUBLIC_REPOSITORY_URL        gradle.properties WEEX商业组件仓库URL，选中商业组件时必选"
-    echo "   -WEEX_REPOSITORY_USERNAME          gradle.properties WEEX商业组件仓库用户名，选中商业组件时必选"
-    echo "   -WEEX_REPOSITORY_PASSWORD          gradle.properties WEEX商业组件仓库密码，选中商业组件时必选"
-
     echo "   -WEEX_BUSINESS_CHARTS              启用商业图表SDK时设置为1。可选"
+
     echo "   -WEEX_PAGE_TAB_SIZE                Weex首页Tab数量，0表示首页非weex，1表示为单页结构，2-5为tab页结构。可选"
 
     echo
