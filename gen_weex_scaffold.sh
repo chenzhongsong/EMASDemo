@@ -220,9 +220,6 @@ while [ $# -gt 0 ];do
     esac
 done
 
-#测试代码
-echo "参数 WEEX_REPOSITORY_USERNAME 的值为 $WEEX_REPOSITORY_USERNAME"
-
 #0. 参数检查
 checkParameters
 
