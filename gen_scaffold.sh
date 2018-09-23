@@ -127,7 +127,7 @@ modifyNativeSDk() {
     fi
 
     if [ "$SDK_CONFIG_ORANGE_DOMAIN" != "" ]; then
-        sed -i "/>RemoteConfig</{n;n;n; s/<string>.*/<string>$SDK_CONFIG_ORANGE_DOMAIN<\/string>/g; }" $SDK_PATH
+        sed -i "/>RemoteConfig</{n;n;n; s@<string>.*@<string>$SDK_CONFIG_ORANGE_DOMAIN<\/string>@g; }" $SDK_PATH
     fi
 
     if [ "$SDK_CONFIG_USE_HTTP" != "" ]; then
