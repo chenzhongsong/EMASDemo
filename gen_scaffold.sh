@@ -64,6 +64,14 @@ printHelp() {
     echo
 }
 
+escapeSpecialChars() {
+    # &替换为\&
+    TEMP=${1//&/\\&}
+    # /替换为\/
+    TEMP=${TEMP//\//\\/}
+    echo $TEMP
+}
+
 checkParameters() {
     echo "开始参数检查..."
     REQUIRED_CONFIGS=(BUNDLE_ID SDK_CONFIG_APP_KEY SDK_CONFIG_APP_SECRET SDK_CONFIG_CHANNEL_ID)
@@ -104,8 +112,7 @@ modifyNativeSDk() {
     fi
 
     if [ "$SDK_CONFIG_ZCACHE_PREFIX" != "" ]; then
-        #参数中可能包含/，所以使用@代替/当分隔符
-        sed -i "/>ZCache</{n;n;n; s@<string>.*@<string>$SDK_CONFIG_ZCACHE_PREFIX<\/string>@g; }" $SDK_PATH
+        sed -i "/>ZCache</{n;n;n; s/<string>.*/<string>$SDK_CONFIG_ZCACHE_PREFIX<\/string>/g; }" $SDK_PATH
     fi
 
     if [ "$SDK_CONFIG_HA_OSS_BUCKET" != "" ]; then
@@ -113,7 +120,6 @@ modifyNativeSDk() {
     fi
 
     if [ "$SDK_CONFIG_HA_ADASH_DOMAIN" != "" ]; then
-        #参数中可能包含/，所以使用@当分隔符
         sed -i "/>UniversalHost</{n; s/<string>.*/<string>$SDK_CONFIG_HA_ADASH_DOMAIN<\/string>/g; }" $SDK_PATH
     fi
 
@@ -122,12 +128,11 @@ modifyNativeSDk() {
     fi
 
     if [ "$SDK_CONFIG_HOTFIX_URL" != "" ]; then
-        #参数中可能包含/，所以使用@代替/当分隔符
-        sed -i "/>Hotfix</{n;n;n; s@<string>.*@<string>$SDK_CONFIG_HOTFIX_URL<\/string>@g; }" $SDK_PATH
+        sed -i "/>Hotfix</{n;n;n; s/<string>.*/<string>$SDK_CONFIG_HOTFIX_URL<\/string>/g; }" $SDK_PATH
     fi
 
     if [ "$SDK_CONFIG_ORANGE_DOMAIN" != "" ]; then
-        sed -i "/>RemoteConfig</{n;n;n; s@<string>.*@<string>$SDK_CONFIG_ORANGE_DOMAIN<\/string>@g; }" $SDK_PATH
+        sed -i "/>RemoteConfig</{n;n;n; s/<string>.*/<string>$SDK_CONFIG_ORANGE_DOMAIN<\/string>/g; }" $SDK_PATH
     fi
 
     if [ "$SDK_CONFIG_USE_HTTP" != "" ]; then
@@ -207,11 +212,13 @@ while [ $# -gt 0 ];do
             exit 0
             ;;
         -*)
-            param_name=${1##-}
+            #字符串截取: $1截取-
+            param_name=${1#-}
             shift
-            eval $param_name=$1
+            TEMP=`escapeSpecialChars "${1}"`
+            eval $param_name='$TEMP'
             shift
-            ;;
+            ;;           
     esac
 done
 
