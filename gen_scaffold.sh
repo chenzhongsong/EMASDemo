@@ -73,7 +73,7 @@ escapeSpecialChars() {
 }
 
 checkParameters() {
-    echo "开始参数检查..."
+    echo "start check parameters ..."
     REQUIRED_CONFIGS=(BUNDLE_ID SDK_CONFIG_APP_KEY SDK_CONFIG_APP_SECRET SDK_CONFIG_CHANNEL_ID)
     for config in ${REQUIRED_CONFIGS[@]}
     do
@@ -82,11 +82,11 @@ checkParameters() {
             exit 1
         fi
     done
-    echo "参数检查完成."
+    echo "check parameters done."
 }
 
 modifyNativeSDk() {
-    echo "开始修改Native SDK配置..."
+    echo "starting modify native SDK ..."
     SDK_PATH="AliyunEmasServices-Info.plist"
     #替换匹配的下一行
     if [ "$SDK_CONFIG_APP_KEY" != "" ]; then
@@ -139,12 +139,12 @@ modifyNativeSDk() {
         sed -i "/>UseHTTP</{n; s/<.*\/>/<$SDK_CONFIG_USE_HTTP\/>/g; }" $SDK_PATH
     fi
 
-    echo "修改Native SDK配置完成."
+    echo "modify native SDK done."
 }
 
 
 modifyWeexSDK() {
-    echo "开始修改weex外围SDK相关配置..."
+    echo "start modify Weex SDK ..."
 
     PODFILE_PATH="Podfile"
 
@@ -194,15 +194,21 @@ modifyWeexSDK() {
     #最后删除Resource文件夹
     rm -rf Resource
 
-    echo "修改weex外围SDK相关配置完成."
+    echo "modify Weex sdk done."
 }
 
 modifyWeexNativePage() {
-    echo "开始修改Weex启动页配置..."
+    echo "start modify WEEX native page ..."
     if [ "$WEEX_PAGE_TAB_SIZE" != "" ]; then
         sed -i "/>TabSize</{n; s/<integer>.*/<integer>$WEEX_PAGE_TAB_SIZE<\/integer>/g; }" EMASDemo/Weex/WeexContainer-Info.plist
     fi
-    echo "修改Weex启动页配置完成."
+    echo "modify Weex native page done."
+}
+
+modifyPackageName() {
+    echo "start modify package name ..."
+    sed -i "/>CFBundleIdentifier</{n; s/<string>.*/<string>$BUNDLE_ID<\/string>/g; }" EMASDemo/Info.plist
+    echo "modify package name done."
 }
 
 while [ $# -gt 0 ];do
@@ -222,6 +228,7 @@ while [ $# -gt 0 ];do
     esac
 done
 
+
 #0. 参数检查
 checkParameters
 
@@ -229,9 +236,7 @@ checkParameters
 modifyNativeSDk
 
 #2. 发布包名修改
-echo "开始修改发布包名..."
-sed -i "/>CFBundleIdentifier</{n; s/<string>.*/<string>$BUNDLE_ID<\/string>/g; }" EMASDemo/Info.plist
-echo "修改发布包名完成."
+modifyPackageName
 
 #3. weex外围sdk相关配置
 modifyWeexSDK
