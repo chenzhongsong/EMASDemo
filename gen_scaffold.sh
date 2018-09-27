@@ -200,7 +200,7 @@ modifyWeexSDK() {
 modifyWeexNativePage() {
     echo "start modify WEEX native page ..."
     if [ "$WEEX_PAGE_TAB_SIZE" != "" ]; then
-        sed -i "/>TabSize</{n; s/<integer>.*/<integer>$WEEX_PAGE_TAB_SIZE<\/integer>/g; }" EMASDemo/Weex/WeexContainer-Info.plist
+        sed -i "/>TabSize</{n; s/<integer>.*/<integer>$WEEX_PAGE_TAB_SIZE<\/integer>/g; }" WeexContainer-Info.plist
     fi
     echo "modify Weex native page done."
 }
