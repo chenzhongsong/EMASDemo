@@ -1,13 +1,16 @@
 #!/bin/bash
 
-#Weex脚手架生成脚本
+#脚手架生成脚本
 #脚本依赖：
 #1. mac系统必须使用GUN的sed，使用命令安装gnu-sed到/usr/local/bin/sed，替换系统FreeBSD的sed. brew install gnu-sed --with-default-names
 #   安装完成后执行sed应该看到“GNU sed home page”几个关键字，如果不是说明还是使用的macos系统/usr/bin/sed，需要将/usr/local/bin加入$PATH且在/usr/bin之前
-#2. 帮助文档 ./gen_weex_scaffold.sh -h
-#3. 命令示例：./gen_weex_scaffold.sh -SDK_CONFIG_APP_KEY appkey -SDK_CONFIG_APP_SECRET appsecret -SDK_CONFIG_CHANNEL_ID 1001@POC_iOS_1.0.0 -SDK_CONFIG_USE_HTTP false -SDK_CONFIG_ACCS_DOMAIN accs.com -SDK_CONFIG_MTOP_DOMAIN mtop.com -SDK_CONFIG_ZCACHE_PREFIX http://zcache.com/prefex -SDK_CONFIG_HOTFIX_URL http://hotfix.com -SDK_CONFIG_HA_OSS_BUCKET ha-oss-bucket -SDK_CONFIG_HA_ADASH_DOMAIN adash.com -APP_NAME myapp -MAVEN_BASE_GROUP com.my -WEEX_UI_SDK 1 -WEEX_BUSINESS_COMPONENTS 1 -WEEX_BUSINESS_CHARTS 1 -WEEX_PAGE_TAB_SIZE 5
+#2. 帮助文档 ./gen_scaffold.sh -h
+#3. 命令示例：./gen_scaffold.sh -BUNDLE_ID my.bundle.id -SDK_CONFIG_APP_KEY appkey -SDK_CONFIG_APP_SECRET appsecret -SDK_CONFIG_CHANNEL_ID 1001@POC_iOS_1.0.0 -SDK_CONFIG_USE_HTTP false -SDK_CONFIG_ACCS_DOMAIN accs.com -SDK_CONFIG_MTOP_DOMAIN mtop.com -SDK_CONFIG_ZCACHE_PREFIX http://zcache.com/prefex -SDK_CONFIG_HOTFIX_URL http://hotfix.com -SDK_CONFIG_HA_OSS_BUCKET ha-oss-bucket -SDK_CONFIG_HA_ADASH_DOMAIN adash.com -APP_NAME myapp -MAVEN_BASE_GROUP com.my -WEEX_UI_SDK 1 -WEEX_BUSINESS_COMPONENTS 1 -WEEX_BUSINESS_CHARTS 1 -WEEX_PAGE_TAB_SIZE 5
 
 set -e
+
+#包名
+BUNDLE_ID=""
 
 #SDK_CONFIG系统配置
 SDK_CONFIG_APP_KEY=""
@@ -33,11 +36,12 @@ WEEX_PAGE_TAB_SIZE=""
 
 #打印帮助文档
 printHelp() {
-    echo "Weex scaffold generate script."
+    echo "scaffold generate script."
     echo
     echo "options:"
     echo "   -h help."
 
+    echo "   -BUNDLE_ID                         bundleId，从控制台读取。必填"
     echo "   -SDK_CONFIG_APP_KEY                AppKey，从控制台读取。必填"
     echo "   -SDK_CONFIG_APP_SECRET             AppSecret，从控制台读取。必填"
     echo "   -SDK_CONFIG_CHANNEL_ID             ChannelID。必填"
@@ -60,9 +64,17 @@ printHelp() {
     echo
 }
 
+escapeSpecialChars() {
+    # &替换为\&
+    TEMP=${1//&/\\&}
+    # /替换为\/
+    TEMP=${TEMP//\//\\/}
+    echo $TEMP
+}
+
 checkParameters() {
-    echo "开始参数检查..."
-    REQUIRED_CONFIGS=(SDK_CONFIG_APP_KEY SDK_CONFIG_APP_SECRET SDK_CONFIG_CHANNEL_ID)
+    echo "start check parameters ..."
+    REQUIRED_CONFIGS=(BUNDLE_ID SDK_CONFIG_APP_KEY SDK_CONFIG_APP_SECRET SDK_CONFIG_CHANNEL_ID)
     for config in ${REQUIRED_CONFIGS[@]}
     do
         if [ "${!config}" == "" ]; then
@@ -70,11 +82,11 @@ checkParameters() {
             exit 1
         fi
     done
-    echo "参数检查完成."
+    echo "check parameters done."
 }
 
 modifyNativeSDk() {
-    echo "开始修改Native SDK配置..."
+    echo "starting modify native SDK ..."
     SDK_PATH="AliyunEmasServices-Info.plist"
     #替换匹配的下一行
     if [ "$SDK_CONFIG_APP_KEY" != "" ]; then
@@ -100,8 +112,7 @@ modifyNativeSDk() {
     fi
 
     if [ "$SDK_CONFIG_ZCACHE_PREFIX" != "" ]; then
-        #参数中可能包含/，所以使用@代替/当分隔符
-        sed -i "/>ZCache</{n;n;n; s@<string>.*@<string>$SDK_CONFIG_ZCACHE_PREFIX<\/string>@g; }" $SDK_PATH
+        sed -i "/>ZCache</{n;n;n; s/<string>.*/<string>$SDK_CONFIG_ZCACHE_PREFIX<\/string>/g; }" $SDK_PATH
     fi
 
     if [ "$SDK_CONFIG_HA_OSS_BUCKET" != "" ]; then
@@ -109,7 +120,6 @@ modifyNativeSDk() {
     fi
 
     if [ "$SDK_CONFIG_HA_ADASH_DOMAIN" != "" ]; then
-        #参数中可能包含/，所以使用@当分隔符
         sed -i "/>UniversalHost</{n; s/<string>.*/<string>$SDK_CONFIG_HA_ADASH_DOMAIN<\/string>/g; }" $SDK_PATH
     fi
 
@@ -118,8 +128,7 @@ modifyNativeSDk() {
     fi
 
     if [ "$SDK_CONFIG_HOTFIX_URL" != "" ]; then
-        #参数中可能包含/，所以使用@代替/当分隔符
-        sed -i "/>Hotfix</{n;n;n; s@<string>.*@<string>$SDK_CONFIG_HOTFIX_URL<\/string>@g; }" $SDK_PATH
+        sed -i "/>Hotfix</{n;n;n; s/<string>.*/<string>$SDK_CONFIG_HOTFIX_URL<\/string>/g; }" $SDK_PATH
     fi
 
     if [ "$SDK_CONFIG_ORANGE_DOMAIN" != "" ]; then
@@ -130,12 +139,12 @@ modifyNativeSDk() {
         sed -i "/>UseHTTP</{n; s/<.*\/>/<$SDK_CONFIG_USE_HTTP\/>/g; }" $SDK_PATH
     fi
 
-    echo "修改Native SDK配置完成."
+    echo "modify native SDK done."
 }
 
 
 modifyWeexSDK() {
-    echo "开始修改weex外围SDK相关配置..."
+    echo "start modify Weex SDK ..."
 
     PODFILE_PATH="Podfile"
 
@@ -185,15 +194,21 @@ modifyWeexSDK() {
     #最后删除Resource文件夹
     rm -rf Resource
 
-    echo "修改weex外围SDK相关配置完成."
+    echo "modify Weex sdk done."
 }
 
 modifyWeexNativePage() {
-    echo "开始修改Weex启动页配置..."
+    echo "start modify WEEX native page ..."
     if [ "$WEEX_PAGE_TAB_SIZE" != "" ]; then
         sed -i "/>TabSize</{n; s/<integer>.*/<integer>$WEEX_PAGE_TAB_SIZE<\/integer>/g; }" EMASDemo/Weex/WeexContainer-Info.plist
     fi
-    echo "修改Weex启动页配置完成."
+    echo "modify Weex native page done."
+}
+
+modifyPackageName() {
+    echo "start modify package name ..."
+    sed -i "/>CFBundleIdentifier</{n; s/<string>.*/<string>$BUNDLE_ID<\/string>/g; }" EMASDemo/Info.plist
+    echo "modify package name done."
 }
 
 while [ $# -gt 0 ];do
@@ -203,13 +218,16 @@ while [ $# -gt 0 ];do
             exit 0
             ;;
         -*)
-            param_name=${1##-}
+            #字符串截取: $1截取-
+            param_name=${1#-}
             shift
-            eval $param_name=$1
+            TEMP=`escapeSpecialChars "${1}"`
+            eval $param_name='$TEMP'
             shift
-            ;;
+            ;;           
     esac
 done
+
 
 #0. 参数检查
 checkParameters
@@ -217,7 +235,8 @@ checkParameters
 #1. native sdk配置修改
 modifyNativeSDk
 
-#2. 发布包名修改(IOS暂不支持)
+#2. 发布包名修改
+modifyPackageName
 
 #3. weex外围sdk相关配置
 modifyWeexSDK
