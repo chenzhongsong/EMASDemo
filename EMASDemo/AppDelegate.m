@@ -58,7 +58,6 @@
 #import "EMASNativeViewController.h"
 #import "EMASBaseNavigationController.h"
 #import "EMASWeexContainerService.h"
-#import <IQKeyboardManager.h>
 
 @interface MyPolicyCenter : NSObject <NWPolicyDelegate>
 @end
