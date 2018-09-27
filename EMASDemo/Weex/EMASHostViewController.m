@@ -37,6 +37,9 @@
 - (instancetype)initWithNavigatorURL:(NSURL *)URL {
     self = [super init];
     if (self) {
+        if (!URL) {
+            URL = [NSURL URLWithString:@""];
+        }
         self.resourceUrlString = URL.absoluteString;
         NSString * urlString = self.resourceUrlString;//[[DynamicConfigurationManager sharedInstance] redirectUrl:[URL absoluteString]];
         self.wxViewController = [[EMASWXRenderViewController alloc] initWithNavigatorURL:[NSURL URLWithString:urlString] withCustomOptions:@{@"bundleUrl":urlString} withInitData:nil withViewController:self];
