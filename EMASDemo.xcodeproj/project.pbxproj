@@ -27,6 +27,7 @@
 		7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6260E81FDA8C8400E856CB /* arp.framework */; };
 		7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */; };
 		7D8394A91FDB902900EBB60F /* fix.lua in Resources */ = {isa = PBXBuildFile; fileRef = 7D8394A81FDB902900EBB60F /* fix.lua */; };
+		8601D68C215C8A4900BDFC46 /* preload_packageapp.zip in Sources */ = {isa = PBXBuildFile; fileRef = 8601D68B215C8A4900BDFC46 /* preload_packageapp.zip */; };
 		869B55CA2140068400809084 /* UIViewController+EMASWXNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */; };
 		869B55CB2140068400809084 /* EMASHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BF2140068300809084 /* EMASHostViewController.m */; };
 		869B55CC2140068400809084 /* EMASWXRenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55C12140068300809084 /* EMASWXRenderViewController.m */; };
@@ -134,6 +135,7 @@
 		7D6260E81FDA8C8400E856CB /* arp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = arp.framework; sourceTree = "<group>"; };
 		7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudHotFixEmas.framework; sourceTree = "<group>"; };
 		7D8394A81FDB902900EBB60F /* fix.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fix.lua; sourceTree = "<group>"; };
+		8601D68B215C8A4900BDFC46 /* preload_packageapp.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = preload_packageapp.zip; sourceTree = "<group>"; };
 		869B55BC2140068300809084 /* UIViewController+EMASWXNaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EMASWXNaviBar.h"; sourceTree = "<group>"; };
 		869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EMASWXNaviBar.m"; sourceTree = "<group>"; };
 		869B55BE2140068300809084 /* EMASHostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASHostViewController.h; sourceTree = "<group>"; };
@@ -327,6 +329,14 @@
 			path = hotfix;
 			sourceTree = "<group>";
 		};
+		8601D68A215C89D700BDFC46 /* preload */ = {
+			isa = PBXGroup;
+			children = (
+				8601D68B215C8A4900BDFC46 /* preload_packageapp.zip */,
+			);
+			path = preload;
+			sourceTree = "<group>";
+		};
 		869B55BA2140068300809084 /* Weex */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +446,7 @@
 				8A69B608200C8F980073756D /* EMASService.h */,
 				8A69B609200C8F980073756D /* EMASService.m */,
 				8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */,
+				8601D68A215C89D700BDFC46 /* preload */,
 				869B55BA2140068300809084 /* Weex */,
 				4A017CEB21006E59001FF027 /* man */,
 				1A65F6231FF2534A00B4573C /* AliHA */,
@@ -867,6 +878,7 @@
 				869B55CF2140068400809084 /* EMASScannerViewController.m in Sources */,
 				8ADA95431FD9309400C0EF49 /* FirstViewController.m in Sources */,
 				8ADA95781FDA3BB000C0EF49 /* SecondTableViewController.m in Sources */,
+				8601D68C215C8A4900BDFC46 /* preload_packageapp.zip in Sources */,
 				980F856D20BECC49002156A2 /* OrangeFeatureFirstVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
