@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TabSize</key>
+	<integer>3</integer>
+	<key>JSSource</key>
+	<dict>
+		<key>0</key>
+		<string>http://106.15.178.156:7480/mobile-hub-dev/app/weex-test/detail.js</string>
+		<key>1</key>
+		<string>http://106.15.178.156:7480/mobile-hub-dev/app/weex-test/detail.web.js</string>
+		<key>2</key>
+		<string>http://106.15.178.156:7480/mobile-hub-dev/app/weex-test/index.js</string>
+		<key>3</key>
+		<string>http://106.15.178.156:7480/mobile-hub-dev/app/weex-test/index.web.js</string>
+	</dict>
+</dict>
+</plist>
