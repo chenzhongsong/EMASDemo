@@ -57,6 +57,12 @@
     
     for (int i = 0; i < tabSizeInt; i++) {
         NSString *url = [jsSourceDic objectForKey:@(i).stringValue];
+        
+        ///先简单区分本地和远程js
+        if ([url rangeOfString:@"/"].location == NSNotFound) {//本地
+            url = [NSString stringWithFormat:@"file://%@/preload/%@?wh_weex=true", [NSBundle mainBundle].bundlePath, url];
+        }
+        
         EMASHostViewController *viewController = [[EMASHostViewController alloc] initWithNavigatorURL:[NSURL URLWithString:url]];
         UIViewController *navigationController = [[EMASBaseNavigationController alloc]
                                                   initWithRootViewController:viewController];
