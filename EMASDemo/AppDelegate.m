@@ -175,7 +175,7 @@
 {
     NSNumber *tabSize = [[EMASWeexContainerService shareInstance] tabSize];
     NSInteger tabSizeInt = tabSize.integerValue;
-    if (!tabSize || tabSize < 0) {
+    if (!tabSize || tabSizeInt < 0) {
         //Native脚手架
     } else if (tabSizeInt == 0) {
         [self showBlankViewController];
