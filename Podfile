@@ -5,12 +5,12 @@ source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs.git'
 #source 'git@gitlab.alibaba-inc.com:alipods/specs.git'
 
 # WeexAceChart
-source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-chart.git'
-source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-chart.git'
+#source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-chart.git'
+#source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-chart.git'
 
 # WeexComponents
-source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-common.git'
-source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-common.git'
+#source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-common.git'
+#source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-common.git'
 
 #project 'EMASDemo.xcodeproj'
 
@@ -57,13 +57,13 @@ platform:ios, '8.0'
     pod 'DynamicConfigurationAdaptor', '10.0.4'
 
     #weex开源组件
-    pod 'BindingX', '~> 1.0.2'
+    #pod 'BindingX', '~> 1.0.2'
     
     #weex商业图表
-    pod 'WeexAceChart'
+    #pod 'WeexAceChart'
     
     #weex商业组件
-    pod 'EmasWeexComponents'
+    #pod 'EmasWeexComponents'
     
     # EMASWeex
     pod 'EMASWeex', '1.1.0'
