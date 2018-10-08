@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>TabSize</key>
-	<integer>3</integer>
+	<integer>4</integer>
 	<key>JSSource</key>
 	<dict>
 		<key>0</key>
-		<string>http://106.15.178.156:7480/mobile-hub-dev/app/weex-test/detail.js</string>
+		<string>http://publish-poc.emas-ha.cn/app/taobao-mobile-yanshi/show2-1.js</string>
 		<key>1</key>
-		<string>http://106.15.178.156:7480/mobile-hub-dev/app/weex-test/detail.web.js</string>
+		<string>http://publish-poc.emas-ha.cn/app/taobao-mobile-yanshi/jserror.js</string>
 		<key>2</key>
-		<string>http://106.15.178.156:7480/mobile-hub-dev/app/weex-test/index.js</string>
+		<string>http://cdn.emas-poc.com/app/taobao-mobile-dfrctest/detail.js</string>
 		<key>3</key>
-		<string>http://106.15.178.156:7480/mobile-hub-dev/app/weex-test/index.web.js</string>
+		<string>http://cdn.emas-poc.com/app/taobao-mobile-dfrctest/index.js</string>
 	</dict>
 </dict>
 </plist>
