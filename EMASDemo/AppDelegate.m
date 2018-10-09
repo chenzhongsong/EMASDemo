@@ -59,6 +59,9 @@
 #import "EMASBaseNavigationController.h"
 #import "EMASWeexContainerService.h"
 
+// --WindVane
+#import "EMASWindVaneConfig.h"
+
 @interface MyPolicyCenter : NSObject <NWPolicyDelegate>
 @end
 
@@ -159,9 +162,11 @@
     // 4. 初始化PUSH
     [self initPushConfig];
     
+    [self initDyConfig];
+    
     [EMASWXSubSDKEngine setup];
     
-    [self initDyConfig];
+    [EMASWindVaneConfig setUpWindVanePlugin];
     
     [self showMainViewController];
     

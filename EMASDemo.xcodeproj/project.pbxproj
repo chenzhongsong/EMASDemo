@@ -28,7 +28,22 @@
 		7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */; };
 		7D8394A91FDB902900EBB60F /* fix.lua in Resources */ = {isa = PBXBuildFile; fileRef = 7D8394A81FDB902900EBB60F /* fix.lua */; };
 		8601D68E215CCB3600BDFC46 /* WeexContainer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8601D68D215CCB3600BDFC46 /* WeexContainer-Info.plist */; };
-		8601D69D215F298800BDFC46 /* preload in Resources */ = {isa = PBXBuildFile; fileRef = 8601D69C215F298800BDFC46 /* preload */; };
+		8601D6BD215F5A2B00BDFC46 /* EMASWindVaneConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8601D6BC215F5A2B00BDFC46 /* EMASWindVaneConfig.m */; };
+		8601D6DB215F611000BDFC46 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6DA215F611000BDFC46 /* CoreBluetooth.framework */; };
+		8601D6DE215F613D00BDFC46 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6DC215F613D00BDFC46 /* AddressBook.framework */; };
+		8601D6DF215F613D00BDFC46 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6DD215F613D00BDFC46 /* AddressBookUI.framework */; };
+		8601D6E2215F616400BDFC46 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6E0215F616400BDFC46 /* Messages.framework */; };
+		8601D6E3215F616400BDFC46 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6E1215F616400BDFC46 /* MessageUI.framework */; };
+		8601D6E6215F618500BDFC46 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6E4215F618500BDFC46 /* ContactsUI.framework */; };
+		8601D6E7215F618500BDFC46 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6E5215F618500BDFC46 /* Contacts.framework */; };
+		8601D6E9215F61A700BDFC46 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6E8215F61A700BDFC46 /* UserNotifications.framework */; };
+		8601D6EC215F7A7E00BDFC46 /* EMASWindVaneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8601D6EB215F7A7E00BDFC46 /* EMASWindVaneViewController.m */; };
+		8601D6F02160728900BDFC46 /* WVNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8601D6EF2160728900BDFC46 /* WVNavigator.m */; };
+		8601D7002162075200BDFC46 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6FF2162075100BDFC46 /* AssetsLibrary.framework */; };
+		8601D708216B4A0100BDFC46 /* filance.js in Resources */ = {isa = PBXBuildFile; fileRef = 8601D704216B4A0100BDFC46 /* filance.js */; };
+		8601D709216B4A0100BDFC46 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 8601D705216B4A0100BDFC46 /* index.js */; };
+		8601D70A216B4A0100BDFC46 /* life.js in Resources */ = {isa = PBXBuildFile; fileRef = 8601D706216B4A0100BDFC46 /* life.js */; };
+		8601D70B216B4A0100BDFC46 /* preload_packageapp.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8601D707216B4A0100BDFC46 /* preload_packageapp.zip */; };
 		869B55CA2140068400809084 /* UIViewController+EMASWXNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */; };
 		869B55CB2140068400809084 /* EMASHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BF2140068300809084 /* EMASHostViewController.m */; };
 		869B55CC2140068400809084 /* EMASWXRenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55C12140068300809084 /* EMASWXRenderViewController.m */; };
@@ -68,7 +83,6 @@
 		980F857120BECC49002156A2 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F856620BECC49002156A2 /* CustomCell.m */; };
 		9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9815F23820A2F73F00F0F70D /* MtopCustomCell.m */; };
 		981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981DC5D720998B53006472AF /* MtopResultViewController.m */; };
-		9A09D7961FF27A6200585632 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 9A09D7951FF27A6200585632 /* index.js */; };
 		F2AEA74CFBBBDD9338DF0F3C /* libPods-EMASDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D522707B463174EC727EEF /* libPods-EMASDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -136,7 +150,25 @@
 		7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudHotFixEmas.framework; sourceTree = "<group>"; };
 		7D8394A81FDB902900EBB60F /* fix.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fix.lua; sourceTree = "<group>"; };
 		8601D68D215CCB3600BDFC46 /* WeexContainer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WeexContainer-Info.plist"; sourceTree = SOURCE_ROOT; };
-		8601D69C215F298800BDFC46 /* preload */ = {isa = PBXFileReference; lastKnownFileType = folder; path = preload; sourceTree = SOURCE_ROOT; };
+		8601D6BB215F5A2B00BDFC46 /* EMASWindVaneConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASWindVaneConfig.h; sourceTree = "<group>"; };
+		8601D6BC215F5A2B00BDFC46 /* EMASWindVaneConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneConfig.m; sourceTree = "<group>"; };
+		8601D6DA215F611000BDFC46 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		8601D6DC215F613D00BDFC46 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		8601D6DD215F613D00BDFC46 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		8601D6E0215F616400BDFC46 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		8601D6E1215F616400BDFC46 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		8601D6E4215F618500BDFC46 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		8601D6E5215F618500BDFC46 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		8601D6E8215F61A700BDFC46 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		8601D6EA215F7A7E00BDFC46 /* EMASWindVaneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASWindVaneViewController.h; sourceTree = "<group>"; };
+		8601D6EB215F7A7E00BDFC46 /* EMASWindVaneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneViewController.m; sourceTree = "<group>"; };
+		8601D6EE2160728800BDFC46 /* WVNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVNavigator.h; sourceTree = "<group>"; };
+		8601D6EF2160728900BDFC46 /* WVNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVNavigator.m; sourceTree = "<group>"; };
+		8601D6FF2162075100BDFC46 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		8601D704216B4A0100BDFC46 /* filance.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = filance.js; sourceTree = "<group>"; };
+		8601D705216B4A0100BDFC46 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		8601D706216B4A0100BDFC46 /* life.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = life.js; sourceTree = "<group>"; };
+		8601D707216B4A0100BDFC46 /* preload_packageapp.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = preload_packageapp.zip; sourceTree = "<group>"; };
 		869B55BC2140068300809084 /* UIViewController+EMASWXNaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EMASWXNaviBar.h"; sourceTree = "<group>"; };
 		869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EMASWXNaviBar.m"; sourceTree = "<group>"; };
 		869B55BE2140068300809084 /* EMASHostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASHostViewController.h; sourceTree = "<group>"; };
@@ -223,7 +255,6 @@
 		981DC5D620998B53006472AF /* MtopResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopResultViewController.h; sourceTree = "<group>"; };
 		981DC5D720998B53006472AF /* MtopResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtopResultViewController.m; sourceTree = "<group>"; };
 		9A09D7901FF2721000585632 /* DemoDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoDefine.h; sourceTree = "<group>"; };
-		9A09D7951FF27A6200585632 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		C9D522707B463174EC727EEF /* libPods-EMASDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EMASDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -232,6 +263,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8601D7002162075200BDFC46 /* AssetsLibrary.framework in Frameworks */,
+				8601D6E9215F61A700BDFC46 /* UserNotifications.framework in Frameworks */,
+				8601D6E6215F618500BDFC46 /* ContactsUI.framework in Frameworks */,
+				8601D6E7215F618500BDFC46 /* Contacts.framework in Frameworks */,
+				8601D6E2215F616400BDFC46 /* Messages.framework in Frameworks */,
+				8601D6E3215F616400BDFC46 /* MessageUI.framework in Frameworks */,
+				8601D6DE215F613D00BDFC46 /* AddressBook.framework in Frameworks */,
+				8601D6DF215F613D00BDFC46 /* AddressBookUI.framework in Frameworks */,
+				8601D6DB215F611000BDFC46 /* CoreBluetooth.framework in Frameworks */,
 				8AC0CB6E200312CF00FD44E6 /* MobileCoreServices.framework in Frameworks */,
 				8AB1A7BF1FFDDE51007C4675 /* UIKit.framework in Frameworks */,
 				7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */,
@@ -328,6 +368,38 @@
 			);
 			path = hotfix;
 			sourceTree = "<group>";
+		};
+		8601D6BA215F57C400BDFC46 /* WindVane */ = {
+			isa = PBXGroup;
+			children = (
+				8601D6ED2160727000BDFC46 /* JSBridgeAPI */,
+				8601D6BB215F5A2B00BDFC46 /* EMASWindVaneConfig.h */,
+				8601D6BC215F5A2B00BDFC46 /* EMASWindVaneConfig.m */,
+				8601D6EA215F7A7E00BDFC46 /* EMASWindVaneViewController.h */,
+				8601D6EB215F7A7E00BDFC46 /* EMASWindVaneViewController.m */,
+			);
+			path = WindVane;
+			sourceTree = "<group>";
+		};
+		8601D6ED2160727000BDFC46 /* JSBridgeAPI */ = {
+			isa = PBXGroup;
+			children = (
+				8601D6EE2160728800BDFC46 /* WVNavigator.h */,
+				8601D6EF2160728900BDFC46 /* WVNavigator.m */,
+			);
+			path = JSBridgeAPI;
+			sourceTree = "<group>";
+		};
+		8601D703216B4A0100BDFC46 /* preload */ = {
+			isa = PBXGroup;
+			children = (
+				8601D704216B4A0100BDFC46 /* filance.js */,
+				8601D705216B4A0100BDFC46 /* index.js */,
+				8601D706216B4A0100BDFC46 /* life.js */,
+				8601D707216B4A0100BDFC46 /* preload_packageapp.zip */,
+			);
+			path = preload;
+			sourceTree = SOURCE_ROOT;
 		};
 		869B55BA2140068300809084 /* Weex */ = {
 			isa = PBXGroup;
@@ -438,7 +510,8 @@
 				8A69B608200C8F980073756D /* EMASService.h */,
 				8A69B609200C8F980073756D /* EMASService.m */,
 				8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */,
-				8601D69C215F298800BDFC46 /* preload */,
+				8601D703216B4A0100BDFC46 /* preload */,
+				8601D6BA215F57C400BDFC46 /* WindVane */,
 				869B55BA2140068300809084 /* Weex */,
 				4A017CEB21006E59001FF027 /* man */,
 				1A65F6231FF2534A00B4573C /* AliHA */,
@@ -465,7 +538,6 @@
 				33A2550B20FDE2EC00C3F673 /* push */,
 				33D18D4220DA04C000ACF0C7 /* accs */,
 				980F855720BECB8A002156A2 /* Orange */,
-				9A09D7941FF27A6200585632 /* bundlejs */,
 				8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */,
 				8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */,
 				8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */,
@@ -519,17 +591,18 @@
 			path = Orange;
 			sourceTree = "<group>";
 		};
-		9A09D7941FF27A6200585632 /* bundlejs */ = {
-			isa = PBXGroup;
-			children = (
-				9A09D7951FF27A6200585632 /* index.js */,
-			);
-			path = bundlejs;
-			sourceTree = "<group>";
-		};
 		D270D82292708B86B2F528C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8601D6FF2162075100BDFC46 /* AssetsLibrary.framework */,
+				8601D6E8215F61A700BDFC46 /* UserNotifications.framework */,
+				8601D6E5215F618500BDFC46 /* Contacts.framework */,
+				8601D6E4215F618500BDFC46 /* ContactsUI.framework */,
+				8601D6E0215F616400BDFC46 /* Messages.framework */,
+				8601D6E1215F616400BDFC46 /* MessageUI.framework */,
+				8601D6DC215F613D00BDFC46 /* AddressBook.framework */,
+				8601D6DD215F613D00BDFC46 /* AddressBookUI.framework */,
+				8601D6DA215F611000BDFC46 /* CoreBluetooth.framework */,
 				8AC0CB6D200312CF00FD44E6 /* MobileCoreServices.framework */,
 				8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */,
 				C9D522707B463174EC727EEF /* libPods-EMASDemo.a */,
@@ -663,19 +736,21 @@
 			files = (
 				8ADA954E1FD9309400C0EF49 /* LaunchScreen.storyboard in Resources */,
 				33D18D5C20DA30DC00ACF0C7 /* ACCSSettingViewController.xib in Resources */,
-				8601D69D215F298800BDFC46 /* preload in Resources */,
+				8601D70A216B4A0100BDFC46 /* life.js in Resources */,
 				980F856F20BECC49002156A2 /* CustomCell.xib in Resources */,
 				980F856C20BECC49002156A2 /* OrangeFeatureFirstVC.xib in Resources */,
 				8ADA954B1FD9309400C0EF49 /* Assets.xcassets in Resources */,
 				7D8394A91FDB902900EBB60F /* fix.lua in Resources */,
 				980F856920BECC49002156A2 /* OrangeRemoteConfigRootVC.xib in Resources */,
-				9A09D7961FF27A6200585632 /* index.js in Resources */,
 				8ADA95491FD9309400C0EF49 /* Main.storyboard in Resources */,
 				8601D68E215CCB3600BDFC46 /* WeexContainer-Info.plist in Resources */,
 				33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */,
 				33D18D6520DA331700ACF0C7 /* wq_code_scanner_line@2x.png in Resources */,
+				8601D709216B4A0100BDFC46 /* index.js in Resources */,
 				33D18D5E20DA31C500ACF0C7 /* btn_qr@2x.png in Resources */,
+				8601D70B216B4A0100BDFC46 /* preload_packageapp.zip in Resources */,
 				33A2551020FDE37000C3F673 /* PushViewController.xib in Resources */,
+				8601D708216B4A0100BDFC46 /* filance.js in Resources */,
 				8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */,
 				980F856E20BECC49002156A2 /* OrangeRemotConfigDebugVC.xib in Resources */,
 				980F856B20BECC49002156A2 /* OrangeFeatureSecondVC.xib in Resources */,
@@ -859,6 +934,7 @@
 				7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */,
 				980F856A20BECC49002156A2 /* OrangeRemotConfigDebugVC.m in Sources */,
 				8ADA95511FD9309400C0EF49 /* main.m in Sources */,
+				8601D6F02160728900BDFC46 /* WVNavigator.m in Sources */,
 				869B55CD2140068400809084 /* EMASWXSubSDKEngine.m in Sources */,
 				33D18D6120DA330100ACF0C7 /* WQCodeScanner.m in Sources */,
 				869B55CC2140068400809084 /* EMASWXRenderViewController.m in Sources */,
@@ -866,7 +942,9 @@
 				980F857120BECC49002156A2 /* CustomCell.m in Sources */,
 				8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */,
 				7D6260E61FDA8C5A00E856CB /* HFXTestClass.m in Sources */,
+				8601D6BD215F5A2B00BDFC46 /* EMASWindVaneConfig.m in Sources */,
 				8A69B60A200C8F980073756D /* EMASService.m in Sources */,
+				8601D6EC215F7A7E00BDFC46 /* EMASWindVaneViewController.m in Sources */,
 				33A2550F20FDE37000C3F673 /* PushViewController.m in Sources */,
 				869B55CF2140068400809084 /* EMASScannerViewController.m in Sources */,
 				8ADA95431FD9309400C0EF49 /* FirstViewController.m in Sources */,

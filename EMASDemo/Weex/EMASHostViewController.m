@@ -10,6 +10,7 @@
 #import <objc/message.h>
 #import <WeexSDK/WXDebugTool.h>
 #import "UIViewController+EMASWXNaviBar.h"
+//#import "EMASWindVaneViewController.h"
 
 @interface EMASHostViewController()
 
@@ -97,6 +98,7 @@
 
 - (void)wxDegradeToH5:(NSString *)url
 {
+#if 1
     [self.wxViewController.instance destroyInstance];
     [self.wxViewController.weexView removeFromSuperview];
     [self.webView removeFromSuperview];
@@ -104,6 +106,14 @@
     self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
     [self.view addSubview:self.webView];
+    
+#else
+    EMASWindVaneViewController *vc = [[EMASWindVaneViewController alloc] init];
+    vc.loadUrl = url;
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+#endif
+
 }
 
 

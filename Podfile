@@ -71,6 +71,9 @@ platform:ios, '8.0'
     pod 'CYLTabBarController', '~> 1.17.14'
     pod 'SocketRocket'
     
+    # WindVane
+    pod 'WindVane', '1.0.0'
+    
     # --热修复
     pod 'AlicloudLua', '5.1.4.2'
     pod 'AlicloudUtils', '1.3.4'

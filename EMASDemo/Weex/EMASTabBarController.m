@@ -60,7 +60,8 @@
         
         ///先简单区分本地和远程js
         if ([url rangeOfString:@"/"].location == NSNotFound) {//本地
-            url = [NSString stringWithFormat:@"file://%@/preload/%@?wh_weex=true", [NSBundle mainBundle].bundlePath, url];
+            ;
+            url = [NSString stringWithFormat:@"file://%@?wh_weex=true",[[NSBundle mainBundle] pathForResource:url ofType:@""]];
         }
         
         EMASHostViewController *viewController = [[EMASHostViewController alloc] initWithNavigatorURL:[NSURL URLWithString:url]];

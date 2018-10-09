@@ -21,6 +21,7 @@
 #import "PushViewController.h"
 #import "MANViewController.h"
 #import "EMASNativeViewController.h"
+#import "EMASWindVaneViewController.h"
 
 @interface FirstTableViewController ()
 
@@ -50,7 +51,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 9;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -71,45 +72,51 @@
             break;
         case 2:
         {
-            cell.textLabel.text = @"Weex";
-            cell.textLabel.textColor = [UIColor orangeColor];
-        }
-        break;
-        case 3:
-        {
             cell.textLabel.text = @"高可用";
             cell.textLabel.textColor = [UIColor blueColor];
         }
         break;
-        case 4:
+        case 3:
         {
             cell.textLabel.text = @"热修复";
             cell.textLabel.textColor = [UIColor greenColor];
         }
             break;
         
-        case 5:
+        case 4:
         {
             cell.textLabel.text = @"远程配置";
             cell.textLabel.textColor = [UIColor lightGrayColor];
         }
         break;
-        case 6:
+        case 5:
         {
             cell.textLabel.text = @"ACCS";
             cell.textLabel.textColor = [UIColor brownColor];
         }
         break;
-        case 7:
+        case 6:
         {
             cell.textLabel.text = @"PUSH";
             cell.textLabel.textColor = [UIColor magentaColor];
         }
             break;
-        case 8:
+        case 7:
         {
             cell.textLabel.text = @"数据分析";
             cell.textLabel.textColor = [UIColor purpleColor];
+        }
+            break;
+        case 8:
+        {
+            cell.textLabel.text = @"Weex";
+            cell.textLabel.textColor = [UIColor orangeColor];
+        }
+            break;
+        case 9:
+        {
+            cell.textLabel.text = @"WindVane";
+            cell.textLabel.textColor = [UIColor cyanColor];
         }
             break;
         default:
@@ -137,49 +144,56 @@
         }
         case 2:
         {
-            UIViewController *controller = [self demoController];
-            [self.navigationController pushViewController:controller animated:YES];
-            break;
-        }
-        
-        case 3:
-        {
             // AliHA
             AliHATestCaseViewController *controller = [[AliHATestCaseViewController alloc] initWithStyle:UITableViewStylePlain];
             [self.navigationController pushViewController:controller animated:YES];
             break;
             
         }
-        case 4:
+        case 3:
         {
             HFXViewController *controller = [HFXViewController new];
             [self.navigationController pushViewController:controller animated:YES];
             break;
         }
         
-        case 5:
+        case 4:
         {
             OrangeRemoteConfigRootVC *configVC = [[OrangeRemoteConfigRootVC alloc] init];
             [self.navigationController pushViewController:configVC animated:YES];
             break;
         }
         
-        case 6:
+        case 5:
         {
             ACCSViewController *avc = [[ACCSViewController alloc] init];
             [self.navigationController pushViewController:avc animated:YES];
             break;
         }
-        case 7:
+        case 6:
         {
             PushViewController *pvc = [[PushViewController alloc] init];
             [self.navigationController pushViewController:pvc animated:YES];
             break;
         }
-        case 8:
+        case 7:
         {
             MANViewController *mvc = [[MANViewController alloc] init];
             [self.navigationController pushViewController:mvc animated:YES];
+            break;
+        }
+        case 8:
+        {
+            UIViewController *controller = [self demoController];
+            [self.navigationController pushViewController:controller animated:YES];
+            break;
+        }
+        case 9:
+        {
+            EMASWindVaneViewController *controller = [[EMASWindVaneViewController alloc] init];
+            //controller.loadUrl = @"http://wapp.m.taobao.com/app/windvane/jsbridge.html";
+            controller.loadUrl = @"http://chaoshi.m.tmall.com";
+            [self.navigationController pushViewController:controller animated:YES];
             break;
         }
         default:
