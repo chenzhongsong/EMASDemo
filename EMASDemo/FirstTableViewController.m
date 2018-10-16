@@ -21,7 +21,7 @@
 #import "PushViewController.h"
 #import "MANViewController.h"
 #import "EMASNativeViewController.h"
-#import "EMASWindVaneViewController.h"
+#import "EMASWindVaneScanViewController.h"
 
 @interface FirstTableViewController ()
 
@@ -184,15 +184,15 @@
         }
         case 8:
         {
-            UIViewController *controller = [self demoController];
+            EMASNativeViewController *controller = [[EMASNativeViewController alloc] init];
             [self.navigationController pushViewController:controller animated:YES];
             break;
         }
         case 9:
         {
-            EMASWindVaneViewController *controller = [[EMASWindVaneViewController alloc] init];
+            EMASWindVaneScanViewController *controller = [[EMASWindVaneScanViewController alloc] init];
             //controller.loadUrl = @"http://wapp.m.taobao.com/app/windvane/jsbridge.html";
-            controller.loadUrl = @"http://chaoshi.m.tmall.com";
+            //controller.loadUrl = @"http://chaoshi.m.tmall.com";
             [self.navigationController pushViewController:controller animated:YES];
             break;
         }
@@ -205,23 +205,6 @@
     }
 }
 
-- (UIViewController *)demoController
-{
-    UIViewController *demo = [[EMASNativeViewController alloc] init];
-    
-//#if DEBUG
-    //If you are debugging in device , please change the host to current IP of your computer.
-//    ((WXDemoViewController *)demo).url = [NSURL URLWithString:HOME_URL];
-//#else
-//    ((WXDemoViewController *)demo).url = [NSURL URLWithString:BUNDLE_URL];
-//#endif
-//
-//#ifdef UITEST
-//    ((WXDemoViewController *)demo).url = [NSURL URLWithString:UITEST_HOME_URL];
-//#endif
-    
-    return demo;
-}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

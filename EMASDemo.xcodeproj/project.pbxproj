@@ -54,6 +54,8 @@
 		869B55D721400A1700809084 /* EMASTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55D621400A1700809084 /* EMASTabBarController.m */; };
 		869B55DC21400A2100809084 /* EMASNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55D921400A2100809084 /* EMASNativeViewController.m */; };
 		869B55DD21400A2100809084 /* EMASBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55DA21400A2100809084 /* EMASBaseNavigationController.m */; };
+		86F1DE84216F501000B6C603 /* EMASWindVaneScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F1DE83216F501000B6C603 /* EMASWindVaneScanViewController.m */; };
+		86F1DE88216F524200B6C603 /* EMASWindVaneScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F1DE87216F524200B6C603 /* EMASWindVaneScannerVC.m */; };
 		8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */; };
 		8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */; };
 		8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */; };
@@ -189,6 +191,10 @@
 		869B55D921400A2100809084 /* EMASNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASNativeViewController.m; sourceTree = "<group>"; };
 		869B55DA21400A2100809084 /* EMASBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASBaseNavigationController.m; sourceTree = "<group>"; };
 		869B55DB21400A2100809084 /* EMASNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASNativeViewController.h; sourceTree = "<group>"; };
+		86F1DE82216F501000B6C603 /* EMASWindVaneScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASWindVaneScanViewController.h; sourceTree = "<group>"; };
+		86F1DE83216F501000B6C603 /* EMASWindVaneScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneScanViewController.m; sourceTree = "<group>"; };
+		86F1DE86216F524200B6C603 /* EMASWindVaneScannerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASWindVaneScannerVC.h; sourceTree = "<group>"; };
+		86F1DE87216F524200B6C603 /* EMASWindVaneScannerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneScannerVC.m; sourceTree = "<group>"; };
 		8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigTableViewController.h; sourceTree = "<group>"; };
 		8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfigTableViewController.m; sourceTree = "<group>"; };
 		8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopVerifyTableViewController.h; sourceTree = "<group>"; };
@@ -372,6 +378,7 @@
 		8601D6BA215F57C400BDFC46 /* WindVane */ = {
 			isa = PBXGroup;
 			children = (
+				86F1DE85216F501500B6C603 /* Scan */,
 				8601D6ED2160727000BDFC46 /* JSBridgeAPI */,
 				8601D6BB215F5A2B00BDFC46 /* EMASWindVaneConfig.h */,
 				8601D6BC215F5A2B00BDFC46 /* EMASWindVaneConfig.m */,
@@ -449,6 +456,17 @@
 			children = (
 				869B55C82140068300809084 /* EMASScannerViewController.h */,
 				869B55C92140068300809084 /* EMASScannerViewController.m */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		86F1DE85216F501500B6C603 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				86F1DE82216F501000B6C603 /* EMASWindVaneScanViewController.h */,
+				86F1DE83216F501000B6C603 /* EMASWindVaneScanViewController.m */,
+				86F1DE86216F524200B6C603 /* EMASWindVaneScannerVC.h */,
+				86F1DE87216F524200B6C603 /* EMASWindVaneScannerVC.m */,
 			);
 			path = Scan;
 			sourceTree = "<group>";
@@ -923,6 +941,7 @@
 				869B55DC21400A2100809084 /* EMASNativeViewController.m in Sources */,
 				869B55CE2140068400809084 /* EMASWXNavigationImpl.m in Sources */,
 				9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */,
+				86F1DE88216F524200B6C603 /* EMASWindVaneScannerVC.m in Sources */,
 				4A017CF421006EC7001FF027 /* MANViewController.m in Sources */,
 				869B55CA2140068400809084 /* UIViewController+EMASWXNaviBar.m in Sources */,
 				8ADA95751FDA3BA300C0EF49 /* FirstTableViewController.m in Sources */,
@@ -944,6 +963,7 @@
 				7D6260E61FDA8C5A00E856CB /* HFXTestClass.m in Sources */,
 				8601D6BD215F5A2B00BDFC46 /* EMASWindVaneConfig.m in Sources */,
 				8A69B60A200C8F980073756D /* EMASService.m in Sources */,
+				86F1DE84216F501000B6C603 /* EMASWindVaneScanViewController.m in Sources */,
 				8601D6EC215F7A7E00BDFC46 /* EMASWindVaneViewController.m in Sources */,
 				33A2550F20FDE37000C3F673 /* PushViewController.m in Sources */,
 				869B55CF2140068400809084 /* EMASScannerViewController.m in Sources */,
@@ -1128,7 +1148,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XN6U3EV979;
+				DEVELOPMENT_TEAM = 2H2CAWW468;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1138,7 +1158,7 @@
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc.push.beta1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc111.push.beta1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1158,7 +1178,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XN6U3EV979;
+				DEVELOPMENT_TEAM = 2H2CAWW468;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1168,7 +1188,7 @@
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc.push.beta1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc111.push.beta1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

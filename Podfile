@@ -49,7 +49,7 @@ platform:ios, '8.0'
     #pod  'ZipArchive', '~> 1.4.0'
     
     # --Weex(通用库-> 高可用 -> 网关 -> Weex)
-    pod 'WeexSDK', '0.17.10.1-EMAS'
+    pod 'WeexSDK', '0.18.3.18-EMAS-Source'
     pod 'ZCache', '10.0.3'
     #pod 'ZipArchive', '~> 1.4.0'
     pod 'SDWebImage', '3.7.5'
