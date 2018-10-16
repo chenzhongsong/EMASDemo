@@ -64,9 +64,11 @@
     //务必设置这个属性，它与导航栏隐藏属性相关。
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    //在宿主容器中添加渲染容器和视图。
-    [self.view addSubview:self.wxViewController.view];
-    [self addChildViewController:self.wxViewController];
+    if (self.wxViewController) {
+        //在宿主容器中添加渲染容器和视图。
+        [self.view addSubview:self.wxViewController.view];
+        [self addChildViewController:self.wxViewController];
+    }
     
     self.view.backgroundColor = [UIColor whiteColor];
     
