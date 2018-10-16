@@ -71,7 +71,6 @@
 		980F857120BECC49002156A2 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F856620BECC49002156A2 /* CustomCell.m */; };
 		9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9815F23820A2F73F00F0F70D /* MtopCustomCell.m */; };
 		981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981DC5D720998B53006472AF /* MtopResultViewController.m */; };
-		9A09D7961FF27A6200585632 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 9A09D7951FF27A6200585632 /* index.js */; };
 		F2AEA74CFBBBDD9338DF0F3C /* libPods-EMASDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D522707B463174EC727EEF /* libPods-EMASDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -686,7 +685,6 @@
 				8ADA954B1FD9309400C0EF49 /* Assets.xcassets in Resources */,
 				7D8394A91FDB902900EBB60F /* fix.lua in Resources */,
 				980F856920BECC49002156A2 /* OrangeRemoteConfigRootVC.xib in Resources */,
-				9A09D7961FF27A6200585632 /* index.js in Resources */,
 				8ADA95491FD9309400C0EF49 /* Main.storyboard in Resources */,
 				8601D68E215CCB3600BDFC46 /* WeexContainer-Info.plist in Resources */,
 				33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */,
