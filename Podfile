@@ -66,7 +66,7 @@ platform:ios, '8.0'
     #pod 'EmasWeexComponents'
     
     # EMASWeex
-    pod 'EMASWeex', '1.1.0'
+    pod 'EMASWeex', '1.2.0'
     pod 'WXDevtool', '~> 0.16.3' #,:configurations => ['Debug']
     pod 'CYLTabBarController', '~> 1.17.14'
     pod 'SocketRocket'
