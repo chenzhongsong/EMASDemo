@@ -10,6 +10,8 @@
 set -e
 
 #包名
+APP_NAME=""
+#bundleID
 BUNDLE_ID=""
 
 #SDK_CONFIG系统配置
@@ -42,6 +44,7 @@ printHelp() {
     echo "   -h help."
 
     echo "   -BUNDLE_ID                         bundleId，从控制台读取。必填"
+    echo "   -APP_NAME                          appName，从控制台读取。必填"
     echo "   -SDK_CONFIG_APP_KEY                AppKey，从控制台读取。必填"
     echo "   -SDK_CONFIG_APP_SECRET             AppSecret，从控制台读取。必填"
     echo "   -SDK_CONFIG_CHANNEL_ID             ChannelID。必填"
@@ -207,8 +210,14 @@ modifyWeexNativePage() {
 
 modifyPackageName() {
     echo "start modify package name ..."
-    sed -i "/>CFBundleIdentifier</{n; s/<string>.*/<string>$BUNDLE_ID<\/string>/g; }" EMASDemo/Info.plist
+    sed -i "/>CFBundleDisplayName</{n; s/<string>.*/<string>$APP_NAME<\/string>/g; }" EMASDemo/Info.plist
     echo "modify package name done."
+}
+
+modifyBundleId() {
+    echo "start modify bundle id ..."
+    sed -i "/>CFBundleIdentifier</{n; s/<string>.*/<string>$BUNDLE_ID<\/string>/g; }" EMASDemo/Info.plist
+    echo "modify bundle Id done."
 }
 
 while [ $# -gt 0 ];do
@@ -237,6 +246,9 @@ modifyNativeSDk
 
 #2. 发布包名修改
 modifyPackageName
+
+#2. 发布包BundleId修改
+modifyBundleId
 
 #3. weex外围sdk相关配置
 modifyWeexSDK
