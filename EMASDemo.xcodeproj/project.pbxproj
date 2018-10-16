@@ -28,7 +28,10 @@
 		7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */; };
 		7D8394A91FDB902900EBB60F /* fix.lua in Resources */ = {isa = PBXBuildFile; fileRef = 7D8394A81FDB902900EBB60F /* fix.lua */; };
 		8601D68E215CCB3600BDFC46 /* WeexContainer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8601D68D215CCB3600BDFC46 /* WeexContainer-Info.plist */; };
-		8601D69D215F298800BDFC46 /* preload in Resources */ = {isa = PBXBuildFile; fileRef = 8601D69C215F298800BDFC46 /* preload */; };
+		8651A2392174C65900345C7C /* filance.js in Resources */ = {isa = PBXBuildFile; fileRef = 8651A2352174C65900345C7C /* filance.js */; };
+		8651A23A2174C65900345C7C /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 8651A2362174C65900345C7C /* index.js */; };
+		8651A23B2174C65900345C7C /* life.js in Resources */ = {isa = PBXBuildFile; fileRef = 8651A2372174C65900345C7C /* life.js */; };
+		8651A23C2174C65900345C7C /* preload_packageapp.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8651A2382174C65900345C7C /* preload_packageapp.zip */; };
 		869B55CA2140068400809084 /* UIViewController+EMASWXNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */; };
 		869B55CB2140068400809084 /* EMASHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BF2140068300809084 /* EMASHostViewController.m */; };
 		869B55CC2140068400809084 /* EMASWXRenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55C12140068300809084 /* EMASWXRenderViewController.m */; };
@@ -136,7 +139,10 @@
 		7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudHotFixEmas.framework; sourceTree = "<group>"; };
 		7D8394A81FDB902900EBB60F /* fix.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fix.lua; sourceTree = "<group>"; };
 		8601D68D215CCB3600BDFC46 /* WeexContainer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WeexContainer-Info.plist"; sourceTree = SOURCE_ROOT; };
-		8601D69C215F298800BDFC46 /* preload */ = {isa = PBXFileReference; lastKnownFileType = folder; path = preload; sourceTree = SOURCE_ROOT; };
+		8651A2352174C65900345C7C /* filance.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = filance.js; sourceTree = "<group>"; };
+		8651A2362174C65900345C7C /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		8651A2372174C65900345C7C /* life.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = life.js; sourceTree = "<group>"; };
+		8651A2382174C65900345C7C /* preload_packageapp.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = preload_packageapp.zip; sourceTree = "<group>"; };
 		869B55BC2140068300809084 /* UIViewController+EMASWXNaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EMASWXNaviBar.h"; sourceTree = "<group>"; };
 		869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EMASWXNaviBar.m"; sourceTree = "<group>"; };
 		869B55BE2140068300809084 /* EMASHostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASHostViewController.h; sourceTree = "<group>"; };
@@ -329,6 +335,17 @@
 			path = hotfix;
 			sourceTree = "<group>";
 		};
+		8651A2342174C65900345C7C /* preload */ = {
+			isa = PBXGroup;
+			children = (
+				8651A2352174C65900345C7C /* filance.js */,
+				8651A2362174C65900345C7C /* index.js */,
+				8651A2372174C65900345C7C /* life.js */,
+				8651A2382174C65900345C7C /* preload_packageapp.zip */,
+			);
+			path = preload;
+			sourceTree = SOURCE_ROOT;
+		};
 		869B55BA2140068300809084 /* Weex */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,7 +455,7 @@
 				8A69B608200C8F980073756D /* EMASService.h */,
 				8A69B609200C8F980073756D /* EMASService.m */,
 				8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */,
-				8601D69C215F298800BDFC46 /* preload */,
+				8651A2342174C65900345C7C /* preload */,
 				869B55BA2140068300809084 /* Weex */,
 				4A017CEB21006E59001FF027 /* man */,
 				1A65F6231FF2534A00B4573C /* AliHA */,
@@ -663,7 +680,7 @@
 			files = (
 				8ADA954E1FD9309400C0EF49 /* LaunchScreen.storyboard in Resources */,
 				33D18D5C20DA30DC00ACF0C7 /* ACCSSettingViewController.xib in Resources */,
-				8601D69D215F298800BDFC46 /* preload in Resources */,
+				8651A23C2174C65900345C7C /* preload_packageapp.zip in Resources */,
 				980F856F20BECC49002156A2 /* CustomCell.xib in Resources */,
 				980F856C20BECC49002156A2 /* OrangeFeatureFirstVC.xib in Resources */,
 				8ADA954B1FD9309400C0EF49 /* Assets.xcassets in Resources */,
@@ -674,8 +691,11 @@
 				8601D68E215CCB3600BDFC46 /* WeexContainer-Info.plist in Resources */,
 				33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */,
 				33D18D6520DA331700ACF0C7 /* wq_code_scanner_line@2x.png in Resources */,
+				8651A23B2174C65900345C7C /* life.js in Resources */,
 				33D18D5E20DA31C500ACF0C7 /* btn_qr@2x.png in Resources */,
 				33A2551020FDE37000C3F673 /* PushViewController.xib in Resources */,
+				8651A2392174C65900345C7C /* filance.js in Resources */,
+				8651A23A2174C65900345C7C /* index.js in Resources */,
 				8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */,
 				980F856E20BECC49002156A2 /* OrangeRemotConfigDebugVC.xib in Resources */,
 				980F856B20BECC49002156A2 /* OrangeFeatureSecondVC.xib in Resources */,

@@ -42,9 +42,16 @@
         }
         self.resourceUrlString = URL.absoluteString;
         NSString * urlString = self.resourceUrlString;//[[DynamicConfigurationManager sharedInstance] redirectUrl:[URL absoluteString]];
-        self.wxViewController = [[EMASWXRenderViewController alloc] initWithNavigatorURL:[NSURL URLWithString:urlString] withCustomOptions:@{@"bundleUrl":urlString} withInitData:nil withViewController:self];
-        //渲染容器的外部代理。
-        self.wxViewController.delegate = self;
+        
+        if ([urlString containsString:@".js"] || [urlString containsString:@".wx"]) {
+            self.wxViewController = [[EMASWXRenderViewController alloc] initWithNavigatorURL:[NSURL URLWithString:urlString] withCustomOptions:@{@"bundleUrl":urlString} withInitData:nil withViewController:self];
+            //渲染容器的外部代理。
+            self.wxViewController.delegate = self;
+        } else {
+            //webview打开
+            [self wxDegradeToH5:urlString];
+        }
+        
     }
     return self;
 }
