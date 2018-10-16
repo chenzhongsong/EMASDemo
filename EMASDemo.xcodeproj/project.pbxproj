@@ -216,7 +216,6 @@
 		981DC5D620998B53006472AF /* MtopResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopResultViewController.h; sourceTree = "<group>"; };
 		981DC5D720998B53006472AF /* MtopResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtopResultViewController.m; sourceTree = "<group>"; };
 		9A09D7901FF2721000585632 /* DemoDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoDefine.h; sourceTree = "<group>"; };
-		9A09D7951FF27A6200585632 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		C9D522707B463174EC727EEF /* libPods-EMASDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EMASDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -441,7 +440,6 @@
 				33A2550B20FDE2EC00C3F673 /* push */,
 				33D18D4220DA04C000ACF0C7 /* accs */,
 				980F855720BECB8A002156A2 /* Orange */,
-				9A09D7941FF27A6200585632 /* bundlejs */,
 				8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */,
 				8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */,
 				8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */,
@@ -493,14 +491,6 @@
 				980F856020BECC49002156A2 /* OrangeTestConstants.h */,
 			);
 			path = Orange;
-			sourceTree = "<group>";
-		};
-		9A09D7941FF27A6200585632 /* bundlejs */ = {
-			isa = PBXGroup;
-			children = (
-				9A09D7951FF27A6200585632 /* index.js */,
-			);
-			path = bundlejs;
 			sourceTree = "<group>";
 		};
 		D270D82292708B86B2F528C3 /* Frameworks */ = {
@@ -1020,7 +1010,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XN6U3EV979;
+				DEVELOPMENT_TEAM = 2H2CAWW468;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1030,7 +1020,7 @@
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc.push.beta1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc111.push.beta1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1050,7 +1040,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XN6U3EV979;
+				DEVELOPMENT_TEAM = 2H2CAWW468;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1060,7 +1050,7 @@
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc.push.beta1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc111.push.beta1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
