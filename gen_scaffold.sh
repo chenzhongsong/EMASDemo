@@ -63,8 +63,8 @@ printHelp() {
     echo "   -WEEX_BUSINESS_CHARTS              启用商业图表SDK时设置为1。可选"
 
     echo "   -WEEX_PAGE_TAB_SIZE                Weex首页Tab数量，0表示首页非weex，1表示为单页结构，2-5为tab页结构。可选"
-    echo "   -SCAFFOLD_TYPE                     脚手架组合类型 1->native 2->跨平台研发weex 4->跨平台研发H5
-    
+    echo "   -SCAFFOLD_TYPE                     脚手架组合类型 1->native 2->跨平台研发weex 4->跨平台研发H5。可选"
+
     echo
 }
 
