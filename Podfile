@@ -9,8 +9,8 @@ source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs.git'
 #source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-chart.git'
 
 # WeexComponents
-#source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-common.git'
-#source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-common.git'
+source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-common.git'
+source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-common.git'
 
 #project 'EMASDemo.xcodeproj'
 
@@ -63,7 +63,7 @@ platform:ios, '8.0'
     #pod 'WeexAceChart'
     
     #weex商业组件
-    #pod 'EmasWeexComponents'
+    pod 'EmasWeexComponents'
     
     # EMASWeex
     pod 'EMASWeex', '1.1.0'

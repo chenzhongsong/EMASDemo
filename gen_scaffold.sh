@@ -26,6 +26,9 @@ SDK_CONFIG_HA_OSS_BUCKET=""  #HA.OSSBucketName
 SDK_CONFIG_HA_ADASH_DOMAIN=""  # HA.UniversalHost
 SDK_CONFIG_HA_PUBLIC_KEY=""    # HA.RSAPublicKey
 
+#脚手架组合类型 1->native 2->跨平台研发weex 4->跨平台研发H5
+SCAFFOLD_TYPE=""
+
 #Weex外围SDK配置，传入非""表示启用
 WEEX_UI_SDK=""
 WEEX_BUSINESS_COMPONENTS=""
@@ -60,7 +63,8 @@ printHelp() {
     echo "   -WEEX_BUSINESS_CHARTS              启用商业图表SDK时设置为1。可选"
 
     echo "   -WEEX_PAGE_TAB_SIZE                Weex首页Tab数量，0表示首页非weex，1表示为单页结构，2-5为tab页结构。可选"
-
+    echo "   -SCAFFOLD_TYPE                     脚手架组合类型 1->native 2->跨平台研发weex 4->跨平台研发H5
+    
     echo
 }
 
@@ -197,10 +201,18 @@ modifyWeexSDK() {
     echo "modify Weex sdk done."
 }
 
+modifyScaffoldType() {
+    echo "start modify Scaffold Type ..."
+    if [ "$SCAFFOLD_TYPE" != "" ]; then
+        sed -i "/>ScaffoldType</{n; s/<integer>.*/<integer>$SCAFFOLD_TYPE<\/integer>/g; }" Scaffold-Info.plist
+    fi
+    echo "modify Scaffold Type done."
+}
+
 modifyWeexNativePage() {
     echo "start modify WEEX native page ..."
     if [ "$WEEX_PAGE_TAB_SIZE" != "" ]; then
-        sed -i "/>TabSize</{n; s/<integer>.*/<integer>$WEEX_PAGE_TAB_SIZE<\/integer>/g; }" WeexContainer-Info.plist
+        sed -i "/>TabSize</{n; s/<integer>.*/<integer>$WEEX_PAGE_TAB_SIZE<\/integer>/g; }" Scaffold-Info.plist
     fi
     echo "modify Weex native page done."
 }
@@ -238,8 +250,11 @@ modifyNativeSDk
 #2. 发布包名修改
 modifyPackageName
 
-#3. weex外围sdk相关配置
+#3. 修改脚手架类型
+modifyScaffoldType
+
+#4. weex外围sdk相关配置
 modifyWeexSDK
 
-#4. Weex Native页面配置
+#5. Weex Native页面配置
 modifyWeexNativePage

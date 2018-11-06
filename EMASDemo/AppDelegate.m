@@ -178,17 +178,38 @@
 
 - (void)showMainViewController
 {
-    NSNumber *tabSize = [[EMASWeexContainerService shareInstance] tabSize];
-    NSInteger tabSizeInt = tabSize.integerValue;
-    if (!tabSize || tabSizeInt < 0) {
-        //Native脚手架
-    } else if (tabSizeInt == 0) {
-        [self showBlankViewController];
-    } else if (tabSizeInt == 1) {
-        [self showSingleViewController];
+    NSNumber *scaffoldType = [[EMASWeexContainerService shareInstance] scaffoldType];
+    NSInteger scaffoldTypeInt = scaffoldType.integerValue;
+    
+    if (scaffoldTypeInt == 2) {
+        //weex脚手架
+        NSNumber *tabSize = [[EMASWeexContainerService shareInstance] tabSize];
+        NSInteger tabSizeInt = tabSize.integerValue;
+        
+        if (!tabSize || tabSizeInt < 0) {
+            //Native脚手架
+            [self showNativeViewController];
+        } else if (tabSizeInt == 0) {
+            [self showBlankViewController];
+        } else if (tabSizeInt == 1) {
+            [self showSingleViewController];
+        } else {
+            [self showTabBarViewController];
+        }
+    } else if (scaffoldTypeInt == 4) {
+        //H5脚手架
+    } else if (scaffoldTypeInt == (2 | 4)) {
+        //weex + H5 脚手架
+        
     } else {
-        [self showTabBarViewController];
+        //Native脚手架
+        [self showNativeViewController];
     }
+}
+
+- (void)showNativeViewController
+{
+   //storyboard已初始化
 }
 
 - (void)showSingleViewController

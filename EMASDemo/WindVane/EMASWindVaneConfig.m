@@ -9,6 +9,8 @@
 #import "EMASWindVaneConfig.h"
 #import <WindVane/WindVane.h>
 #import "EMASService.h"
+#import "EMASWVCrashReporter.h"
+#import "EMASWindVaneURLProtocol.h"
 
 @implementation EMASWindVaneConfig
 
@@ -45,8 +47,11 @@
     //[WVTBExtension setup];
     [WVBasic setup];
     [WVAPI setup];
-    [WVPackageApp setup];
     [WVMonitor startMonitoring];
+    //crash信息
+    [EMASWVCrashReporter setup];
+    //如有预加载需求，接管url请求判断是否已有预加载包
+    [WVURLProtocolService registerURLProtocol:[EMASWindVaneURLProtocol class]];
 }
 
 @end
