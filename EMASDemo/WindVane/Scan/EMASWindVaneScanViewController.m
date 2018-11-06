@@ -21,6 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setupNaviBar];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)setupNaviBar
@@ -54,6 +55,8 @@
         }
         self.navigationItem.leftBarButtonItems = @[leftItem];
     }
+    
+    self.navigationItem.rightBarButtonItems = @[[self leftBarButtonItem]];
     
 }
 

@@ -31,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = [UIColor whiteColor];
     
 #if !(TARGET_IPHONE_SIMULATOR)
     self.session = [[AVCaptureSession alloc]init];
