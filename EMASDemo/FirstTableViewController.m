@@ -7,7 +7,6 @@
 //
 
 #import "FirstTableViewController.h"
-#import "FirstViewController.h"
 #import "HFXViewController.h"
 #import "EMASHostViewController.h"
 #import "DemoDefine.h"
@@ -51,7 +50,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 8;//10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -193,12 +192,6 @@
             EMASWindVaneScanViewController *controller = [[EMASWindVaneScanViewController alloc] init];
             //controller.loadUrl = @"http://wapp.m.taobao.com/app/windvane/jsbridge.html";
             //controller.loadUrl = @"http://chaoshi.m.tmall.com";
-            [self.navigationController pushViewController:controller animated:YES];
-            break;
-        }
-        default:
-        {
-            FirstViewController *controller = [FirstViewController new];
             [self.navigationController pushViewController:controller animated:YES];
             break;
         }

@@ -15,10 +15,7 @@
 		33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D5520DA2CFB00ACF0C7 /* ACCSViewController.xib */; };
 		33D18D5B20DA30DC00ACF0C7 /* ACCSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D18D5920DA30DC00ACF0C7 /* ACCSSettingViewController.m */; };
 		33D18D5C20DA30DC00ACF0C7 /* ACCSSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D5A20DA30DC00ACF0C7 /* ACCSSettingViewController.xib */; };
-		33D18D5E20DA31C500ACF0C7 /* btn_qr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D5D20DA31C400ACF0C7 /* btn_qr@2x.png */; };
 		33D18D6120DA330100ACF0C7 /* WQCodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D18D5F20DA330100ACF0C7 /* WQCodeScanner.m */; };
-		33D18D6420DA331700ACF0C7 /* wq_code_scanner_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D6220DA331700ACF0C7 /* wq_code_scanner_back@2x.png */; };
-		33D18D6520DA331700ACF0C7 /* wq_code_scanner_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D6320DA331700ACF0C7 /* wq_code_scanner_line@2x.png */; };
 		4A017CF221006EC7001FF027 /* TestUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CED21006EC7001FF027 /* TestUIViewController.m */; };
 		4A017CF321006EC7001FF027 /* BaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CEE21006EC7001FF027 /* BaseUIViewController.m */; };
 		4A017CF421006EC7001FF027 /* MANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CEF21006EC7001FF027 /* MANViewController.m */; };
@@ -45,6 +42,7 @@
 		8601D70B216B4A0100BDFC46 /* preload_packageapp.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8601D707216B4A0100BDFC46 /* preload_packageapp.zip */; };
 		8611700D218885D500DCAB7F /* EMASWindVaneURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 8611700C218885D500DCAB7F /* EMASWindVaneURLProtocol.m */; };
 		8611700F21916D7E00DCAB7F /* Scaffold-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8611700E21916D7E00DCAB7F /* Scaffold-Info.plist */; };
+		8611706521943A5000DCAB7F /* EMASPortalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8611706421943A5000DCAB7F /* EMASPortalViewController.m */; };
 		8651A2442178371F00345C7C /* EMASWVCrashReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8651A2432178371F00345C7C /* EMASWVCrashReporter.m */; };
 		869B55CA2140068400809084 /* UIViewController+EMASWXNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */; };
 		869B55CB2140068400809084 /* EMASHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BF2140068300809084 /* EMASHostViewController.m */; };
@@ -65,8 +63,6 @@
 		8AB1A7BF1FFDDE51007C4675 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */; };
 		8AC0CB6E200312CF00FD44E6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC0CB6D200312CF00FD44E6 /* MobileCoreServices.framework */; };
 		8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA953F1FD9309400C0EF49 /* AppDelegate.m */; };
-		8ADA95431FD9309400C0EF49 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95421FD9309400C0EF49 /* FirstViewController.m */; };
-		8ADA95461FD9309400C0EF49 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95451FD9309400C0EF49 /* SecondViewController.m */; };
 		8ADA95491FD9309400C0EF49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ADA95471FD9309400C0EF49 /* Main.storyboard */; };
 		8ADA954B1FD9309400C0EF49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ADA954A1FD9309400C0EF49 /* Assets.xcassets */; };
 		8ADA954E1FD9309400C0EF49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ADA954C1FD9309400C0EF49 /* LaunchScreen.storyboard */; };
@@ -74,7 +70,6 @@
 		8ADA955B1FD9309400C0EF49 /* EMASDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA955A1FD9309400C0EF49 /* EMASDemoTests.m */; };
 		8ADA95661FD9309400C0EF49 /* EMASDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95651FD9309400C0EF49 /* EMASDemoUITests.m */; };
 		8ADA95751FDA3BA300C0EF49 /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95741FDA3BA300C0EF49 /* FirstTableViewController.m */; };
-		8ADA95781FDA3BB000C0EF49 /* SecondTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95771FDA3BB000C0EF49 /* SecondTableViewController.m */; };
 		980F856820BECC49002156A2 /* OrangeFeatureSecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F855A20BECC48002156A2 /* OrangeFeatureSecondVC.m */; };
 		980F856920BECC49002156A2 /* OrangeRemoteConfigRootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980F855C20BECC48002156A2 /* OrangeRemoteConfigRootVC.xib */; };
 		980F856A20BECC49002156A2 /* OrangeRemotConfigDebugVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F855D20BECC48002156A2 /* OrangeRemotConfigDebugVC.m */; };
@@ -135,11 +130,8 @@
 		33D18D5820DA30DC00ACF0C7 /* ACCSSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACCSSettingViewController.h; sourceTree = "<group>"; };
 		33D18D5920DA30DC00ACF0C7 /* ACCSSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACCSSettingViewController.m; sourceTree = "<group>"; };
 		33D18D5A20DA30DC00ACF0C7 /* ACCSSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ACCSSettingViewController.xib; sourceTree = "<group>"; };
-		33D18D5D20DA31C400ACF0C7 /* btn_qr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_qr@2x.png"; path = "accs/btn_qr@2x.png"; sourceTree = "<group>"; };
 		33D18D5F20DA330100ACF0C7 /* WQCodeScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCodeScanner.m; sourceTree = "<group>"; };
 		33D18D6020DA330100ACF0C7 /* WQCodeScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCodeScanner.h; sourceTree = "<group>"; };
-		33D18D6220DA331700ACF0C7 /* wq_code_scanner_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wq_code_scanner_back@2x.png"; path = "accs/wq_code_scanner_back@2x.png"; sourceTree = "<group>"; };
-		33D18D6320DA331700ACF0C7 /* wq_code_scanner_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wq_code_scanner_line@2x.png"; path = "accs/wq_code_scanner_line@2x.png"; sourceTree = "<group>"; };
 		4A017CEC21006EC7001FF027 /* BaseUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseUIViewController.h; sourceTree = "<group>"; };
 		4A017CED21006EC7001FF027 /* TestUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUIViewController.m; sourceTree = "<group>"; };
 		4A017CEE21006EC7001FF027 /* BaseUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseUIViewController.m; sourceTree = "<group>"; };
@@ -175,6 +167,8 @@
 		8611700B218885D500DCAB7F /* EMASWindVaneURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASWindVaneURLProtocol.h; sourceTree = "<group>"; };
 		8611700C218885D500DCAB7F /* EMASWindVaneURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneURLProtocol.m; sourceTree = "<group>"; };
 		8611700E21916D7E00DCAB7F /* Scaffold-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Scaffold-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8611706321943A5000DCAB7F /* EMASPortalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASPortalViewController.h; sourceTree = "<group>"; };
+		8611706421943A5000DCAB7F /* EMASPortalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASPortalViewController.m; sourceTree = "<group>"; };
 		8651A2422178371F00345C7C /* EMASWVCrashReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASWVCrashReporter.h; sourceTree = "<group>"; };
 		8651A2432178371F00345C7C /* EMASWVCrashReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASWVCrashReporter.m; sourceTree = "<group>"; };
 		869B55BC2140068300809084 /* UIViewController+EMASWXNaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EMASWXNaviBar.h"; sourceTree = "<group>"; };
@@ -226,10 +220,6 @@
 		8ADA953B1FD9309400C0EF49 /* EMASDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMASDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ADA953E1FD9309400C0EF49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8ADA953F1FD9309400C0EF49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8ADA95411FD9309400C0EF49 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		8ADA95421FD9309400C0EF49 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		8ADA95441FD9309400C0EF49 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		8ADA95451FD9309400C0EF49 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		8ADA95481FD9309400C0EF49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8ADA954A1FD9309400C0EF49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8ADA954D1FD9309400C0EF49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -243,8 +233,6 @@
 		8ADA95671FD9309400C0EF49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ADA95731FDA3BA300C0EF49 /* FirstTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstTableViewController.h; sourceTree = "<group>"; };
 		8ADA95741FDA3BA300C0EF49 /* FirstTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewController.m; sourceTree = "<group>"; };
-		8ADA95761FDA3BB000C0EF49 /* SecondTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondTableViewController.h; sourceTree = "<group>"; };
-		8ADA95771FDA3BB000C0EF49 /* SecondTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondTableViewController.m; sourceTree = "<group>"; };
 		97BD7DEF55A6F7A44C7420EE /* Pods-EMASDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMASDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		980F855820BECC48002156A2 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		980F855920BECC48002156A2 /* OrangeRemoteConfigRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrangeRemoteConfigRootVC.h; sourceTree = "<group>"; };
@@ -560,28 +548,19 @@
 				4A017CEB21006E59001FF027 /* man */,
 				1A65F6231FF2534A00B4573C /* AliHA */,
 				7D6260E11FDA8C5900E856CB /* hotfix */,
+				33A2550B20FDE2EC00C3F673 /* push */,
+				33D18D4220DA04C000ACF0C7 /* accs */,
+				980F855720BECB8A002156A2 /* Orange */,
 				8ADA953E1FD9309400C0EF49 /* AppDelegate.h */,
 				8ADA953F1FD9309400C0EF49 /* AppDelegate.m */,
-				8ADA95411FD9309400C0EF49 /* FirstViewController.h */,
-				8ADA95421FD9309400C0EF49 /* FirstViewController.m */,
-				8ADA95441FD9309400C0EF49 /* SecondViewController.h */,
-				8ADA95451FD9309400C0EF49 /* SecondViewController.m */,
 				8ADA95471FD9309400C0EF49 /* Main.storyboard */,
 				8ADA954A1FD9309400C0EF49 /* Assets.xcassets */,
-				33D18D6220DA331700ACF0C7 /* wq_code_scanner_back@2x.png */,
-				33D18D6320DA331700ACF0C7 /* wq_code_scanner_line@2x.png */,
-				33D18D5D20DA31C400ACF0C7 /* btn_qr@2x.png */,
 				8ADA954C1FD9309400C0EF49 /* LaunchScreen.storyboard */,
 				8ADA954F1FD9309400C0EF49 /* Info.plist */,
 				8ADA95501FD9309400C0EF49 /* main.m */,
 				8ADA95731FDA3BA300C0EF49 /* FirstTableViewController.h */,
 				8ADA95741FDA3BA300C0EF49 /* FirstTableViewController.m */,
-				8ADA95761FDA3BB000C0EF49 /* SecondTableViewController.h */,
-				8ADA95771FDA3BB000C0EF49 /* SecondTableViewController.m */,
 				9A09D7901FF2721000585632 /* DemoDefine.h */,
-				33A2550B20FDE2EC00C3F673 /* push */,
-				33D18D4220DA04C000ACF0C7 /* accs */,
-				980F855720BECB8A002156A2 /* Orange */,
 				8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */,
 				8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */,
 				8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */,
@@ -590,6 +569,8 @@
 				981DC5D720998B53006472AF /* MtopResultViewController.m */,
 				9815F23720A2F73F00F0F70D /* MtopCustomCell.h */,
 				9815F23820A2F73F00F0F70D /* MtopCustomCell.m */,
+				8611706321943A5000DCAB7F /* EMASPortalViewController.h */,
+				8611706421943A5000DCAB7F /* EMASPortalViewController.m */,
 			);
 			path = EMASDemo;
 			sourceTree = "<group>";
@@ -789,16 +770,13 @@
 				980F856920BECC49002156A2 /* OrangeRemoteConfigRootVC.xib in Resources */,
 				8ADA95491FD9309400C0EF49 /* Main.storyboard in Resources */,
 				33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */,
-				33D18D6520DA331700ACF0C7 /* wq_code_scanner_line@2x.png in Resources */,
 				8601D709216B4A0100BDFC46 /* index.js in Resources */,
-				33D18D5E20DA31C500ACF0C7 /* btn_qr@2x.png in Resources */,
 				8601D70B216B4A0100BDFC46 /* preload_packageapp.zip in Resources */,
 				33A2551020FDE37000C3F673 /* PushViewController.xib in Resources */,
 				8601D708216B4A0100BDFC46 /* filance.js in Resources */,
 				8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */,
 				980F856E20BECC49002156A2 /* OrangeRemotConfigDebugVC.xib in Resources */,
 				980F856B20BECC49002156A2 /* OrangeFeatureSecondVC.xib in Resources */,
-				33D18D6420DA331700ACF0C7 /* wq_code_scanner_back@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -960,7 +938,6 @@
 				869B55DD21400A2100809084 /* EMASBaseNavigationController.m in Sources */,
 				981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */,
 				980F856820BECC49002156A2 /* OrangeFeatureSecondVC.m in Sources */,
-				8ADA95461FD9309400C0EF49 /* SecondViewController.m in Sources */,
 				8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */,
 				33D18D5620DA2CFB00ACF0C7 /* ACCSViewController.m in Sources */,
 				4A017CF321006EC7001FF027 /* BaseUIViewController.m in Sources */,
@@ -969,6 +946,7 @@
 				9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */,
 				86F1DE88216F524200B6C603 /* EMASWindVaneScannerVC.m in Sources */,
 				4A017CF421006EC7001FF027 /* MANViewController.m in Sources */,
+				8611706521943A5000DCAB7F /* EMASPortalViewController.m in Sources */,
 				869B55CA2140068400809084 /* UIViewController+EMASWXNaviBar.m in Sources */,
 				8ADA95751FDA3BA300C0EF49 /* FirstTableViewController.m in Sources */,
 				33D18D5B20DA30DC00ACF0C7 /* ACCSSettingViewController.m in Sources */,
@@ -994,9 +972,7 @@
 				8601D6EC215F7A7E00BDFC46 /* EMASWindVaneViewController.m in Sources */,
 				33A2550F20FDE37000C3F673 /* PushViewController.m in Sources */,
 				869B55CF2140068400809084 /* EMASScannerViewController.m in Sources */,
-				8ADA95431FD9309400C0EF49 /* FirstViewController.m in Sources */,
 				8651A2442178371F00345C7C /* EMASWVCrashReporter.m in Sources */,
-				8ADA95781FDA3BB000C0EF49 /* SecondTableViewController.m in Sources */,
 				980F856D20BECC49002156A2 /* OrangeFeatureFirstVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

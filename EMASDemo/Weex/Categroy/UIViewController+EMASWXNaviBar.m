@@ -35,7 +35,7 @@
     
     [self.navigationController.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                                       [UIColor whiteColor], NSForegroundColorAttributeName, nil]];
-    self.navigationItem.title = @"Title";
+    self.navigationItem.title = @"Weex页面演示";
     
     if (!self.navigationItem.leftBarButtonItem) {
         UIBarButtonItem *leftItem;

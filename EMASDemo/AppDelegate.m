@@ -58,6 +58,7 @@
 #import "EMASNativeViewController.h"
 #import "EMASBaseNavigationController.h"
 #import "EMASWeexContainerService.h"
+#import "EMASPortalViewController.h"
 
 // --WindVane
 #import "EMASWindVaneConfig.h"
@@ -210,6 +211,7 @@
 - (void)showNativeViewController
 {
    //storyboard已初始化
+
 }
 
 - (void)showSingleViewController
