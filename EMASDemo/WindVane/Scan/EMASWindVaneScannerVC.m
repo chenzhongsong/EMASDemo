@@ -58,6 +58,8 @@
     [self setupNaviBar];
     [self.view.layer addSublayer:_captureLayer];
     [_session startRunning];
+    
+    self.navigationItem.title = @"H5页面演示";
 }
 
 - (void) viewDidDisappear:(BOOL)animated

@@ -40,10 +40,8 @@
 		8601D709216B4A0100BDFC46 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 8601D705216B4A0100BDFC46 /* index.js */; };
 		8601D70A216B4A0100BDFC46 /* life.js in Resources */ = {isa = PBXBuildFile; fileRef = 8601D706216B4A0100BDFC46 /* life.js */; };
 		8601D70B216B4A0100BDFC46 /* preload_packageapp.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8601D707216B4A0100BDFC46 /* preload_packageapp.zip */; };
-		8611700D218885D500DCAB7F /* EMASWindVaneURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 8611700C218885D500DCAB7F /* EMASWindVaneURLProtocol.m */; };
 		8611700F21916D7E00DCAB7F /* Scaffold-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8611700E21916D7E00DCAB7F /* Scaffold-Info.plist */; };
 		8611706521943A5000DCAB7F /* EMASPortalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8611706421943A5000DCAB7F /* EMASPortalViewController.m */; };
-		8651A2442178371F00345C7C /* EMASWVCrashReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8651A2432178371F00345C7C /* EMASWVCrashReporter.m */; };
 		869B55CA2140068400809084 /* UIViewController+EMASWXNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */; };
 		869B55CB2140068400809084 /* EMASHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BF2140068300809084 /* EMASHostViewController.m */; };
 		869B55CC2140068400809084 /* EMASWXRenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55C12140068300809084 /* EMASWXRenderViewController.m */; };
@@ -164,13 +162,9 @@
 		8601D705216B4A0100BDFC46 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		8601D706216B4A0100BDFC46 /* life.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = life.js; sourceTree = "<group>"; };
 		8601D707216B4A0100BDFC46 /* preload_packageapp.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = preload_packageapp.zip; sourceTree = "<group>"; };
-		8611700B218885D500DCAB7F /* EMASWindVaneURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASWindVaneURLProtocol.h; sourceTree = "<group>"; };
-		8611700C218885D500DCAB7F /* EMASWindVaneURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneURLProtocol.m; sourceTree = "<group>"; };
 		8611700E21916D7E00DCAB7F /* Scaffold-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Scaffold-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8611706321943A5000DCAB7F /* EMASPortalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASPortalViewController.h; sourceTree = "<group>"; };
 		8611706421943A5000DCAB7F /* EMASPortalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASPortalViewController.m; sourceTree = "<group>"; };
-		8651A2422178371F00345C7C /* EMASWVCrashReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASWVCrashReporter.h; sourceTree = "<group>"; };
-		8651A2432178371F00345C7C /* EMASWVCrashReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASWVCrashReporter.m; sourceTree = "<group>"; };
 		869B55BC2140068300809084 /* UIViewController+EMASWXNaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EMASWXNaviBar.h"; sourceTree = "<group>"; };
 		869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EMASWXNaviBar.m"; sourceTree = "<group>"; };
 		869B55BE2140068300809084 /* EMASHostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASHostViewController.h; sourceTree = "<group>"; };
@@ -372,8 +366,6 @@
 		8601D6BA215F57C400BDFC46 /* WindVane */ = {
 			isa = PBXGroup;
 			children = (
-				8611700A218885C200DCAB7F /* ZCacheConfig */,
-				8651A2412178370400345C7C /* CrashRepoter */,
 				86F1DE85216F501500B6C603 /* Scan */,
 				8601D6ED2160727000BDFC46 /* JSBridgeAPI */,
 				8601D6BB215F5A2B00BDFC46 /* EMASWindVaneConfig.h */,
@@ -403,24 +395,6 @@
 			);
 			path = preload;
 			sourceTree = SOURCE_ROOT;
-		};
-		8611700A218885C200DCAB7F /* ZCacheConfig */ = {
-			isa = PBXGroup;
-			children = (
-				8611700B218885D500DCAB7F /* EMASWindVaneURLProtocol.h */,
-				8611700C218885D500DCAB7F /* EMASWindVaneURLProtocol.m */,
-			);
-			path = ZCacheConfig;
-			sourceTree = "<group>";
-		};
-		8651A2412178370400345C7C /* CrashRepoter */ = {
-			isa = PBXGroup;
-			children = (
-				8651A2422178371F00345C7C /* EMASWVCrashReporter.h */,
-				8651A2432178371F00345C7C /* EMASWVCrashReporter.m */,
-			);
-			path = CrashRepoter;
-			sourceTree = "<group>";
 		};
 		869B55BA2140068300809084 /* Weex */ = {
 			isa = PBXGroup;
@@ -959,7 +933,6 @@
 				8ADA95511FD9309400C0EF49 /* main.m in Sources */,
 				8601D6F02160728900BDFC46 /* WVNavigator.m in Sources */,
 				869B55CD2140068400809084 /* EMASWXSubSDKEngine.m in Sources */,
-				8611700D218885D500DCAB7F /* EMASWindVaneURLProtocol.m in Sources */,
 				33D18D6120DA330100ACF0C7 /* WQCodeScanner.m in Sources */,
 				869B55CC2140068400809084 /* EMASWXRenderViewController.m in Sources */,
 				869B55D721400A1700809084 /* EMASTabBarController.m in Sources */,
@@ -972,7 +945,6 @@
 				8601D6EC215F7A7E00BDFC46 /* EMASWindVaneViewController.m in Sources */,
 				33A2550F20FDE37000C3F673 /* PushViewController.m in Sources */,
 				869B55CF2140068400809084 /* EMASScannerViewController.m in Sources */,
-				8651A2442178371F00345C7C /* EMASWVCrashReporter.m in Sources */,
 				980F856D20BECC49002156A2 /* OrangeFeatureFirstVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1158,6 +1130,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EMASDemo/hotfix",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Pods/WindVane",
+					"$(PROJECT_DIR)/EMASDemo/WindVane/framework",
 				);
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1188,10 +1162,17 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EMASDemo/hotfix",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Pods/WindVane",
+					"$(PROJECT_DIR)/EMASDemo/WindVane/framework",
 				);
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					"/Users/jiangbin/Documents/work/EMASDemo/Pods/WindVane/**",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc111.push.beta1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
