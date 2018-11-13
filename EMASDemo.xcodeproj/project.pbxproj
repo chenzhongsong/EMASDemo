@@ -197,18 +197,6 @@
 		8A69B608200C8F980073756D /* EMASService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASService.h; sourceTree = "<group>"; };
 		8A69B609200C8F980073756D /* EMASService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASService.m; sourceTree = "<group>"; };
 		8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EMASDemo.entitlements; sourceTree = "<group>"; };
-		8AA1174C1FF5E8FD004D4D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		8AA1174E1FF5E8FD004D4D0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8AA117501FF5E8FD004D4D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8AA1175A1FF5E8FE004D4D0A /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
-		8AA1175B1FF5E8FE004D4D0A /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
-		8AA1175D1FF5E8FE004D4D0A /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
-		8AA1175E1FF5E8FE004D4D0A /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
-		8AA117601FF5E8FE004D4D0A /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
-		8AA117611FF5E8FE004D4D0A /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
-		8AA117631FF5E8FE004D4D0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8AA117651FF5E8FE004D4D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8AA117661FF5E8FE004D4D0A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8AC0CB6D200312CF00FD44E6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		8ADA953B1FD9309400C0EF49 /* EMASDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMASDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -458,40 +446,12 @@
 			path = Scan;
 			sourceTree = "<group>";
 		};
-		8AA1174A1FF5E8FD004D4D0A /* EMASWatch */ = {
-			isa = PBXGroup;
-			children = (
-				8AA1174B1FF5E8FD004D4D0A /* Interface.storyboard */,
-				8AA1174E1FF5E8FD004D4D0A /* Assets.xcassets */,
-				8AA117501FF5E8FD004D4D0A /* Info.plist */,
-			);
-			path = EMASWatch;
-			sourceTree = "<group>";
-		};
-		8AA117591FF5E8FE004D4D0A /* EMASWatch Extension */ = {
-			isa = PBXGroup;
-			children = (
-				8AA1175A1FF5E8FE004D4D0A /* InterfaceController.h */,
-				8AA1175B1FF5E8FE004D4D0A /* InterfaceController.m */,
-				8AA1175D1FF5E8FE004D4D0A /* ExtensionDelegate.h */,
-				8AA1175E1FF5E8FE004D4D0A /* ExtensionDelegate.m */,
-				8AA117601FF5E8FE004D4D0A /* NotificationController.h */,
-				8AA117611FF5E8FE004D4D0A /* NotificationController.m */,
-				8AA117631FF5E8FE004D4D0A /* Assets.xcassets */,
-				8AA117651FF5E8FE004D4D0A /* Info.plist */,
-				8AA117661FF5E8FE004D4D0A /* PushNotificationPayload.apns */,
-			);
-			path = "EMASWatch Extension";
-			sourceTree = "<group>";
-		};
 		8ADA95321FD9309400C0EF49 = {
 			isa = PBXGroup;
 			children = (
 				8ADA953D1FD9309400C0EF49 /* EMASDemo */,
 				8ADA95591FD9309400C0EF49 /* EMASDemoTests */,
 				8ADA95641FD9309400C0EF49 /* EMASDemoUITests */,
-				8AA1174A1FF5E8FD004D4D0A /* EMASWatch */,
-				8AA117591FF5E8FE004D4D0A /* EMASWatch Extension */,
 				8ADA953C1FD9309400C0EF49 /* Products */,
 				024D3223F0A2D0A415B2F56B /* Pods */,
 				D270D82292708B86B2F528C3 /* Frameworks */,
@@ -981,14 +941,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8AA1174B1FF5E8FD004D4D0A /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8AA1174C1FF5E8FD004D4D0A /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
 		8ADA95471FD9309400C0EF49 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1131,7 +1083,6 @@
 					"$(PROJECT_DIR)/EMASDemo/hotfix",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Pods/WindVane",
-					"$(PROJECT_DIR)/EMASDemo/WindVane/framework",
 				);
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1163,16 +1114,11 @@
 					"$(PROJECT_DIR)/EMASDemo/hotfix",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Pods/WindVane",
-					"$(PROJECT_DIR)/EMASDemo/WindVane/framework",
 				);
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"<Multiple",
-					"values>",
-					"/Users/jiangbin/Documents/work/EMASDemo/Pods/WindVane/**",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc111.push.beta1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
