@@ -11,6 +11,7 @@
 #import <WeexSDK/WXDebugTool.h>
 #import "UIViewController+EMASWXNaviBar.h"
 //#import "EMASWindVaneViewController.h"
+#import <DynamicConfiguration/DynamicConfigurationManager.h>
 
 @interface EMASHostViewController()
 
@@ -42,7 +43,7 @@
             URL = [NSURL URLWithString:@""];
         }
         self.resourceUrlString = URL.absoluteString;
-        NSString * urlString = self.resourceUrlString;//[[DynamicConfigurationManager sharedInstance] redirectUrl:[URL absoluteString]];
+        NSString * urlString = [[DynamicConfigurationManager sharedInstance] redirectUrl:self.resourceUrlString];
         self.wxViewController = [[EMASWXRenderViewController alloc] initWithNavigatorURL:[NSURL URLWithString:urlString] withCustomOptions:@{@"bundleUrl":urlString} withInitData:nil withViewController:self];
         //渲染容器的外部代理。
         self.wxViewController.delegate = self;
@@ -87,9 +88,9 @@
 
 - (void)wxFailCreateInstance:(NSError *)error {
     //Weex Instance创建失败
-//    if ([error.localizedDescription containsString:@"404"]) {
-//        [[DynamicConfigurationManager sharedInstance] deleteConfigurationForGoalUrl:self.resourceUrlString];
-//    }
+    if ([error.localizedDescription containsString:@"404"]) {
+        [[DynamicConfigurationManager sharedInstance] deleteConfigurationForGoalUrl:self.resourceUrlString];
+    }
 }
 
 - (void)wxFinishRenderInstance {

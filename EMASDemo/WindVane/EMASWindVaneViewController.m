@@ -9,6 +9,7 @@
 #import "EMASWindVaneViewController.h"
 #import <WindVane/WindVane.h>
 #import <WindVaneBridge/WVBridge+Advance.h>
+#import <DynamicConfiguration/DynamicConfigurationManager.h>
 
 @interface EMASWindVaneViewController ()
 
@@ -36,6 +37,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+}
+
+- (void)setLoadUrl:(NSString *)loadUrl
+{
+    loadUrl = [[DynamicConfigurationManager sharedInstance] redirectUrl:loadUrl];
+    [super setLoadUrl:loadUrl];
 }
 
 - (void)registerJSBridge {
