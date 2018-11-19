@@ -9,8 +9,8 @@ source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs.git'
 #source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-chart.git'
 
 # WeexComponents
-#source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-common.git'
-#source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-common.git'
+source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-common.git'
+source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-common.git'
 
 #project 'EMASDemo.xcodeproj'
 
@@ -49,7 +49,7 @@ platform:ios, '8.0'
     #pod  'ZipArchive', '~> 1.4.0'
     
     # --Weex(通用库-> 高可用 -> 网关 -> Weex)
-    pod 'WeexSDK', '0.17.10.1-EMAS'
+    pod 'WeexSDK', '0.18.3.18-EMAS-Source'
     pod 'ZCache', '10.0.3'
     #pod 'ZipArchive', '~> 1.4.0'
     pod 'SDWebImage', '3.7.5'
@@ -63,13 +63,16 @@ platform:ios, '8.0'
     #pod 'WeexAceChart'
     
     #weex商业组件
-    #pod 'EmasWeexComponents'
+    pod 'EmasWeexComponents'
     
     # EMASWeex
     pod 'EMASWeex', '1.2.0'
     pod 'WXDevtool', '~> 0.16.3' ,:configurations => ['Debug']
     pod 'CYLTabBarController', '~> 1.17.14'
     pod 'SocketRocket'
+    
+    # WindVane
+    pod 'WindVane', '1.0.0'
     
     # --热修复
     pod 'AlicloudLua', '5.1.4.2'

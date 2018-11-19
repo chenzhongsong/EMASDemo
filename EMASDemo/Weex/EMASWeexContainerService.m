@@ -26,11 +26,16 @@
 {
     if (self = [super init])
     {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"WeexContainer-Info" ofType:@"plist"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"Scaffold-Info" ofType:@"plist"];
         NSDictionary *root = [NSDictionary dictionaryWithContentsOfFile:path];
         services = root;
     }
     return self;
+}
+
+- (NSNumber *)scaffoldType
+{
+    return [services objectForKey:@"ScaffoldType"];
 }
 
 - (NSNumber *)tabSize

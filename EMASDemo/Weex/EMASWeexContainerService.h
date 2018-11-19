@@ -16,4 +16,9 @@
 
 - (NSDictionary *)jsSource;
 
+//1-native
+//2-weex
+//4-h5
+- (NSNumber *)scaffoldType;
+
 @end
