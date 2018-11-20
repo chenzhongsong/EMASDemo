@@ -439,6 +439,19 @@
     NSLog(@"[APNS] register error: %@", error);
 }
 
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler {
+    
+    NSLog(@">>>>>>> [AGOO MESSAGE]: %@", userInfo);
+    
+    NSString *text = [userInfo description];
+    if ( !text ) {
+        text = @"消息解析失败!";
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AGOO 消息" message:text delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
 #pragma mark - distinguish device
 - (BOOL) isDeviceIphone {
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
