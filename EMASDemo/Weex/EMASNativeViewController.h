@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EMASHostViewController.h"
 
-@interface EMASNativeViewController : UIViewController
+@interface EMASNativeViewController : EMASHostViewController
 
 @end

@@ -7,17 +7,6 @@
 	<key>TabSize</key>
 	<integer>-1</integer>
 	<key>JSSource</key>
-	<dict>
-		<key>4</key>
-		<string>http://106.15.178.156:7480/mobile-hub-dev/app/yanpei-yanpei-weex-demo/index.js</string>
-		<key>3</key>
-		<string>http://106.15.178.156:7480/mobile-hub-dev/app/yanpei-yanpei-weex-demo/detail.js</string>
-		<key>2</key>
-		<string>life.js</string>
-		<key>1</key>
-		<string>filance.js</string>
-		<key>0</key>
-		<string>index.js</string>
-	</dict>
+	<dict/>
 </dict>
 </plist>

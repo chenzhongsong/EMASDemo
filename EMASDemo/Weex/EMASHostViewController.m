@@ -39,13 +39,13 @@
 - (instancetype)initWithNavigatorURL:(NSURL *)URL {
     self = [super init];
     if (self) {
-        if (!URL) {
-            URL = [NSURL URLWithString:@""];
-        }
         self.resourceUrlString = URL.absoluteString;
-        NSString * urlString = self.resourceUrlString;//[[DynamicConfigurationManager sharedInstance] redirectUrl:[URL absoluteString]];
+        NSString * urlString = [[DynamicConfigurationManager sharedInstance] redirectUrl:[URL absoluteString]];
         
-        if ([urlString containsString:@".js"] || [urlString containsString:@".wx"]) {
+        if (!urlString) {
+            urlString = @"";
+        }
+        if (urlString.length == 0 || [urlString containsString:@".js"] || [urlString containsString:@".wx"]) {
             self.wxViewController = [[EMASWXRenderViewController alloc] initWithNavigatorURL:[NSURL URLWithString:urlString] withCustomOptions:@{@"bundleUrl":urlString} withInitData:nil withViewController:self];
             //渲染容器的外部代理。
             self.wxViewController.delegate = self;

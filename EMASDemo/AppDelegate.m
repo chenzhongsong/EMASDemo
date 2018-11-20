@@ -235,7 +235,7 @@
 
 - (void)showBlankViewController
 {
-    EMASNativeViewController *viewController = [[EMASNativeViewController alloc] init];
+    EMASNativeViewController *viewController = [[EMASNativeViewController alloc] initWithNavigatorURL:[NSURL URLWithString:@"http://cdn.emas-poc.com/material/yanpeicpf/index.html?_wx_tpl=http://cdn.emas-poc.com/app/yanpeicpf-bbb/pages/index/entry.js"]];
     self.window.rootViewController = [[EMASBaseNavigationController alloc] initWithRootViewController:viewController];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

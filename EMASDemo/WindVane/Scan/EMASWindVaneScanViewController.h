@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EMASWindVaneViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EMASWindVaneScanViewController : UIViewController
+@interface EMASWindVaneScanViewController : EMASWindVaneViewController
 
 @end
 

@@ -45,9 +45,6 @@
 		8601D6EC215F7A7E00BDFC46 /* EMASWindVaneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8601D6EB215F7A7E00BDFC46 /* EMASWindVaneViewController.m */; };
 		8601D6F02160728900BDFC46 /* WVNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8601D6EF2160728900BDFC46 /* WVNavigator.m */; };
 		8601D7002162075200BDFC46 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6FF2162075100BDFC46 /* AssetsLibrary.framework */; };
-		8601D708216B4A0100BDFC46 /* filance.js in Resources */ = {isa = PBXBuildFile; fileRef = 8601D704216B4A0100BDFC46 /* filance.js */; };
-		8601D709216B4A0100BDFC46 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 8601D705216B4A0100BDFC46 /* index.js */; };
-		8601D70A216B4A0100BDFC46 /* life.js in Resources */ = {isa = PBXBuildFile; fileRef = 8601D706216B4A0100BDFC46 /* life.js */; };
 		8601D70B216B4A0100BDFC46 /* preload_packageapp.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8601D707216B4A0100BDFC46 /* preload_packageapp.zip */; };
 		8611700F21916D7E00DCAB7F /* Scaffold-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8611700E21916D7E00DCAB7F /* Scaffold-Info.plist */; };
 		8611706521943A5000DCAB7F /* EMASPortalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8611706421943A5000DCAB7F /* EMASPortalViewController.m */; };
@@ -199,9 +196,6 @@
 		8601D6EE2160728800BDFC46 /* WVNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVNavigator.h; sourceTree = "<group>"; };
 		8601D6EF2160728900BDFC46 /* WVNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVNavigator.m; sourceTree = "<group>"; };
 		8601D6FF2162075100BDFC46 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		8601D704216B4A0100BDFC46 /* filance.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = filance.js; sourceTree = "<group>"; };
-		8601D705216B4A0100BDFC46 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
-		8601D706216B4A0100BDFC46 /* life.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = life.js; sourceTree = "<group>"; };
 		8601D707216B4A0100BDFC46 /* preload_packageapp.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = preload_packageapp.zip; sourceTree = "<group>"; };
 		8611700E21916D7E00DCAB7F /* Scaffold-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Scaffold-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8611706321943A5000DCAB7F /* EMASPortalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASPortalViewController.h; sourceTree = "<group>"; };
@@ -440,9 +434,6 @@
 		8601D703216B4A0100BDFC46 /* preload */ = {
 			isa = PBXGroup;
 			children = (
-				8601D704216B4A0100BDFC46 /* filance.js */,
-				8601D705216B4A0100BDFC46 /* index.js */,
-				8601D706216B4A0100BDFC46 /* life.js */,
 				8601D707216B4A0100BDFC46 /* preload_packageapp.zip */,
 			);
 			path = preload;
@@ -805,7 +796,6 @@
 				3342C6C221A1AF62006B6A87 /* AccsReceiverTable.plist in Resources */,
 				33E1BA9F21A4275300E81E32 /* clock.wav in Resources */,
 				8611700F21916D7E00DCAB7F /* Scaffold-Info.plist in Resources */,
-				8601D70A216B4A0100BDFC46 /* life.js in Resources */,
 				980F856F20BECC49002156A2 /* CustomCell.xib in Resources */,
 				980F856C20BECC49002156A2 /* OrangeFeatureFirstVC.xib in Resources */,
 				8ADA954B1FD9309400C0EF49 /* Assets.xcassets in Resources */,
@@ -813,10 +803,8 @@
 				980F856920BECC49002156A2 /* OrangeRemoteConfigRootVC.xib in Resources */,
 				8ADA95491FD9309400C0EF49 /* Main.storyboard in Resources */,
 				33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */,
-				8601D709216B4A0100BDFC46 /* index.js in Resources */,
 				8601D70B216B4A0100BDFC46 /* preload_packageapp.zip in Resources */,
 				33A2551020FDE37000C3F673 /* PushViewController.xib in Resources */,
-				8601D708216B4A0100BDFC46 /* filance.js in Resources */,
 				8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */,
 				3342C6C121A1AF62006B6A87 /* PushSDKReceiverConfig.plist in Resources */,
 				33E1BAA221A4290A00E81E32 /* hongbao.wav in Resources */,
