@@ -63,7 +63,7 @@ platform:ios, '8.0'
     #pod 'WeexAceChart'
     
     #weex商业组件
-    pod 'EmasWeexComponents'
+    pod 'EmasWeexComponents', '0.0.4'
     
     # EMASWeex
     pod 'EMASWeex', '1.2.0'

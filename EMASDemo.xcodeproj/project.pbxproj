@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1A65F6261FF253CF00B4573C /* AliHATestCaseViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A65F6251FF253CF00B4573C /* AliHATestCaseViewController.mm */; };
 		33A2550F20FDE37000C3F673 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A2550D20FDE37000C3F673 /* PushViewController.m */; };
-		33A2551020FDE37000C3F673 /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A2550E20FDE37000C3F673 /* PushViewController.xib */; };
 		33D18D4B20DA06CE00ACF0C7 /* AccsConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D18D4A20DA06CE00ACF0C7 /* AccsConfiguration.m */; };
 		33D18D5620DA2CFB00ACF0C7 /* ACCSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D18D5420DA2CFB00ACF0C7 /* ACCSViewController.m */; };
 		33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D5520DA2CFB00ACF0C7 /* ACCSViewController.xib */; };
@@ -54,6 +53,7 @@
 		869B55DD21400A2100809084 /* EMASBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55DA21400A2100809084 /* EMASBaseNavigationController.m */; };
 		86F1DE84216F501000B6C603 /* EMASWindVaneScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F1DE83216F501000B6C603 /* EMASWindVaneScanViewController.m */; };
 		86F1DE88216F524200B6C603 /* EMASWindVaneScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F1DE87216F524200B6C603 /* EMASWindVaneScannerVC.m */; };
+		87FA349221A3BA8E0095673C /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87FA349121A3BA8E0095673C /* PushViewController.xib */; };
 		8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */; };
 		8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */; };
 		8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */; };
@@ -119,7 +119,6 @@
 		1A65F6251FF253CF00B4573C /* AliHATestCaseViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AliHATestCaseViewController.mm; sourceTree = "<group>"; };
 		33A2550C20FDE37000C3F673 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
 		33A2550D20FDE37000C3F673 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
-		33A2550E20FDE37000C3F673 /* PushViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
 		33D18D4920DA06CE00ACF0C7 /* AccsConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccsConfiguration.h; sourceTree = "<group>"; };
 		33D18D4A20DA06CE00ACF0C7 /* AccsConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccsConfiguration.m; sourceTree = "<group>"; };
 		33D18D5320DA2CFB00ACF0C7 /* ACCSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACCSViewController.h; sourceTree = "<group>"; };
@@ -189,6 +188,7 @@
 		86F1DE83216F501000B6C603 /* EMASWindVaneScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneScanViewController.m; sourceTree = "<group>"; };
 		86F1DE86216F524200B6C603 /* EMASWindVaneScannerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASWindVaneScannerVC.h; sourceTree = "<group>"; };
 		86F1DE87216F524200B6C603 /* EMASWindVaneScannerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneScannerVC.m; sourceTree = "<group>"; };
+		87FA349121A3BA8E0095673C /* PushViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
 		8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigTableViewController.h; sourceTree = "<group>"; };
 		8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfigTableViewController.m; sourceTree = "<group>"; };
 		8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopVerifyTableViewController.h; sourceTree = "<group>"; };
@@ -302,7 +302,7 @@
 			children = (
 				33A2550C20FDE37000C3F673 /* PushViewController.h */,
 				33A2550D20FDE37000C3F673 /* PushViewController.m */,
-				33A2550E20FDE37000C3F673 /* PushViewController.xib */,
+				87FA349121A3BA8E0095673C /* PushViewController.xib */,
 			);
 			name = push;
 			sourceTree = "<group>";
@@ -482,9 +482,6 @@
 				4A017CEB21006E59001FF027 /* man */,
 				1A65F6231FF2534A00B4573C /* AliHA */,
 				7D6260E11FDA8C5900E856CB /* hotfix */,
-				33A2550B20FDE2EC00C3F673 /* push */,
-				33D18D4220DA04C000ACF0C7 /* accs */,
-				980F855720BECB8A002156A2 /* Orange */,
 				8ADA953E1FD9309400C0EF49 /* AppDelegate.h */,
 				8ADA953F1FD9309400C0EF49 /* AppDelegate.m */,
 				8ADA95471FD9309400C0EF49 /* Main.storyboard */,
@@ -709,7 +706,7 @@
 				33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */,
 				8601D709216B4A0100BDFC46 /* index.js in Resources */,
 				8601D70B216B4A0100BDFC46 /* preload_packageapp.zip in Resources */,
-				33A2551020FDE37000C3F673 /* PushViewController.xib in Resources */,
+				87FA349221A3BA8E0095673C /* PushViewController.xib in Resources */,
 				8601D708216B4A0100BDFC46 /* filance.js in Resources */,
 				8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */,
 				980F856E20BECC49002156A2 /* OrangeRemotConfigDebugVC.xib in Resources */,

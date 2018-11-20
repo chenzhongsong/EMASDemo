@@ -439,6 +439,17 @@
     NSLog(@"[APNS] register error: %@", error);
 }
 
+//收到远程通知后的回调事件（如设置埋点、弹出警告框等）
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    NSString *alertr = [NSString stringWithFormat: @"%s, %d \n %@", __FUNCTION__, __LINE__, userInfo];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle: alertr
+                                                        message: nil
+                                                       delegate: nil
+                                              cancelButtonTitle: @"yes"
+                                              otherButtonTitles: nil];
+    [alertView show];
+}
+
 #pragma mark - distinguish device
 - (BOOL) isDeviceIphone {
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
