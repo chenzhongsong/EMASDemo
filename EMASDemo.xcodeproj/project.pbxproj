@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1A65F6261FF253CF00B4573C /* AliHATestCaseViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A65F6251FF253CF00B4573C /* AliHATestCaseViewController.mm */; };
+		3342C6BE21A1AF07006B6A87 /* PushMessageReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3342C6BD21A1AF07006B6A87 /* PushMessageReceiver.m */; };
+		3342C6C121A1AF62006B6A87 /* PushSDKReceiverConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3342C6BF21A1AF61006B6A87 /* PushSDKReceiverConfig.plist */; };
+		3342C6C221A1AF62006B6A87 /* AccsReceiverTable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3342C6C021A1AF62006B6A87 /* AccsReceiverTable.plist */; };
 		33A2550F20FDE37000C3F673 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A2550D20FDE37000C3F673 /* PushViewController.m */; };
 		33A2551020FDE37000C3F673 /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A2550E20FDE37000C3F673 /* PushViewController.xib */; };
 		33D18D4B20DA06CE00ACF0C7 /* AccsConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D18D4A20DA06CE00ACF0C7 /* AccsConfiguration.m */; };
@@ -108,6 +111,10 @@
 		0841F49C85C633B167F1BB45 /* Pods-EMASDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMASDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo.release.xcconfig"; sourceTree = "<group>"; };
 		1A65F6241FF253CF00B4573C /* AliHATestCaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliHATestCaseViewController.h; sourceTree = "<group>"; };
 		1A65F6251FF253CF00B4573C /* AliHATestCaseViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AliHATestCaseViewController.mm; sourceTree = "<group>"; };
+		3342C6BC21A1AF07006B6A87 /* PushMessageReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushMessageReceiver.h; sourceTree = "<group>"; };
+		3342C6BD21A1AF07006B6A87 /* PushMessageReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushMessageReceiver.m; sourceTree = "<group>"; };
+		3342C6BF21A1AF61006B6A87 /* PushSDKReceiverConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = PushSDKReceiverConfig.plist; sourceTree = SOURCE_ROOT; };
+		3342C6C021A1AF62006B6A87 /* AccsReceiverTable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AccsReceiverTable.plist; sourceTree = SOURCE_ROOT; };
 		33A2550C20FDE37000C3F673 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
 		33A2550D20FDE37000C3F673 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 		33A2550E20FDE37000C3F673 /* PushViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
@@ -270,6 +277,8 @@
 		33A2550B20FDE2EC00C3F673 /* push */ = {
 			isa = PBXGroup;
 			children = (
+				3342C6BC21A1AF07006B6A87 /* PushMessageReceiver.h */,
+				3342C6BD21A1AF07006B6A87 /* PushMessageReceiver.m */,
 				33A2550C20FDE37000C3F673 /* PushViewController.h */,
 				33A2550D20FDE37000C3F673 /* PushViewController.m */,
 				33A2550E20FDE37000C3F673 /* PushViewController.xib */,
@@ -409,6 +418,8 @@
 		8ADA953D1FD9309400C0EF49 /* EMASDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3342C6C021A1AF62006B6A87 /* AccsReceiverTable.plist */,
+				3342C6BF21A1AF61006B6A87 /* PushSDKReceiverConfig.plist */,
 				8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */,
 				8A69B608200C8F980073756D /* EMASService.h */,
 				8A69B609200C8F980073756D /* EMASService.m */,
@@ -630,6 +641,7 @@
 				8ADA954E1FD9309400C0EF49 /* LaunchScreen.storyboard in Resources */,
 				33D18D5C20DA30DC00ACF0C7 /* ACCSSettingViewController.xib in Resources */,
 				8651A23C2174C65900345C7C /* preload_packageapp.zip in Resources */,
+				3342C6C221A1AF62006B6A87 /* AccsReceiverTable.plist in Resources */,
 				980F856F20BECC49002156A2 /* CustomCell.xib in Resources */,
 				980F856C20BECC49002156A2 /* OrangeFeatureFirstVC.xib in Resources */,
 				8ADA954B1FD9309400C0EF49 /* Assets.xcassets in Resources */,
@@ -645,6 +657,7 @@
 				8651A2392174C65900345C7C /* filance.js in Resources */,
 				8651A23A2174C65900345C7C /* index.js in Resources */,
 				8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */,
+				3342C6C121A1AF62006B6A87 /* PushSDKReceiverConfig.plist in Resources */,
 				980F856E20BECC49002156A2 /* OrangeRemotConfigDebugVC.xib in Resources */,
 				980F856B20BECC49002156A2 /* OrangeFeatureSecondVC.xib in Resources */,
 				33D18D6420DA331700ACF0C7 /* wq_code_scanner_back@2x.png in Resources */,
@@ -827,6 +840,7 @@
 				7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */,
 				980F856A20BECC49002156A2 /* OrangeRemotConfigDebugVC.m in Sources */,
 				8ADA95511FD9309400C0EF49 /* main.m in Sources */,
+				3342C6BE21A1AF07006B6A87 /* PushMessageReceiver.m in Sources */,
 				869B55CD2140068400809084 /* EMASWXSubSDKEngine.m in Sources */,
 				33D18D6120DA330100ACF0C7 /* WQCodeScanner.m in Sources */,
 				869B55CC2140068400809084 /* EMASWXRenderViewController.m in Sources */,
@@ -1010,7 +1024,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2H2CAWW468;
+				DEVELOPMENT_TEAM = VSW2PKYTD7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1020,7 +1034,7 @@
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc111.push.beta1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.push.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1040,7 +1054,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2H2CAWW468;
+				DEVELOPMENT_TEAM = VSW2PKYTD7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1050,7 +1064,7 @@
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.poc111.push.beta1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.push.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

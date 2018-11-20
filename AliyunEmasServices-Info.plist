@@ -9,9 +9,9 @@
 		<key>LogLevel</key>
 		<string>none</string>
 		<key>AppKey</key>
-		<string>20000351</string>
+		<string>20000262</string>
 		<key>AppSecret</key>
-		<string>f22d703aa3243150141a658fa310aae9</string>
+		<string>5df61fd2d923dddffa1d461fab58c0e2</string>
 		<key>UseSecurityGuard</key>
 		<false/>
 		<key>ChannelID</key>
@@ -19,11 +19,11 @@
 		<key>ACCS</key>
 		<dict>
 			<key>Host</key>
-			<string>accs.emas-poc.com</string>
+			<string>aserver-pre-k8s.emas-poc.com</string>
 			<key>DefaultIP</key>
-			<string>11.163.130.35</string>
+			<string>106.15.81.192</string>
 			<key>DefaultPort</key>
-			<integer>443</integer>
+			<integer>30080</integer>
 			<key>CustomAppVersion</key>
 			<string>123</string>
 			<key>SlightSSLPublickeyIndex</key>
