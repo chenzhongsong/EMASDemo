@@ -18,10 +18,7 @@
 		33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D5520DA2CFB00ACF0C7 /* ACCSViewController.xib */; };
 		33D18D5B20DA30DC00ACF0C7 /* ACCSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D18D5920DA30DC00ACF0C7 /* ACCSSettingViewController.m */; };
 		33D18D5C20DA30DC00ACF0C7 /* ACCSSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D5A20DA30DC00ACF0C7 /* ACCSSettingViewController.xib */; };
-		33D18D5E20DA31C500ACF0C7 /* btn_qr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D5D20DA31C400ACF0C7 /* btn_qr@2x.png */; };
 		33D18D6120DA330100ACF0C7 /* WQCodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D18D5F20DA330100ACF0C7 /* WQCodeScanner.m */; };
-		33D18D6420DA331700ACF0C7 /* wq_code_scanner_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D6220DA331700ACF0C7 /* wq_code_scanner_back@2x.png */; };
-		33D18D6520DA331700ACF0C7 /* wq_code_scanner_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D6320DA331700ACF0C7 /* wq_code_scanner_line@2x.png */; };
 		4A017CF221006EC7001FF027 /* TestUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CED21006EC7001FF027 /* TestUIViewController.m */; };
 		4A017CF321006EC7001FF027 /* BaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CEE21006EC7001FF027 /* BaseUIViewController.m */; };
 		4A017CF421006EC7001FF027 /* MANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CEF21006EC7001FF027 /* MANViewController.m */; };
@@ -30,11 +27,24 @@
 		7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6260E81FDA8C8400E856CB /* arp.framework */; };
 		7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */; };
 		7D8394A91FDB902900EBB60F /* fix.lua in Resources */ = {isa = PBXBuildFile; fileRef = 7D8394A81FDB902900EBB60F /* fix.lua */; };
-		8601D68E215CCB3600BDFC46 /* WeexContainer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8601D68D215CCB3600BDFC46 /* WeexContainer-Info.plist */; };
-		8651A2392174C65900345C7C /* filance.js in Resources */ = {isa = PBXBuildFile; fileRef = 8651A2352174C65900345C7C /* filance.js */; };
-		8651A23A2174C65900345C7C /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 8651A2362174C65900345C7C /* index.js */; };
-		8651A23B2174C65900345C7C /* life.js in Resources */ = {isa = PBXBuildFile; fileRef = 8651A2372174C65900345C7C /* life.js */; };
-		8651A23C2174C65900345C7C /* preload_packageapp.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8651A2382174C65900345C7C /* preload_packageapp.zip */; };
+		8601D6BD215F5A2B00BDFC46 /* EMASWindVaneConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8601D6BC215F5A2B00BDFC46 /* EMASWindVaneConfig.m */; };
+		8601D6DB215F611000BDFC46 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6DA215F611000BDFC46 /* CoreBluetooth.framework */; };
+		8601D6DE215F613D00BDFC46 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6DC215F613D00BDFC46 /* AddressBook.framework */; };
+		8601D6DF215F613D00BDFC46 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6DD215F613D00BDFC46 /* AddressBookUI.framework */; };
+		8601D6E2215F616400BDFC46 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6E0215F616400BDFC46 /* Messages.framework */; };
+		8601D6E3215F616400BDFC46 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6E1215F616400BDFC46 /* MessageUI.framework */; };
+		8601D6E6215F618500BDFC46 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6E4215F618500BDFC46 /* ContactsUI.framework */; };
+		8601D6E7215F618500BDFC46 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6E5215F618500BDFC46 /* Contacts.framework */; };
+		8601D6E9215F61A700BDFC46 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6E8215F61A700BDFC46 /* UserNotifications.framework */; };
+		8601D6EC215F7A7E00BDFC46 /* EMASWindVaneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8601D6EB215F7A7E00BDFC46 /* EMASWindVaneViewController.m */; };
+		8601D6F02160728900BDFC46 /* WVNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8601D6EF2160728900BDFC46 /* WVNavigator.m */; };
+		8601D7002162075200BDFC46 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6FF2162075100BDFC46 /* AssetsLibrary.framework */; };
+		8601D708216B4A0100BDFC46 /* filance.js in Resources */ = {isa = PBXBuildFile; fileRef = 8601D704216B4A0100BDFC46 /* filance.js */; };
+		8601D709216B4A0100BDFC46 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 8601D705216B4A0100BDFC46 /* index.js */; };
+		8601D70A216B4A0100BDFC46 /* life.js in Resources */ = {isa = PBXBuildFile; fileRef = 8601D706216B4A0100BDFC46 /* life.js */; };
+		8601D70B216B4A0100BDFC46 /* preload_packageapp.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8601D707216B4A0100BDFC46 /* preload_packageapp.zip */; };
+		8611700F21916D7E00DCAB7F /* Scaffold-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8611700E21916D7E00DCAB7F /* Scaffold-Info.plist */; };
+		8611706521943A5000DCAB7F /* EMASPortalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8611706421943A5000DCAB7F /* EMASPortalViewController.m */; };
 		869B55CA2140068400809084 /* UIViewController+EMASWXNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */; };
 		869B55CB2140068400809084 /* EMASHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BF2140068300809084 /* EMASHostViewController.m */; };
 		869B55CC2140068400809084 /* EMASWXRenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55C12140068300809084 /* EMASWXRenderViewController.m */; };
@@ -45,6 +55,8 @@
 		869B55D721400A1700809084 /* EMASTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55D621400A1700809084 /* EMASTabBarController.m */; };
 		869B55DC21400A2100809084 /* EMASNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55D921400A2100809084 /* EMASNativeViewController.m */; };
 		869B55DD21400A2100809084 /* EMASBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55DA21400A2100809084 /* EMASBaseNavigationController.m */; };
+		86F1DE84216F501000B6C603 /* EMASWindVaneScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F1DE83216F501000B6C603 /* EMASWindVaneScanViewController.m */; };
+		86F1DE88216F524200B6C603 /* EMASWindVaneScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F1DE87216F524200B6C603 /* EMASWindVaneScannerVC.m */; };
 		8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */; };
 		8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */; };
 		8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */; };
@@ -52,8 +64,6 @@
 		8AB1A7BF1FFDDE51007C4675 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */; };
 		8AC0CB6E200312CF00FD44E6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC0CB6D200312CF00FD44E6 /* MobileCoreServices.framework */; };
 		8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA953F1FD9309400C0EF49 /* AppDelegate.m */; };
-		8ADA95431FD9309400C0EF49 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95421FD9309400C0EF49 /* FirstViewController.m */; };
-		8ADA95461FD9309400C0EF49 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95451FD9309400C0EF49 /* SecondViewController.m */; };
 		8ADA95491FD9309400C0EF49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ADA95471FD9309400C0EF49 /* Main.storyboard */; };
 		8ADA954B1FD9309400C0EF49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ADA954A1FD9309400C0EF49 /* Assets.xcassets */; };
 		8ADA954E1FD9309400C0EF49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ADA954C1FD9309400C0EF49 /* LaunchScreen.storyboard */; };
@@ -61,7 +71,6 @@
 		8ADA955B1FD9309400C0EF49 /* EMASDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA955A1FD9309400C0EF49 /* EMASDemoTests.m */; };
 		8ADA95661FD9309400C0EF49 /* EMASDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95651FD9309400C0EF49 /* EMASDemoUITests.m */; };
 		8ADA95751FDA3BA300C0EF49 /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95741FDA3BA300C0EF49 /* FirstTableViewController.m */; };
-		8ADA95781FDA3BB000C0EF49 /* SecondTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95771FDA3BB000C0EF49 /* SecondTableViewController.m */; };
 		980F856820BECC49002156A2 /* OrangeFeatureSecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F855A20BECC48002156A2 /* OrangeFeatureSecondVC.m */; };
 		980F856920BECC49002156A2 /* OrangeRemoteConfigRootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980F855C20BECC48002156A2 /* OrangeRemoteConfigRootVC.xib */; };
 		980F856A20BECC49002156A2 /* OrangeRemotConfigDebugVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F855D20BECC48002156A2 /* OrangeRemotConfigDebugVC.m */; };
@@ -126,11 +135,8 @@
 		33D18D5820DA30DC00ACF0C7 /* ACCSSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACCSSettingViewController.h; sourceTree = "<group>"; };
 		33D18D5920DA30DC00ACF0C7 /* ACCSSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACCSSettingViewController.m; sourceTree = "<group>"; };
 		33D18D5A20DA30DC00ACF0C7 /* ACCSSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ACCSSettingViewController.xib; sourceTree = "<group>"; };
-		33D18D5D20DA31C400ACF0C7 /* btn_qr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_qr@2x.png"; path = "accs/btn_qr@2x.png"; sourceTree = "<group>"; };
 		33D18D5F20DA330100ACF0C7 /* WQCodeScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCodeScanner.m; sourceTree = "<group>"; };
 		33D18D6020DA330100ACF0C7 /* WQCodeScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCodeScanner.h; sourceTree = "<group>"; };
-		33D18D6220DA331700ACF0C7 /* wq_code_scanner_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wq_code_scanner_back@2x.png"; path = "accs/wq_code_scanner_back@2x.png"; sourceTree = "<group>"; };
-		33D18D6320DA331700ACF0C7 /* wq_code_scanner_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wq_code_scanner_line@2x.png"; path = "accs/wq_code_scanner_line@2x.png"; sourceTree = "<group>"; };
 		4A017CEC21006EC7001FF027 /* BaseUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseUIViewController.h; sourceTree = "<group>"; };
 		4A017CED21006EC7001FF027 /* TestUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUIViewController.m; sourceTree = "<group>"; };
 		4A017CEE21006EC7001FF027 /* BaseUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseUIViewController.m; sourceTree = "<group>"; };
@@ -144,11 +150,28 @@
 		7D6260E81FDA8C8400E856CB /* arp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = arp.framework; sourceTree = "<group>"; };
 		7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudHotFixEmas.framework; sourceTree = "<group>"; };
 		7D8394A81FDB902900EBB60F /* fix.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fix.lua; sourceTree = "<group>"; };
-		8601D68D215CCB3600BDFC46 /* WeexContainer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WeexContainer-Info.plist"; sourceTree = SOURCE_ROOT; };
-		8651A2352174C65900345C7C /* filance.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = filance.js; sourceTree = "<group>"; };
-		8651A2362174C65900345C7C /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
-		8651A2372174C65900345C7C /* life.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = life.js; sourceTree = "<group>"; };
-		8651A2382174C65900345C7C /* preload_packageapp.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = preload_packageapp.zip; sourceTree = "<group>"; };
+		8601D6BB215F5A2B00BDFC46 /* EMASWindVaneConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASWindVaneConfig.h; sourceTree = "<group>"; };
+		8601D6BC215F5A2B00BDFC46 /* EMASWindVaneConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneConfig.m; sourceTree = "<group>"; };
+		8601D6DA215F611000BDFC46 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		8601D6DC215F613D00BDFC46 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		8601D6DD215F613D00BDFC46 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		8601D6E0215F616400BDFC46 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		8601D6E1215F616400BDFC46 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		8601D6E4215F618500BDFC46 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		8601D6E5215F618500BDFC46 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		8601D6E8215F61A700BDFC46 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		8601D6EA215F7A7E00BDFC46 /* EMASWindVaneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASWindVaneViewController.h; sourceTree = "<group>"; };
+		8601D6EB215F7A7E00BDFC46 /* EMASWindVaneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneViewController.m; sourceTree = "<group>"; };
+		8601D6EE2160728800BDFC46 /* WVNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVNavigator.h; sourceTree = "<group>"; };
+		8601D6EF2160728900BDFC46 /* WVNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVNavigator.m; sourceTree = "<group>"; };
+		8601D6FF2162075100BDFC46 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		8601D704216B4A0100BDFC46 /* filance.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = filance.js; sourceTree = "<group>"; };
+		8601D705216B4A0100BDFC46 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		8601D706216B4A0100BDFC46 /* life.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = life.js; sourceTree = "<group>"; };
+		8601D707216B4A0100BDFC46 /* preload_packageapp.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = preload_packageapp.zip; sourceTree = "<group>"; };
+		8611700E21916D7E00DCAB7F /* Scaffold-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Scaffold-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8611706321943A5000DCAB7F /* EMASPortalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASPortalViewController.h; sourceTree = "<group>"; };
+		8611706421943A5000DCAB7F /* EMASPortalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASPortalViewController.m; sourceTree = "<group>"; };
 		869B55BC2140068300809084 /* UIViewController+EMASWXNaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EMASWXNaviBar.h"; sourceTree = "<group>"; };
 		869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EMASWXNaviBar.m"; sourceTree = "<group>"; };
 		869B55BE2140068300809084 /* EMASHostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASHostViewController.h; sourceTree = "<group>"; };
@@ -169,6 +192,10 @@
 		869B55D921400A2100809084 /* EMASNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASNativeViewController.m; sourceTree = "<group>"; };
 		869B55DA21400A2100809084 /* EMASBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASBaseNavigationController.m; sourceTree = "<group>"; };
 		869B55DB21400A2100809084 /* EMASNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASNativeViewController.h; sourceTree = "<group>"; };
+		86F1DE82216F501000B6C603 /* EMASWindVaneScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASWindVaneScanViewController.h; sourceTree = "<group>"; };
+		86F1DE83216F501000B6C603 /* EMASWindVaneScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneScanViewController.m; sourceTree = "<group>"; };
+		86F1DE86216F524200B6C603 /* EMASWindVaneScannerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASWindVaneScannerVC.h; sourceTree = "<group>"; };
+		86F1DE87216F524200B6C603 /* EMASWindVaneScannerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneScannerVC.m; sourceTree = "<group>"; };
 		8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigTableViewController.h; sourceTree = "<group>"; };
 		8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfigTableViewController.m; sourceTree = "<group>"; };
 		8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopVerifyTableViewController.h; sourceTree = "<group>"; };
@@ -182,10 +209,6 @@
 		8ADA953B1FD9309400C0EF49 /* EMASDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMASDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ADA953E1FD9309400C0EF49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8ADA953F1FD9309400C0EF49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8ADA95411FD9309400C0EF49 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		8ADA95421FD9309400C0EF49 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		8ADA95441FD9309400C0EF49 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		8ADA95451FD9309400C0EF49 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		8ADA95481FD9309400C0EF49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8ADA954A1FD9309400C0EF49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8ADA954D1FD9309400C0EF49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -199,8 +222,6 @@
 		8ADA95671FD9309400C0EF49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ADA95731FDA3BA300C0EF49 /* FirstTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstTableViewController.h; sourceTree = "<group>"; };
 		8ADA95741FDA3BA300C0EF49 /* FirstTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewController.m; sourceTree = "<group>"; };
-		8ADA95761FDA3BB000C0EF49 /* SecondTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondTableViewController.h; sourceTree = "<group>"; };
-		8ADA95771FDA3BB000C0EF49 /* SecondTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondTableViewController.m; sourceTree = "<group>"; };
 		97BD7DEF55A6F7A44C7420EE /* Pods-EMASDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMASDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		980F855820BECC48002156A2 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		980F855920BECC48002156A2 /* OrangeRemoteConfigRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrangeRemoteConfigRootVC.h; sourceTree = "<group>"; };
@@ -231,6 +252,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8601D7002162075200BDFC46 /* AssetsLibrary.framework in Frameworks */,
+				8601D6E9215F61A700BDFC46 /* UserNotifications.framework in Frameworks */,
+				8601D6E6215F618500BDFC46 /* ContactsUI.framework in Frameworks */,
+				8601D6E7215F618500BDFC46 /* Contacts.framework in Frameworks */,
+				8601D6E2215F616400BDFC46 /* Messages.framework in Frameworks */,
+				8601D6E3215F616400BDFC46 /* MessageUI.framework in Frameworks */,
+				8601D6DE215F613D00BDFC46 /* AddressBook.framework in Frameworks */,
+				8601D6DF215F613D00BDFC46 /* AddressBookUI.framework in Frameworks */,
+				8601D6DB215F611000BDFC46 /* CoreBluetooth.framework in Frameworks */,
 				8AC0CB6E200312CF00FD44E6 /* MobileCoreServices.framework in Frameworks */,
 				8AB1A7BF1FFDDE51007C4675 /* UIKit.framework in Frameworks */,
 				7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */,
@@ -330,13 +360,35 @@
 			path = hotfix;
 			sourceTree = "<group>";
 		};
-		8651A2342174C65900345C7C /* preload */ = {
+		8601D6BA215F57C400BDFC46 /* WindVane */ = {
 			isa = PBXGroup;
 			children = (
-				8651A2352174C65900345C7C /* filance.js */,
-				8651A2362174C65900345C7C /* index.js */,
-				8651A2372174C65900345C7C /* life.js */,
-				8651A2382174C65900345C7C /* preload_packageapp.zip */,
+				86F1DE85216F501500B6C603 /* Scan */,
+				8601D6ED2160727000BDFC46 /* JSBridgeAPI */,
+				8601D6BB215F5A2B00BDFC46 /* EMASWindVaneConfig.h */,
+				8601D6BC215F5A2B00BDFC46 /* EMASWindVaneConfig.m */,
+				8601D6EA215F7A7E00BDFC46 /* EMASWindVaneViewController.h */,
+				8601D6EB215F7A7E00BDFC46 /* EMASWindVaneViewController.m */,
+			);
+			path = WindVane;
+			sourceTree = "<group>";
+		};
+		8601D6ED2160727000BDFC46 /* JSBridgeAPI */ = {
+			isa = PBXGroup;
+			children = (
+				8601D6EE2160728800BDFC46 /* WVNavigator.h */,
+				8601D6EF2160728900BDFC46 /* WVNavigator.m */,
+			);
+			path = JSBridgeAPI;
+			sourceTree = "<group>";
+		};
+		8601D703216B4A0100BDFC46 /* preload */ = {
+			isa = PBXGroup;
+			children = (
+				8601D704216B4A0100BDFC46 /* filance.js */,
+				8601D705216B4A0100BDFC46 /* index.js */,
+				8601D706216B4A0100BDFC46 /* life.js */,
+				8601D707216B4A0100BDFC46 /* preload_packageapp.zip */,
 			);
 			path = preload;
 			sourceTree = SOURCE_ROOT;
@@ -361,7 +413,6 @@
 				869B55DA21400A2100809084 /* EMASBaseNavigationController.m */,
 				869B55DB21400A2100809084 /* EMASNativeViewController.h */,
 				869B55D921400A2100809084 /* EMASNativeViewController.m */,
-				8601D68D215CCB3600BDFC46 /* WeexContainer-Info.plist */,
 			);
 			path = Weex;
 			sourceTree = "<group>";
@@ -389,6 +440,17 @@
 			children = (
 				869B55C82140068300809084 /* EMASScannerViewController.h */,
 				869B55C92140068300809084 /* EMASScannerViewController.m */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		86F1DE85216F501500B6C603 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				86F1DE82216F501000B6C603 /* EMASWindVaneScanViewController.h */,
+				86F1DE83216F501000B6C603 /* EMASWindVaneScanViewController.m */,
+				86F1DE86216F524200B6C603 /* EMASWindVaneScannerVC.h */,
+				86F1DE87216F524200B6C603 /* EMASWindVaneScannerVC.m */,
 			);
 			path = Scan;
 			sourceTree = "<group>";
@@ -421,32 +483,25 @@
 				3342C6C021A1AF62006B6A87 /* AccsReceiverTable.plist */,
 				3342C6BF21A1AF61006B6A87 /* PushSDKReceiverConfig.plist */,
 				8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */,
+				8611700E21916D7E00DCAB7F /* Scaffold-Info.plist */,
 				8A69B608200C8F980073756D /* EMASService.h */,
 				8A69B609200C8F980073756D /* EMASService.m */,
 				8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */,
-				8651A2342174C65900345C7C /* preload */,
+				8601D703216B4A0100BDFC46 /* preload */,
+				8601D6BA215F57C400BDFC46 /* WindVane */,
 				869B55BA2140068300809084 /* Weex */,
 				4A017CEB21006E59001FF027 /* man */,
 				1A65F6231FF2534A00B4573C /* AliHA */,
 				7D6260E11FDA8C5900E856CB /* hotfix */,
 				8ADA953E1FD9309400C0EF49 /* AppDelegate.h */,
 				8ADA953F1FD9309400C0EF49 /* AppDelegate.m */,
-				8ADA95411FD9309400C0EF49 /* FirstViewController.h */,
-				8ADA95421FD9309400C0EF49 /* FirstViewController.m */,
-				8ADA95441FD9309400C0EF49 /* SecondViewController.h */,
-				8ADA95451FD9309400C0EF49 /* SecondViewController.m */,
 				8ADA95471FD9309400C0EF49 /* Main.storyboard */,
 				8ADA954A1FD9309400C0EF49 /* Assets.xcassets */,
-				33D18D6220DA331700ACF0C7 /* wq_code_scanner_back@2x.png */,
-				33D18D6320DA331700ACF0C7 /* wq_code_scanner_line@2x.png */,
-				33D18D5D20DA31C400ACF0C7 /* btn_qr@2x.png */,
 				8ADA954C1FD9309400C0EF49 /* LaunchScreen.storyboard */,
 				8ADA954F1FD9309400C0EF49 /* Info.plist */,
 				8ADA95501FD9309400C0EF49 /* main.m */,
 				8ADA95731FDA3BA300C0EF49 /* FirstTableViewController.h */,
 				8ADA95741FDA3BA300C0EF49 /* FirstTableViewController.m */,
-				8ADA95761FDA3BB000C0EF49 /* SecondTableViewController.h */,
-				8ADA95771FDA3BB000C0EF49 /* SecondTableViewController.m */,
 				9A09D7901FF2721000585632 /* DemoDefine.h */,
 				33A2550B20FDE2EC00C3F673 /* push */,
 				33D18D4220DA04C000ACF0C7 /* accs */,
@@ -459,6 +514,8 @@
 				981DC5D720998B53006472AF /* MtopResultViewController.m */,
 				9815F23720A2F73F00F0F70D /* MtopCustomCell.h */,
 				9815F23820A2F73F00F0F70D /* MtopCustomCell.m */,
+				8611706321943A5000DCAB7F /* EMASPortalViewController.h */,
+				8611706421943A5000DCAB7F /* EMASPortalViewController.m */,
 			);
 			path = EMASDemo;
 			sourceTree = "<group>";
@@ -507,6 +564,15 @@
 		D270D82292708B86B2F528C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8601D6FF2162075100BDFC46 /* AssetsLibrary.framework */,
+				8601D6E8215F61A700BDFC46 /* UserNotifications.framework */,
+				8601D6E5215F618500BDFC46 /* Contacts.framework */,
+				8601D6E4215F618500BDFC46 /* ContactsUI.framework */,
+				8601D6E0215F616400BDFC46 /* Messages.framework */,
+				8601D6E1215F616400BDFC46 /* MessageUI.framework */,
+				8601D6DC215F613D00BDFC46 /* AddressBook.framework */,
+				8601D6DD215F613D00BDFC46 /* AddressBookUI.framework */,
+				8601D6DA215F611000BDFC46 /* CoreBluetooth.framework */,
 				8AC0CB6D200312CF00FD44E6 /* MobileCoreServices.framework */,
 				8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */,
 				C9D522707B463174EC727EEF /* libPods-EMASDemo.a */,
@@ -642,25 +708,23 @@
 				33D18D5C20DA30DC00ACF0C7 /* ACCSSettingViewController.xib in Resources */,
 				8651A23C2174C65900345C7C /* preload_packageapp.zip in Resources */,
 				3342C6C221A1AF62006B6A87 /* AccsReceiverTable.plist in Resources */,
+				8611700F21916D7E00DCAB7F /* Scaffold-Info.plist in Resources */,
+				8601D70A216B4A0100BDFC46 /* life.js in Resources */,
 				980F856F20BECC49002156A2 /* CustomCell.xib in Resources */,
 				980F856C20BECC49002156A2 /* OrangeFeatureFirstVC.xib in Resources */,
 				8ADA954B1FD9309400C0EF49 /* Assets.xcassets in Resources */,
 				7D8394A91FDB902900EBB60F /* fix.lua in Resources */,
 				980F856920BECC49002156A2 /* OrangeRemoteConfigRootVC.xib in Resources */,
 				8ADA95491FD9309400C0EF49 /* Main.storyboard in Resources */,
-				8601D68E215CCB3600BDFC46 /* WeexContainer-Info.plist in Resources */,
 				33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */,
-				33D18D6520DA331700ACF0C7 /* wq_code_scanner_line@2x.png in Resources */,
-				8651A23B2174C65900345C7C /* life.js in Resources */,
-				33D18D5E20DA31C500ACF0C7 /* btn_qr@2x.png in Resources */,
+				8601D709216B4A0100BDFC46 /* index.js in Resources */,
+				8601D70B216B4A0100BDFC46 /* preload_packageapp.zip in Resources */,
 				33A2551020FDE37000C3F673 /* PushViewController.xib in Resources */,
-				8651A2392174C65900345C7C /* filance.js in Resources */,
-				8651A23A2174C65900345C7C /* index.js in Resources */,
+				8601D708216B4A0100BDFC46 /* filance.js in Resources */,
 				8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */,
 				3342C6C121A1AF62006B6A87 /* PushSDKReceiverConfig.plist in Resources */,
 				980F856E20BECC49002156A2 /* OrangeRemotConfigDebugVC.xib in Resources */,
 				980F856B20BECC49002156A2 /* OrangeFeatureSecondVC.xib in Resources */,
-				33D18D6420DA331700ACF0C7 /* wq_code_scanner_back@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,14 +886,15 @@
 				869B55DD21400A2100809084 /* EMASBaseNavigationController.m in Sources */,
 				981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */,
 				980F856820BECC49002156A2 /* OrangeFeatureSecondVC.m in Sources */,
-				8ADA95461FD9309400C0EF49 /* SecondViewController.m in Sources */,
 				8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */,
 				33D18D5620DA2CFB00ACF0C7 /* ACCSViewController.m in Sources */,
 				4A017CF321006EC7001FF027 /* BaseUIViewController.m in Sources */,
 				869B55DC21400A2100809084 /* EMASNativeViewController.m in Sources */,
 				869B55CE2140068400809084 /* EMASWXNavigationImpl.m in Sources */,
 				9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */,
+				86F1DE88216F524200B6C603 /* EMASWindVaneScannerVC.m in Sources */,
 				4A017CF421006EC7001FF027 /* MANViewController.m in Sources */,
+				8611706521943A5000DCAB7F /* EMASPortalViewController.m in Sources */,
 				869B55CA2140068400809084 /* UIViewController+EMASWXNaviBar.m in Sources */,
 				8ADA95751FDA3BA300C0EF49 /* FirstTableViewController.m in Sources */,
 				33D18D5B20DA30DC00ACF0C7 /* ACCSSettingViewController.m in Sources */,
@@ -841,6 +906,7 @@
 				980F856A20BECC49002156A2 /* OrangeRemotConfigDebugVC.m in Sources */,
 				8ADA95511FD9309400C0EF49 /* main.m in Sources */,
 				3342C6BE21A1AF07006B6A87 /* PushMessageReceiver.m in Sources */,
+				8601D6F02160728900BDFC46 /* WVNavigator.m in Sources */,
 				869B55CD2140068400809084 /* EMASWXSubSDKEngine.m in Sources */,
 				33D18D6120DA330100ACF0C7 /* WQCodeScanner.m in Sources */,
 				869B55CC2140068400809084 /* EMASWXRenderViewController.m in Sources */,
@@ -848,11 +914,12 @@
 				980F857120BECC49002156A2 /* CustomCell.m in Sources */,
 				8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */,
 				7D6260E61FDA8C5A00E856CB /* HFXTestClass.m in Sources */,
+				8601D6BD215F5A2B00BDFC46 /* EMASWindVaneConfig.m in Sources */,
 				8A69B60A200C8F980073756D /* EMASService.m in Sources */,
+				86F1DE84216F501000B6C603 /* EMASWindVaneScanViewController.m in Sources */,
+				8601D6EC215F7A7E00BDFC46 /* EMASWindVaneViewController.m in Sources */,
 				33A2550F20FDE37000C3F673 /* PushViewController.m in Sources */,
 				869B55CF2140068400809084 /* EMASScannerViewController.m in Sources */,
-				8ADA95431FD9309400C0EF49 /* FirstViewController.m in Sources */,
-				8ADA95781FDA3BB000C0EF49 /* SecondTableViewController.m in Sources */,
 				980F856D20BECC49002156A2 /* OrangeFeatureFirstVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1020,6 +1087,7 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_ENTITLEMENTS = EMASDemo/EMASDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1030,6 +1098,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EMASDemo/hotfix",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Pods/WindVane",
 				);
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1050,6 +1119,7 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_ENTITLEMENTS = EMASDemo/EMASDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1060,11 +1130,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EMASDemo/hotfix",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Pods/WindVane",
 				);
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.emas.push.demo;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

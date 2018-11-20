@@ -96,6 +96,9 @@
 //        }
 //    }
     NSURL *url = [NSURL URLWithString:transformURL];
+    if (!url) {
+        return;
+    }
     if ([self remoteDebug:url]) {
         return;
     }

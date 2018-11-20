@@ -10,6 +10,8 @@
 #import <objc/message.h>
 #import <WeexSDK/WXDebugTool.h>
 #import "UIViewController+EMASWXNaviBar.h"
+//#import "EMASWindVaneViewController.h"
+#import <DynamicConfiguration/DynamicConfigurationManager.h>
 
 @interface EMASHostViewController()
 
@@ -51,7 +53,6 @@
             //webview打开
             [self wxDegradeToH5:urlString];
         }
-        
     }
     return self;
 }
@@ -95,9 +96,9 @@
 
 - (void)wxFailCreateInstance:(NSError *)error {
     //Weex Instance创建失败
-//    if ([error.localizedDescription containsString:@"404"]) {
-//        [[DynamicConfigurationManager sharedInstance] deleteConfigurationForGoalUrl:self.resourceUrlString];
-//    }
+    if ([error.localizedDescription containsString:@"404"]) {
+        [[DynamicConfigurationManager sharedInstance] deleteConfigurationForGoalUrl:self.resourceUrlString];
+    }
 }
 
 - (void)wxFinishRenderInstance {
@@ -106,6 +107,7 @@
 
 - (void)wxDegradeToH5:(NSString *)url
 {
+#if 1
     [self.wxViewController.instance destroyInstance];
     [self.wxViewController.weexView removeFromSuperview];
     [self.webView removeFromSuperview];
@@ -113,6 +115,14 @@
     self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
     [self.view addSubview:self.webView];
+    
+#else
+    EMASWindVaneViewController *vc = [[EMASWindVaneViewController alloc] init];
+    vc.loadUrl = url;
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+#endif
+
 }
 
 

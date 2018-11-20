@@ -1,19 +1,28 @@
-/**
- * Created by Weex.
- * Copyright (c) 2016, Alibaba, Inc. All rights reserved.
- *
- * This source code is licensed under the Apache Licence 2.0.
- * For the full copyright and license information,please view the LICENSE file in the root directory of this source tree.
- */
+//
+//  EMASWindVaneScanViewController.m
+//  EMASDemo
+//
+//  Created by daoche.jb on 2018/10/11.
+//  Copyright © 2018年 EMAS. All rights reserved.
+//
 
-#import "UIViewController+EMASWXNaviBar.h"
-#import "EMASScannerViewController.h"
-#import <WeexSDK/WeexSDK.h>
-//#import "WXDefine.h"
+#import "EMASWindVaneScanViewController.h"
 #import <objc/runtime.h>
+#import "EMASWindVaneScannerVC.h"
 #define WEEX_COLOR [UIColor colorWithRed:0.2 green:0.6 blue:1.0 alpha:1]
 
-@implementation UIViewController (EMASWXNaviBar)
+@interface EMASWindVaneScanViewController ()<UIGestureRecognizerDelegate>
+
+@end
+
+@implementation EMASWindVaneScanViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self setupNaviBar];
+    self.view.backgroundColor = [UIColor whiteColor];
+}
 
 - (void)setupNaviBar
 {
@@ -35,7 +44,7 @@
     
     [self.navigationController.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                                       [UIColor whiteColor], NSForegroundColorAttributeName, nil]];
-    self.navigationItem.title = @"Weex页面演示";
+    self.navigationItem.title = @"H5页面演示";
     
     if (!self.navigationItem.leftBarButtonItem) {
         UIBarButtonItem *leftItem;
@@ -46,7 +55,9 @@
         }
         self.navigationItem.leftBarButtonItems = @[leftItem];
     }
-
+    
+    self.navigationItem.rightBarButtonItems = @[[self leftBarButtonItem]];
+    
 }
 
 - (void)edgePanGesture:(UIScreenEdgePanGestureRecognizer*)edgePanGestureRecognizer
@@ -73,7 +84,7 @@
     if (!leftItem) {
         leftItem = [[UIBarButtonItem alloc]
                     initWithImage:[UIImage imageNamed:@"scan"]
-                     style:UIBarButtonItemStylePlain
+                    style:UIBarButtonItemStylePlain
                     target:self
                     action:@selector(scanQR:)];
         leftItem.accessibilityHint = @"click to scan qr code";
@@ -101,7 +112,7 @@
 
 - (void)scanQR:(id)sender
 {
-    EMASScannerViewController * scanViewController = [[EMASScannerViewController alloc] init];
+    EMASWindVaneScannerVC * scanViewController = [[EMASWindVaneScannerVC alloc] init];
     [self.navigationController pushViewController:scanViewController animated:YES];
 }
 
@@ -109,5 +120,6 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 
 @end

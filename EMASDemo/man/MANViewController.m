@@ -36,6 +36,8 @@ static NSString *scheme = @"https";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"数据分析";
+    self.view.backgroundColor = [UIColor whiteColor];
     
     CGFloat xStart = 50;
     CGFloat yStart = 100;
