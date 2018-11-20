@@ -181,20 +181,20 @@
             [self.navigationController pushViewController:mvc animated:YES];
             break;
         }
-        case 8:
-        {
-            EMASNativeViewController *controller = [[EMASNativeViewController alloc] init];
-            [self.navigationController pushViewController:controller animated:YES];
-            break;
-        }
-        case 9:
-        {
-            EMASWindVaneScanViewController *controller = [[EMASWindVaneScanViewController alloc] init];
-            //controller.loadUrl = @"http://wapp.m.taobao.com/app/windvane/jsbridge.html";
-            //controller.loadUrl = @"http://chaoshi.m.tmall.com";
-            [self.navigationController pushViewController:controller animated:YES];
-            break;
-        }
+//        case 8:
+//        {
+//            EMASNativeViewController *controller = [[EMASNativeViewController alloc] init];
+//            [self.navigationController pushViewController:controller animated:YES];
+//            break;
+//        }
+//        case 9:
+//        {
+//            EMASWindVaneScanViewController *controller = [[EMASWindVaneScanViewController alloc] init];
+//            //controller.loadUrl = @"http://wapp.m.taobao.com/app/windvane/jsbridge.html";
+//            //controller.loadUrl = @"http://chaoshi.m.tmall.com";
+//            [self.navigationController pushViewController:controller animated:YES];
+//            break;
+//        }
     }
 }
 
