@@ -27,6 +27,8 @@
     [WVUserConfig setAppUA:[NSString stringWithFormat:@"TBIOS"]];
     // 设置 App 名称，会在 UserAgent 中带上，请务必正确设置。
     [WVUserConfig setAppName:@"EMASDemo"];
+    //取消域名安全策略
+    [WVConfigManager defaultDomainConfig].aliDomain = @"";
     // 设置app版本
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     [WVUserConfig setAppVersion: [infoDictionary objectForKey:@"CFBundleShortVersionString"]];
