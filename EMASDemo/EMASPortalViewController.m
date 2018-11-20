@@ -46,12 +46,15 @@
 }
 
 - (IBAction)didWeexShowButtonClicked:(id)sender {
-    EMASNativeViewController *controller = [[EMASNativeViewController alloc] init];
+    EMASNativeViewController *controller = [[EMASNativeViewController alloc] initWithNavigatorURL:[NSURL URLWithString:@"http://cdn.emas-poc.com/material/yanpeicpf/index.html?_wx_tpl=http://cdn.emas-poc.com/app/yanpeicpf-bbb/pages/index/entry.js"]];
+    //controller
     [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (IBAction)didH5ShowButtonClicked:(id)sender {
     EMASWindVaneScanViewController *controller = [[EMASWindVaneScanViewController alloc] init];
+    controller.loadUrl = @"http://cdn.emas-poc.com/app/yanpeicpf-aaa/index.html";
+    
     //controller.loadUrl = @"http://wapp.m.taobao.com/app/windvane/jsbridge.html";
     //controller.loadUrl = @"http://chaoshi.m.tmall.com";
     [self.navigationController pushViewController:controller animated:YES];

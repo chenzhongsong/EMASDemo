@@ -235,7 +235,7 @@
 
 - (void)showBlankViewController
 {
-    EMASNativeViewController *viewController = [[EMASNativeViewController alloc] init];
+    EMASNativeViewController *viewController = [[EMASNativeViewController alloc] initWithNavigatorURL:[NSURL URLWithString:@"http://cdn.emas-poc.com/material/yanpeicpf/index.html?_wx_tpl=http://cdn.emas-poc.com/app/yanpeicpf-bbb/pages/index/entry.js"]];
     self.window.rootViewController = [[EMASBaseNavigationController alloc] initWithRootViewController:viewController];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -439,15 +439,17 @@
     NSLog(@"[APNS] register error: %@", error);
 }
 
-//收到远程通知后的回调事件（如设置埋点、弹出警告框等）
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    NSString *alertr = [NSString stringWithFormat: @"%s, %d \n %@", __FUNCTION__, __LINE__, userInfo];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle: alertr
-                                                        message: nil
-                                                       delegate: nil
-                                              cancelButtonTitle: @"yes"
-                                              otherButtonTitles: nil];
-    [alertView show];
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler {
+    
+    NSLog(@">>>>>>> [AGOO MESSAGE]: %@", userInfo);
+    
+    NSString *text = [userInfo description];
+    if ( !text ) {
+        text = @"消息解析失败!";
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AGOO 消息" message:text delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 #pragma mark - distinguish device
