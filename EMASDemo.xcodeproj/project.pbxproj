@@ -12,7 +12,6 @@
 		3342C6C121A1AF62006B6A87 /* PushSDKReceiverConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3342C6BF21A1AF61006B6A87 /* PushSDKReceiverConfig.plist */; };
 		3342C6C221A1AF62006B6A87 /* AccsReceiverTable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3342C6C021A1AF62006B6A87 /* AccsReceiverTable.plist */; };
 		33A2550F20FDE37000C3F673 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A2550D20FDE37000C3F673 /* PushViewController.m */; };
-		33A2551020FDE37000C3F673 /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A2550E20FDE37000C3F673 /* PushViewController.xib */; };
 		33CD22D221A3E2C10005D834 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CD22D121A3E2C10005D834 /* NotificationService.m */; };
 		33CD22D621A3E2C10005D834 /* EMASDemo Notification Extension Service.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 33CD22CE21A3E2C10005D834 /* EMASDemo Notification Extension Service.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		33CD22DD21A3E93D0005D834 /* TBNotificationServiceError.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CD22DC21A3E93D0005D834 /* TBNotificationServiceError.m */; };
@@ -148,7 +147,6 @@
 		3342C6C021A1AF62006B6A87 /* AccsReceiverTable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AccsReceiverTable.plist; sourceTree = SOURCE_ROOT; };
 		33A2550C20FDE37000C3F673 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
 		33A2550D20FDE37000C3F673 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
-		33A2550E20FDE37000C3F673 /* PushViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
 		33CD22CE21A3E2C10005D834 /* EMASDemo Notification Extension Service.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EMASDemo Notification Extension Service.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CD22D021A3E2C10005D834 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
 		33CD22D121A3E2C10005D834 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
@@ -725,8 +723,11 @@
 				TargetAttributes = {
 					33CD22CD21A3E2C10005D834 = {
 						CreatedOnToolsVersion = 10.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -734,7 +735,7 @@
 					};
 					8ADA953A1FD9309400C0EF49 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -807,7 +808,6 @@
 				33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */,
 				8601D70B216B4A0100BDFC46 /* preload_packageapp.zip in Resources */,
 				87FA349221A3BA8E0095673C /* PushViewController.xib in Resources */,
-				8601D708216B4A0100BDFC46 /* filance.js in Resources */,
 				8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */,
 				3342C6C121A1AF62006B6A87 /* PushSDKReceiverConfig.plist in Resources */,
 				33E1BAA221A4290A00E81E32 /* hongbao.wav in Resources */,
@@ -1086,7 +1086,7 @@
 				CODE_SIGN_ENTITLEMENTS = "EMASDemo Notification Extension Service/EMASDemo Notification Extension Service.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VSW2PKYTD7;
 				INFOPLIST_FILE = "$(SRCROOT)/EMASDemo Notification Extension Service/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1095,6 +1095,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push.notificationextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = emas_push_notificationextension_profile;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1109,14 +1110,15 @@
 				CODE_SIGN_ENTITLEMENTS = "EMASDemo Notification Extension Service/EMASDemo Notification Extension Service.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VSW2PKYTD7;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/EMASDemo Notification Extension Service/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push.notificationextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1238,7 +1240,7 @@
 				CODE_SIGN_ENTITLEMENTS = EMASDemo/EMASDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VSW2PKYTD7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1253,7 +1255,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = emas_push_profile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1270,8 +1272,7 @@
 				CODE_SIGN_ENTITLEMENTS = EMASDemo/EMASDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VSW2PKYTD7;
+				CODE_SIGN_STYLE = Manual;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

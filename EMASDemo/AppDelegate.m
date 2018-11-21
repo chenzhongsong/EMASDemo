@@ -63,6 +63,9 @@
 // --WindVane
 #import "EMASWindVaneConfig.h"
 
+// Push
+#import <UserNotifications/UserNotifications.h>
+
 @interface MyPolicyCenter : NSObject <NWPolicyDelegate>
 @end
 
@@ -132,7 +135,7 @@
 
 @end
 
-@interface AppDelegate ()
+@interface AppDelegate () <UNUserNotificationCenterDelegate>
 @property(nonatomic,strong) MyPolicyCenter *policyCenter;
 @end
 
@@ -297,14 +300,29 @@
 }
 
 - (void)registerNotificationSetting {
-    //registerUserNotificationSettings function must be used from main thread only
-    [[UIApplication sharedApplication] registerUserNotificationSettings:
+    if (@available(iOS 10.0, *)) {
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate = self;
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if(!error) {
+                NSLog( @"Push registration FAILED" );
+                NSLog( @"ERROR: %@ - %@", error.localizedFailureReason, error.localizedDescription );
+                NSLog( @"SUGGESTIONS: %@ - %@", error.localizedRecoveryOptions, error.localizedRecoverySuggestion );
+                return;
+            }
+            
+            [[UIApplication sharedApplication] registerForRemoteNotifications];
+            NSLog( @"Push registration success." );
+        }];
+    } else {
+        [[UIApplication sharedApplication] registerUserNotificationSettings:
          [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge)
                                            categories:nil]];
-    
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
-    
-    NSLog(@"[APNS] registerNotificationSetting");
+        
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+        
+        NSLog(@"[APNS] registerNotificationSetting");
+    }
 }
 
 //-- 高可用
@@ -386,9 +404,7 @@
     openOrangeLog(OrangeLogLevel_ALL);
     [Orange setOrangeDataCenterOnlineHost:service.RemoteConfigHost debugHost:service.RemoteConfigHost dailyHost:service.RemoteConfigHost];
     [Orange setOrangeBetaModeAccsHost:@[service.ACCSDomain,service.ACCSDomain,service.ACCSDomain]];
-    [Orange runMode:OrangeUpateModeEvent];
-
-    
+    [Orange runMode:OrangeUpateModeEvent];    
 }
 
 #pragma mark -
@@ -439,15 +455,27 @@
     NSLog(@"[APNS] register error: %@", error);
 }
 
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler {
-    
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     NSLog(@">>>>>>> [AGOO MESSAGE]: %@", userInfo);
-    
+
     NSString *text = [userInfo description];
     if ( !text ) {
         text = @"消息解析失败!";
     }
-    
+
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AGOO 消息" message:text delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler  API_AVAILABLE(ios(10.0)){
+    NSDictionary *userInfo = response.notification.request.content.userInfo;
+    NSLog(@">>>>>>> [AGOO MESSAGE]: %@", userInfo);
+
+    NSString *text = [userInfo description];
+    if ( !text ) {
+        text = @"消息解析失败!";
+    }
+
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AGOO 消息" message:text delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
     [alert show];
 }

@@ -10,6 +10,7 @@
 #import <AliEMASConfigure/AliEMASConfigure.h>
 #import <PushCenterSDK/TBSDKPushCenterConfiguration.h>
 #import <PushCenterSDK/TBSDKPushCenterEngine.h>
+#import "TBAccsSDK/TBAccsManager.h"
 #include <sys/utsname.h>
 #import <objc/runtime.h>
 
@@ -19,18 +20,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *bundleidLabel;
 @property (weak, nonatomic) IBOutlet UILabel *brandLabel;
 @property (weak, nonatomic) IBOutlet UILabel *deviceModelLabel;
-@property (weak, nonatomic) IBOutlet UITextView *deviceidLabel;
+@property (weak, nonatomic) IBOutlet UITextField *deviceidLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *accsHostLabel;
 @property (weak, nonatomic) IBOutlet UILabel *accsChannelLabel;
 
 @property (weak, nonatomic) IBOutlet UITextField *aliasTextField;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *bindSegmentControl;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *pushSegmentControl;
-
-@property (nonatomic, assign) BOOL binded;
-@property (nonatomic, assign) BOOL pushed;
 @end
 
 @implementation PushViewController
@@ -49,10 +45,40 @@
     self.bundleidLabel.text = options.bundleID;
     self.brandLabel.text = @"iPhone";
     self.deviceModelLabel.text = [self.class currentModel];
-    self.deviceidLabel.text = [self getUTDid];
+    self.deviceidLabel.text = [[TBSDKPushCenterEngine shareInstance] getDeviceID];
     self.versionLabel.text = [@([[[UIDevice currentDevice] systemVersion] floatValue]) stringValue];
     self.accsHostLabel.text = options.accsOptions.defaultIP;
-    self.accsChannelLabel.text = @"offline";
+    self.aliasTextField.text = @"Brant";
+    
+    // ACCS 通过配置文件自初始化
+    TBAccsManager *accsManager = [TBAccsManager accsManagerByConfigureName:nil];
+    if ([accsManager canRequest]) {
+        self.accsChannelLabel.text = @"Online";
+    } else {
+        self.accsChannelLabel.text = @"Offline";
+    }
+    
+    // 注册ACCS通道通断事件
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(onAccsStatusChanged:)
+                                                 name: k_Accs_Aisle_OK // ACCS 通道连接成功
+                                               object: nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(onAccsStatusChanged:)
+                                                 name: k_Accs_Aisle_NO // ACCS 通道断开
+                                               object: nil];
+}
+
+- (void)onAccsStatusChanged:(NSNotification *)noti {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([noti.name isEqualToString:k_Accs_Aisle_OK]) {
+            self.accsChannelLabel.text = @"Online";
+        }
+        else if ([noti.name isEqualToString:k_Accs_Aisle_NO]) {
+            self.accsChannelLabel.text = @"Offline";
+        }
+    });
 }
 
 #pragma mark- Override Parent Methods
@@ -61,22 +87,20 @@
 
 #pragma mark- Actions
 
+- (IBAction)didEndOnExit:(UITextField *)sender {
+    [sender resignFirstResponder];
+}
+
 - (IBAction)touchGestureAction:(id)sender {
     [self.view endEditing:YES];
 }
 
-- (IBAction)bindSegmentAction:(UISegmentedControl *)segmentControl {
-    if (segmentControl.selectedSegmentIndex == 0) {
-        [self bindUser];
-    }
-    
-    if (segmentControl.selectedSegmentIndex == 1) {
-        [self unbindUser];
-    }
+- (IBAction)bindUserAction:(id)sender {
+    [self bindUser];
 }
 
-- (IBAction)pushSegmentAction:(UISegmentedControl *)segmentControl {
-    
+- (IBAction)unbindUserAction:(id)sender {
+    [self unbindUser];
 }
 
 #pragma mark- Public Methods
@@ -90,10 +114,6 @@
     if (alias.length == 0) {
         [self displayText:@"别名不能为空"];
         
-        if (!self.binded) {
-            [self.bindSegmentControl setSelectedSegmentIndex:1];
-        }
-        
         return;
     }
     
@@ -101,11 +121,8 @@
     [pce bindUserIntoPushCenterWithAlias:alias userInfo:nil callback:^(NSDictionary *result, NSError *error){
         if (error) {
             [self displayText:[NSString stringWithFormat:@"绑定别名错误:%@", error]];
-            if (!self.binded) {
-                [self.bindSegmentControl setSelectedSegmentIndex:1];
-            } else {
-                self.binded = YES;
-            }
+        } else {
+            [self displayText:[NSString stringWithFormat:@"绑定别名成功"]];
         }
     }];
 }
@@ -115,11 +132,8 @@
     [pce unbindUserIntoPushCenterWithPushUserInfo:nil callback:^(NSDictionary *result, NSError *error){
         if (error) {
             [self displayText:[NSString stringWithFormat:@"解绑别名发生错误: %@", error]];
-            if (self.binded) {
-                [self.bindSegmentControl setSelectedSegmentIndex:0];
-            }
         } else {
-            self.binded = NO;
+            [self displayText:[NSString stringWithFormat:@"解除绑定别名成功"]];
         }
     }];
 }
@@ -129,7 +143,7 @@
         return;
     }
     
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"错误" message:text preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:text preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
     [alertController addAction:ok];
     [self presentViewController:alertController animated:YES completion:nil];
