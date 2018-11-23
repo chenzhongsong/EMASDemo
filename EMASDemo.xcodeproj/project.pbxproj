@@ -89,7 +89,7 @@
 		980F857120BECC49002156A2 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F856620BECC49002156A2 /* CustomCell.m */; };
 		9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9815F23820A2F73F00F0F70D /* MtopCustomCell.m */; };
 		981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981DC5D720998B53006472AF /* MtopResultViewController.m */; };
-		F2AEA74CFBBBDD9338DF0F3C /* libPods-EMASDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D522707B463174EC727EEF /* libPods-EMASDemo.a */; };
+		FF46C4EFA5A002A812E18F53 /* libPods-EMASDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D522707B463174EC727EEF /* libPods-EMASDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,7 +141,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0841F49C85C633B167F1BB45 /* Pods-EMASDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMASDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo.release.xcconfig"; sourceTree = "<group>"; };
 		1A65F6241FF253CF00B4573C /* AliHATestCaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliHATestCaseViewController.h; sourceTree = "<group>"; };
 		1A65F6251FF253CF00B4573C /* AliHATestCaseViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AliHATestCaseViewController.mm; sourceTree = "<group>"; };
 		3342C6BC21A1AF07006B6A87 /* PushMessageReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushMessageReceiver.h; sourceTree = "<group>"; };
@@ -255,6 +254,7 @@
 		8ADA95671FD9309400C0EF49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ADA95731FDA3BA300C0EF49 /* FirstTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstTableViewController.h; sourceTree = "<group>"; };
 		8ADA95741FDA3BA300C0EF49 /* FirstTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewController.m; sourceTree = "<group>"; };
+		8E3940FA5D2B7CA506DC1A36 /* Pods-EMASDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMASDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo.release.xcconfig"; sourceTree = "<group>"; };
 		97BD7DEF55A6F7A44C7420EE /* Pods-EMASDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMASDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		980F855820BECC48002156A2 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		980F855920BECC48002156A2 /* OrangeRemoteConfigRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrangeRemoteConfigRootVC.h; sourceTree = "<group>"; };
@@ -305,7 +305,7 @@
 				8AB1A7BF1FFDDE51007C4675 /* UIKit.framework in Frameworks */,
 				7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */,
 				7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */,
-				F2AEA74CFBBBDD9338DF0F3C /* libPods-EMASDemo.a in Frameworks */,
+				FF46C4EFA5A002A812E18F53 /* libPods-EMASDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				97BD7DEF55A6F7A44C7420EE /* Pods-EMASDemo.debug.xcconfig */,
-				0841F49C85C633B167F1BB45 /* Pods-EMASDemo.release.xcconfig */,
+				8E3940FA5D2B7CA506DC1A36 /* Pods-EMASDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -661,16 +661,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8ADA956A1FD9309400C0EF49 /* Build configuration list for PBXNativeTarget "EMASDemo" */;
 			buildPhases = (
-				825039DA85D5B5D38C35EE8C /* [CP] Check Pods Manifest.lock */,
-				579AA850E8214768859E3DFA /* [CP] Check Pods Manifest.lock */,
-				D784AF3C3C4686A8D23CC66A /* [CP] Check Pods Manifest.lock */,
+				7E52B87F8848102D355C54FE /* [CP] Check Pods Manifest.lock */,
 				8ADA95371FD9309400C0EF49 /* Sources */,
 				8ADA95381FD9309400C0EF49 /* Frameworks */,
 				8ADA95391FD9309400C0EF49 /* Resources */,
 				AA85B2CA3C2F5806D1BDF7DB /* [CP] Copy Pods Resources */,
 				67DAC7CF7E1FB0DDB324BBC0 /* 📦 Copy Pods Resources */,
 				8ABD97BD1FF4D55700469557 /* Embed Watch Content */,
-				F4FCA1556D861474F87E39BC /* [CP] Embed Pods Frameworks */,
 				33CD22DA21A3E2C10005D834 /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -841,21 +838,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		579AA850E8214768859E3DFA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		67DAC7CF7E1FB0DDB324BBC0 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -871,7 +853,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		825039DA85D5B5D38C35EE8C /* [CP] Check Pods Manifest.lock */ = {
+		7E52B87F8848102D355C54FE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -886,7 +868,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AA85B2CA3C2F5806D1BDF7DB /* [CP] Copy Pods Resources */ = {
@@ -902,6 +884,9 @@
 				"${PODS_ROOT}/AliHAPerformanceMonitor/AliHAPerformanceMonitor.framework/alihaperformancemonitor_bundle.plist",
 				"${PODS_ROOT}/AliHASecurity/AliHASecurity.framework/alihasecurity_bundle.plist",
 				"${PODS_ROOT}/EMASWeex/EMASWeex.framework/EMASWeex-Info.plist",
+				"${PODS_ROOT}/EmasXBase/EmasXBase.framework/zh.lproj",
+				"${PODS_ROOT}/EmasXBase/EmasXBase.framework/XCOPatternLockViewController.nib",
+				"${PODS_ROOT}/EmasXBase/EmasXBase.framework/XCOPatternLock.xcassets",
 				"${PODS_ROOT}/JDYThreadTrace/JDYThreadTrace.framework/.gitkeep",
 				"${PODS_ROOT}/JDYThreadTrace/JDYThreadTrace.framework/JDYThreadTrace.podspec",
 				"${PODS_ROOT}/TBRest/TBRest.framework/TBRest.podspec",
@@ -921,6 +906,9 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihaperformancemonitor_bundle.plist",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihasecurity_bundle.plist",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EMASWeex-Info.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zh.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/XCOPatternLockViewController.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.car",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/.gitkeep",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JDYThreadTrace.podspec",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TBRest.podspec",
@@ -934,39 +922,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D784AF3C3C4686A8D23CC66A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EMASDemo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F4FCA1556D861474F87E39BC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1118,17 +1073,17 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_ENTITLEMENTS = "EMASDemo Notification Extension Service/EMASDemo Notification Extension Service.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: kun ling (VSW2PKYTD7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: kun ling (VSW2PKYTD7)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VSW2PKYTD7;
 				INFOPLIST_FILE = "$(SRCROOT)/EMASDemo Notification Extension Service/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push.notificationextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = emas_push_notificationextension_profile_adhoc;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1248,20 +1203,89 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_ENTITLEMENTS = EMASDemo/EMASDemo.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: kun ling (VD2NZ36RV4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kun ling (VD2NZ36RV4)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VSW2PKYTD7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EMASDemo/hotfix",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/**",
 					"$(PROJECT_DIR)/Pods/WindVane",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+					"\"${PODS_ROOT}/Headers/Public/AliEMASConfigure\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHAAdapter4poc\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHACore\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHADeviceEvaluation\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHALogEngine\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHAMemoryMonitor\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHAMethodTrace\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHAPerformanceMonitor\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHAProtocol\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHASecurity\"",
+					"\"${PODS_ROOT}/Headers/Public/AliNetStateInterface\"",
+					"\"${PODS_ROOT}/Headers/Public/AlicloudHotFixDebugEmas\"",
+					"\"${PODS_ROOT}/Headers/Public/AlicloudLua\"",
+					"\"${PODS_ROOT}/Headers/Public/AlicloudUTDID\"",
+					"\"${PODS_ROOT}/Headers/Public/AlicloudUtils\"",
+					"\"${PODS_ROOT}/Headers/Public/AliyunOSSiOS\"",
+					"\"${PODS_ROOT}/Headers/Public/BizErrorReporter4iOS\"",
+					"\"${PODS_ROOT}/Headers/Public/CYLTabBarController\"",
+					"\"${PODS_ROOT}/Headers/Public/CrashReporter\"",
+					"\"${PODS_ROOT}/Headers/Public/DynamicConfiguration\"",
+					"\"${PODS_ROOT}/Headers/Public/DynamicConfigurationAdaptor\"",
+					"\"${PODS_ROOT}/Headers/Public/EMASMAN\"",
+					"\"${PODS_ROOT}/Headers/Public/EMASWeex\"",
+					"\"${PODS_ROOT}/Headers/Public/EmasWeexComponents\"",
+					"\"${PODS_ROOT}/Headers/Public/EmasXBase\"",
+					"\"${PODS_ROOT}/Headers/Public/FBAllocationTracker\"",
+					"\"${PODS_ROOT}/Headers/Public/FBMemoryProfiler\"",
+					"\"${PODS_ROOT}/Headers/Public/FBRetainCycleDetector\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/JDYThreadTrace\"",
+					"\"${PODS_ROOT}/Headers/Public/MtopSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/NetworkSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/PushCenterSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
+					"\"${PODS_ROOT}/Headers/Public/RemoteDebugChannel\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/TBAccsSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/TBCrashReporter\"",
+					"\"${PODS_ROOT}/Headers/Public/TBJSONModel\"",
+					"\"${PODS_ROOT}/Headers/Public/TBRest\"",
+					"\"${PODS_ROOT}/Headers/Public/TRemoteDebugger\"",
+					"\"${PODS_ROOT}/Headers/Public/UserTrack\"",
+					"\"${PODS_ROOT}/Headers/Public/WXDevtool\"",
+					"\"${PODS_ROOT}/Headers/Public/WeexPluginLoader\"",
+					"\"${PODS_ROOT}/Headers/Public/WeexSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/WindVane\"",
+					"\"${PODS_ROOT}/Headers/Public/ZCache\"",
+					"\"${PODS_ROOT}/Headers/Public/ZipArchive\"",
+					"\"${PODS_ROOT}/Headers/Public/mtopext\"",
+					"\"${PODS_ROOT}/Headers/Public/orange\"",
+					"\"${PODS_ROOT}/Headers/Public/tnet\"",
+					"\"${PODS_ROOT}/Headers/**\"",
 				);
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/AliyunOSSiOS\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/CYLTabBarController\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/FBAllocationTracker\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/FMDB\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Reachability\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SDWebImage\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SocketRocket\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/ZipArchive\"",
+					"\"${PODS_ROOT}/AlicloudLua/liblua/lib\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1272,7 +1296,7 @@
 		};
 		8ADA956C1FD9309400C0EF49 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0841F49C85C633B167F1BB45 /* Pods-EMASDemo.release.xcconfig */;
+			baseConfigurationReference = 8E3940FA5D2B7CA506DC1A36 /* Pods-EMASDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -1280,9 +1304,10 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_ENTITLEMENTS = EMASDemo/EMASDemo.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: kun ling (VSW2PKYTD7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: kun ling (VSW2PKYTD7)";
 				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VSW2PKYTD7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1290,14 +1315,82 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Pods/WindVane",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+					"\"${PODS_ROOT}/Headers/Public/AliEMASConfigure\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHAAdapter4poc\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHACore\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHADeviceEvaluation\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHALogEngine\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHAMemoryMonitor\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHAMethodTrace\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHAPerformanceMonitor\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHAProtocol\"",
+					"\"${PODS_ROOT}/Headers/Public/AliHASecurity\"",
+					"\"${PODS_ROOT}/Headers/Public/AliNetStateInterface\"",
+					"\"${PODS_ROOT}/Headers/Public/AlicloudHotFixDebugEmas\"",
+					"\"${PODS_ROOT}/Headers/Public/AlicloudLua\"",
+					"\"${PODS_ROOT}/Headers/Public/AlicloudUTDID\"",
+					"\"${PODS_ROOT}/Headers/Public/AlicloudUtils\"",
+					"\"${PODS_ROOT}/Headers/Public/AliyunOSSiOS\"",
+					"\"${PODS_ROOT}/Headers/Public/BizErrorReporter4iOS\"",
+					"\"${PODS_ROOT}/Headers/Public/CYLTabBarController\"",
+					"\"${PODS_ROOT}/Headers/Public/CrashReporter\"",
+					"\"${PODS_ROOT}/Headers/Public/DynamicConfiguration\"",
+					"\"${PODS_ROOT}/Headers/Public/DynamicConfigurationAdaptor\"",
+					"\"${PODS_ROOT}/Headers/Public/EMASMAN\"",
+					"\"${PODS_ROOT}/Headers/Public/EMASWeex\"",
+					"\"${PODS_ROOT}/Headers/Public/EmasWeexComponents\"",
+					"\"${PODS_ROOT}/Headers/Public/EmasXBase\"",
+					"\"${PODS_ROOT}/Headers/Public/FBAllocationTracker\"",
+					"\"${PODS_ROOT}/Headers/Public/FBMemoryProfiler\"",
+					"\"${PODS_ROOT}/Headers/Public/FBRetainCycleDetector\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/JDYThreadTrace\"",
+					"\"${PODS_ROOT}/Headers/Public/MtopSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/NetworkSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/PushCenterSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
+					"\"${PODS_ROOT}/Headers/Public/RemoteDebugChannel\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/TBAccsSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/TBCrashReporter\"",
+					"\"${PODS_ROOT}/Headers/Public/TBJSONModel\"",
+					"\"${PODS_ROOT}/Headers/Public/TBRest\"",
+					"\"${PODS_ROOT}/Headers/Public/TRemoteDebugger\"",
+					"\"${PODS_ROOT}/Headers/Public/UserTrack\"",
+					"\"${PODS_ROOT}/Headers/Public/WXDevtool\"",
+					"\"${PODS_ROOT}/Headers/Public/WeexPluginLoader\"",
+					"\"${PODS_ROOT}/Headers/Public/WeexSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/WindVane\"",
+					"\"${PODS_ROOT}/Headers/Public/ZCache\"",
+					"\"${PODS_ROOT}/Headers/Public/ZipArchive\"",
+					"\"${PODS_ROOT}/Headers/Public/mtopext\"",
+					"\"${PODS_ROOT}/Headers/Public/orange\"",
+					"\"${PODS_ROOT}/Headers/Public/tnet\"",
+					"\"${PODS_ROOT}/Headers/**\"",
+				);
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/AliyunOSSiOS\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/CYLTabBarController\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/FBAllocationTracker\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/FMDB\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Reachability\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SDWebImage\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SocketRocket\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/ZipArchive\"",
+					"\"${PODS_ROOT}/AlicloudLua/liblua/lib\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = emas_push_profile_adhoc;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

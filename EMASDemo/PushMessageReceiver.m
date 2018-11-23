@@ -40,10 +40,6 @@
             [PushReporter reportMessageTaped:messageId];
         }
     }
-    
-    if (messageId.length > 0) {
-        [PushReporter reportMessageArrived:messageId];
-    }
 }
 
 - (void)pushNotificationOniOS10:(NSDictionary *)userInfo {

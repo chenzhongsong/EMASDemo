@@ -407,7 +407,24 @@
     openOrangeLog(OrangeLogLevel_ALL);
     [Orange setOrangeDataCenterOnlineHost:service.RemoteConfigHost debugHost:service.RemoteConfigHost dailyHost:service.RemoteConfigHost];
     [Orange setOrangeBetaModeAccsHost:@[service.ACCSDomain,service.ACCSDomain,service.ACCSDomain]];
-    [Orange runMode:OrangeUpateModeEvent];    
+    [Orange runMode:OrangeUpateModeEvent];
+}
+
+- (void)initPushParameters {
+    NSString *deviceTokenString = [[TBSDKPushCenterEngine shareInstance] getDeviceID];
+    NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.emas.demo.push"];
+    [sharedDefaults setObject:[[EMASService shareInstance] appkey] forKey:@"TB_PUSH_EXTENSION_APPKEY"];
+    [sharedDefaults setObject:deviceTokenString ?: @"" forKey:@"TB_PUSH_EXTENSION_AGOO_TOKEN"];
+    
+    AliEMASEnvironment environment = [AliEMASConfigure defaultConfigure].options.environment;
+    if (environment == AliEMASEnvironmentDaily) {
+        [sharedDefaults setObject:@"http://aserver-pre-k8s.emas-poc.com:30080/agooack/apns" forKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
+    } else if (environment == AliEMASEnvironmentReleaseDebug) {
+        [sharedDefaults setObject:@"http://aserver-pre-k8s.emas-poc.com:30080/agooack/apns" forKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
+    } else {
+        [sharedDefaults setObject:@"http://aserver-pre-k8s.emas-poc.com:30080/agooack/apns" forKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
+    }
+    [sharedDefaults synchronize];
 }
 
 #pragma mark -
@@ -443,28 +460,13 @@
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // 收到APNS token时回调
     NSLog(@"[APNS] device token: %@", deviceToken);
-    NSString * deviceTokenString = [deviceToken description];
-    
-    NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.emas.demo.push"];
-    [sharedDefaults setObject:[[EMASService shareInstance] appkey] forKey:@"TB_PUSH_EXTENSION_APPKEY"];
-    [sharedDefaults setObject:deviceTokenString forKey:@"TB_PUSH_EXTENSION_AGOO_TOKEN"];
-    
-    AliEMASEnvironment environment = [AliEMASConfigure defaultConfigure].options.environment;
-    if (environment == AliEMASEnvironmentDaily) {
-        [sharedDefaults setObject:@"agoo-report.m.taobao.com" forKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
-    } else if (environment == AliEMASEnvironmentReleaseDebug) {
-        [sharedDefaults setObject:@"pre-agooack.m.taobao.com" forKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
-    } else {
-        [sharedDefaults setObject:@"agoo-ack.taobao.net" forKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
-    }
-    [sharedDefaults synchronize];
     
     TBSDKPushCenterEngine *pce = [TBSDKPushCenterEngine sharedInstanceWithDefaultConfigure];
     [pce upLoaderDeviceToken:deviceToken userInfo:nil callback:^(NSDictionary *result, NSError *error){
         if ( error ) {
             NSLog(@"[APNS] update token error: %@", error);
-        }
-        else {
+        } else {
+            [self initPushParameters];
             NSLog(@"[APNS] update token successfully!");
         }
     }];

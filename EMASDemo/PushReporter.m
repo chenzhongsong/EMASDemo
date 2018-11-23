@@ -72,9 +72,10 @@
         
         NSData *body = [NSJSONSerialization dataWithJSONObject:dict options:0 error:nil];
         
-        NSString *url = [NSString stringWithFormat:@"https://%@/apns/", reportHost];
+        NSString *url = [NSString stringWithFormat:@"%@", reportHost];
         NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
         [req setHTTPMethod:@"POST"];
+        [req setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
         [req setHTTPBody:body];
         
         NSURLSessionDataTask * task = [[PushReporter thumbnailSession] dataTaskWithRequest:req completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
