@@ -59,6 +59,9 @@
 		869B55DD21400A2100809084 /* EMASBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55DA21400A2100809084 /* EMASBaseNavigationController.m */; };
 		86F1DE84216F501000B6C603 /* EMASWindVaneScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F1DE83216F501000B6C603 /* EMASWindVaneScanViewController.m */; };
 		86F1DE88216F524200B6C603 /* EMASWindVaneScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F1DE87216F524200B6C603 /* EMASWindVaneScannerVC.m */; };
+		8783A75521A6E5C900C177A1 /* PushReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8783A75421A6E5C900C177A1 /* PushReporter.m */; };
+		8783A75621A6E65800C177A1 /* PushReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8783A75421A6E5C900C177A1 /* PushReporter.m */; };
+		87D11D3321A69A6A0098FBC6 /* icon_two_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CD22E121A3ECA60005D834 /* icon_two_selected.png */; };
 		87FA349221A3BA8E0095673C /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87FA349121A3BA8E0095673C /* PushViewController.xib */; };
 		8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */; };
 		8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */; };
@@ -223,6 +226,8 @@
 		86F1DE83216F501000B6C603 /* EMASWindVaneScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneScanViewController.m; sourceTree = "<group>"; };
 		86F1DE86216F524200B6C603 /* EMASWindVaneScannerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASWindVaneScannerVC.h; sourceTree = "<group>"; };
 		86F1DE87216F524200B6C603 /* EMASWindVaneScannerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneScannerVC.m; sourceTree = "<group>"; };
+		8783A75321A6E5C900C177A1 /* PushReporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushReporter.h; sourceTree = "<group>"; };
+		8783A75421A6E5C900C177A1 /* PushReporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushReporter.m; sourceTree = "<group>"; };
 		87FA349121A3BA8E0095673C /* PushViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
 		8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigTableViewController.h; sourceTree = "<group>"; };
 		8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfigTableViewController.m; sourceTree = "<group>"; };
@@ -347,6 +352,8 @@
 				33A2550C20FDE37000C3F673 /* PushViewController.h */,
 				33A2550D20FDE37000C3F673 /* PushViewController.m */,
 				87FA349121A3BA8E0095673C /* PushViewController.xib */,
+				8783A75321A6E5C900C177A1 /* PushReporter.h */,
+				8783A75421A6E5C900C177A1 /* PushReporter.m */,
 			);
 			name = push;
 			sourceTree = "<group>";
@@ -726,7 +733,7 @@
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.Push = {
 								enabled = 1;
@@ -738,7 +745,7 @@
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.Push = {
 								enabled = 1;
@@ -812,6 +819,7 @@
 				3342C6C121A1AF62006B6A87 /* PushSDKReceiverConfig.plist in Resources */,
 				33E1BAA221A4290A00E81E32 /* hongbao.wav in Resources */,
 				980F856E20BECC49002156A2 /* OrangeRemotConfigDebugVC.xib in Resources */,
+				87D11D3321A69A6A0098FBC6 /* icon_two_selected.png in Resources */,
 				980F856B20BECC49002156A2 /* OrangeFeatureSecondVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -968,6 +976,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8783A75621A6E65800C177A1 /* PushReporter.m in Sources */,
 				33CD22D221A3E2C10005D834 /* NotificationService.m in Sources */,
 				33CD22DD21A3E93D0005D834 /* TBNotificationServiceError.m in Sources */,
 			);
@@ -977,6 +986,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8783A75521A6E5C900C177A1 /* PushReporter.m in Sources */,
 				869B55D421400A0700809084 /* EMASWeexContainerService.m in Sources */,
 				33D18D4B20DA06CE00ACF0C7 /* AccsConfiguration.m in Sources */,
 				1A65F6261FF253CF00B4573C /* AliHATestCaseViewController.mm in Sources */,

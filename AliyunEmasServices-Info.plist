@@ -5,7 +5,7 @@
 	<key>private_cloud_config</key>
 	<dict>
 		<key>Environment</key>
-		<string>release</string>
+		<string>releaseDebug</string>
 		<key>LogLevel</key>
 		<string>none</string>
 		<key>AppKey</key>

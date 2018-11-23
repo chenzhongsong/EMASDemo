@@ -65,6 +65,7 @@
 
 // Push
 #import <UserNotifications/UserNotifications.h>
+#import "PushReporter.h"
 
 @interface MyPolicyCenter : NSObject <NWPolicyDelegate>
 @end
@@ -293,6 +294,8 @@
 {
     // PUSH 通过配置文件自初始化
     TBSDKPushCenterEngine *pce = [TBSDKPushCenterEngine sharedInstanceWithDefaultConfigure];
+    [TBSDKPushCenterConfiguration shareInstance].scheduleLocalNotificationWhenAppBackground = NO;
+    
     [pce start];
     
     // register notification setting
@@ -304,7 +307,7 @@
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
         center.delegate = self;
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
-            if(!error) {
+            if(error) {
                 NSLog( @"Push registration FAILED" );
                 NSLog( @"ERROR: %@ - %@", error.localizedFailureReason, error.localizedDescription );
                 NSLog( @"SUGGESTIONS: %@ - %@", error.localizedRecoveryOptions, error.localizedRecoverySuggestion );
@@ -428,6 +431,7 @@
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
@@ -439,6 +443,21 @@
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // 收到APNS token时回调
     NSLog(@"[APNS] device token: %@", deviceToken);
+    NSString * deviceTokenString = [deviceToken description];
+    
+    NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.emas.demo.push"];
+    [sharedDefaults setObject:[[EMASService shareInstance] appkey] forKey:@"TB_PUSH_EXTENSION_APPKEY"];
+    [sharedDefaults setObject:deviceTokenString forKey:@"TB_PUSH_EXTENSION_AGOO_TOKEN"];
+    
+    AliEMASEnvironment environment = [AliEMASConfigure defaultConfigure].options.environment;
+    if (environment == AliEMASEnvironmentDaily) {
+        [sharedDefaults setObject:@"agoo-report.m.taobao.com" forKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
+    } else if (environment == AliEMASEnvironmentReleaseDebug) {
+        [sharedDefaults setObject:@"pre-agooack.m.taobao.com" forKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
+    } else {
+        [sharedDefaults setObject:@"agoo-ack.taobao.net" forKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
+    }
+    [sharedDefaults synchronize];
     
     TBSDKPushCenterEngine *pce = [TBSDKPushCenterEngine sharedInstanceWithDefaultConfigure];
     [pce upLoaderDeviceToken:deviceToken userInfo:nil callback:^(NSDictionary *result, NSError *error){
@@ -457,7 +476,7 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     NSLog(@">>>>>>> [AGOO MESSAGE]: %@", userInfo);
-
+    
     NSString *text = [userInfo description];
     if ( !text ) {
         text = @"消息解析失败!";
@@ -465,19 +484,30 @@
 
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AGOO 消息" message:text delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
     [alert show];
+    
+    NSString *messageId = [userInfo objectForKey:@"m"];
+    if (messageId.length > 0) {
+        [PushReporter reportMessageTaped:messageId];
+    }
 }
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler  API_AVAILABLE(ios(10.0)){
     NSDictionary *userInfo = response.notification.request.content.userInfo;
+    
     NSLog(@">>>>>>> [AGOO MESSAGE]: %@", userInfo);
 
     NSString *text = [userInfo description];
     if ( !text ) {
         text = @"消息解析失败!";
     }
-
+    
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AGOO 消息" message:text delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
     [alert show];
+    
+    NSString *messageId = [userInfo objectForKey:@"m"];
+    if (messageId.length > 0) {
+        [PushReporter reportMessageTaped:messageId];
+    }
 }
 
 #pragma mark - distinguish device

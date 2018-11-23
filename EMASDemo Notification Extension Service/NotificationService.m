@@ -11,7 +11,7 @@
 
 #define ICON_KEY            @"icon"
 
-#define SHARED_GROUP_NAME   @"group.com.taobao.taobao4iphone.extension"
+#define SHARED_GROUP_NAME   @"group.com.emas.demo.push"
 
 @interface NotificationService ()
 
