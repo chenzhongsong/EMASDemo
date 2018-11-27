@@ -48,7 +48,7 @@
     [WVBasic setup];
     [WVAPI setup];
     [WVMonitor startMonitoring];  
-    [EMASWVExtensionConfig setup];
+   // [EMASWVExtensionConfig setup];
 }
 
 @end

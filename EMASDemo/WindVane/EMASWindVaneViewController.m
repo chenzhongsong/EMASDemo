@@ -10,6 +10,7 @@
 #import <WindVane/WindVane.h>
 #import <WindVaneBridge/WVBridge+Advance.h>
 #import <DynamicConfiguration/DynamicConfigurationManager.h>
+#import <objc/runtime.h>
 
 @interface EMASWindVaneViewController ()
 
@@ -19,11 +20,14 @@
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        self.title = @"EMAS";
         self.autoLoadTitle = YES;
         self.allowsControlNavigationBar = YES;
         self.useToolbar = NO;
         self.useWKWebView = WVUseWKWebViewCustom;
         [self supportiOS7WithoutStatusBar];
+        
+        self.navigationItem.leftBarButtonItems = @[[self backButtonItem]];
     }
     return self;
 }
@@ -61,6 +65,24 @@
                         [context callbackSuccess:nil];
                     }
                 }];
+}
+
+- (UIBarButtonItem *)backButtonItem
+{
+    UIBarButtonItem *backButtonItem = objc_getAssociatedObject(self, _cmd);
+    if (!backButtonItem) {
+        backButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"]
+                                                          style:UIBarButtonItemStylePlain
+                                                         target:self
+                                                         action:@selector(backButtonClicked:)];
+        objc_setAssociatedObject(self, _cmd, backButtonItem, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    return backButtonItem;
+}
+
+- (void)backButtonClicked:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

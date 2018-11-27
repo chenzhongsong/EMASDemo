@@ -7,9 +7,10 @@
 //
 
 #import "EMASPortalViewController.h"
-#import "EMASNativeViewController.h"
-#import "EMASWindVaneScanViewController.h"
+#import "EMASHostViewController.h"
+#import "EMASWindVaneViewController.h"
 #import "EMASWeexContainerService.h"
+#import "UIViewController+EMASWXNaviBar.h"
 
 @interface EMASPortalViewController ()
 
@@ -19,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupNaviBar];
+    
     // Do any additional setup after loading the view.
     NSNumber *scaffoldType = [[EMASWeexContainerService shareInstance] scaffoldType];
     NSInteger scaffoldTypeInt = scaffoldType.integerValue;
@@ -46,13 +49,13 @@
 }
 
 - (IBAction)didWeexShowButtonClicked:(id)sender {
-    EMASNativeViewController *controller = [[EMASNativeViewController alloc] initWithNavigatorURL:[NSURL URLWithString:@"http://cdn.emas-poc.com/material/yanpeicpf/index.html?_wx_tpl=http://cdn.emas-poc.com/app/yanpeicpf-bbb/pages/index/entry.js"]];
+    EMASHostViewController *controller = [[EMASHostViewController alloc] initWithNavigatorURL:[NSURL URLWithString:@"http://cdn.emas-poc.com/material/yanpeicpf/index.html?_wx_tpl=http://cdn.emas-poc.com/app/yanpeicpf-bbb/pages/index/entry.js"]];
     //controller
     [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (IBAction)didH5ShowButtonClicked:(id)sender {
-    EMASWindVaneScanViewController *controller = [[EMASWindVaneScanViewController alloc] init];
+    EMASWindVaneViewController *controller = [[EMASWindVaneViewController alloc] init];
     controller.loadUrl = @"http://cdn.emas-poc.com/app/yanpeicpf-aaa/index.html";
     
     //controller.loadUrl = @"http://wapp.m.taobao.com/app/windvane/jsbridge.html";

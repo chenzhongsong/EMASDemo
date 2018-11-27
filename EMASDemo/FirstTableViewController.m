@@ -20,7 +20,7 @@
 #import "PushViewController.h"
 #import "MANViewController.h"
 #import "EMASNativeViewController.h"
-#import "EMASWindVaneScanViewController.h"
+#import "UIViewController+EMASWXNaviBar.h"
 
 @interface FirstTableViewController ()
 
@@ -30,7 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setupNaviBar];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

@@ -13,10 +13,6 @@
 		3342C6C221A1AF62006B6A87 /* AccsReceiverTable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3342C6C021A1AF62006B6A87 /* AccsReceiverTable.plist */; };
 		33A2550F20FDE37000C3F673 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A2550D20FDE37000C3F673 /* PushViewController.m */; };
 		33A2551020FDE37000C3F673 /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A2550E20FDE37000C3F673 /* PushViewController.xib */; };
-		33CD22D221A3E2C10005D834 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CD22D121A3E2C10005D834 /* NotificationService.m */; };
-		33CD22D621A3E2C10005D834 /* EMASDemo Notification Extension Service.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 33CD22CE21A3E2C10005D834 /* EMASDemo Notification Extension Service.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		33CD22DD21A3E93D0005D834 /* TBNotificationServiceError.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CD22DC21A3E93D0005D834 /* TBNotificationServiceError.m */; };
-		33CD22E421A3ECA60005D834 /* icon_two_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CD22E121A3ECA60005D834 /* icon_two_selected.png */; };
 		33D18D4B20DA06CE00ACF0C7 /* AccsConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D18D4A20DA06CE00ACF0C7 /* AccsConfiguration.m */; };
 		33D18D5620DA2CFB00ACF0C7 /* ACCSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D18D5420DA2CFB00ACF0C7 /* ACCSViewController.m */; };
 		33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33D18D5520DA2CFB00ACF0C7 /* ACCSViewController.xib */; };
@@ -58,8 +54,6 @@
 		869B55D721400A1700809084 /* EMASTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55D621400A1700809084 /* EMASTabBarController.m */; };
 		869B55DC21400A2100809084 /* EMASNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55D921400A2100809084 /* EMASNativeViewController.m */; };
 		869B55DD21400A2100809084 /* EMASBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55DA21400A2100809084 /* EMASBaseNavigationController.m */; };
-		86F1DE84216F501000B6C603 /* EMASWindVaneScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F1DE83216F501000B6C603 /* EMASWindVaneScanViewController.m */; };
-		86F1DE88216F524200B6C603 /* EMASWindVaneScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F1DE87216F524200B6C603 /* EMASWindVaneScannerVC.m */; };
 		8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */; };
 		8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */; };
 		8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */; };
@@ -90,13 +84,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		33CD22D421A3E2C10005D834 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8ADA95331FD9309400C0EF49 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 33CD22CD21A3E2C10005D834;
-			remoteInfo = notificationextension;
-		};
 		8ADA95571FD9309400C0EF49 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8ADA95331FD9309400C0EF49 /* Project object */;
@@ -120,7 +107,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				33CD22D621A3E2C10005D834 /* EMASDemo Notification Extension Service.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,7 +134,6 @@
 		33A2550C20FDE37000C3F673 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
 		33A2550D20FDE37000C3F673 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 		33A2550E20FDE37000C3F673 /* PushViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
-		33CD22CE21A3E2C10005D834 /* EMASDemo Notification Extension Service.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EMASDemo Notification Extension Service.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CD22D021A3E2C10005D834 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
 		33CD22D121A3E2C10005D834 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
 		33CD22D321A3E2C10005D834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -220,10 +205,6 @@
 		869B55D921400A2100809084 /* EMASNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASNativeViewController.m; sourceTree = "<group>"; };
 		869B55DA21400A2100809084 /* EMASBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASBaseNavigationController.m; sourceTree = "<group>"; };
 		869B55DB21400A2100809084 /* EMASNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASNativeViewController.h; sourceTree = "<group>"; };
-		86F1DE82216F501000B6C603 /* EMASWindVaneScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASWindVaneScanViewController.h; sourceTree = "<group>"; };
-		86F1DE83216F501000B6C603 /* EMASWindVaneScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneScanViewController.m; sourceTree = "<group>"; };
-		86F1DE86216F524200B6C603 /* EMASWindVaneScannerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASWindVaneScannerVC.h; sourceTree = "<group>"; };
-		86F1DE87216F524200B6C603 /* EMASWindVaneScannerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneScannerVC.m; sourceTree = "<group>"; };
 		8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigTableViewController.h; sourceTree = "<group>"; };
 		8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfigTableViewController.m; sourceTree = "<group>"; };
 		8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopVerifyTableViewController.h; sourceTree = "<group>"; };
@@ -276,13 +257,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		33CD22CB21A3E2C10005D834 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8ADA95381FD9309400C0EF49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -412,7 +386,6 @@
 		8601D6BA215F57C400BDFC46 /* WindVane */ = {
 			isa = PBXGroup;
 			children = (
-				86F1DE85216F501500B6C603 /* Scan */,
 				8601D6ED2160727000BDFC46 /* JSBridgeAPI */,
 				8601D6BB215F5A2B00BDFC46 /* EMASWindVaneConfig.h */,
 				8601D6BC215F5A2B00BDFC46 /* EMASWindVaneConfig.m */,
@@ -442,9 +415,7 @@
 		869B55BA2140068300809084 /* Weex */ = {
 			isa = PBXGroup;
 			children = (
-				869B55BB2140068300809084 /* Categroy */,
 				869B55C42140068300809084 /* Handler */,
-				869B55C72140068300809084 /* Scan */,
 				869B55BE2140068300809084 /* EMASHostViewController.h */,
 				869B55BF2140068300809084 /* EMASHostViewController.m */,
 				869B55C02140068300809084 /* EMASWXRenderViewController.h */,
@@ -481,22 +452,11 @@
 			path = Handler;
 			sourceTree = "<group>";
 		};
-		869B55C72140068300809084 /* Scan */ = {
+		86FC82EB21ACE47F0052E251 /* Scan */ = {
 			isa = PBXGroup;
 			children = (
 				869B55C82140068300809084 /* EMASScannerViewController.h */,
 				869B55C92140068300809084 /* EMASScannerViewController.m */,
-			);
-			path = Scan;
-			sourceTree = "<group>";
-		};
-		86F1DE85216F501500B6C603 /* Scan */ = {
-			isa = PBXGroup;
-			children = (
-				86F1DE82216F501000B6C603 /* EMASWindVaneScanViewController.h */,
-				86F1DE83216F501000B6C603 /* EMASWindVaneScanViewController.m */,
-				86F1DE86216F524200B6C603 /* EMASWindVaneScannerVC.h */,
-				86F1DE87216F524200B6C603 /* EMASWindVaneScannerVC.m */,
 			);
 			path = Scan;
 			sourceTree = "<group>";
@@ -520,7 +480,6 @@
 				8ADA953B1FD9309400C0EF49 /* EMASDemo.app */,
 				8ADA95561FD9309400C0EF49 /* EMASDemoTests.xctest */,
 				8ADA95611FD9309400C0EF49 /* EMASDemoUITests.xctest */,
-				33CD22CE21A3E2C10005D834 /* EMASDemo Notification Extension Service.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -537,12 +496,14 @@
 				8A69B608200C8F980073756D /* EMASService.h */,
 				8A69B609200C8F980073756D /* EMASService.m */,
 				8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */,
+				869B55BB2140068300809084 /* Categroy */,
 				8601D703216B4A0100BDFC46 /* preload */,
 				8601D6BA215F57C400BDFC46 /* WindVane */,
 				869B55BA2140068300809084 /* Weex */,
 				4A017CEB21006E59001FF027 /* man */,
 				1A65F6231FF2534A00B4573C /* AliHA */,
 				7D6260E11FDA8C5900E856CB /* hotfix */,
+				86FC82EB21ACE47F0052E251 /* Scan */,
 				8ADA953E1FD9309400C0EF49 /* AppDelegate.h */,
 				8ADA953F1FD9309400C0EF49 /* AppDelegate.m */,
 				8ADA95471FD9309400C0EF49 /* Main.storyboard */,
@@ -633,23 +594,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		33CD22CD21A3E2C10005D834 /* EMASDemo Notification Extension Service */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 33CD22D921A3E2C10005D834 /* Build configuration list for PBXNativeTarget "EMASDemo Notification Extension Service" */;
-			buildPhases = (
-				33CD22CA21A3E2C10005D834 /* Sources */,
-				33CD22CB21A3E2C10005D834 /* Frameworks */,
-				33CD22CC21A3E2C10005D834 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "EMASDemo Notification Extension Service";
-			productName = notificationextension;
-			productReference = 33CD22CE21A3E2C10005D834 /* EMASDemo Notification Extension Service.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		8ADA953A1FD9309400C0EF49 /* EMASDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8ADA956A1FD9309400C0EF49 /* Build configuration list for PBXNativeTarget "EMASDemo" */;
@@ -669,7 +613,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				33CD22D521A3E2C10005D834 /* PBXTargetDependency */,
 			);
 			name = EMASDemo;
 			productName = EMASDemo;
@@ -721,15 +664,6 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = EMAS;
 				TargetAttributes = {
-					33CD22CD21A3E2C10005D834 = {
-						CreatedOnToolsVersion = 10.1;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.Push = {
-								enabled = 1;
-							};
-						};
-					};
 					8ADA953A1FD9309400C0EF49 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -773,20 +707,11 @@
 				8ADA953A1FD9309400C0EF49 /* EMASDemo */,
 				8ADA95551FD9309400C0EF49 /* EMASDemoTests */,
 				8ADA95601FD9309400C0EF49 /* EMASDemoUITests */,
-				33CD22CD21A3E2C10005D834 /* EMASDemo Notification Extension Service */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		33CD22CC21A3E2C10005D834 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				33CD22E421A3ECA60005D834 /* icon_two_selected.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8ADA95391FD9309400C0EF49 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -961,15 +886,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		33CD22CA21A3E2C10005D834 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				33CD22D221A3E2C10005D834 /* NotificationService.m in Sources */,
-				33CD22DD21A3E93D0005D834 /* TBNotificationServiceError.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8ADA95371FD9309400C0EF49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -986,7 +902,6 @@
 				869B55DC21400A2100809084 /* EMASNativeViewController.m in Sources */,
 				869B55CE2140068400809084 /* EMASWXNavigationImpl.m in Sources */,
 				9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */,
-				86F1DE88216F524200B6C603 /* EMASWindVaneScannerVC.m in Sources */,
 				4A017CF421006EC7001FF027 /* MANViewController.m in Sources */,
 				8611706521943A5000DCAB7F /* EMASPortalViewController.m in Sources */,
 				869B55CA2140068400809084 /* UIViewController+EMASWXNaviBar.m in Sources */,
@@ -1010,7 +925,6 @@
 				7D6260E61FDA8C5A00E856CB /* HFXTestClass.m in Sources */,
 				8601D6BD215F5A2B00BDFC46 /* EMASWindVaneConfig.m in Sources */,
 				8A69B60A200C8F980073756D /* EMASService.m in Sources */,
-				86F1DE84216F501000B6C603 /* EMASWindVaneScanViewController.m in Sources */,
 				8601D6EC215F7A7E00BDFC46 /* EMASWindVaneViewController.m in Sources */,
 				33A2550F20FDE37000C3F673 /* PushViewController.m in Sources */,
 				869B55CF2140068400809084 /* EMASScannerViewController.m in Sources */,
@@ -1037,11 +951,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		33CD22D521A3E2C10005D834 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 33CD22CD21A3E2C10005D834 /* EMASDemo Notification Extension Service */;
-			targetProxy = 33CD22D421A3E2C10005D834 /* PBXContainerItemProxy */;
-		};
 		8ADA95581FD9309400C0EF49 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8ADA953A1FD9309400C0EF49 /* EMASDemo */;
@@ -1074,51 +983,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		33CD22D721A3E2C10005D834 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CODE_SIGN_ENTITLEMENTS = "EMASDemo Notification Extension Service/EMASDemo Notification Extension Service.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VSW2PKYTD7;
-				INFOPLIST_FILE = "$(SRCROOT)/EMASDemo Notification Extension Service/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push.notificationextension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		33CD22D821A3E2C10005D834 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CODE_SIGN_ENTITLEMENTS = "EMASDemo Notification Extension Service/EMASDemo Notification Extension Service.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VSW2PKYTD7;
-				INFOPLIST_FILE = "$(SRCROOT)/EMASDemo Notification Extension Service/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push.notificationextension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		8ADA95681FD9309400C0EF49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1242,12 +1106,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EMASDemo/hotfix",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Pods/WindVane",
 				);
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1274,13 +1137,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EMASDemo/hotfix",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Pods/WindVane",
 				);
 				INFOPLIST_FILE = EMASDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.push111.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1345,15 +1207,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		33CD22D921A3E2C10005D834 /* Build configuration list for PBXNativeTarget "EMASDemo Notification Extension Service" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				33CD22D721A3E2C10005D834 /* Debug */,
-				33CD22D821A3E2C10005D834 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8ADA95361FD9309400C0EF49 /* Build configuration list for PBXProject "EMASDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
