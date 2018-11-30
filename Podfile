@@ -66,13 +66,13 @@ platform:ios, '8.0'
     pod 'EmasWeexComponents'
     
     # EMASWeex
-    pod 'EMASWeex', '1.2.0'
+    pod 'EMASWeex', '1.3.0'
     pod 'WXDevtool', '~> 0.16.3' ,:configurations => ['Debug']
     pod 'CYLTabBarController', '~> 1.17.14'
     pod 'SocketRocket'
     
     # WindVane
-    pod 'WindVane', '1.0.0'
+    pod 'WindVane', '1.1.0'
     
     # --热修复
     pod 'AlicloudLua', '5.1.4.2'
