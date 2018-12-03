@@ -14,6 +14,8 @@
 
 @interface EMASWindVaneViewController ()
 
+@property (nonatomic, copy) NSString *resourceUrlString;
+
 @end
 
 @implementation EMASWindVaneViewController
@@ -28,6 +30,19 @@
         [self supportiOS7WithoutStatusBar];
         
         self.navigationItem.leftBarButtonItems = @[[self backButtonItem]];
+        __weak typeof(self) weakSelf = self;
+        self.shouldStartLoadAction = ^BOOL(UIView<WVWebViewProtocol> * _Nonnull view, NSURLRequest * _Nonnull request, UIWebViewNavigationType type) {
+            
+            // 获取返回的状态吗
+            NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError *_Nullable error) {
+                NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)response;
+                if (httpResponse.statusCode == 404) {
+                    [[DynamicConfigurationManager sharedInstance] deleteConfigurationForGoalUrl:weakSelf.resourceUrlString];
+                }
+            }];
+            [dataTask resume];
+            return YES;
+        };
     }
     return self;
 }
@@ -45,6 +60,7 @@
 
 - (void)setLoadUrl:(NSString *)loadUrl
 {
+    self.resourceUrlString = loadUrl.mutableCopy;
     loadUrl = [[DynamicConfigurationManager sharedInstance] redirectUrl:loadUrl];
     [super setLoadUrl:loadUrl];
 }
