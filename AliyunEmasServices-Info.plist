@@ -5,13 +5,13 @@
 	<key>private_cloud_config</key>
 	<dict>
 		<key>Environment</key>
-		<string>releaseDebug</string>
+		<string>release</string>
 		<key>LogLevel</key>
 		<string>none</string>
 		<key>AppKey</key>
-		<string>20000262</string>
+		<string>20000420</string>
 		<key>AppSecret</key>
-		<string>5df61fd2d923dddffa1d461fab58c0e2</string>
+		<string>5ab0aa846ca93bd78d5b4653ed5078db</string>
 		<key>UseSecurityGuard</key>
 		<false/>
 		<key>ChannelID</key>
@@ -19,11 +19,11 @@
 		<key>ACCS</key>
 		<dict>
 			<key>Host</key>
-			<string>accs-pre-k8s.emas-poc.com</string>
+			<string>accs.emas-poc.com</string>
 			<key>DefaultIP</key>
-			<string>106.15.81.192</string>
+			<string>101.132.89.137</string>
 			<key>DefaultPort</key>
-			<integer>30080</integer>
+			<integer>80</integer>
 			<key>CustomAppVersion</key>
 			<string>123</string>
 			<key>SlightSSLPublickeyIndex</key>
