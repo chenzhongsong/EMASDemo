@@ -83,7 +83,7 @@ platform:ios, '8.0'
     # ????
     pod 'EMASMAN', '10.0.0'    
     
-    # pod 'EMASFirstBundle', '3.0.8'
+    pod 'EMASFirstBundle', '3.0.8'
     
     
 end
