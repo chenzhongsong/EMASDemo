@@ -1,7 +1,7 @@
 source 'git@github.com:CocoaPods/Specs.git'
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs-thirdpart.git'
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs.git'
-#source 'git@gitlab.emas-ha.cn:root/emas-specs.git'
+source 'git@gitlab.emas-ha.cn:root/emas-specs.git'
 #source 'git@gitlab.alibaba-inc.com:alipods/specs.git'
 
 # WeexAceChart
