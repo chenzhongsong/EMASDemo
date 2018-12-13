@@ -668,18 +668,6 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = EMAS;
 				TargetAttributes = {
-					33CD22CD21A3E2C10005D834 = {
-						CreatedOnToolsVersion = 10.1;
-						ProvisioningStyle = Manual;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-							com.apple.Push = {
-								enabled = 1;
-							};
-						};
-					};
 					8ADA953A1FD9309400C0EF49 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Manual;
