@@ -8,10 +8,11 @@
 
 #import "NotificationService.h"
 #import "TBNotificationServiceError.h"
+#import "PushReporter.h"
 
 #define ICON_KEY            @"icon"
 
-#define SHARED_GROUP_NAME   @"group.com.taobao.taobao4iphone.extension"
+#define SHARED_GROUP_NAME   @"group.com.emas.demo.push"
 
 @interface NotificationService ()
 
@@ -148,53 +149,7 @@
 }
 
 - (void)reportMessageArrived:(NSString *)messageId error:(TBNotificationServiceError *)error {
-    
-    __block NSString *t_msgid = [messageId copy];
-    __block TBNotificationServiceError *t_error = [error copy];
-    
-    dispatch_async([NotificationService feedbackQueue], ^(){
-        NSLog(@"[NotificationService] reportFeedback: %ld", error.code);
-        
-        NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:SHARED_GROUP_NAME];
-        NSString *appkey = [sharedDefaults objectForKey:@"TB_PUSH_EXTENSION_APPKEY"];
-        NSString *agootoken = [sharedDefaults objectForKey:@"TB_PUSH_EXTENSION_AGOO_TOKEN"];
-        NSString *reportHost = [sharedDefaults objectForKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
-        
-        if (reportHost.length == 0) {
-            NSLog(@"[NotificationService] the report HOST is empty!");
-            return;
-        }
-        
-        NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-        [dict setValue:(appkey.length>0 ? appkey : @"") forKey:@"appkey"];
-        [dict setValue:(agootoken.length>0 ? agootoken : @"") forKey:@"tbAppDeviceToken"];
-        [dict setValue:(t_msgid.length>0 ? t_msgid : @"") forKey:@"id"];
-        [dict setValue:@"4" forKey:@"status"];
-        
-        if (t_error != nil) {
-            [dict setValue:[NSString stringWithFormat:@"%ld", t_error.code] forKey:@"ec"];
-            [dict setValue:[NSString stringWithFormat:@"%ld", t_error.subcode] forKey:@"subec"];
-        }
-        
-        NSData *body = [NSJSONSerialization dataWithJSONObject:dict options:0 error:nil];
-        
-        NSString *url = [NSString stringWithFormat:@"https://%@/apns/", reportHost];
-        NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
-        [req setHTTPMethod:@"POST"];
-        [req setHTTPBody:body];
-        
-        NSURLSessionDataTask * task = [[NotificationService thumbnailSession] dataTaskWithRequest:req completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-            
-            if ( error ) {
-                NSLog(@"[NotificationService] report error: %@", error);
-            }
-            
-            //NSLog(@"[NotificationService] ACK response: %@", response);
-            //NSLog(@"[NotificationService] ACK body: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
-            
-        }];
-        [task resume];
-    });
+    [PushReporter reportMessageArrived:messageId];
 }
 
 @end

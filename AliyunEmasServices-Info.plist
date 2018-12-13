@@ -9,9 +9,9 @@
 		<key>LogLevel</key>
 		<string>none</string>
 		<key>AppKey</key>
-		<string>20000324</string>
+		<string>20000420</string>
 		<key>AppSecret</key>
-		<string>e0f1d7c7dd6e070ca038ab9b0c2bf5ed</string>
+		<string>5ab0aa846ca93bd78d5b4653ed5078db</string>
 		<key>UseSecurityGuard</key>
 		<false/>
 		<key>ChannelID</key>
@@ -21,9 +21,9 @@
 			<key>Host</key>
 			<string>accs.emas-poc.com</string>
 			<key>DefaultIP</key>
-			<string>11.163.130.35</string>
+			<string>101.132.89.137</string>
 			<key>DefaultPort</key>
-			<integer>443</integer>
+			<integer>80</integer>
 			<key>CustomAppVersion</key>
 			<string>123</string>
 			<key>SlightSSLPublickeyIndex</key>
@@ -55,25 +55,25 @@
 		<key>MTOP</key>
 		<dict>
 			<key>Domain</key>
-			<string>aserver.emas-poc.com</string>
+			<string>aserver-pre-k8s.emas-poc.com:30080</string>
 		</dict>
 		<key>ZCache</key>
 		<dict>
 			<key>URL</key>
-			<string>http://publish-poc.emas-ha.cn/eweex/</string>
+			<string>http://106.15.178.156:7480/mobile-hub-dev/eweex/</string>
 		</dict>
 		<key>HA</key>
 		<dict>
 			<key>RSAPublicKey</key>
 			<string></string>
 			<key>OSSBucketName</key>
-			<string>emas-ha-remote-log-poc</string>
+			<string>emas-pre-private</string>
 			<key>ServiceID</key>
 			<string>emas-ha</string>
 			<key>UniversalHost</key>
-			<string>adash.emas-poc.com</string>
+			<string>adash-pre-k8s.emas-poc.com:32080</string>
 			<key>TimestampHost</key>
-			<string>aserver.emas-poc.com</string>
+			<string>aserver-pre-k8s.emas-poc.com:30080</string>
 		</dict>
 		<key>Hotfix</key>
 		<dict>
