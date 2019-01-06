@@ -183,19 +183,19 @@
 
 - (void)showMainViewController
 {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+    
     NSNumber *scaffoldType = [[EMASWeexContainerService shareInstance] scaffoldType];
     NSInteger scaffoldTypeInt = scaffoldType.integerValue;
     
-    if (scaffoldTypeInt == 2) {
+    if (scaffoldTypeInt == 2 || scaffoldTypeInt == (2 | 4)) {
         //weex脚手架
         NSNumber *tabSize = [[EMASWeexContainerService shareInstance] tabSize];
         NSInteger tabSizeInt = tabSize.integerValue;
         
-        if (!tabSize || tabSizeInt < 0) {
+        if (!tabSize || tabSizeInt <= 0) {
             //Native脚手架
             [self showNativeViewController];
-        } else if (tabSizeInt == 0) {
-            [self showBlankViewController];
         } else if (tabSizeInt == 1) {
             [self showSingleViewController];
         } else {
@@ -203,9 +203,6 @@
         }
     } else if (scaffoldTypeInt == 4) {
         //H5脚手架
-    } else if (scaffoldTypeInt == (2 | 4)) {
-        //weex + H5 脚手架
-        
     } else {
         //Native脚手架
         [self showNativeViewController];

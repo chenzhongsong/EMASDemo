@@ -12,6 +12,7 @@
 #import "UIViewController+EMASWXNaviBar.h"
 //#import "EMASWindVaneViewController.h"
 #import <DynamicConfiguration/DynamicConfigurationManager.h>
+#import <EmasWeexComponents/WXLocationModule.h>
 
 @interface EMASHostViewController()
 
@@ -39,8 +40,19 @@
 - (instancetype)initWithNavigatorURL:(NSURL *)URL {
     self = [super init];
     if (self) {
-        self.resourceUrlString = URL.absoluteString;
-        NSString * urlString = [[DynamicConfigurationManager sharedInstance] redirectUrl:[URL absoluteString]];
+        NSString *url = URL.absoluteString;
+        
+        ///先简单区分本地和远程js
+        if ([url rangeOfString:@"/"].location == NSNotFound ||
+            [url rangeOfString:@"/"].location == 0) {//本地
+            NSString *bundlePath = [NSBundle mainBundle].bundlePath;
+            url = [NSString stringWithFormat:@"file://%@/bundlejs/%@", bundlePath,URL.absoluteString];
+        }
+        
+        
+        self.resourceUrlString = url;
+        
+        NSString * urlString = [[DynamicConfigurationManager sharedInstance] redirectUrl:self.resourceUrlString];
         
         if (!urlString) {
             urlString = @"";
@@ -74,6 +86,21 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationRefreshInstance:) name:@"RefreshInstance" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationReload:)
+                                                 name:WX_LOCATION_NOTIFICATION_RELOAD object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationReplace:)
+                                                 name:WX_LOCATION_NOTIFICATION_REPLACE object:nil];
+}
+
+- (void)locationReload:(NSNotification *)notification
+{
+    [self.wxViewController refreshWeex];
+}
+
+- (void)locationReplace:(NSNotification *)notification
+{
+    
 }
 
 # pragma mark WXViewController Delegate
@@ -107,21 +134,23 @@
 
 - (void)wxDegradeToH5:(NSString *)url
 {
+    dispatch_async(dispatch_get_main_queue(), ^{
 #if 1
-    [self.wxViewController.instance destroyInstance];
-    [self.wxViewController.weexView removeFromSuperview];
-    [self.webView removeFromSuperview];
-    
-    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
-    [self.view addSubview:self.webView];
-    
+        [self.wxViewController.instance destroyInstance];
+        [self.wxViewController.weexView removeFromSuperview];
+        [self.webView removeFromSuperview];
+        
+        self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+        [self.view addSubview:self.webView];
+        
 #else
-    EMASWindVaneViewController *vc = [[EMASWindVaneViewController alloc] init];
-    vc.loadUrl = url;
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
+        EMASWindVaneViewController *vc = [[EMASWindVaneViewController alloc] init];
+        vc.loadUrl = url;
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
 #endif
+    });
 
 }
 

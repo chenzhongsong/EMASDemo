@@ -90,15 +90,17 @@
     NSString *transformURL = URL;
     //NSURL *url = [NSURL URLWithString:URL];
     
+    NSURL *url = [NSURL URLWithString:transformURL];
+    if (!url) {
+        return;
+    }
+    if ([self remoteDebug:url]) {
+        return;
+    }
+    
     //weex打开
     if (URL.length == 0 || [URL containsString:@".js"] || [URL containsString:@".wx"]) {
-        NSURL *url = [NSURL URLWithString:transformURL];
-        if (!url) {
-            return;
-        }
-        if ([self remoteDebug:url]) {
-            return;
-        }
+
         [self jsReplace:url];
         
         EMASHostViewController * controller = [[EMASHostViewController alloc] initWithNavigatorURL:url];

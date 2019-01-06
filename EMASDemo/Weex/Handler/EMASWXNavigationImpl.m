@@ -19,6 +19,7 @@
 
 #import "EMASWXNavigationImpl.h"
 #import "EMASHostViewController.h"
+#import "EMASWindVaneViewController.h"
 
 @interface EMASWXBarButton :UIButton
 
@@ -354,6 +355,29 @@
     if (block) {
         block(code, reposonData);
     }
+}
+
+- (void)open:(NSDictionary *)param success:(WXModuleCallback)success
+     failure:(WXModuleCallback)failure
+withContainer:(UIViewController *)container
+{
+    if (0 == [param count] || !param[@"url"] || !container) {
+        !failure?:failure(nil);
+        return;
+    }
+    
+    BOOL animated = YES;
+    NSString *obj = [[param objectForKey:@"animated"] lowercaseString];
+    if (obj && [obj isEqualToString:@"false"]) {
+        animated = NO;
+    }
+    
+    EMASWindVaneViewController *vc = [[EMASWindVaneViewController alloc] init];
+    vc.loadUrl = param[@"url"];
+    vc.hidesBottomBarWhenPushed = YES;
+    [container.navigationController pushViewController:vc animated:animated];
+    !success?:success(nil);
+    
 }
 
 @end

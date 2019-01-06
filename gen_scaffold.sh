@@ -116,8 +116,6 @@ modifyNativeSDk() {
 
     if [ "$SDK_CONFIG_MTOP_DOMAIN" != "" ]; then
         sed -i "/>MTOP</{n;n;n; s/<string>.*/<string>$SDK_CONFIG_MTOP_DOMAIN<\/string>/g; }" $SDK_PATH
-        # TimestampHost domain跟 MTOP 保持一致
-        sed -i "/>TimestampHost</{n; s/<string>.*/<string>$SDK_CONFIG_MTOP_DOMAIN<\/string>/g; }" $SDK_PATH
     fi
 
     if [ "$SDK_CONFIG_ZCACHE_PREFIX" != "" ]; then
@@ -209,7 +207,7 @@ modifyWeexSDK() {
 modifyScaffoldType() {
     echo "start modify Scaffold Type ..."
     if [ "$SCAFFOLD_TYPE" != "" ]; then
-        sed -i "/>ScaffoldType</{n; s/<integer>.*/<integer>$SCAFFOLD_TYPE<\/integer>/g; }" Scaffold-Info.plist
+        sed -i "/>ScaffoldType</{n; s/<integer>.*/<integer>$SCAFFOLD_TYPE<\/integer>/g; }" WeexContainer-Info.plist
     fi
     echo "modify Scaffold Type done."
 }
@@ -217,7 +215,7 @@ modifyScaffoldType() {
 modifyWeexNativePage() {
     echo "start modify WEEX native page ..."
     if [ "$WEEX_PAGE_TAB_SIZE" != "" ]; then
-        sed -i "/>TabSize</{n; s/<integer>.*/<integer>$WEEX_PAGE_TAB_SIZE<\/integer>/g; }" Scaffold-Info.plist
+        sed -i "/>TabSize</{n; s/<integer>.*/<integer>$WEEX_PAGE_TAB_SIZE<\/integer>/g; }" WeexContainer-Info.plist
     fi
     echo "modify Weex native page done."
 }

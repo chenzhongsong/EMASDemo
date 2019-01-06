@@ -31,6 +31,13 @@
     return (NSMutableArray *)self.childViewControllers;
 }
 
+- (void)presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion
+{
+    if (self.parentVC) {
+        [self.parentVC presentViewController:viewControllerToPresent animated:flag completion:completion];
+    }
+}
+
 //在渲染容器中添加特定的子视图控制器。
 - (void)wxAddChildViewController:(UIViewController *)viewController {
     [self addChildViewController:viewController];
@@ -55,13 +62,19 @@
 
 //自定义页面加载的indicatorView，并显示在view中。
 - (void)wxShowPageLoadingIndicator:(UIView *)view {
-    [view addSubview:self.pageLoadingIndicator];
-    [self.pageLoadingIndicator startAnimating];}
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [view addSubview:self.pageLoadingIndicator];
+        [self.pageLoadingIndicator startAnimating];
+    });
+    
+}
 
 //隐藏indicatorView
 - (void)wxHidePageLoadingIndicator {
-    [self.pageLoadingIndicator stopAnimating];
-    [self.pageLoadingIndicator removeFromSuperview];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.pageLoadingIndicator stopAnimating];
+        [self.pageLoadingIndicator removeFromSuperview];
+    });
 }
 
 - (UIActivityIndicatorView *)pageLoadingIndicator {

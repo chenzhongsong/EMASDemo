@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,8 +41,12 @@
 		8601D6F02160728900BDFC46 /* WVNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8601D6EF2160728900BDFC46 /* WVNavigator.m */; };
 		8601D7002162075200BDFC46 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6FF2162075100BDFC46 /* AssetsLibrary.framework */; };
 		8601D70B216B4A0100BDFC46 /* preload_packageapp.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8601D707216B4A0100BDFC46 /* preload_packageapp.zip */; };
-		8611700F21916D7E00DCAB7F /* Scaffold-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8611700E21916D7E00DCAB7F /* Scaffold-Info.plist */; };
+		8611700F21916D7E00DCAB7F /* WeexContainer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8611700E21916D7E00DCAB7F /* WeexContainer-Info.plist */; };
 		8611706521943A5000DCAB7F /* EMASPortalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8611706421943A5000DCAB7F /* EMASPortalViewController.m */; };
+		8635030D21CF962B00E210DE /* WXNavigationBarDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8635030C21CF962A00E210DE /* WXNavigationBarDefaultImpl.m */; };
+		8635031621D13E5E00E210DE /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8635031421D13E5900E210DE /* UIColor+Hex.m */; };
+		8635031C21D291E800E210DE /* WXScreenshotModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8635031B21D291E800E210DE /* WXScreenshotModule.m */; };
+		8635032021D3283800E210DE /* EMASWXScreenModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8635031F21D3283800E210DE /* EMASWXScreenModule.m */; };
 		869B55CA2140068400809084 /* UIViewController+EMASWXNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */; };
 		869B55CB2140068400809084 /* EMASHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BF2140068300809084 /* EMASHostViewController.m */; };
 		869B55CC2140068400809084 /* EMASWXRenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55C12140068300809084 /* EMASWXRenderViewController.m */; };
@@ -182,9 +186,17 @@
 		8601D6EF2160728900BDFC46 /* WVNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVNavigator.m; sourceTree = "<group>"; };
 		8601D6FF2162075100BDFC46 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		8601D707216B4A0100BDFC46 /* preload_packageapp.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = preload_packageapp.zip; sourceTree = "<group>"; };
-		8611700E21916D7E00DCAB7F /* Scaffold-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Scaffold-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8611700E21916D7E00DCAB7F /* WeexContainer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WeexContainer-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8611706321943A5000DCAB7F /* EMASPortalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASPortalViewController.h; sourceTree = "<group>"; };
 		8611706421943A5000DCAB7F /* EMASPortalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASPortalViewController.m; sourceTree = "<group>"; };
+		8635030B21CF962A00E210DE /* WXNavigationBarDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXNavigationBarDefaultImpl.h; sourceTree = "<group>"; };
+		8635030C21CF962A00E210DE /* WXNavigationBarDefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXNavigationBarDefaultImpl.m; sourceTree = "<group>"; };
+		8635031421D13E5900E210DE /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		8635031521D13E5C00E210DE /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		8635031A21D291E800E210DE /* WXScreenshotModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXScreenshotModule.h; sourceTree = "<group>"; };
+		8635031B21D291E800E210DE /* WXScreenshotModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXScreenshotModule.m; sourceTree = "<group>"; };
+		8635031E21D3283800E210DE /* EMASWXScreenModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASWXScreenModule.h; sourceTree = "<group>"; };
+		8635031F21D3283800E210DE /* EMASWXScreenModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASWXScreenModule.m; sourceTree = "<group>"; };
 		869B55BC2140068300809084 /* UIViewController+EMASWXNaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EMASWXNaviBar.h"; sourceTree = "<group>"; };
 		869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EMASWXNaviBar.m"; sourceTree = "<group>"; };
 		869B55BE2140068300809084 /* EMASHostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASHostViewController.h; sourceTree = "<group>"; };
@@ -418,9 +430,21 @@
 			path = preload;
 			sourceTree = SOURCE_ROOT;
 		};
+		8635031D21D291EE00E210DE /* module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = module;
+			sourceTree = "<group>";
+		};
 		869B55BA2140068300809084 /* Weex */ = {
 			isa = PBXGroup;
 			children = (
+				8635031D21D291EE00E210DE /* module */,
+				8635031A21D291E800E210DE /* WXScreenshotModule.h */,
+				8635031B21D291E800E210DE /* WXScreenshotModule.m */,
+				8635031E21D3283800E210DE /* EMASWXScreenModule.h */,
+				8635031F21D3283800E210DE /* EMASWXScreenModule.m */,
 				869B55C42140068300809084 /* Handler */,
 				869B55BE2140068300809084 /* EMASHostViewController.h */,
 				869B55BF2140068300809084 /* EMASHostViewController.m */,
@@ -436,6 +460,8 @@
 				869B55DA21400A2100809084 /* EMASBaseNavigationController.m */,
 				869B55DB21400A2100809084 /* EMASNativeViewController.h */,
 				869B55D921400A2100809084 /* EMASNativeViewController.m */,
+				8635031521D13E5C00E210DE /* UIColor+Hex.h */,
+				8635031421D13E5900E210DE /* UIColor+Hex.m */,
 			);
 			path = Weex;
 			sourceTree = "<group>";
@@ -452,6 +478,8 @@
 		869B55C42140068300809084 /* Handler */ = {
 			isa = PBXGroup;
 			children = (
+				8635030B21CF962A00E210DE /* WXNavigationBarDefaultImpl.h */,
+				8635030C21CF962A00E210DE /* WXNavigationBarDefaultImpl.m */,
 				869B55C52140068300809084 /* EMASWXNavigationImpl.h */,
 				869B55C62140068300809084 /* EMASWXNavigationImpl.m */,
 			);
@@ -498,7 +526,7 @@
 				3342C6C021A1AF62006B6A87 /* AccsReceiverTable.plist */,
 				3342C6BF21A1AF61006B6A87 /* PushSDKReceiverConfig.plist */,
 				8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */,
-				8611700E21916D7E00DCAB7F /* Scaffold-Info.plist */,
+				8611700E21916D7E00DCAB7F /* WeexContainer-Info.plist */,
 				8A69B608200C8F980073756D /* EMASService.h */,
 				8A69B609200C8F980073756D /* EMASService.m */,
 				8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */,
@@ -670,6 +698,7 @@
 				TargetAttributes = {
 					8ADA953A1FD9309400C0EF49 = {
 						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = VSW2PKYTD7;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -696,7 +725,7 @@
 				};
 			};
 			buildConfigurationList = 8ADA95361FD9309400C0EF49 /* Build configuration list for PBXProject "EMASDemo" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -724,7 +753,7 @@
 				33D18D5C20DA30DC00ACF0C7 /* ACCSSettingViewController.xib in Resources */,
 				3342C6C221A1AF62006B6A87 /* AccsReceiverTable.plist in Resources */,
 				33E1BA9F21A4275300E81E32 /* clock.wav in Resources */,
-				8611700F21916D7E00DCAB7F /* Scaffold-Info.plist in Resources */,
+				8611700F21916D7E00DCAB7F /* WeexContainer-Info.plist in Resources */,
 				980F856F20BECC49002156A2 /* CustomCell.xib in Resources */,
 				980F856C20BECC49002156A2 /* OrangeFeatureFirstVC.xib in Resources */,
 				8ADA954B1FD9309400C0EF49 /* Assets.xcassets in Resources */,
@@ -871,6 +900,7 @@
 				8783A75521A6E5C900C177A1 /* PushReporter.m in Sources */,
 				869B55D421400A0700809084 /* EMASWeexContainerService.m in Sources */,
 				33D18D4B20DA06CE00ACF0C7 /* AccsConfiguration.m in Sources */,
+				8635030D21CF962B00E210DE /* WXNavigationBarDefaultImpl.m in Sources */,
 				1A65F6261FF253CF00B4573C /* AliHATestCaseViewController.mm in Sources */,
 				869B55DD21400A2100809084 /* EMASBaseNavigationController.m in Sources */,
 				981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */,
@@ -888,10 +918,12 @@
 				33D18D5B20DA30DC00ACF0C7 /* ACCSSettingViewController.m in Sources */,
 				869B55CB2140068400809084 /* EMASHostViewController.m in Sources */,
 				980F857020BECC49002156A2 /* OrangeRemoteConfigRootVC.m in Sources */,
+				8635031C21D291E800E210DE /* WXScreenshotModule.m in Sources */,
 				8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */,
 				4A017CF221006EC7001FF027 /* TestUIViewController.m in Sources */,
 				7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */,
 				980F856A20BECC49002156A2 /* OrangeRemotConfigDebugVC.m in Sources */,
+				8635031621D13E5E00E210DE /* UIColor+Hex.m in Sources */,
 				8ADA95511FD9309400C0EF49 /* main.m in Sources */,
 				3342C6BE21A1AF07006B6A87 /* PushMessageReceiver.m in Sources */,
 				8601D6F02160728900BDFC46 /* WVNavigator.m in Sources */,
@@ -905,6 +937,7 @@
 				8601D6BD215F5A2B00BDFC46 /* EMASWindVaneConfig.m in Sources */,
 				8A69B60A200C8F980073756D /* EMASService.m in Sources */,
 				8601D6EC215F7A7E00BDFC46 /* EMASWindVaneViewController.m in Sources */,
+				8635032021D3283800E210DE /* EMASWXScreenModule.m in Sources */,
 				33A2550F20FDE37000C3F673 /* PushViewController.m in Sources */,
 				869B55CF2140068400809084 /* EMASScannerViewController.m in Sources */,
 				980F856D20BECC49002156A2 /* OrangeFeatureFirstVC.m in Sources */,
@@ -1071,6 +1104,7 @@
 			baseConfigurationReference = 97BD7DEF55A6F7A44C7420EE /* Pods-EMASDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1081,6 +1115,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VSW2PKYTD7;
 				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EMASDemo/hotfix",
@@ -1172,6 +1207,7 @@
 			baseConfigurationReference = 8E3940FA5D2B7CA506DC1A36 /* Pods-EMASDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1182,6 +1218,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VSW2PKYTD7;
 				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EMASDemo/hotfix",
@@ -1262,7 +1299,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = emas_push_profile_adhoc;
+				PROVISIONING_PROFILE_SPECIFIER = emas_push_profile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

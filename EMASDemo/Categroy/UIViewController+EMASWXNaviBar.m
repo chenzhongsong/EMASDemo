@@ -11,7 +11,7 @@
 #import <WeexSDK/WeexSDK.h>
 //#import "WXDefine.h"
 #import <objc/runtime.h>
-#define WEEX_COLOR [UIColor colorWithRed:0.2 green:0.6 blue:1.0 alpha:1]
+#define WEEX_COLOR [UIColor colorWithRed:4.0/255.0 green:21.0/255.0 blue:44.0/255.0 alpha:1]
 
 @implementation UIViewController (EMASWXNaviBar)
 

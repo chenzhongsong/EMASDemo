@@ -26,7 +26,7 @@
 {
     if (self = [super init])
     {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"Scaffold-Info" ofType:@"plist"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"WeexContainer-Info" ofType:@"plist"];
         NSDictionary *root = [NSDictionary dictionaryWithContentsOfFile:path];
         services = root;
     }

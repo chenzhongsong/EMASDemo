@@ -1,12 +1,12 @@
 source 'git@github.com:CocoaPods/Specs.git'
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs-thirdpart.git'
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs.git'
-source 'git@gitlab.emas-ha.cn:root/emas-specs.git'
+#source 'git@gitlab.emas-ha.cn:root/emas-specs.git'
 #source 'git@gitlab.alibaba-inc.com:alipods/specs.git'
 
 # WeexAceChart
-#source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-chart.git'
-#source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-chart.git'
+source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-chart.git'
+source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-chart.git'
 
 # WeexComponents
 source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-common.git'
@@ -49,7 +49,7 @@ platform:ios, '8.0'
     #pod  'ZipArchive', '~> 1.4.0'
     
     # --Weex(通用库-> 高可用 -> 网关 -> Weex)
-    pod 'WeexSDK', '0.18.3.18-EMAS'
+    pod 'WeexSDK', '0.20.0.3-EMAS'
     pod 'ZCache', '10.0.3'
     #pod 'ZipArchive', '~> 1.4.0'
     pod 'SDWebImage', '3.7.5'
@@ -57,17 +57,20 @@ platform:ios, '8.0'
     pod 'DynamicConfigurationAdaptor', '10.0.4'
 
     #weex开源组件
-    #pod 'BindingX', '~> 1.0.2'
+    pod 'BindingX', '~> 1.0.2'
     
     #weex商业图表
-    #pod 'WeexAceChart'
+    pod 'WeexAceChart'
     
     #weex商业组件
     pod 'EmasWeexComponents', '0.0.4'
+    pod 'EmasXBase', '0.0.2'
+    pod 'EmasSocial', '0.0.1'
+    pod 'WeexPluginLoader'
     
     # EMASWeex
     pod 'EMASWeex', '1.3.0'
-    pod 'WXDevtool', '~> 0.16.3' ,:configurations => ['Debug']
+    pod 'WXDevtool', '~> 0.20.0' ,:configurations => ['Debug']
     pod 'CYLTabBarController', '~> 1.17.14'
     pod 'SocketRocket'
     
@@ -83,7 +86,16 @@ platform:ios, '8.0'
     # 数据分析
     pod 'EMASMAN', '10.0.0'    
     
-    pod 'EMASFirstBundle', '3.0.8'
+   # pod 'EMASFirstBundle', '3.0.8'
     
     
+end
+
+post_install do |installer|
+    copy_pods_resources_path = "Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh"
+    string_to_replace = '--compile "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"'
+    assets_compile_with_app_icon_arguments = '--compile "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}" --app-icon "${ASSETCATALOG_COMPILER_APPICON_NAME}" --output-partial-info-plist "${BUILD_DIR}/assetcatalog_generated_info.plist"'
+    text = File.read(copy_pods_resources_path)
+    new_contents = text.gsub(string_to_replace, assets_compile_with_app_icon_arguments)
+    File.open(copy_pods_resources_path, "w") {|file| file.puts new_contents }
 end
