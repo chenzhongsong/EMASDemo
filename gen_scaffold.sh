@@ -116,6 +116,8 @@ modifyNativeSDk() {
 
     if [ "$SDK_CONFIG_MTOP_DOMAIN" != "" ]; then
         sed -i "/>MTOP</{n;n;n; s/<string>.*/<string>$SDK_CONFIG_MTOP_DOMAIN<\/string>/g; }" $SDK_PATH
+        # TimestampHost domain跟 MTOP 保持一致
+        sed -i "/>TimestampHost</{n; s/<string>.*/<string>$SDK_CONFIG_MTOP_DOMAIN<\/string>/g; }" $SDK_PATH
     fi
 
     if [ "$SDK_CONFIG_ZCACHE_PREFIX" != "" ]; then
