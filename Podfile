@@ -1,16 +1,15 @@
-source 'git@github.com:CocoaPods/Specs.git'
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs-thirdpart.git'
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs.git'
 #source 'git@gitlab.emas-ha.cn:root/emas-specs.git'
 #source 'git@gitlab.alibaba-inc.com:alipods/specs.git'
 
 # WeexAceChart
-source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-chart.git'
-source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-chart.git'
+#source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-chart.git'
+#source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-chart.git'
 
 # WeexComponents
-source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-common.git'
-source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-common.git'
+#source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-common.git'
+#source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-common.git'
 
 #project 'EMASDemo.xcodeproj'
 
@@ -57,22 +56,20 @@ platform:ios, '8.0'
     pod 'DynamicConfigurationAdaptor', '10.0.4'
 
     #weex开源组件
-    pod 'BindingX', '~> 1.0.2'
+    pod 'BindingX', '1.0.3-EMAS'
     
     #weex商业图表
-    pod 'WeexAceChart'
+    #pod 'WeexAceChart'
     
     #weex商业组件
-    pod 'EmasWeexComponents', '0.0.4'
-    pod 'EmasXBase', '0.0.2'
-    pod 'EmasSocial', '0.0.1'
-    pod 'WeexPluginLoader'
+    #pod 'EmasWeexComponents', '0.0.4'
     
     # EMASWeex
     pod 'EMASWeex', '1.3.0'
-    pod 'WXDevtool', '~> 0.20.0' ,:configurations => ['Debug']
-    pod 'CYLTabBarController', '~> 1.17.14'
-    pod 'SocketRocket'
+    pod 'WXDevtool', '0.20.0-EMAS' ,:configurations => ['Debug']
+    pod 'CYLTabBarController', '1.17.22-EMAS'
+    pod 'SocketRocket', '0.5.1'
+    pod 'WeexPluginLoader', '0.0.1.9.1'
     
     # WindVane
     pod 'WindVane', '1.1.0'

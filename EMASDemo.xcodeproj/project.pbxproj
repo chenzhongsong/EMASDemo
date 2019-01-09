@@ -45,8 +45,8 @@
 		8611706521943A5000DCAB7F /* EMASPortalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8611706421943A5000DCAB7F /* EMASPortalViewController.m */; };
 		8635030D21CF962B00E210DE /* WXNavigationBarDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8635030C21CF962A00E210DE /* WXNavigationBarDefaultImpl.m */; };
 		8635031621D13E5E00E210DE /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8635031421D13E5900E210DE /* UIColor+Hex.m */; };
-		8635031C21D291E800E210DE /* WXScreenshotModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8635031B21D291E800E210DE /* WXScreenshotModule.m */; };
 		8635032021D3283800E210DE /* EMASWXScreenModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8635031F21D3283800E210DE /* EMASWXScreenModule.m */; };
+		8676D6F921E5F00100CBD794 /* WXScreenshotModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676D6F721E5F00100CBD794 /* WXScreenshotModule.m */; };
 		869B55CA2140068400809084 /* UIViewController+EMASWXNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */; };
 		869B55CB2140068400809084 /* EMASHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BF2140068300809084 /* EMASHostViewController.m */; };
 		869B55CC2140068400809084 /* EMASWXRenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55C12140068300809084 /* EMASWXRenderViewController.m */; };
@@ -193,10 +193,10 @@
 		8635030C21CF962A00E210DE /* WXNavigationBarDefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXNavigationBarDefaultImpl.m; sourceTree = "<group>"; };
 		8635031421D13E5900E210DE /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		8635031521D13E5C00E210DE /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
-		8635031A21D291E800E210DE /* WXScreenshotModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXScreenshotModule.h; sourceTree = "<group>"; };
-		8635031B21D291E800E210DE /* WXScreenshotModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXScreenshotModule.m; sourceTree = "<group>"; };
 		8635031E21D3283800E210DE /* EMASWXScreenModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASWXScreenModule.h; sourceTree = "<group>"; };
 		8635031F21D3283800E210DE /* EMASWXScreenModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASWXScreenModule.m; sourceTree = "<group>"; };
+		8676D6F721E5F00100CBD794 /* WXScreenshotModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXScreenshotModule.m; sourceTree = "<group>"; };
+		8676D6F821E5F00100CBD794 /* WXScreenshotModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXScreenshotModule.h; sourceTree = "<group>"; };
 		869B55BC2140068300809084 /* UIViewController+EMASWXNaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EMASWXNaviBar.h"; sourceTree = "<group>"; };
 		869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EMASWXNaviBar.m"; sourceTree = "<group>"; };
 		869B55BE2140068300809084 /* EMASHostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASHostViewController.h; sourceTree = "<group>"; };
@@ -433,6 +433,10 @@
 		8635031D21D291EE00E210DE /* module */ = {
 			isa = PBXGroup;
 			children = (
+				8635031E21D3283800E210DE /* EMASWXScreenModule.h */,
+				8635031F21D3283800E210DE /* EMASWXScreenModule.m */,
+				8676D6F821E5F00100CBD794 /* WXScreenshotModule.h */,
+				8676D6F721E5F00100CBD794 /* WXScreenshotModule.m */,
 			);
 			path = module;
 			sourceTree = "<group>";
@@ -441,10 +445,6 @@
 			isa = PBXGroup;
 			children = (
 				8635031D21D291EE00E210DE /* module */,
-				8635031A21D291E800E210DE /* WXScreenshotModule.h */,
-				8635031B21D291E800E210DE /* WXScreenshotModule.m */,
-				8635031E21D3283800E210DE /* EMASWXScreenModule.h */,
-				8635031F21D3283800E210DE /* EMASWXScreenModule.m */,
 				869B55C42140068300809084 /* Handler */,
 				869B55BE2140068300809084 /* EMASHostViewController.h */,
 				869B55BF2140068300809084 /* EMASHostViewController.m */,
@@ -903,6 +903,7 @@
 				8635030D21CF962B00E210DE /* WXNavigationBarDefaultImpl.m in Sources */,
 				1A65F6261FF253CF00B4573C /* AliHATestCaseViewController.mm in Sources */,
 				869B55DD21400A2100809084 /* EMASBaseNavigationController.m in Sources */,
+				8676D6F921E5F00100CBD794 /* WXScreenshotModule.m in Sources */,
 				981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */,
 				980F856820BECC49002156A2 /* OrangeFeatureSecondVC.m in Sources */,
 				8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */,
@@ -918,7 +919,6 @@
 				33D18D5B20DA30DC00ACF0C7 /* ACCSSettingViewController.m in Sources */,
 				869B55CB2140068400809084 /* EMASHostViewController.m in Sources */,
 				980F857020BECC49002156A2 /* OrangeRemoteConfigRootVC.m in Sources */,
-				8635031C21D291E800E210DE /* WXScreenshotModule.m in Sources */,
 				8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */,
 				4A017CF221006EC7001FF027 /* TestUIViewController.m in Sources */,
 				7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */,

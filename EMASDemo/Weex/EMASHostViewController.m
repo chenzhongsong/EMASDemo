@@ -12,7 +12,14 @@
 #import "UIViewController+EMASWXNaviBar.h"
 //#import "EMASWindVaneViewController.h"
 #import <DynamicConfiguration/DynamicConfigurationManager.h>
-#import <EmasWeexComponents/WXLocationModule.h>
+
+#ifndef WX_LOCATION_NOTIFICATION_RELOAD
+#define WX_LOCATION_NOTIFICATION_RELOAD    @"location_reload"
+#endif
+
+#ifndef WX_LOCATION_NOTIFICATION_REPLACE
+#define WX_LOCATION_NOTIFICATION_REPLACE   @"location_replace"
+#endif
 
 @interface EMASHostViewController()
 

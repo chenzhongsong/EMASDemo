@@ -180,6 +180,10 @@ modifyWeexSDK() {
         sed -i "/pod 'EmasWeexComponents'/{ s/#//g }" $PODFILE_PATH
         #移动文件
         mv Resource/BusinessSDK/EMASWXSubSDKEngine.m EMASDemo/Weex/EMASWXSubSDKEngine.m
+        mv Resource/BusinessSDK/WXNavigationBarDefaultImpl.h EMASDemo/Weex/Handler/WXNavigationBarDefaultImpl.h
+        mv Resource/BusinessSDK/WXNavigationBarDefaultImpl.m EMASDemo/Weex/Handler/WXNavigationBarDefaultImpl.m
+        mv Resource/BusinessSDK/WXScreenshotModule.h EMASDemo/Weex/Handler/WXScreenshotModule.h
+        mv Resource/BusinessSDK/WXScreenshotModule.m EMASDemo/Weex/module/WXScreenshotModule.m
     fi
 
     #商业图表SDK

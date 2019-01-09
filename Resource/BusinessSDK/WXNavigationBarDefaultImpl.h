@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <EmasWeexComponents/WXNavigationBarModuleProtocol.h>
 
-@interface WXNavigationBarDefaultImpl : NSObject
+@interface WXNavigationBarDefaultImpl : NSObject<WXNavigationBarModuleProtocol>
 
 @end
