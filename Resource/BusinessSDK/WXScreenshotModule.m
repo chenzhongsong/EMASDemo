@@ -8,6 +8,8 @@
 #import "WXScreenshotModule.h"
 #import <WeexPluginLoader/WeexPluginLoader.h>
 #import <EmasXBase/XCOScreenshotDetector.h>
+#import <WeexSDK/WeexSDK.h>
+
 @implementation WXScreenshotModule
 
 WX_PlUGIN_EXPORT_MODULE(xscreenshot, WXScreenshotModule)

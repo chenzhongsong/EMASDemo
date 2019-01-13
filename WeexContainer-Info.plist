@@ -7,9 +7,6 @@
 	<key>TabSize</key>
 	<integer>-1</integer>
 	<key>JSSource</key>
-	<dict>
-		<key>0</key>
-		<string>http://cdn.emas-poc.com/app/emas-showcase-weex-showcase/pages/index/entry.js</string>
-	</dict>
+	<dict/>
 </dict>
 </plist>
