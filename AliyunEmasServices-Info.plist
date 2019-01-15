@@ -16,6 +16,11 @@
 		<false/>
 		<key>ChannelID</key>
 		<string>1001@POC_iOS_1.0.0</string>
+		<key>API</key>
+		<dict>
+			<key>Domain</key>
+			<string>gw.emas-poc.com</string>
+		</dict>
 		<key>ACCS</key>
 		<dict>
 			<key>Host</key>

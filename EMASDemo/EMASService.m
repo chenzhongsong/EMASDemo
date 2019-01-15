@@ -70,6 +70,11 @@
     return [services objectForKey:@"HAServiceID"];
 }
 
+- (NSString *)APIDomain {
+    NSDictionary *dict = [services objectForKey:@"API"];
+    return [dict objectForKey:@"Domain"];
+}
+
 - (NSString *)MTOPDomain
 {
     NSDictionary *dict = [services objectForKey:@"MTOP"];
