@@ -84,7 +84,17 @@
 - (NSString *)ZCacheURL
 {
     NSDictionary *dict = [services objectForKey:@"ZCache"];
-    return [dict objectForKey:@"URL"];
+    NSString *url = [dict objectForKey:@"URL"];
+    
+    NSUInteger length = url.length;
+    if (length >= 1) {
+        NSString *lastWord = [url substringFromIndex:length - 1];
+        if (![lastWord isEqualToString:@"/"]) {
+            url = [url stringByAppendingString:@"/"];
+        }
+    }
+    
+    return url;
 }
 
 - (NSString *)HAOSSBucketName
