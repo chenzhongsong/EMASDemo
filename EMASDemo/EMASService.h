@@ -21,6 +21,7 @@
 - (NSString *)MTOPDomain;
 - (NSString *)ChannelID;
 - (NSString *)ZCacheURL;
+- (NSString *)APIDomain;
 - (NSString *)HAOSSBucketName;
 - (NSString *)HAUniversalHost;
 - (NSString *)HATimestampHost;

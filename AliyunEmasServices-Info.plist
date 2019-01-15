@@ -9,13 +9,18 @@
 		<key>LogLevel</key>
 		<string>none</string>
 		<key>AppKey</key>
-		<string>20000420</string>
+		<string>20000291</string>
 		<key>AppSecret</key>
-		<string>5ab0aa846ca93bd78d5b4653ed5078db</string>
+		<string>a015430c7cbefa7546889893bbdc1ab4</string>
 		<key>UseSecurityGuard</key>
 		<false/>
 		<key>ChannelID</key>
 		<string>1001@POC_iOS_1.0.0</string>
+		<key>API</key>
+		<dict>
+			<key>Domain</key>
+			<string>gw.emas-poc.com</string>
+		</dict>
 		<key>ACCS</key>
 		<dict>
 			<key>Host</key>

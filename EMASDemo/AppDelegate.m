@@ -160,7 +160,7 @@
     [self initHAConfig];
     
     // 3. 初始化Weex，Weex依赖基础库、网关和高可用，因此Weex的初始化顺序为，基础库->高可用->网关->远程配置->ZCache->Weex
-    //[self initRemoteConfig];
+    [self initRemoteConfig];
     [self initMtopConfig];
     [self initZCacheConfig];
     

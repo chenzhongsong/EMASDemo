@@ -307,43 +307,37 @@ TestObjectClass(7)
 {
     // 定义维度集合
     AppMonitorDimensionSet  *dimensionSet = [[AppMonitorDimensionSet alloc] init];
-    [dimensionSet addDimensionWithName:@"isVip"];
+    [dimensionSet addDimensionWithName:@"isSpdy"];
     
     // 定义指标集合
     AppMonitorMeasureSet    *measureSet = [[AppMonitorMeasureSet alloc] init];
     //添加指标，默认取值范围大于等于0
-    [measureSet   addMeasureWithName:@"tokenLost"];
+    [measureSet addMeasureWithName:@"a"];
+    [measureSet addMeasureWithName:@"b"];
+    [measureSet addMeasureWithName:@"b"];
     
     //注册埋点 "network"对应埋点配置-模块；"responseTime"对应埋点配置-监控点
-    [AppMonitorStat registerWithModule:@"vipmonitor" monitorPoint:@"tokenerror" measureSet:measureSet dimensionSet:dimensionSet];
+    [AppMonitorStat registerWithModule:@"network_poc" monitorPoint:@"responseTime" measureSet:measureSet dimensionSet:dimensionSet];
     
-    for (int i = 0; i < 2000; i++)
-    {
-        NSString *isVip = nil;
-        double tokenLost;
-        if (i % 4 == 0) {
-            isVip = @"true";
-            tokenLost = 1;
-        } else if (i % 4 == 1){
-            isVip = @"false";
-            tokenLost = 1;
-        } else if (i % 4 == 2) {
-            isVip = @"false";
-            tokenLost = 0;
-        } else {
-            isVip = @"true";
-            tokenLost = 0;
-        }
-        // 增加setValue添加维度、指标
-        AppMonitorDimensionValueSet *dimensionValues = [[AppMonitorDimensionValueSet alloc] init];
-        [dimensionValues setValue:isVip forName:@"isVip"];
+    for (int i = 0; i < 20; i ++) {
         
-        AppMonitorMeasureValueSet  *measureValues = [[AppMonitorMeasureValueSet alloc] init];
-        AppMonitorMeasureValue *measureValue = [[AppMonitorMeasureValue alloc] initWithValue:[NSNumber numberWithDouble:tokenLost]];
-        [measureValues setValue:measureValue forName:@"tokenLost"];
+        // 增加setValue添加维度、指标
+        
+        AppMonitorDimensionValueSet *dimensionValues = [[AppMonitorDimensionValueSet alloc] init];
+        [dimensionValues setValue:[NSString stringWithFormat:@"%d", i] forName:@"isSpdy"];
+        
+        AppMonitorMeasureValueSet *measureValues = [[AppMonitorMeasureValueSet alloc] init];
+        AppMonitorMeasureValue *a = [[AppMonitorMeasureValue alloc] initWithValue:@(100 + i)];
+        AppMonitorMeasureValue *b = [[AppMonitorMeasureValue alloc] initWithValue:@(100 + i)];
+        AppMonitorMeasureValue *c = [[AppMonitorMeasureValue alloc] initWithValue:@(100 + i)];
+        
+        [measureValues setValue:a forName:@"a"];
+        [measureValues setValue:b forName:@"a"];
+        [measureValues setValue:c forName:@"a"];
         
         // 多维度多指标，最通用
-        [AppMonitorStat commitWithModule:@"vipmonitor" monitorPoint:@"tokenerror" dimensionValueSet:dimensionValues measureValueSet:measureValues];
+        [AppMonitorStat commitWithModule:@"network_poc" monitorPoint:@"responseTime" dimensionValueSet:dimensionValues measureValueSet:measureValues];
+
     }
 }
 
