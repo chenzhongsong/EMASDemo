@@ -265,11 +265,14 @@ modifyNativeSDk
 #2. 发布包名修改
 modifyPackageName
 
-#3. 修改脚手架类型
+#3. bundleId修改
+modifyBundleId
+
+#4. 修改脚手架类型
 modifyScaffoldType
 
-#4. weex外围sdk相关配置
+#5. weex外围sdk相关配置
 modifyWeexSDK
 
-#5. Weex Native页面配置
+#6. Weex Native页面配置
 modifyWeexNativePage
