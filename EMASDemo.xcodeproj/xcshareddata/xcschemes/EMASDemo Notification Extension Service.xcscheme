@@ -30,8 +30,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8ADA953A1FD9309400C0EF49"
-               BuildableName = "g.app"
-               BlueprintName = "g"
+               BuildableName = "EMASDemo.app"
+               BlueprintName = "EMASDemo"
                ReferencedContainer = "container:EMASDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -76,8 +76,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8ADA953A1FD9309400C0EF49"
-            BuildableName = "g.app"
-            BlueprintName = "g"
+            BuildableName = "EMASDemo.app"
+            BlueprintName = "EMASDemo"
             ReferencedContainer = "container:EMASDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -96,8 +96,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8ADA953A1FD9309400C0EF49"
-            BuildableName = "g.app"
-            BlueprintName = "g"
+            BuildableName = "EMASDemo.app"
+            BlueprintName = "EMASDemo"
             ReferencedContainer = "container:EMASDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

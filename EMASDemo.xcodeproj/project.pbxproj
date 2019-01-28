@@ -230,7 +230,7 @@
 		8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EMASDemo.entitlements; sourceTree = "<group>"; };
 		8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8AC0CB6D200312CF00FD44E6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		8ADA953B1FD9309400C0EF49 /* g.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = g.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ADA953B1FD9309400C0EF49 /* EMASDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMASDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ADA953E1FD9309400C0EF49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8ADA953F1FD9309400C0EF49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8ADA95481FD9309400C0EF49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -511,7 +511,7 @@
 		8ADA953C1FD9309400C0EF49 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8ADA953B1FD9309400C0EF49 /* g.app */,
+				8ADA953B1FD9309400C0EF49 /* EMASDemo.app */,
 				8ADA95561FD9309400C0EF49 /* EMASDemoTests.xctest */,
 				8ADA95611FD9309400C0EF49 /* EMASDemoUITests.xctest */,
 			);
@@ -628,9 +628,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8ADA953A1FD9309400C0EF49 /* g */ = {
+		8ADA953A1FD9309400C0EF49 /* EMASDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8ADA956A1FD9309400C0EF49 /* Build configuration list for PBXNativeTarget "g" */;
+			buildConfigurationList = 8ADA956A1FD9309400C0EF49 /* Build configuration list for PBXNativeTarget "EMASDemo" */;
 			buildPhases = (
 				7E52B87F8848102D355C54FE /* [CP] Check Pods Manifest.lock */,
 				8ADA95371FD9309400C0EF49 /* Sources */,
@@ -640,15 +640,14 @@
 				67DAC7CF7E1FB0DDB324BBC0 /* 📦 Copy Pods Resources */,
 				8ABD97BD1FF4D55700469557 /* Embed Watch Content */,
 				33CD22DA21A3E2C10005D834 /* Embed App Extensions */,
-				351F6C19EAB6C4E3FF549D6B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = g;
+			name = EMASDemo;
 			productName = EMASDemo;
-			productReference = 8ADA953B1FD9309400C0EF49 /* g.app */;
+			productReference = 8ADA953B1FD9309400C0EF49 /* EMASDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8ADA95551FD9309400C0EF49 /* EMASDemoTests */ = {
@@ -737,7 +736,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8ADA953A1FD9309400C0EF49 /* g */,
+				8ADA953A1FD9309400C0EF49 /* EMASDemo */,
 				8ADA95551FD9309400C0EF49 /* EMASDemoTests */,
 				8ADA95601FD9309400C0EF49 /* EMASDemoUITests */,
 			);
@@ -789,21 +788,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		351F6C19EAB6C4E3FF549D6B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		67DAC7CF7E1FB0DDB324BBC0 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -834,7 +818,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AA85B2CA3C2F5806D1BDF7DB /* [CP] Copy Pods Resources */ = {
@@ -959,12 +943,12 @@
 /* Begin PBXTargetDependency section */
 		8ADA95581FD9309400C0EF49 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8ADA953A1FD9309400C0EF49 /* g */;
+			target = 8ADA953A1FD9309400C0EF49 /* EMASDemo */;
 			targetProxy = 8ADA95571FD9309400C0EF49 /* PBXContainerItemProxy */;
 		};
 		8ADA95631FD9309400C0EF49 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8ADA953A1FD9309400C0EF49 /* g */;
+			target = 8ADA953A1FD9309400C0EF49 /* EMASDemo */;
 			targetProxy = 8ADA95621FD9309400C0EF49 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1103,8 +1087,8 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_MODULES_AUTOLINK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: kun ling (VSW2PKYTD7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: kun ling (VSW2PKYTD7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: kun ling (VD2NZ36RV4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kun ling (VD2NZ36RV4)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VSW2PKYTD7;
 				ENABLE_BITCODE = NO;
@@ -1190,7 +1174,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.emas.kraken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = emas_kraken_adhoc;
+				PROVISIONING_PROFILE_SPECIFIER = emas_push_profile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1291,7 +1275,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.emas.kraken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = emas_kraken_adhoc;
+				PROVISIONING_PROFILE_SPECIFIER = emas_push_profile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1362,7 +1346,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8ADA956A1FD9309400C0EF49 /* Build configuration list for PBXNativeTarget "g" */ = {
+		8ADA956A1FD9309400C0EF49 /* Build configuration list for PBXNativeTarget "EMASDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8ADA956B1FD9309400C0EF49 /* Debug */,
