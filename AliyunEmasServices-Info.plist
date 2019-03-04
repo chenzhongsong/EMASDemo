@@ -71,7 +71,7 @@
 			<key>OSSBucketName</key>
 			<string>emas-poc-private</string>
 			<key>ServiceID</key>
-			<string>emas-ha</string>
+			<string>emas-test</string>
 			<key>UniversalHost</key>
 			<string>adash.emas-poc.com</string>
 			<key>TimestampHost</key>
