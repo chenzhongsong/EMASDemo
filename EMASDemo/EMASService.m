@@ -71,8 +71,8 @@
 }
 
 - (NSString *)APIDomain {
-    NSDictionary *dict = [services objectForKey:@"API"];
-    return [dict objectForKey:@"Domain"];
+    NSDictionary *dict = [services objectForKey:@"MTOP"];
+    return [dict objectForKey:@"APIDomain"];
 }
 
 - (NSString *)MTOPDomain

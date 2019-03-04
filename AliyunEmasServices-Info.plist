@@ -9,18 +9,13 @@
 		<key>LogLevel</key>
 		<string>none</string>
 		<key>AppKey</key>
-		<string>20000291</string>
+		<string>200004471</string>
 		<key>AppSecret</key>
-		<string>a015430c7cbefa7546889893bbdc1ab4</string>
+		<string>7e4b1a372a1bd920b9d194cfdf12be3f</string>
 		<key>UseSecurityGuard</key>
 		<false/>
 		<key>ChannelID</key>
 		<string>1001@POC_iOS_1.0.0</string>
-		<key>API</key>
-		<dict>
-			<key>Domain</key>
-			<string>gw.emas-poc.com</string>
-		</dict>
 		<key>ACCS</key>
 		<dict>
 			<key>Host</key>
@@ -61,18 +56,20 @@
 		<dict>
 			<key>Domain</key>
 			<string>aserver.emas-poc.com</string>
+			<key>APIDomain</key>
+			<string>gw.emas-poc.com</string>
 		</dict>
 		<key>ZCache</key>
 		<dict>
 			<key>URL</key>
-			<string>http://publish-poc.emas-ha.cn/eweex/</string>
+			<string>http://cdn.emas-poc.com/eweex/</string>
 		</dict>
 		<key>HA</key>
 		<dict>
 			<key>RSAPublicKey</key>
 			<string></string>
 			<key>OSSBucketName</key>
-			<string>emas-ha-remote-log-poc</string>
+			<string>emas-poc-private</string>
 			<key>ServiceID</key>
 			<string>emas-ha</string>
 			<key>UniversalHost</key>
@@ -83,7 +80,7 @@
 		<key>Hotfix</key>
 		<dict>
 			<key>URL</key>
-			<string>http://hotfix-gate.emas-poc.com</string>
+			<string>aserver.emas-poc.com</string>
 		</dict>
 		<key>RemoteConfig</key>
 		<dict>
