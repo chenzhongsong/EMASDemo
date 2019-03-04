@@ -10,7 +10,7 @@
 #import "AccsConfiguration.h"
 #import "EMASService.h"
 
-#define EMAS_DEFAULT_SERVICEID      @"4272_mock"
+#define EMAS_DEFAULT_SERVICEID      @"emas-test"
 
 @implementation AccsConfiguration
 

@@ -177,8 +177,9 @@
 
 
 - (IBAction)bindService:(id)sender {
-    AccsConfiguration *config = [AccsConfiguration sharedInstance];
-    NSString *serviceId = config.serviceId;
+//    AccsConfiguration *config = [AccsConfiguration sharedInstance];
+//    NSString *serviceId = config.serviceId;
+    NSString *serviceId = @"emas-test";
     if (serviceId.length == 0) {
         NSString *txt = [NSString stringWithFormat:@">> [UNBIND SERVICE] The service id is invalid!"];
         NSLog(@"%@", txt);
@@ -228,7 +229,8 @@
 }
 
 - (IBAction)unbindService:(id)sender {
-    [_accsManager unbindServiceWithServiceId:[AccsConfiguration sharedInstance].serviceId
+    NSString *serviceId = @"emas-test";
+    [_accsManager unbindServiceWithServiceId:serviceId
                                     callBack:^(NSError *error, NSDictionary *resultsDict) {
                                         if (error) {
                                             NSString *txt = [NSString stringWithFormat:@">> [UNBIND SERVICE] ERROR: %@", error];
@@ -245,7 +247,7 @@
 
 - (IBAction)sendRequest:(id)sender {
     NSString *msg = @"hello world!";
-    NSString *serviceId = [AccsConfiguration sharedInstance].serviceId;
+    NSString *serviceId = @"emas-test";//[AccsConfiguration sharedInstance].serviceId;
     
     if (msg.length==0 || serviceId.length==0) {
         NSString *txt = [NSString stringWithFormat:@">> [SEND REQ] Please input service id and message!"];

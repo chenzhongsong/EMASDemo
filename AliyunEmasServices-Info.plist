@@ -9,9 +9,9 @@
 		<key>LogLevel</key>
 		<string>none</string>
 		<key>AppKey</key>
-		<string>200004471</string>
+		<string>10000016</string>
 		<key>AppSecret</key>
-		<string>7e4b1a372a1bd920b9d194cfdf12be3f</string>
+		<string>ddc1f5c8b69da5e875a04e3278203fe2</string>
 		<key>UseSecurityGuard</key>
 		<false/>
 		<key>ChannelID</key>
@@ -71,7 +71,7 @@
 			<key>OSSBucketName</key>
 			<string>emas-poc-private</string>
 			<key>ServiceID</key>
-			<string>emas-test</string>
+			<string>emas-ha</string>
 			<key>UniversalHost</key>
 			<string>adash.emas-poc.com</string>
 			<key>TimestampHost</key>
