@@ -129,7 +129,19 @@
 - (NSString *)HotfixServerURL
 {
     NSDictionary *dict = [services objectForKey:@"Hotfix"];
-    return [dict objectForKey:@"URL"];
+    NSString *domain = [dict objectForKey:@"URL"];
+    
+    if ([domain hasPrefix:@"https"] ||
+        [domain hasPrefix:@"http"]) {
+        return domain;
+    }
+    
+    NSString *scheme = @"https";
+    if ([self useHTTP]) {
+        scheme = @"http";
+    }
+    
+    return [NSString stringWithFormat:@"%@://%@", scheme, domain];
 }
 
 - (BOOL)useHTTP
