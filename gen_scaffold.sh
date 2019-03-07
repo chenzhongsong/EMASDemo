@@ -5,7 +5,7 @@
 #1. mac系统必须使用GUN的sed，使用命令安装gnu-sed到/usr/local/bin/sed，替换系统FreeBSD的sed. brew install gnu-sed --with-default-names
 #   安装完成后执行sed应该看到“GNU sed home page”几个关键字，如果不是说明还是使用的macos系统/usr/bin/sed，需要将/usr/local/bin加入$PATH且在/usr/bin之前
 #2. 帮助文档 ./gen_scaffold.sh -h
-#3. 命令示例：./gen_scaffold.sh -BUNDLE_ID my.bundle.id -SDK_CONFIG_APP_KEY appkey -SDK_CONFIG_APP_SECRET appsecret -SDK_CONFIG_CHANNEL_ID 1001@POC_iOS_1.0.0 -SDK_CONFIG_USE_HTTP false -SDK_CONFIG_ACCS_DOMAIN accs.com -SDK_CONFIG_MTOP_DOMAIN mtop.com -SDK_CONFIG_ZCACHE_PREFIX http://zcache.com/prefex -SDK_CONFIG_HOTFIX_URL http://hotfix.com -SDK_CONFIG_HA_OSS_BUCKET ha-oss-bucket -SDK_CONFIG_HA_ADASH_DOMAIN adash.com -APP_NAME myapp -MAVEN_BASE_GROUP com.my -WEEX_UI_SDK 1 -WEEX_BUSINESS_COMPONENTS 1 -WEEX_BUSINESS_CHARTS 1 -WEEX_PAGE_TAB_SIZE 5 -SCAFFOLD_TYPE 1
+#3. 命令示例：./gen_scaffold.sh -BUNDLE_ID my.bundle.id -SDK_CONFIG_APP_KEY appkey -SDK_CONFIG_APP_SECRET appsecret -SDK_CONFIG_CHANNEL_ID 1001@POC_iOS_1.0.0 -SDK_CONFIG_USE_HTTP false -SDK_CONFIG_ACCS_DOMAIN accs.com -SDK_CONFIG_MTOP_DOMAIN mtop.com -SDK_CONFIG_ZCACHE_PREFIX http://zcache.com/prefex -SDK_CONFIG_HOTFIX_URL hotfix.com -SDK_CONFIG_HA_OSS_BUCKET ha-oss-bucket -SDK_CONFIG_HA_ADASH_DOMAIN adash.com -APP_NAME myapp -MAVEN_BASE_GROUP com.my -WEEX_UI_SDK 1 -WEEX_BUSINESS_COMPONENTS 1 -WEEX_BUSINESS_CHARTS 1 -WEEX_PAGE_TAB_SIZE 5 -SCAFFOLD_TYPE 1 -SDK_CONFIG_API_DOMAIN api.com
 
 set -e
 
