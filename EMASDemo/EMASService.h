@@ -23,6 +23,7 @@
 - (NSString *)ZCacheURL;
 - (NSString *)APIDomain;
 - (NSString *)HAOSSBucketName;
+- (NSString *)HACephBucketName;
 - (NSString *)HAUniversalHost;
 - (NSString *)HATimestampHost;
 - (NSString *)HARSAPublicKey;

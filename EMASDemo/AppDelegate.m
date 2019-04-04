@@ -347,6 +347,7 @@
                          plugins:nil
                             nick:@"emas-ha"]; // nick根据app实际情况填写
     [AliHAAdapter configOSS:[[EMASService shareInstance] HAOSSBucketName]];
+    [AliHAAdapter configCeph:[[EMASService shareInstance] HACephBucketName]];
     [AliHAAdapter setupAccsChannel:[[EMASService shareInstance] ACCSDomain] serviceId:[[EMASService shareInstance] HAServiceID]];
     [AliHAAdapter setupRemoteDebugRPCChannel:[[EMASService shareInstance] HAUniversalHost] scheme:scheme];
     
