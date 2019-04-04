@@ -28,7 +28,7 @@ SDK_CONFIG_HA_OSS_BUCKET=""  #HA.OSSBucketName
 SDK_CONFIG_HA_ADASH_DOMAIN=""  # HA.UniversalHost
 SDK_CONFIG_HA_PUBLIC_KEY=""    # HA.RSAPublicKey
 SDK_CONFIG_API_DOMAIN=""
-SDK_CONFIG_HA_CEPH_BUCKET=""  #HA.CEPHBucketName
+HA_UPLOAD_TYPE = ""
 
 #脚手架组合类型 1->native 2->跨平台研发weex 4->跨平台研发H5
 SCAFFOLD_TYPE=""
@@ -60,9 +60,9 @@ printHelp() {
     echo "   -SDK_CONFIG_ORANGE_DOMAIN          RemoteConfig Domain，从控制台读取。可选"
     echo "   -SDK_CONFIG_HOTFIX_URL             Hotfix URL，从控制台读取。可选"
     echo "   -SDK_CONFIG_HA_OSS_BUCKET          HA.OSSBucketName，从控制台读取。可选"
-    echo "   -SDK_CONFIG_HA_CEPH_BUCKET          HA.cephBucketName，从控制台读取。可选"
     echo "   -SDK_CONFIG_HA_ADASH_DOMAIN        HA.UniversalHost，从控制台读取。可选"
     echo "   -SDK_CONFIG_HA_PUBLIC_KEY          HA.RSAPublicKey，从控制台读取。可选"
+    echo "   -HA_UPLOAD_TYPE                    高可用上传类型，默认不传为OSS方式，传1为ceph方式。可选"
 
     echo "   -WEEX_UI_SDK                       启用weex-ui SDK时设置为1。可选"
     echo "   -WEEX_BUSINESS_COMPONENTS          启用商业组件SDK时设置为1。可选"
@@ -136,10 +136,9 @@ modifyNativeSDk() {
         sed -i "/>OSSBucketName</{n; s/<string>.*/<string>$SDK_CONFIG_HA_OSS_BUCKET<\/string>/g; }" $SDK_PATH
     fi
 
-    if [ "$SDK_CONFIG_HA_CEPH_BUCKET" != "" ]; then
-        sed -i "/>cephBucketName</{n; s/<string>.*/<string>$SDK_CONFIG_HA_CEPH_BUCKET<\/string>/g; }" $SDK_PATH
+    if [ "$HA_UPLOAD_TYPE" != "" ]; then
+        sed -i "/>UploadType</{n; s/<string>.*/<string>$HA_UPLOAD_TYPE<\/string>/g; }" $SDK_PATH
     fi
-
     
     if [ "$SDK_CONFIG_HA_ADASH_DOMAIN" != "" ]; then
         sed -i "/>UniversalHost</{n; s/<string>.*/<string>$SDK_CONFIG_HA_ADASH_DOMAIN<\/string>/g; }" $SDK_PATH

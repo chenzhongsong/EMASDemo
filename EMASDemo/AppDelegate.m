@@ -346,8 +346,13 @@
                          channel:[[EMASService shareInstance] ChannelID]
                          plugins:nil
                             nick:@"emas-ha"]; // nick根据app实际情况填写
-    [AliHAAdapter configOSS:[[EMASService shareInstance] HAOSSBucketName]];
-    [AliHAAdapter configCeph:[[EMASService shareInstance] HACephBucketName]];
+    NSString *uploadType = [[EMASService shareInstance] HAUploadType];
+    if ([uploadType isEqualToString:@"1"]) {
+        [AliHAAdapter configCeph:[[EMASService shareInstance] HAOSSBucketName]];
+    } else {
+        [AliHAAdapter configOSS:[[EMASService shareInstance] HAOSSBucketName]];
+    }
+    
     [AliHAAdapter setupAccsChannel:[[EMASService shareInstance] ACCSDomain] serviceId:[[EMASService shareInstance] HAServiceID]];
     [AliHAAdapter setupRemoteDebugRPCChannel:[[EMASService shareInstance] HAUniversalHost] scheme:scheme];
     

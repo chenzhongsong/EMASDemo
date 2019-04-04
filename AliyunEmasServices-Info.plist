@@ -70,7 +70,7 @@
 			<string></string>
 			<key>OSSBucketName</key>
 			<string>emas-poc-private</string>
-			<key>cephBucketName</key>
+			<key>UploadType</key>
 			<string></string>
 			<key>ServiceID</key>
 			<string>emas-ha</string>

@@ -108,10 +108,10 @@
     return [dict objectForKey:@"OSSBucketName"];
 }
 
-- (NSString *)HACephBucketName
+- (NSString *)HAUploadType
 {
     NSDictionary *dict = [services objectForKey:@"HA"];
-    return [dict objectForKey:@"cephBucketName"];
+    return [dict objectForKey:@"UploadType"];
 }
 
 - (NSString *)HAUniversalHost
