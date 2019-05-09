@@ -46,8 +46,11 @@
 		8635030D21CF962B00E210DE /* WXNavigationBarDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8635030C21CF962A00E210DE /* WXNavigationBarDefaultImpl.m */; };
 		8635031621D13E5E00E210DE /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8635031421D13E5900E210DE /* UIColor+Hex.m */; };
 		8635032021D3283800E210DE /* EMASWXScreenModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8635031F21D3283800E210DE /* EMASWXScreenModule.m */; };
-		864178192283CEFE00A3D7C0 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 864178182283CEFE00A3D7C0 /* NotificationService.m */; };
 		8641781D2283CEFE00A3D7C0 /* EMASDemo Notification Extension Service.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 864178152283CEFD00A3D7C0 /* EMASDemo Notification Extension Service.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		864178292283D36E00A3D7C0 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 864178242283D36E00A3D7C0 /* NotificationService.m */; };
+		8641782A2283D36E00A3D7C0 /* TBNotificationServiceError.m in Sources */ = {isa = PBXBuildFile; fileRef = 864178262283D36E00A3D7C0 /* TBNotificationServiceError.m */; };
+		8641782B2283D36E00A3D7C0 /* icon_two_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 864178272283D36E00A3D7C0 /* icon_two_selected.png */; };
+		8641782E2283D4FF00A3D7C0 /* PushReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8641782C2283D4FF00A3D7C0 /* PushReporter.m */; };
 		8676D6F921E5F00100CBD794 /* WXScreenshotModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8676D6F721E5F00100CBD794 /* WXScreenshotModule.m */; };
 		869B55CA2140068400809084 /* UIViewController+EMASWXNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BD2140068300809084 /* UIViewController+EMASWXNaviBar.m */; };
 		869B55CB2140068400809084 /* EMASHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55BF2140068300809084 /* EMASHostViewController.m */; };
@@ -60,7 +63,6 @@
 		869B55DC21400A2100809084 /* EMASNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55D921400A2100809084 /* EMASNativeViewController.m */; };
 		869B55DD21400A2100809084 /* EMASBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55DA21400A2100809084 /* EMASBaseNavigationController.m */; };
 		8783A75521A6E5C900C177A1 /* PushReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8783A75421A6E5C900C177A1 /* PushReporter.m */; };
-		87D11D3321A69A6A0098FBC6 /* icon_two_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CD22E121A3ECA60005D834 /* icon_two_selected.png */; };
 		87FA349221A3BA8E0095673C /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87FA349121A3BA8E0095673C /* PushViewController.xib */; };
 		8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */; };
 		8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */; };
@@ -148,13 +150,6 @@
 		3342C6C021A1AF62006B6A87 /* AccsReceiverTable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AccsReceiverTable.plist; sourceTree = SOURCE_ROOT; };
 		33A2550C20FDE37000C3F673 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
 		33A2550D20FDE37000C3F673 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
-		33CD22D021A3E2C10005D834 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
-		33CD22D121A3E2C10005D834 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
-		33CD22D321A3E2C10005D834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		33CD22DB21A3E93C0005D834 /* TBNotificationServiceError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBNotificationServiceError.h; sourceTree = "<group>"; };
-		33CD22DC21A3E93D0005D834 /* TBNotificationServiceError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBNotificationServiceError.m; sourceTree = "<group>"; };
-		33CD22DE21A3E95E0005D834 /* EMASDemo Notification Extension Service.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "EMASDemo Notification Extension Service.entitlements"; sourceTree = "<group>"; };
-		33CD22E121A3ECA60005D834 /* icon_two_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_two_selected.png; sourceTree = "<group>"; };
 		33D18D4920DA06CE00ACF0C7 /* AccsConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccsConfiguration.h; sourceTree = "<group>"; };
 		33D18D4A20DA06CE00ACF0C7 /* AccsConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccsConfiguration.m; sourceTree = "<group>"; };
 		33D18D5320DA2CFB00ACF0C7 /* ACCSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACCSViewController.h; sourceTree = "<group>"; };
@@ -206,9 +201,15 @@
 		8635031E21D3283800E210DE /* EMASWXScreenModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASWXScreenModule.h; sourceTree = "<group>"; };
 		8635031F21D3283800E210DE /* EMASWXScreenModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASWXScreenModule.m; sourceTree = "<group>"; };
 		864178152283CEFD00A3D7C0 /* EMASDemo Notification Extension Service.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EMASDemo Notification Extension Service.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		864178172283CEFE00A3D7C0 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
-		864178182283CEFE00A3D7C0 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
 		8641781A2283CEFE00A3D7C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		864178212283D36D00A3D7C0 /* EMASDemo Notification Extension Service.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "EMASDemo Notification Extension Service.entitlements"; sourceTree = "<group>"; };
+		864178232283D36E00A3D7C0 /* TBNotificationServiceError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBNotificationServiceError.h; sourceTree = "<group>"; };
+		864178242283D36E00A3D7C0 /* NotificationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		864178252283D36E00A3D7C0 /* NotificationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		864178262283D36E00A3D7C0 /* TBNotificationServiceError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBNotificationServiceError.m; sourceTree = "<group>"; };
+		864178272283D36E00A3D7C0 /* icon_two_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_two_selected.png; sourceTree = "<group>"; };
+		8641782C2283D4FF00A3D7C0 /* PushReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PushReporter.m; path = EMASDemo/PushReporter.m; sourceTree = SOURCE_ROOT; };
+		8641782D2283D4FF00A3D7C0 /* PushReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushReporter.h; path = EMASDemo/PushReporter.h; sourceTree = SOURCE_ROOT; };
 		8676D6F721E5F00100CBD794 /* WXScreenshotModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXScreenshotModule.m; sourceTree = "<group>"; };
 		8676D6F821E5F00100CBD794 /* WXScreenshotModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXScreenshotModule.h; sourceTree = "<group>"; };
 		869B55BC2140068300809084 /* UIViewController+EMASWXNaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EMASWXNaviBar.h"; sourceTree = "<group>"; };
@@ -364,20 +365,6 @@
 			name = push;
 			sourceTree = "<group>";
 		};
-		33CD22CF21A3E2C10005D834 /* EMASDemo Notification Extension Service */ = {
-			isa = PBXGroup;
-			children = (
-				33CD22E121A3ECA60005D834 /* icon_two_selected.png */,
-				33CD22DE21A3E95E0005D834 /* EMASDemo Notification Extension Service.entitlements */,
-				33CD22DB21A3E93C0005D834 /* TBNotificationServiceError.h */,
-				33CD22DC21A3E93D0005D834 /* TBNotificationServiceError.m */,
-				33CD22D021A3E2C10005D834 /* NotificationService.h */,
-				33CD22D121A3E2C10005D834 /* NotificationService.m */,
-				33CD22D321A3E2C10005D834 /* Info.plist */,
-			);
-			path = "EMASDemo Notification Extension Service";
-			sourceTree = "<group>";
-		};
 		33D18D4220DA04C000ACF0C7 /* accs */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,8 +452,14 @@
 		864178162283CEFE00A3D7C0 /* EMASDemo Notification Extension Service */ = {
 			isa = PBXGroup;
 			children = (
-				864178172283CEFE00A3D7C0 /* NotificationService.h */,
-				864178182283CEFE00A3D7C0 /* NotificationService.m */,
+				864178212283D36D00A3D7C0 /* EMASDemo Notification Extension Service.entitlements */,
+				864178272283D36E00A3D7C0 /* icon_two_selected.png */,
+				8641782D2283D4FF00A3D7C0 /* PushReporter.h */,
+				8641782C2283D4FF00A3D7C0 /* PushReporter.m */,
+				864178252283D36E00A3D7C0 /* NotificationService.h */,
+				864178242283D36E00A3D7C0 /* NotificationService.m */,
+				864178232283D36E00A3D7C0 /* TBNotificationServiceError.h */,
+				864178262283D36E00A3D7C0 /* TBNotificationServiceError.m */,
 				8641781A2283CEFE00A3D7C0 /* Info.plist */,
 			);
 			path = "EMASDemo Notification Extension Service";
@@ -532,7 +525,6 @@
 				8ADA953D1FD9309400C0EF49 /* EMASDemo */,
 				8ADA95591FD9309400C0EF49 /* EMASDemoTests */,
 				8ADA95641FD9309400C0EF49 /* EMASDemoUITests */,
-				33CD22CF21A3E2C10005D834 /* EMASDemo Notification Extension Service */,
 				864178162283CEFE00A3D7C0 /* EMASDemo Notification Extension Service */,
 				8ADA953C1FD9309400C0EF49 /* Products */,
 				024D3223F0A2D0A415B2F56B /* Pods */,
@@ -751,6 +743,11 @@
 						CreatedOnToolsVersion = 10.2.1;
 						DevelopmentTeam = VSW2PKYTD7;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8ADA953A1FD9309400C0EF49 = {
 						CreatedOnToolsVersion = 9.0;
@@ -806,6 +803,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8641782B2283D36E00A3D7C0 /* icon_two_selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,7 +829,6 @@
 				3342C6C121A1AF62006B6A87 /* PushSDKReceiverConfig.plist in Resources */,
 				33E1BAA221A4290A00E81E32 /* hongbao.wav in Resources */,
 				980F856E20BECC49002156A2 /* OrangeRemotConfigDebugVC.xib in Resources */,
-				87D11D3321A69A6A0098FBC6 /* icon_two_selected.png in Resources */,
 				980F856B20BECC49002156A2 /* OrangeFeatureSecondVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -955,7 +952,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				864178192283CEFE00A3D7C0 /* NotificationService.m in Sources */,
+				8641782E2283D4FF00A3D7C0 /* PushReporter.m in Sources */,
+				864178292283D36E00A3D7C0 /* NotificationService.m in Sources */,
+				8641782A2283D36E00A3D7C0 /* TBNotificationServiceError.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1072,6 +1071,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_ENTITLEMENTS = "EMASDemo Notification Extension Service/EMASDemo Notification Extension Service.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -1081,9 +1081,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push.notificationextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = emas_push_profile;
+				PROVISIONING_PROFILE_SPECIFIER = emas_push_notificationextension_profile;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1095,6 +1095,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_ENTITLEMENTS = "EMASDemo Notification Extension Service/EMASDemo Notification Extension Service.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: kun ling (VSW2PKYTD7)";
 				CODE_SIGN_STYLE = Manual;
@@ -1103,7 +1104,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push.notificationextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = emas_push_profile;
 				SKIP_INSTALL = YES;
