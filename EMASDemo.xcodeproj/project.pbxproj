@@ -1081,7 +1081,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push.notificationextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo.notificationextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1104,7 +1104,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push.notificationextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo.notificationextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1311,7 +1311,7 @@
 					"\"$PODS_CONFIGURATION_BUILD_DIR/ZipArchive\"",
 					"\"${PODS_ROOT}/AlicloudLua/liblua/lib\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1413,7 +1413,7 @@
 					"\"$PODS_CONFIGURATION_BUILD_DIR/ZipArchive\"",
 					"\"${PODS_ROOT}/AlicloudLua/liblua/lib\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.emas.demo.push;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
