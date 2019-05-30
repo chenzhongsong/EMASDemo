@@ -1,6 +1,6 @@
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs-thirdpart.git'
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs.git'
-#source 'git@gitlab.emas-ha.cn:root/emas-specs.git'
+source 'git@gitlab.emas-ha.cn:root/emas-specs.git'
 #source 'git@gitlab.alibaba-inc.com:alipods/specs.git'
 
 # WeexAceChart
@@ -84,7 +84,7 @@ platform:ios, '8.0'
     pod 'EMASMAN', '10.0.0'    
     
    # pod 'EMASFirstBundle', '3.1.1'
-   # pod 'IOSFirstBundle', '1.0.0'
+   pod 'IOSFirstBundle', '1.0.0'
     
     
 end
