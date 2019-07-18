@@ -5,7 +5,7 @@
 #1. mac系统必须使用GUN的sed，使用命令安装gnu-sed到/usr/local/bin/sed，替换系统FreeBSD的sed. brew install gnu-sed --with-default-names
 #   安装完成后执行sed应该看到“GNU sed home page”几个关键字，如果不是说明还是使用的macos系统/usr/bin/sed，需要将/usr/local/bin加入$PATH且在/usr/bin之前
 #2. 帮助文档 ./gen_scaffold.sh -h
-#3. 命令示例：./gen_scaffold.sh -BUNDLE_ID my.bundle.id -SDK_CONFIG_APP_KEY appkey -SDK_CONFIG_APP_SECRET appsecret -SDK_CONFIG_CHANNEL_ID 1001@POC_iOS_1.0.0 -SDK_CONFIG_USE_HTTP false -SDK_CONFIG_ACCS_DOMAIN accs.com -SDK_CONFIG_MTOP_DOMAIN mtop.com -SDK_CONFIG_ZCACHE_PREFIX http://zcache.com/prefex -SDK_CONFIG_HOTFIX_URL hotfix.com -SDK_CONFIG_HA_OSS_BUCKET ha-oss-bucket -SDK_CONFIG_HA_ADASH_DOMAIN adash.com -APP_NAME myapp -MAVEN_BASE_GROUP com.my -WEEX_UI_SDK 1 -WEEX_BUSINESS_COMPONENTS 1 -WEEX_BUSINESS_CHARTS 1 -WEEX_PAGE_TAB_SIZE 5 -SCAFFOLD_TYPE 1 -SDK_CONFIG_API_DOMAIN api.com -HA_UPLOAD_TYPE 1
+#3. 命令示例：./gen_scaffold.sh -BUNDLE_ID my.bundle.id -SDK_CONFIG_APP_KEY appkey -SDK_CONFIG_APP_SECRET appsecret -SDK_CONFIG_CHANNEL_ID 1001@POC_iOS_1.0.0 -SDK_CONFIG_USE_HTTP false -SDK_CONFIG_ACCS_DOMAIN accs.com -SDK_CONFIG_MTOP_DOMAIN mtop.com -SDK_CONFIG_ZCACHE_PREFIX http://zcache.com/prefex -SDK_CONFIG_HOTFIX_URL hotfix.com -SDK_CONFIG_HA_OSS_BUCKET ha-oss-bucket -SDK_CONFIG_HA_ADASH_DOMAIN adash.com -APP_NAME myapp -MAVEN_BASE_GROUP com.my -WEEX_UI_SDK 1 -WEEX_BUSINESS_COMPONENTS 1 -WEEX_BUSINESS_CHARTS 1 -WEEX_PAGE_TAB_SIZE 5 -SCAFFOLD_TYPE 1 -SDK_CONFIG_API_DOMAIN api.com -HA_UPLOAD_TYPE 1 -CUSTOM_COCOAPODS_ADDRESS git@gitlab.emas-poc.com:root/emas-specs2.git
 
 set -e
 
@@ -29,6 +29,7 @@ SDK_CONFIG_HA_ADASH_DOMAIN=""  # HA.UniversalHost
 SDK_CONFIG_HA_PUBLIC_KEY=""    # HA.RSAPublicKey
 SDK_CONFIG_API_DOMAIN=""
 HA_UPLOAD_TYPE=""
+CUSTOM_COCOAPODS_ADDRESS=""
 
 #脚手架组合类型 1->native 2->跨平台研发weex 4->跨平台研发H5
 SCAFFOLD_TYPE=""
@@ -63,6 +64,7 @@ printHelp() {
     echo "   -SDK_CONFIG_HA_ADASH_DOMAIN        HA.UniversalHost，从控制台读取。可选"
     echo "   -SDK_CONFIG_HA_PUBLIC_KEY          HA.RSAPublicKey，从控制台读取。可选"
     echo "   -HA_UPLOAD_TYPE                    高可用上传类型，默认不传为OSS方式，传1为ceph方式。可选"
+    echo "   -CUSTOM_COCOAPODS_ADDRESS          产物上传Cocoapods地址。可选"
 
     echo "   -WEEX_UI_SDK                       启用weex-ui SDK时设置为1。可选"
     echo "   -WEEX_BUSINESS_COMPONENTS          启用商业组件SDK时设置为1。可选"
@@ -73,6 +75,9 @@ printHelp() {
     echo "   -SDK_CONFIG_API_DOMAIN             MTOP API Domain，从控制台读取。可选"
     echo
 }
+
+# 全局变量
+PODFILE_PATH="Podfile"
 
 escapeSpecialChars() {
     # &替换为\&
@@ -139,7 +144,7 @@ modifyNativeSDk() {
     if [ "$HA_UPLOAD_TYPE" != "" ]; then
         sed -i "/>UploadType</{n; s/<string>.*/<string>$HA_UPLOAD_TYPE<\/string>/g; }" $SDK_PATH
     fi
-    
+
     if [ "$SDK_CONFIG_HA_ADASH_DOMAIN" != "" ]; then
         sed -i "/>UniversalHost</{n; s/<string>.*/<string>$SDK_CONFIG_HA_ADASH_DOMAIN<\/string>/g; }" $SDK_PATH
     fi
@@ -166,8 +171,6 @@ modifyNativeSDk() {
 
 modifyWeexSDK() {
     echo "start modify Weex SDK ..."
-
-    PODFILE_PATH="Podfile"
 
     #weex-ui sdk（bindingx)
     if [ "$WEEX_UI_SDK" == "" ]; then
@@ -230,6 +233,14 @@ modifyScaffoldType() {
     echo "modify Scaffold Type done."
 }
 
+modifyPodfile() {
+    echo "start modify Podfile ..."
+    if [ "$CUSTOM_COCOAPODS_ADDRESS" != "" ]; then
+        sed -i "s/git@gitlab.emas-poc.com:root\/emas-specs.git/$CUSTOM_COCOAPODS_ADDRESS/g" $PODFILE_PATH
+    fi
+    echo "modify Podfile done."
+}
+
 modifyWeexNativePage() {
     echo "start modify WEEX native page ..."
     if [ "$WEEX_PAGE_TAB_SIZE" != "" ]; then
@@ -283,8 +294,11 @@ modifyBundleId
 #4. 修改脚手架类型
 modifyScaffoldType
 
-#5. weex外围sdk相关配置
+#5. 修改Podfile文件
+modifyPodfile
+
+#6. weex外围sdk相关配置
 modifyWeexSDK
 
-#6. Weex Native页面配置
+#7. Weex Native页面配置
 modifyWeexNativePage
