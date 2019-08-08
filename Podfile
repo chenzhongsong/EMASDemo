@@ -44,7 +44,7 @@ platform:ios, '8.0'
     pod 'orange','10.0.0'
     
     # --高可用(通用库-> ACCS -> 高可用)
-    pod  'AliHAAdapter4poc',   '10.0.5.3'
+    pod  'AliHAAdapter4poc',   '10.0.5.4'
     #pod  'ZipArchive', '~> 1.4.0'
     
     # --Weex(通用库-> 高可用 -> 网关 -> Weex)
