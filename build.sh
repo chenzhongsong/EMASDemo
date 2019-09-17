@@ -7,6 +7,12 @@ WORK_DIR=`pwd`
 echo "packaging at work dir: ${WORK_DIR}"
 echo "start packaging..."
 #find . -name "*.lua"|zip patch_tmp.zip -@
+lines=`ls patch/*.lua | wc -l`
+if [ "$lines" -le 0 ]
+then
+    echo "There aren't *.lua files in patch directory"
+    exit 1
+fi
 zip patch_tmp.zip patch/*
 echo "finish packaging..."
 echo "start encrypting"
