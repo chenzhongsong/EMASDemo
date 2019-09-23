@@ -414,6 +414,7 @@
 - (void)initRemoteConfig {
     EMASService *service = [EMASService shareInstance];
     openOrangeLog(OrangeLogLevel_ALL);
+    if (!service.useHTTP) [Orange enableHttps];
     [Orange setOrangeDataCenterOnlineHost:service.RemoteConfigHost debugHost:service.RemoteConfigHost dailyHost:service.RemoteConfigHost];
     [Orange setOrangeBetaModeAccsHost:@[service.ACCSDomain,service.ACCSDomain,service.ACCSDomain]];
     [Orange runMode:OrangeUpateModeEvent];
