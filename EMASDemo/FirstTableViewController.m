@@ -21,6 +21,7 @@
 #import "MANViewController.h"
 #import "EMASNativeViewController.h"
 #import "UIViewController+EMASWXNaviBar.h"
+#import <AlicloudUpdate/AlicloudUpdate.h>
 
 @interface FirstTableViewController ()
 
@@ -50,7 +51,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 8;//10;
+    return 9;//11;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -108,11 +109,17 @@
             break;
         case 8:
         {
+            cell.textLabel.text = @"手动检查版本更新";
+            cell.textLabel.textColor = [UIColor darkGrayColor];
+            break;
+        }
+        case 9:
+        {
             cell.textLabel.text = @"Weex";
             cell.textLabel.textColor = [UIColor orangeColor];
         }
             break;
-        case 9:
+        case 10:
         {
             cell.textLabel.text = @"WindVane";
             cell.textLabel.textColor = [UIColor cyanColor];
@@ -181,13 +188,17 @@
             [self.navigationController pushViewController:mvc animated:YES];
             break;
         }
-//        case 8:
+        case 8:
+        {
+            [AlicloudUpdate checkAndUpdateNewVersion];
+        }
+//        case 9:
 //        {
 //            EMASNativeViewController *controller = [[EMASNativeViewController alloc] init];
 //            [self.navigationController pushViewController:controller animated:YES];
 //            break;
 //        }
-//        case 9:
+//        case 10:
 //        {
 //            EMASWindVaneScanViewController *controller = [[EMASWindVaneScanViewController alloc] init];
 //            //controller.loadUrl = @"http://wapp.m.taobao.com/app/windvane/jsbridge.html";

@@ -23,6 +23,7 @@
 		4A017CF221006EC7001FF027 /* TestUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CED21006EC7001FF027 /* TestUIViewController.m */; };
 		4A017CF321006EC7001FF027 /* BaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CEE21006EC7001FF027 /* BaseUIViewController.m */; };
 		4A017CF421006EC7001FF027 /* MANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CEF21006EC7001FF027 /* MANViewController.m */; };
+		77E6C9632338CA0100DE6E11 /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77E6C9622338CA0100DE6E11 /* AliyunEmasServices-Info.plist */; };
 		7D6260E61FDA8C5A00E856CB /* HFXTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6260E31FDA8C5900E856CB /* HFXTestClass.m */; };
 		7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6260E51FDA8C5900E856CB /* HFXViewController.m */; };
 		7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6260E81FDA8C8400E856CB /* arp.framework */; };
@@ -66,7 +67,7 @@
 		87FA349221A3BA8E0095673C /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87FA349121A3BA8E0095673C /* PushViewController.xib */; };
 		8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */; };
 		8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */; };
-		8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */; };
+		8A69B607200C8E5F0073756D /* AliyunEmasServices-Info-bak.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A69B606200C8E5F0073756D /* AliyunEmasServices-Info-bak.plist */; };
 		8A69B60A200C8F980073756D /* EMASService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69B609200C8F980073756D /* EMASService.m */; };
 		8AB1A7BF1FFDDE51007C4675 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */; };
 		8AC0CB6E200312CF00FD44E6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC0CB6D200312CF00FD44E6 /* MobileCoreServices.framework */; };
@@ -168,6 +169,7 @@
 		4A017CEF21006EC7001FF027 /* MANViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANViewController.m; sourceTree = "<group>"; };
 		4A017CF021006EC7001FF027 /* TestUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUIViewController.h; sourceTree = "<group>"; };
 		4A017CF121006EC7001FF027 /* MANViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANViewController.h; sourceTree = "<group>"; };
+		77E6C9622338CA0100DE6E11 /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = "<group>"; };
 		7D6260E21FDA8C5900E856CB /* HFXTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXTestClass.h; sourceTree = "<group>"; };
 		7D6260E31FDA8C5900E856CB /* HFXTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXTestClass.m; sourceTree = "<group>"; };
 		7D6260E41FDA8C5900E856CB /* HFXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXViewController.h; sourceTree = "<group>"; };
@@ -239,7 +241,7 @@
 		8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfigTableViewController.m; sourceTree = "<group>"; };
 		8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopVerifyTableViewController.h; sourceTree = "<group>"; };
 		8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtopVerifyTableViewController.m; sourceTree = "<group>"; };
-		8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8A69B606200C8E5F0073756D /* AliyunEmasServices-Info-bak.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info-bak.plist"; sourceTree = SOURCE_ROOT; };
 		8A69B608200C8F980073756D /* EMASService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASService.h; sourceTree = "<group>"; };
 		8A69B609200C8F980073756D /* EMASService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASService.m; sourceTree = "<group>"; };
 		8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EMASDemo.entitlements; sourceTree = "<group>"; };
@@ -550,7 +552,8 @@
 				33E1BA9D21A4275200E81E32 /* clock.wav */,
 				3342C6C021A1AF62006B6A87 /* AccsReceiverTable.plist */,
 				3342C6BF21A1AF61006B6A87 /* PushSDKReceiverConfig.plist */,
-				8A69B606200C8E5F0073756D /* AliyunEmasServices-Info.plist */,
+				77E6C9622338CA0100DE6E11 /* AliyunEmasServices-Info.plist */,
+				8A69B606200C8E5F0073756D /* AliyunEmasServices-Info-bak.plist */,
 				8611700E21916D7E00DCAB7F /* WeexContainer-Info.plist */,
 				8A69B608200C8F980073756D /* EMASService.h */,
 				8A69B609200C8F980073756D /* EMASService.m */,
@@ -682,7 +685,6 @@
 				67DAC7CF7E1FB0DDB324BBC0 /* 📦 Copy Pods Resources */,
 				8ABD97BD1FF4D55700469557 /* Embed Watch Content */,
 				33CD22DA21A3E2C10005D834 /* Embed App Extensions */,
-				AA0B6E32292A055CB00D4C69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -811,6 +813,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77E6C9632338CA0100DE6E11 /* AliyunEmasServices-Info.plist in Resources */,
 				8ADA954E1FD9309400C0EF49 /* LaunchScreen.storyboard in Resources */,
 				33D18D5C20DA30DC00ACF0C7 /* ACCSSettingViewController.xib in Resources */,
 				3342C6C221A1AF62006B6A87 /* AccsReceiverTable.plist in Resources */,
@@ -825,7 +828,7 @@
 				33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */,
 				8601D70B216B4A0100BDFC46 /* preload_packageapp.zip in Resources */,
 				87FA349221A3BA8E0095673C /* PushViewController.xib in Resources */,
-				8A69B607200C8E5F0073756D /* AliyunEmasServices-Info.plist in Resources */,
+				8A69B607200C8E5F0073756D /* AliyunEmasServices-Info-bak.plist in Resources */,
 				3342C6C121A1AF62006B6A87 /* PushSDKReceiverConfig.plist in Resources */,
 				33E1BAA221A4290A00E81E32 /* hongbao.wav in Resources */,
 				980F856E20BECC49002156A2 /* OrangeRemotConfigDebugVC.xib in Resources */,
@@ -880,22 +883,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		AA0B6E32292A055CB00D4C69 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AA85B2CA3C2F5806D1BDF7DB /* [CP] Copy Pods Resources */ = {

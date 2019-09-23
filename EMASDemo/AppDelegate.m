@@ -67,6 +67,9 @@
 #import <UserNotifications/UserNotifications.h>
 #import "PushReporter.h"
 
+// -- Alicloud Update
+#import <AlicloudUpdate/AlicloudUpdate.h>
+
 @interface MyPolicyCenter : NSObject <NWPolicyDelegate>
 @end
 
@@ -163,11 +166,14 @@
     [self initRemoteConfig];
     [self initMtopConfig];
     [self initZCacheConfig];
+    [self initDyConfig];
     
     // 4. 初始化PUSH
     [self initPushConfig];
     
-    [self initDyConfig];
+    // 5. 初始化 update SDK
+    [AlicloudUpdate autoInit];
+    
     
     [EMASWXSubSDKEngine setup];
     
