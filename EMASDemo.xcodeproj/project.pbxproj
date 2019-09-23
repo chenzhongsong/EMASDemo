@@ -23,8 +23,6 @@
 		4A017CF221006EC7001FF027 /* TestUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CED21006EC7001FF027 /* TestUIViewController.m */; };
 		4A017CF321006EC7001FF027 /* BaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CEE21006EC7001FF027 /* BaseUIViewController.m */; };
 		4A017CF421006EC7001FF027 /* MANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CEF21006EC7001FF027 /* MANViewController.m */; };
-		77E6C9662338CDB300DE6E11 /* AliyunEmasServices-Info-bak.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77E6C9642338CDB200DE6E11 /* AliyunEmasServices-Info-bak.plist */; };
-		77E6C9672338CDB300DE6E11 /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77E6C9652338CDB200DE6E11 /* AliyunEmasServices-Info.plist */; };
 		7D6260E61FDA8C5A00E856CB /* HFXTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6260E31FDA8C5900E856CB /* HFXTestClass.m */; };
 		7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6260E51FDA8C5900E856CB /* HFXViewController.m */; };
 		7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6260E81FDA8C8400E856CB /* arp.framework */; };
@@ -169,8 +167,6 @@
 		4A017CEF21006EC7001FF027 /* MANViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANViewController.m; sourceTree = "<group>"; };
 		4A017CF021006EC7001FF027 /* TestUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUIViewController.h; sourceTree = "<group>"; };
 		4A017CF121006EC7001FF027 /* MANViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANViewController.h; sourceTree = "<group>"; };
-		77E6C9642338CDB200DE6E11 /* AliyunEmasServices-Info-bak.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info-bak.plist"; sourceTree = "<group>"; };
-		77E6C9652338CDB200DE6E11 /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = "<group>"; };
 		7D6260E21FDA8C5900E856CB /* HFXTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXTestClass.h; sourceTree = "<group>"; };
 		7D6260E31FDA8C5900E856CB /* HFXTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXTestClass.m; sourceTree = "<group>"; };
 		7D6260E41FDA8C5900E856CB /* HFXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXViewController.h; sourceTree = "<group>"; };
@@ -555,8 +551,6 @@
 				8611700E21916D7E00DCAB7F /* WeexContainer-Info.plist */,
 				8A69B608200C8F980073756D /* EMASService.h */,
 				8A69B609200C8F980073756D /* EMASService.m */,
-				77E6C9642338CDB200DE6E11 /* AliyunEmasServices-Info-bak.plist */,
-				77E6C9652338CDB200DE6E11 /* AliyunEmasServices-Info.plist */,
 				8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */,
 				869B55BB2140068300809084 /* Categroy */,
 				8601D703216B4A0100BDFC46 /* preload */,
@@ -813,8 +807,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77E6C9672338CDB300DE6E11 /* AliyunEmasServices-Info.plist in Resources */,
-				77E6C9662338CDB300DE6E11 /* AliyunEmasServices-Info-bak.plist in Resources */,
 				8ADA954E1FD9309400C0EF49 /* LaunchScreen.storyboard in Resources */,
 				33D18D5C20DA30DC00ACF0C7 /* ACCSSettingViewController.xib in Resources */,
 				3342C6C221A1AF62006B6A87 /* AccsReceiverTable.plist in Resources */,
