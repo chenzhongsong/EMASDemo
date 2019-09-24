@@ -33,7 +33,7 @@ platform:ios, '8.0'
     #pod  'TBAccsSDK',  :path=>  '/Users/wuchen.xj/gitemas/tbaccssdk/'
     
     # --PUSH(通用库 -> PUSH)
-    pod  'PushCenterSDK',     '10.0.1'
+    pod  'PushCenterSDK',     '10.0.6'
     #pod  'PushCenterSDK',  :path=>  '/Users/wuchen.xj/gitemas/pushcentersdk/'
     
     # --网关(通用库-> 网关)
