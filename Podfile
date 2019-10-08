@@ -83,7 +83,10 @@ platform:ios, '8.0'
     # 数据分析
     pod 'EMASMAN', '10.0.0'
     
+    # 更新推送
     pod 'AlicloudUpdate', '1.0.0'
+    
+    
    # pod 'EMASFirstBundle', '3.1.1'
    # pod 'IOSFirstBundle', '1.0.0'
     
