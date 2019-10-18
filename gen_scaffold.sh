@@ -20,6 +20,7 @@ SDK_CONFIG_APP_SECRET=""
 SDK_CONFIG_CHANNEL_ID=""
 SDK_CONFIG_USE_HTTP=""
 SDK_CONFIG_ACCS_DOMAIN=""
+SDK_CONFIG_ACCS_PORT=""
 SDK_CONFIG_MTOP_DOMAIN=""
 SDK_CONFIG_ZCACHE_PREFIX=""  # ZCache.URL
 SDK_CONFIG_HOTFIX_URL=""  # Hotfix.URL
@@ -103,6 +104,18 @@ checkParameters() {
 modifyNativeSDk() {
     echo "starting modify native SDK ..."
     SDK_PATH="AliyunEmasServices-Info.plist"
+
+    #解析accs domain/port
+    accsArray=(${SDK_CONFIG_ACCS_DOMAIN//:/ })  
+    #如果domain设置了端口号，截取域名和端口分别赋值，否则默认为443
+    #如果端口为443，不对IPStrategy进行改动
+    if [ "${#accsArray[*]}" == "2" ]; then
+        SDK_CONFIG_ACCS_DOMAIN=${accsArray[0]}
+        SDK_CONFIG_ACCS_PORT=${accsArray[1]}
+    else
+        SDK_CONFIG_ACCS_PORT=443
+    fi
+
     #替换匹配的下一行
     if [ "$SDK_CONFIG_APP_KEY" != "" ]; then
         #如果">AppKey<"被匹配，则n命令移动到匹配行的下一行，替换这一行的参数
@@ -120,6 +133,14 @@ modifyNativeSDk() {
     if [ "$SDK_CONFIG_ACCS_DOMAIN" != "" ]; then
         #如果">ACCS<"被匹配，则n命令移动到匹配行的下3行，替换这一行的Domain信息
         sed -i "/>ACCS</{n;n;n; s/<string>.*/<string>$SDK_CONFIG_ACCS_DOMAIN<\/string>/g; }" $SDK_PATH
+
+        #如果端口不为443，设置IPStrategy
+        if [ "$SDK_CONFIG_ACCS_PORT" != "443" ]; then
+            sed -i "/>IPStrategy</{n;n; s/<key>.*/<key>$SDK_CONFIG_ACCS_DOMAIN<\/key>/g; }" $SDK_PATH
+            sed -i "/>IPStrategy</{n;n;n;n;n;n; s/<string>.*/<string>$SDK_CONFIG_ACCS_DOMAIN<\/string>/g; }" $SDK_PATH
+            sed -i "/>IPStrategy</{n;n;n;n;n;n;n;n; s/<integer>.*/<integer>$SDK_CONFIG_ACCS_PORT<\/integer>/g; }" $SDK_PATH
+        fi
+
     fi
 
     if [ "$SDK_CONFIG_MTOP_DOMAIN" != "" ]; then

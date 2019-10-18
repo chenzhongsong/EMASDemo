@@ -41,7 +41,7 @@
 						<key>ip</key>
 						<string>1.1.1.1</string>
 						<key>port</key>
-						<string>80</string>
+						<integer>80</integer>
 						<key>publickey</key>
 						<string>emas</string>
 					</dict>
