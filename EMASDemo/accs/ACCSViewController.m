@@ -26,7 +26,7 @@
 #define EMAS_ACCS_PREPARE_IP        @"47.97.186.202"
 #define EMAS_ACCS_PREPARE_PORT      30080
 
-@interface ACCSViewController ()
+@interface ACCSViewController () <UITextFieldDelegate>
 
 @property(nonatomic, strong) IBOutlet UILabel       *lbConnectStatus;
 @property(nonatomic, strong) IBOutlet UITextField   *tfUserID;
@@ -88,6 +88,8 @@
     NSString *utdid = [NWNetworkConfiguration shareInstance].utdid;
     [self.tfUtdid setText:utdid];
     NSLog(@"UTDID: %@", utdid);
+    
+    self.tfUserID.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -312,6 +314,10 @@
             [self.lbConnectStatus setTextColor:[UIColor redColor]];
         }
     });
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    return [textField resignFirstResponder];
 }
 
 @end

@@ -432,7 +432,9 @@
     } else if (environment == AliEMASEnvironmentReleaseDebug) {
         [sharedDefaults setObject:@"http://aserver-pre-k8s.emas-poc.com:30080/agooack/apns" forKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
     } else {
-        [sharedDefaults setObject:@"http://aserver.emas-poc.com/agooack/apns" forKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
+//        [sharedDefaults setObject:@"http://aserver.emas-poc.com/agooack/apns" forKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
+        NSString *aserverString = [AliEMASConfigure defaultConfigure].options.mtopOptions.domain;
+        [sharedDefaults setObject:[NSString stringWithFormat:@"http://%@/agooack/apns", aserverString] forKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
     }
     [sharedDefaults synchronize];
 }

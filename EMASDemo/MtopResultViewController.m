@@ -11,6 +11,7 @@
 #import <mtopext/MtopCore/MtopExtResponse.h>
 #import <mtopext/MtopCore/MtopService.h>
 #import <MtopSDK/TBSDKConnection.h>
+#import "EMASService.h"
 
 typedef NS_ENUM(NSUInteger,MtopParamType){
     MtopParamType_Int = 1,
@@ -145,7 +146,7 @@ static NSString* mtopDescription(MtopExtResponse *response){
     config.latitude = 30.26;
     config.longitude = 120.19;
     request.protocolType = MtopProtocolTypeEmas;
-    [request disableHttps];
+    [[EMASService shareInstance] useHTTP] ? [request disableHttps] : [request useHttps];
     
     if ([(NSString *)[requestData objectForKey:@"Mtheod"] hasPrefix:@"POST"]) {
         [request useHttpPost];
