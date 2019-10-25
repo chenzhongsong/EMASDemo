@@ -26,14 +26,14 @@ platform:ios, '8.0'
     pod  'FMDB',             '2.7.2'
     pod  'NetworkSDK',       '10.0.4.2'
     pod  'tnet',             '10.2.0'
-    pod  'AliEMASConfigure',  '0.0.1.13'
-
+    pod  'AliEMASConfigure',  '0.0.1.19'
+    
     # --ACCS(通用库 -> ACCS)
     pod  'TBAccsSDK',         '10.0.7'
     #pod  'TBAccsSDK',  :path=>  '/Users/wuchen.xj/gitemas/tbaccssdk/'
     
     # --PUSH(通用库 -> PUSH)
-    pod  'PushCenterSDK',     '10.0.6'
+    pod  'PushCenterSDK',     '10.0.9'
     #pod  'PushCenterSDK',  :path=>  '/Users/wuchen.xj/gitemas/pushcentersdk/'
     
     # --网关(通用库-> 网关)
