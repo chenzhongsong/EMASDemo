@@ -89,6 +89,7 @@ platform:ios, '8.0'
     
    # pod 'EMASFirstBundle', '3.1.1'
    # pod 'IOSFirstBundle', '1.0.0'
+     pod 'EMASFirstBundleDemo','1.0.4'
     
     
 end
