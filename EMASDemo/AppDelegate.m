@@ -473,6 +473,15 @@
     // 收到APNS token时回调
     NSLog(@"[APNS] device token: %@", deviceToken);
     
+    const unsigned *tokenBytes = [deviceToken bytes];
+    NSString *hexToken = [NSString stringWithFormat:@"%08x%08x%08x%08x%08x%08x%08x%08x",
+                        ntohl(tokenBytes[0]), ntohl(tokenBytes[1]), ntohl(tokenBytes[2]),
+                        ntohl(tokenBytes[3]), ntohl(tokenBytes[4]), ntohl(tokenBytes[5]),
+                        ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
+    NSLog(@"\n>>>[DeviceToken(NSData)]: %@", hexToken);
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AGOO消息deviceToken" message:[NSString stringWithFormat:@"%@",hexToken] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+//    [alert show];
+    
     TBSDKPushCenterEngine *pce = [TBSDKPushCenterEngine sharedInstanceWithDefaultConfigure];
     [pce upLoaderDeviceToken:deviceToken userInfo:nil callback:^(NSDictionary *result, NSError *error){
         if ( error ) {
@@ -489,13 +498,15 @@
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    NSLog(@">>>>>>> [AGOO MESSAGE]: %@", userInfo);
+//    NSLog(@">>>>>>> [AGOO MESSAGE]: %@", userInfo);
     
     NSString *text = [userInfo description];
+    text = [NSString stringWithCString:[text cStringUsingEncoding:NSUTF8StringEncoding] encoding:NSNonLossyASCIIStringEncoding];
     if ( !text ) {
         text = @"消息解析失败!";
     }
-
+    NSLog(@">>>>>>> [AGOO MESSAGE]: %@", text);
+    
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AGOO 消息" message:text delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
     [alert show];
     
@@ -508,12 +519,14 @@
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler  API_AVAILABLE(ios(10.0)){
     NSDictionary *userInfo = response.notification.request.content.userInfo;
     
-    NSLog(@">>>>>>> [AGOO MESSAGE]: %@", userInfo);
+//    NSLog(@">>>>>>> [AGOO MESSAGE]: %@", userInfo);
 
     NSString *text = [userInfo description];
+    text = [NSString stringWithCString:[text cStringUsingEncoding:NSUTF8StringEncoding] encoding:NSNonLossyASCIIStringEncoding];
     if ( !text ) {
         text = @"消息解析失败!";
     }
+    NSLog(@">>>>>>> [AGOO MESSAGE]: %@", text);
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AGOO 消息" message:text delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
     [alert show];

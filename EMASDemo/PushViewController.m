@@ -14,6 +14,8 @@
 #include <sys/utsname.h>
 #import <objc/runtime.h>
 
+#define user_alias @"alias"
+
 @interface PushViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *appKeyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *appSecretLabel;
@@ -48,7 +50,8 @@
     self.deviceidLabel.text = [[TBSDKPushCenterEngine shareInstance] getDeviceID];
     self.versionLabel.text = [@([[[UIDevice currentDevice] systemVersion] floatValue]) stringValue];
     self.accsHostLabel.text = options.accsOptions.defaultIP;
-    self.aliasTextField.text = @"Brant";
+    NSString *aliasStr = [[NSUserDefaults standardUserDefaults] objectForKey:user_alias];
+    self.aliasTextField.text = aliasStr ? : @"Brant";
     
     // ACCS 通过配置文件自初始化
     TBAccsManager *accsManager = [TBAccsManager accsManagerByConfigureName:nil];
@@ -116,6 +119,9 @@
         
         return;
     }
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault setObject:self.aliasTextField.text forKey:user_alias];
+    [userDefault synchronize];
     
     TBSDKPushCenterEngine *pce = [TBSDKPushCenterEngine sharedInstanceWithDefaultConfigure];
     [pce bindUserIntoPushCenterWithAlias:alias userInfo:nil callback:^(NSDictionary *result, NSError *error){
@@ -128,6 +134,10 @@
 }
 
 - (void)unbindUser {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault removeObjectForKey:user_alias];
+    [userDefault synchronize];
+    
     TBSDKPushCenterEngine *pce = [TBSDKPushCenterEngine sharedInstanceWithDefaultConfigure];
     [pce unbindUserIntoPushCenterWithPushUserInfo:nil callback:^(NSDictionary *result, NSError *error){
         if (error) {
