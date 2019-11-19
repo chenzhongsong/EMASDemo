@@ -87,7 +87,7 @@ platform:ios, '8.0'
     pod 'AlicloudUpdate', '1.0.0'
     
     
-   # pod 'EMASFirstBundle', '3.1.1'
-   # pod 'IOSFirstBundle', '1.0.0'
+    pod 'HKEMASIOSModule', '1.0.0'
+    pod 'IOSFirstBundle', '1.11.33'
     
 end
