@@ -9,9 +9,13 @@
 	<key>JSSource</key>
 	<dict>
 		<key>0</key>
-		<string>http://114.55.200.178:7480/validate-emas-cdn/app/hlltest-weex_check_module/pages/detail/entry.js</string>
+		<string>http://114.55.200.178:7482/validate-emas-cdn/app/hlltest-H5_check_module/app.js</string>
 		<key>1</key>
-		<string>http://114.55.200.178:7480/validate-emas-cdn/app/hlltest-weex_check_module/pages/detail/entry.js</string>
+		<string>http://114.55.200.178:7482/validate-emas-cdn/app/hlltest-H5_check_module/babel-polyfill.js</string>
+		<key>2</key>
+		<string>http://114.55.200.178:7482/validate-emas-cdn/app/hlltest-H5_check_module/index.html</string>
+		<key>3</key>
+		<string>http://114.55.200.178:7482/validate-emas-cdn/app/hlltest-H5_check_module/vendors.js</string>
 	</dict>
 </dict>
 </plist>
