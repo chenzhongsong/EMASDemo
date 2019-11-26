@@ -9,15 +9,9 @@
 	<key>JSSource</key>
 	<dict>
 		<key>0</key>
-		<string>http://114.55.200.178:7482/validate-emas-cdn/app/hlltest-11/pages/index/entry.js</string>
+		<string>http://114.55.200.178:7480/validate-emas-cdn/app/hlltest-weex_check_module/pages/detail/entry.js</string>
 		<key>1</key>
-		<string>http://114.55.200.178:7482/validate-emas-cdn/app/hlltest-11/pages/detail/entry.js</string>
-		<key>2</key>
-		<string>http://114.55.200.178:7482/validate-emas-cdn/app/hlltest-11/pages/star/entry.js</string>
-		<key>3</key>
-		<string>http://114.55.200.178:7482/validate-emas-cdn/app/hlltest-11/pages/index/entry.web.js</string>
-		<key>4</key>
-		<string>http://114.55.200.178:7482/validate-emas-cdn/app/hlltest-11/pages/detail/entry.web.js</string>
+		<string>http://114.55.200.178:7480/validate-emas-cdn/app/hlltest-weex_check_module/pages/detail/entry.js</string>
 	</dict>
 </dict>
 </plist>
