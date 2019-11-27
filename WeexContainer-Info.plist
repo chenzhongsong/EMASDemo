@@ -5,17 +5,21 @@
 	<key>ScaffoldType</key>
 	<integer>1</integer>
 	<key>TabSize</key>
-	<integer>1</integer>
+	<integer>4</integer>
 	<key>JSSource</key>
 	<dict>
 		<key>0</key>
-		<string>http://114.55.200.178:7482/validate-emas-cdn/app/hlltest-H5_check_module/app.js</string>
+		<string>http://cdn.emas-poc.com/app/emas-demo-check-weex--nawang/pages/detail/entry.js</string>
 		<key>1</key>
-		<string>http://114.55.200.178:7482/validate-emas-cdn/app/hlltest-H5_check_module/babel-polyfill.js</string>
+		<string>http://cdn.emas-poc.com/app/emas-demo-check-weex--nawang/pages/index/entry.js</string>
 		<key>2</key>
-		<string>http://114.55.200.178:7482/validate-emas-cdn/app/hlltest-H5_check_module/index.html</string>
+		<string>http://cdn.emas-poc.com/app/emas-demo-check-weex--nawang/pages/star/entry.js</string>
 		<key>3</key>
-		<string>http://114.55.200.178:7482/validate-emas-cdn/app/hlltest-H5_check_module/vendors.js</string>
+		<string>http://cdn.emas-poc.com/app/emas-demo-check-weex--nawang/pages/detail/entry.web.js</string>
+		<key>4</key>
+		<string>http://cdn.emas-poc.com/app/emas-demo-check-weex--nawang/pages/index/entry.web.js</string>
+		<key>5</key>
+		<string>http://cdn.emas-poc.com/app/emas-demo-check-weex--nawang/pages/star/entry.web.js</string>
 	</dict>
 </dict>
 </plist>
