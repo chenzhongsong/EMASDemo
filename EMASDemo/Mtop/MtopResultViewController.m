@@ -214,6 +214,7 @@ static NSString* mtopDescription(MtopExtResponse *response){
     request.failedBlock = ^(MtopExtResponse *response) {
         // 失败回调
         self.requestText.text = mtopDescription(response);
+        NSLog(@"Error error: %@", response.error);
     };
     
     [[MtopService getInstance] async_call:request delegate:nil];
