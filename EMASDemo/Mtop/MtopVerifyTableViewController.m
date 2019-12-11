@@ -149,8 +149,8 @@ static NSString *TableSampleIdentifier4 = @"TableSampleIdentifier4";
             }
             if (indexPath.row == 1) {
                 ((MtopCustomCell1 *)cell).textFiled.placeholder = @"输入API名称及版本 (apiName/apiVersion)";
-                //((MtopCustomCell1 *)cell).textFiled.text = @"mtop.bizmock.test.passbody.http/1.0";
-//                ((MtopCustomCell1 *)cell).textFiled.text = @"mtop.bizmock.test.simpleParam.http/1.0";
+//                ((MtopCustomCell1 *)cell).textFiled.text = @"mtop.bizmock.test.passbody.http/1.0";
+//                ((MtopCustomCell1 *)cell).textFiled.text = @"emas.com.mock.login/1.0";
                 ((MtopCustomCell1 *)cell).textFiled.text = @"emas.max.mock.check/1.0";
             }
         }
