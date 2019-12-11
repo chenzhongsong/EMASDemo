@@ -37,7 +37,7 @@ platform:ios, '8.0'
     #pod  'PushCenterSDK',  :path=>  '/Users/wuchen.xj/gitemas/pushcentersdk/'
     
     # --网关(通用库-> 网关)
-    pod  'MtopSDK',          '10.1.3'
+    pod  'MtopSDK',          '10.1.4'
     pod  'mtopext/MtopCore', '10.1.1'
     
     # --远程配置
