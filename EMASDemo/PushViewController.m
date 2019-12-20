@@ -115,7 +115,10 @@
 }
 
 - (IBAction)deviceToken:(id)sender {
-    [self showDeviceHexToken];
+    if (self.deviceHexTokenStr) {
+        [self showDeviceHexToken];
+    }
+    
 }
 
 #pragma mark- Public Methods
@@ -272,7 +275,7 @@
 
 - (void)showDeviceHexToken {
     
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"DeviceToken" message:@"deviceToken不为空\n点击”复制“会复制deviceToken文本" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"DeviceToken" message:@"点击”复制“会复制deviceToken" preferredStyle:UIAlertControllerStyleAlert];
     __weak typeof(self) wself = self;
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
 //        UITextField *textField = alert.textFields[0];
