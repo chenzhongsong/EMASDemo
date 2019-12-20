@@ -13,10 +13,10 @@
 #import "TBAccsSDK/TBAccsManager.h"
 #include <sys/utsname.h>
 #import <objc/runtime.h>
-
+#import "AppDelegate.h"
 #define user_alias @"alias"
 
-@interface PushViewController ()
+@interface PushViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *appKeyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *appSecretLabel;
 @property (weak, nonatomic) IBOutlet UILabel *bundleidLabel;
@@ -29,6 +29,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *accsChannelLabel;
 
 @property (weak, nonatomic) IBOutlet UITextField *aliasTextField;
+@property (weak, nonatomic) IBOutlet UIButton *deviceTokenBtn;
+@property (copy, nonatomic) NSString *deviceHexTokenStr;
+@property (strong, nonatomic) UITextField *deviceTokenField;
 @end
 
 @implementation PushViewController
@@ -52,6 +55,11 @@
     self.accsHostLabel.text = options.accsOptions.defaultIP;
     NSString *aliasStr = [[NSUserDefaults standardUserDefaults] objectForKey:user_alias];
     self.aliasTextField.text = aliasStr ? : @"Brant";
+    
+    AppDelegate *appDele = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    self.deviceHexTokenStr = appDele.agooDeviceToken ;
+    [self.deviceTokenBtn setTitle:[NSString stringWithFormat:@"DeviceToken: %@",self.deviceHexTokenStr] forState:UIControlStateNormal];
+    self.deviceTokenBtn.titleLabel.numberOfLines = 0;
     
     // ACCS 通过配置文件自初始化
     TBAccsManager *accsManager = [TBAccsManager accsManagerByConfigureName:nil];
@@ -104,6 +112,10 @@
 
 - (IBAction)unbindUserAction:(id)sender {
     [self unbindUser];
+}
+
+- (IBAction)deviceToken:(id)sender {
+    [self showDeviceHexToken];
 }
 
 #pragma mark- Public Methods
@@ -258,5 +270,43 @@
     return @"Unknown";
 }
 
+- (void)showDeviceHexToken {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"DeviceToken" message:@"deviceToken不为空\n点击”复制“会复制deviceToken文本" preferredStyle:UIAlertControllerStyleAlert];
+    __weak typeof(self) wself = self;
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+//        UITextField *textField = alert.textFields[0];
+        textField.delegate = wself;
+        [textField resignFirstResponder];
+        wself.deviceTokenField = textField;
+        textField.text = wself.deviceHexTokenStr;
+    }];
+    
+    UIAlertAction *copy = [UIAlertAction actionWithTitle:@"复制" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        if (self.deviceHexTokenStr) {
+            //复制deviceToken文本
+            UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+            pasteboard.string = self.deviceHexTokenStr;
+        }
+       
+    }];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:copy];
+    [alert addAction:cancel];
 
+    //  显示警示框
+    [self presentViewController:alert animated:YES completion:nil];
+    
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    if (textField == self.deviceTokenField) {
+        
+        [textField resignFirstResponder];
+        
+        return NO;
+    }
+    return YES;
+}
 @end
