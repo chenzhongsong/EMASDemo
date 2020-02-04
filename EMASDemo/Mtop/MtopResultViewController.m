@@ -145,6 +145,8 @@ static NSString* mtopDescription(MtopExtResponse *response){
     }
     MtopExtRequest* request = [[MtopExtRequest alloc] initWithApiName: apiName apiVersion: apiVersion];
     [request setCustomHost:domain];
+//    根据客户实际业务情况添加授权加签
+//    [request addHttpHeader:@"c:app:E04C733181004F43A7ABC8676909DF93" forKey:@"x-emas-gw-auth-ticket"];
     TBSDKConfiguration *config = [TBSDKConfiguration shareInstance];
     config.latitude = 30.26;
     config.longitude = 120.19;

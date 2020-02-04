@@ -486,6 +486,7 @@
                         ntohl(tokenBytes[3]), ntohl(tokenBytes[4]), ntohl(tokenBytes[5]),
                         ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
     NSLog(@"\n>>>[DeviceToken(NSData)]: %@", hexToken);
+    self.agooDeviceToken = hexToken;
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AGOO消息deviceToken" message:[NSString stringWithFormat:@"%@",hexToken] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
 //    [alert show];
     
