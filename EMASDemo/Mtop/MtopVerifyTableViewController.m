@@ -7,8 +7,10 @@
 //
 
 #import "MtopVerifyTableViewController.h"
-#import <mtopext/MtopCore/MtopService.h>
-#import <mtopext/MtopCore/MtopExtRequest.h>
+//#import <mtopext/MtopCore/MtopService.h>
+//#import <mtopext/MtopCore/MtopExtRequest.h>
+#import <MtopCore/MtopService.h>
+#import <MtopCore/MtopExtRequest.h>
 #import "MtopResultViewController.h"
 #import "MtopCustomCell.h"
 #import <TBAccsSDK/TBAccsManager.h>

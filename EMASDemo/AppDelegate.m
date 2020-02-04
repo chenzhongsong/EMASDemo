@@ -14,10 +14,16 @@
 // --基础库头文件
 #import <UT/UTAnalytics.h>
 #import <UT/AppMonitor.h>
-#import <NetworkSDK/NetworkCore/NWNetworkConfiguration.h>
-#import <NetworkSDK/NetworkCore/NetworkDemote.h>
-#import <NetworkSDK/NetworkCore/NWuserLoger.h>
-#import <NetworkSDK/AliReachability/NWLog.h>
+
+#import <NetworkCore/NWNetworkConfiguration.h>
+#import <NetworkCore/NetworkDemote.h>
+#import <NetworkCore/NWuserLoger.h>
+#import <AliReachability/NWLog.h>
+
+//#import <NetworkSDK/NetworkCore/NWNetworkConfiguration.h>
+//#import <NetworkSDK/NetworkCore/NetworkDemote.h>
+//#import <NetworkSDK/NetworkCore/NWuserLoger.h>
+//#import <NetworkSDK/AliReachability/NWLog.h>
 
 // --ACCS头文件
 #import <TBAccsSDK/TBAccsManager.h>

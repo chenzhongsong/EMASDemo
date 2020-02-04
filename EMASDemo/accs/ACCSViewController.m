@@ -19,8 +19,11 @@
 #import "TBAccsSDK/TBAccsSDKLogUtil.h"
 #import "AccsConfiguration.h"
 
-#import <NetworkSDK/NetworkCore/NWNetworkConfiguration.h>
-#import <NetworkSDK/AliReachability/NWLog.h>
+//#import <NetworkSDK/NetworkCore/NWNetworkConfiguration.h>
+//#import <NetworkSDK/AliReachability/NWLog.h>
+
+#import <NetworkCore/NWNetworkConfiguration.h>
+#import <AliReachability/NWLog.h>
 
 #define EMAS_ACCS_PREPARE_HOST      @"aserver-pre-k8s.emas-poc.com"
 #define EMAS_ACCS_PREPARE_IP        @"47.97.186.202"

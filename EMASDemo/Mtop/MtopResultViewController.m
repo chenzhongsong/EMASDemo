@@ -7,9 +7,12 @@
 //
 
 #import "MtopResultViewController.h"
-#import <mtopext/MtopCore/MtopExtRequest.h>
-#import <mtopext/MtopCore/MtopExtResponse.h>
-#import <mtopext/MtopCore/MtopService.h>
+//#import <mtopext/MtopCore/MtopExtRequest.h>
+//#import <mtopext/MtopCore/MtopExtResponse.h>
+//#import <mtopext/MtopCore/MtopService.h>
+#import <MtopCore/MtopExtRequest.h>
+#import <MtopCore/MtopExtResponse.h>
+#import <MtopCore/MtopService.h>
 #import <MtopSDK/TBSDKConnection.h>
 #import "EMASService.h"
 
