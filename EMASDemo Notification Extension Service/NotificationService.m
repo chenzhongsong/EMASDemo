@@ -126,7 +126,8 @@
     }
     
     // 有ICON字段，即显示指定小图
-    if ( [self.bestAttemptContent.userInfo objectForKey:ICON_KEY] ) {
+    NSString *attachmentStr = [request.content.userInfo objectForKey:ICON_KEY];
+    if (attachmentStr && [attachmentStr isKindOfClass:NSString.class] && attachmentStr.length > 0) {
         NSLog(@"Notification Service: attach icon.");
         
         NSURL *iconUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"icon_two_selected.png" ofType:nil]];
@@ -136,6 +137,9 @@
                                                                                           options:nil
                                                                                             error:nil];
         self.bestAttemptContent.attachments = @[attachment];
+        self.contentHandler(self.bestAttemptContent);
+    } else {
+        self.bestAttemptContent.attachments = @[];
         self.contentHandler(self.bestAttemptContent);
     }
     
