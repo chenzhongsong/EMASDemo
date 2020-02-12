@@ -88,6 +88,6 @@ platform:ios, '8.0'
     
     
     pod 'HKEMASIOSModule', '1.0.2'
-    pod 'IOSFirstBundle', '1.11.33'
+    pod 'IOSFirstBundle', '1.11.29-SNAPSHOT'
     
 end
