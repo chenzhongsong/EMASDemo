@@ -379,6 +379,8 @@
     }
     restConfiguration.dataUploadHost = [[EMASService shareInstance] HAUniversalHost];
     [[TBRestSendService shareInstance] configBasicParamWithTBConfiguration:restConfiguration];
+    
+    [TRDManagerService updateLogLevel:TLogLevelDebug];
 }
 
 // 网关
