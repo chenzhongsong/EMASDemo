@@ -10,6 +10,7 @@
 #import <AliHACore/AliHA.h>
 #import <TRemoteDebugger/TRDManagerService.h>
 #import <TRemoteDebugger/TBClientDrivingPushTLogExec.h>
+#import <TRemoteDebugger/TLog.h>
 #import <BizErrorReporter4iOS/BizErrorReporter.h>
 #import <WeexSDK/WeexSDK.h>
 #import <UT/AppMonitorStat.h>
@@ -54,6 +55,15 @@ TestObjectClass(7)
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    [TLog info:@"自定义 tlog 日志 ---- 【info】等级"];
+    [TLog debug:@"自定义 tlog 日志 ---- 【debug】等级"];
+    [TLog warn:@"自定义 tlog 日志 ---- 【warn】等级"];
+    [TLog error:@"自定义 tlog 日志 ---- 【error】等级"];
 }
 
 - (void)didReceiveMemoryWarning {
