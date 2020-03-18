@@ -14,10 +14,16 @@
 // --基础库头文件
 #import <UT/UTAnalytics.h>
 #import <UT/AppMonitor.h>
-#import <NetworkSDK/NetworkCore/NWNetworkConfiguration.h>
-#import <NetworkSDK/NetworkCore/NetworkDemote.h>
-#import <NetworkSDK/NetworkCore/NWuserLoger.h>
-#import <NetworkSDK/AliReachability/NWLog.h>
+
+#import <NetworkCore/NWNetworkConfiguration.h>
+#import <NetworkCore/NetworkDemote.h>
+#import <NetworkCore/NWuserLoger.h>
+#import <AliReachability/NWLog.h>
+
+//#import <NetworkSDK/NetworkCore/NWNetworkConfiguration.h>
+//#import <NetworkSDK/NetworkCore/NetworkDemote.h>
+//#import <NetworkSDK/NetworkCore/NWuserLoger.h>
+//#import <NetworkSDK/AliReachability/NWLog.h>
 
 // --ACCS头文件
 #import <TBAccsSDK/TBAccsManager.h>
@@ -373,6 +379,8 @@
     }
     restConfiguration.dataUploadHost = [[EMASService shareInstance] HAUniversalHost];
     [[TBRestSendService shareInstance] configBasicParamWithTBConfiguration:restConfiguration];
+    
+    [TRDManagerService updateLogLevel:TLogLevelDebug];
 }
 
 // 网关
@@ -434,7 +442,8 @@
     } else {
 //        [sharedDefaults setObject:@"http://aserver.emas-poc.com/agooack/apns" forKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
         NSString *aserverString = [AliEMASConfigure defaultConfigure].options.mtopOptions.domain;
-        [sharedDefaults setObject:[NSString stringWithFormat:@"http://%@/agooack/apns", aserverString] forKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
+        NSString *protocolHeaderString = [EMASService shareInstance].useHTTP ? @"http" : @"https";
+        [sharedDefaults setObject:[NSString stringWithFormat:@"%@://%@/agooack/apns", protocolHeaderString,aserverString] forKey:@"TB_PUSH_EXTENSION_AGOO_REPORT_HOST"];
     }
     [sharedDefaults synchronize];
 }
@@ -479,6 +488,7 @@
                         ntohl(tokenBytes[3]), ntohl(tokenBytes[4]), ntohl(tokenBytes[5]),
                         ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
     NSLog(@"\n>>>[DeviceToken(NSData)]: %@", hexToken);
+    self.agooDeviceToken = hexToken;
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AGOO消息deviceToken" message:[NSString stringWithFormat:@"%@",hexToken] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
 //    [alert show];
     

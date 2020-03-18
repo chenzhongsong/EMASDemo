@@ -411,6 +411,19 @@
 			path = hotfix;
 			sourceTree = "<group>";
 		};
+		7EA522A0239A6FD500485537 /* Mtop */ = {
+			isa = PBXGroup;
+			children = (
+				8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */,
+				8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */,
+				981DC5D620998B53006472AF /* MtopResultViewController.h */,
+				981DC5D720998B53006472AF /* MtopResultViewController.m */,
+				9815F23720A2F73F00F0F70D /* MtopCustomCell.h */,
+				9815F23820A2F73F00F0F70D /* MtopCustomCell.m */,
+			);
+			path = Mtop;
+			sourceTree = "<group>";
+		};
 		8601D6BA215F57C400BDFC46 /* WindVane */ = {
 			isa = PBXGroup;
 			children = (
@@ -579,16 +592,11 @@
 				33A2550B20FDE2EC00C3F673 /* push */,
 				33D18D4220DA04C000ACF0C7 /* accs */,
 				980F855720BECB8A002156A2 /* Orange */,
-				8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */,
-				8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */,
-				8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */,
-				8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */,
-				981DC5D620998B53006472AF /* MtopResultViewController.h */,
-				981DC5D720998B53006472AF /* MtopResultViewController.m */,
-				9815F23720A2F73F00F0F70D /* MtopCustomCell.h */,
-				9815F23820A2F73F00F0F70D /* MtopCustomCell.m */,
+				7EA522A0239A6FD500485537 /* Mtop */,
 				8611706321943A5000DCAB7F /* EMASPortalViewController.h */,
 				8611706421943A5000DCAB7F /* EMASPortalViewController.m */,
+				8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */,
+				8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */,
 			);
 			path = EMASDemo;
 			sourceTree = "<group>";
@@ -892,7 +900,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh",
 				"${PODS_ROOT}/AliHAAdapter4poc/AliHAAdapter4poc.framework/alihaadapter4poc_bundle.plist",
 				"${PODS_ROOT}/AliHACore/AliHACore.framework/alihacore_bundle.plist",
 				"${PODS_ROOT}/AliHADeviceEvaluation/AliHADeviceEvaluation.framework/alihadeviceevaluation_bundle.plist",
@@ -930,7 +938,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1071,7 +1079,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo.notificationextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = emas_pocdemo_developer_notificationextension;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1094,7 +1102,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo.notificationextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = emas_pocdemo_developer_notificationextension;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1215,9 +1223,10 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_ENTITLEMENTS = EMASDemo/EMASDemo.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = VSW2PKYTD7;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
@@ -1302,7 +1311,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = poc_emasdemo_develoepr;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1404,7 +1413,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = poc_emasdemo_develoepr;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

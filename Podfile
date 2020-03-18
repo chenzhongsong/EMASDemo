@@ -24,12 +24,12 @@ platform:ios, '8.0'
     pod  'UserTrack',        '6.3.5.100005-poc'
     pod  'Reachability',     '3.2'
     pod  'FMDB',             '2.7.2'
-    pod  'NetworkSDK',       '10.0.4.2'
-    pod  'tnet',             '10.2.0'
+    pod  'NetworkSDK',       '10.0.4.6'
+    pod  'tnet',             '10.3.0'
     pod  'AliEMASConfigure',  '0.0.1.19'
     
     # --ACCS(通用库 -> ACCS)
-    pod  'TBAccsSDK',         '10.0.7'
+    pod  'TBAccsSDK',         '10.0.11'
     #pod  'TBAccsSDK',  :path=>  '/Users/wuchen.xj/gitemas/tbaccssdk/'
     
     # --PUSH(通用库 -> PUSH)
@@ -37,19 +37,20 @@ platform:ios, '8.0'
     #pod  'PushCenterSDK',  :path=>  '/Users/wuchen.xj/gitemas/pushcentersdk/'
     
     # --网关(通用库-> 网关)
-    pod  'MtopSDK',          '10.0.6'
-    pod  'mtopext/MtopCore', '10.0.6'
+    pod  'MtopSDK',          '10.1.6'
+    pod  'mtopext/MtopCore', '10.1.3'
     
     # --远程配置
     pod 'orange','10.0.0'
     
     # --高可用(通用库-> ACCS -> 高可用)
-    pod  'AliHAAdapter4poc',   '10.0.5.4'
+    pod  'AliHAAdapter4poc',   '10.0.5.5'
+#    pod  'AliHAAdapter4poc',   '10.0.5.4'
     #pod  'ZipArchive', '~> 1.4.0'
     
     # --Weex(通用库-> 高可用 -> 网关 -> Weex)
     pod 'WeexSDK', '0.20.0.3-EMAS'
-    pod 'ZCache', '10.0.3'
+    pod 'ZCache', '10.0.9'
     #pod 'ZipArchive', '~> 1.4.0'
     pod 'SDWebImage', '3.7.5'
     pod 'DynamicConfiguration', '10.0.4'

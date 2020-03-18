@@ -7,9 +7,12 @@
 //
 
 #import "MtopResultViewController.h"
-#import <mtopext/MtopCore/MtopExtRequest.h>
-#import <mtopext/MtopCore/MtopExtResponse.h>
-#import <mtopext/MtopCore/MtopService.h>
+//#import <mtopext/MtopCore/MtopExtRequest.h>
+//#import <mtopext/MtopCore/MtopExtResponse.h>
+//#import <mtopext/MtopCore/MtopService.h>
+#import <MtopCore/MtopExtRequest.h>
+#import <MtopCore/MtopExtResponse.h>
+#import <MtopCore/MtopService.h>
 #import <MtopSDK/TBSDKConnection.h>
 #import "EMASService.h"
 
@@ -142,6 +145,8 @@ static NSString* mtopDescription(MtopExtResponse *response){
     }
     MtopExtRequest* request = [[MtopExtRequest alloc] initWithApiName: apiName apiVersion: apiVersion];
     [request setCustomHost:domain];
+//    根据客户实际业务情况添加授权加签
+//    [request addHttpHeader:@"c:app:E04C733181004F43A7ABC8676909DF93" forKey:@"x-emas-gw-auth-ticket"];
     TBSDKConfiguration *config = [TBSDKConfiguration shareInstance];
     config.latitude = 30.26;
     config.longitude = 120.19;
@@ -214,6 +219,7 @@ static NSString* mtopDescription(MtopExtResponse *response){
     request.failedBlock = ^(MtopExtResponse *response) {
         // 失败回调
         self.requestText.text = mtopDescription(response);
+        NSLog(@"Error error: %@", response.error);
     };
     
     [[MtopService getInstance] async_call:request delegate:nil];
