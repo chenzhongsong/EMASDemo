@@ -76,6 +76,8 @@
 // -- Alicloud Update
 #import <AlicloudUpdate/AlicloudUpdate.h>
 
+#import "TBSDKAgooMessageCopy.h"
+
 @interface MyPolicyCenter : NSObject <NWPolicyDelegate>
 @end
 
@@ -210,15 +212,6 @@
     }
     NSLog(@"resultDataText:%@",resultDataText);
     
-//    NSString *resultDatabodyStr = [self base64EncodedWithString:resultDataText];
-    
-    
-//    NSMutableArray *resultDataArr = [NSMutableArray arrayWithObject:resultDataText];
-//    NSDictionary *resultDataDic = resultDataArr[0];
-//    NSString *body_resultDataStr = [resultDataDic objectForKey:@"b"];
-//    NSString *str = @"xgr1ZuURrJOisKbtJoz7xZztSk_byf3wnuoGsULyAAkhELVR1zYnkLB_beEk9uStSnXI_Ry4VMSs\nX_zHthPrbUaYBJy70wW1K9pMwh2khaw=";
-//    NSString *bodyStr = [self base64EncodedWithString:str];
-//    NSLog(@"bodyStr:%@",bodyStr);
 
 
     NSString *text = [resultDic description];
@@ -393,8 +386,8 @@
             NSLog(@"%@", txt);
             NSLog(@"\n\nreceviceData-ResultsDict:%@\n\n",resultsDict);
             
-//            TBSDKAgooMessage *agooMsg = [TBSDKAgooMessage convertFromAccsMessage:resultsDict withError:&error];
-//            NSString *bodyStr = agooMsg.body;
+            TBSDKAgooMessageCopy *agooMsg = [TBSDKAgooMessageCopy convertFromAccsMessage:resultsDict withError:&error];
+            NSString *bodyStr = agooMsg.body;
             [[NSNotificationCenter defaultCenter] postNotificationName:@"downMassage" object:nil userInfo:resultsDict];
         }
     }];

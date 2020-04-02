@@ -30,6 +30,8 @@
 		7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6260E81FDA8C8400E856CB /* arp.framework */; };
 		7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */; };
 		7D8394A91FDB902900EBB60F /* fix.lua in Resources */ = {isa = PBXBuildFile; fileRef = 7D8394A81FDB902900EBB60F /* fix.lua */; };
+		7E193AD524361944004FF22A /* TBSDKAgooMessageCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E193AD324361943004FF22A /* TBSDKAgooMessageCopy.m */; };
+		7E193AD624361944004FF22A /* TBSDKPushUtilsCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E193AD424361943004FF22A /* TBSDKPushUtilsCopy.m */; };
 		8601D6BD215F5A2B00BDFC46 /* EMASWindVaneConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8601D6BC215F5A2B00BDFC46 /* EMASWindVaneConfig.m */; };
 		8601D6DB215F611000BDFC46 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6DA215F611000BDFC46 /* CoreBluetooth.framework */; };
 		8601D6DE215F613D00BDFC46 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6DC215F613D00BDFC46 /* AddressBook.framework */; };
@@ -178,6 +180,10 @@
 		7D6260E81FDA8C8400E856CB /* arp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = arp.framework; sourceTree = "<group>"; };
 		7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudHotFixEmas.framework; sourceTree = "<group>"; };
 		7D8394A81FDB902900EBB60F /* fix.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fix.lua; sourceTree = "<group>"; };
+		7E193AD124361943004FF22A /* TBSDKAgooMessageCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBSDKAgooMessageCopy.h; sourceTree = "<group>"; };
+		7E193AD224361943004FF22A /* TBSDKPushUtilsCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBSDKPushUtilsCopy.h; sourceTree = "<group>"; };
+		7E193AD324361943004FF22A /* TBSDKAgooMessageCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBSDKAgooMessageCopy.m; sourceTree = "<group>"; };
+		7E193AD424361943004FF22A /* TBSDKPushUtilsCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBSDKPushUtilsCopy.m; sourceTree = "<group>"; };
 		8601D6BB215F5A2B00BDFC46 /* EMASWindVaneConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASWindVaneConfig.h; sourceTree = "<group>"; };
 		8601D6BC215F5A2B00BDFC46 /* EMASWindVaneConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneConfig.m; sourceTree = "<group>"; };
 		8601D6DA215F611000BDFC46 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -411,6 +417,18 @@
 			path = hotfix;
 			sourceTree = "<group>";
 		};
+		7E193AD024361943004FF22A /* agoo */ = {
+			isa = PBXGroup;
+			children = (
+				7E193AD124361943004FF22A /* TBSDKAgooMessageCopy.h */,
+				7E193AD224361943004FF22A /* TBSDKPushUtilsCopy.h */,
+				7E193AD324361943004FF22A /* TBSDKAgooMessageCopy.m */,
+				7E193AD424361943004FF22A /* TBSDKPushUtilsCopy.m */,
+			);
+			name = agoo;
+			path = EMASDemo/agoo;
+			sourceTree = "<group>";
+		};
 		7EA522A0239A6FD500485537 /* Mtop */ = {
 			isa = PBXGroup;
 			children = (
@@ -537,6 +555,7 @@
 		8ADA95321FD9309400C0EF49 = {
 			isa = PBXGroup;
 			children = (
+				7E193AD024361943004FF22A /* agoo */,
 				8ADA953D1FD9309400C0EF49 /* EMASDemo */,
 				8ADA95591FD9309400C0EF49 /* EMASDemoTests */,
 				8ADA95641FD9309400C0EF49 /* EMASDemoUITests */,
@@ -900,7 +919,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh",
 				"${PODS_ROOT}/AliHAAdapter4poc/AliHAAdapter4poc.framework/alihaadapter4poc_bundle.plist",
 				"${PODS_ROOT}/AliHACore/AliHACore.framework/alihacore_bundle.plist",
 				"${PODS_ROOT}/AliHADeviceEvaluation/AliHADeviceEvaluation.framework/alihadeviceevaluation_bundle.plist",
@@ -938,7 +957,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -980,8 +999,10 @@
 				33D18D5B20DA30DC00ACF0C7 /* ACCSSettingViewController.m in Sources */,
 				869B55CB2140068400809084 /* EMASHostViewController.m in Sources */,
 				980F857020BECC49002156A2 /* OrangeRemoteConfigRootVC.m in Sources */,
+				7E193AD524361944004FF22A /* TBSDKAgooMessageCopy.m in Sources */,
 				8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */,
 				4A017CF221006EC7001FF027 /* TestUIViewController.m in Sources */,
+				7E193AD624361944004FF22A /* TBSDKPushUtilsCopy.m in Sources */,
 				7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */,
 				980F856A20BECC49002156A2 /* OrangeRemotConfigDebugVC.m in Sources */,
 				8635031621D13E5E00E210DE /* UIColor+Hex.m in Sources */,
@@ -1311,7 +1332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = poc_emasdemo_develoepr;
+				PROVISIONING_PROFILE_SPECIFIER = emas_pocdemo_developer;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1413,7 +1434,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = poc_emasdemo_develoepr;
+				PROVISIONING_PROFILE_SPECIFIER = emas_pocdemo_developer;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
