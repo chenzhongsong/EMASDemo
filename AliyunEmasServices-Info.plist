@@ -9,21 +9,21 @@
 		<key>LogLevel</key>
 		<string>none</string>
 		<key>AppKey</key>
-		<string>20000781</string>
+		<string>20000003</string>
 		<key>AppSecret</key>
-		<string>869108435e7328e22adc8f02ea4a475c</string>
+		<string>887349f0791ddce2ad0dbf22f8a5f81c</string>
 		<key>UseSecurityGuard</key>
 		<false/>
 		<key>ChannelID</key>
-		<string>1001@POC_iOS_1.0.0</string>
+		<string>600000@DemoApp_IOS_1.0.0</string>
 		<key>ACCS</key>
 		<dict>
 			<key>Host</key>
-			<string>accs.emas-poc.com</string>
+			<string>aserver-pre1.emas-poc.com</string>
 			<key>DefaultIP</key>
-			<string></string>
+			<string>101.133.105.148</string>
 			<key>DefaultPort</key>
-			<integer>0</integer>
+			<integer>80</integer>
 			<key>CustomAppVersion</key>
 			<string>123</string>
 			<key>SlightSSLPublickeyIndex</key>
@@ -35,11 +35,11 @@
 		<dict>
 			<key>IPStrategy</key>
 			<dict>
-				<key>1emaspoc-acs.emas-ha.cn</key>
+				<key>aserver-pre1.emas-poc.com</key>
 				<array>
 					<dict>
 						<key>ip</key>
-						<string>1.1.1.1</string>
+						<string>aserver-pre1.emas-poc.com</string>
 						<key>port</key>
 						<integer>80</integer>
 						<key>publickey</key>
@@ -55,42 +55,42 @@
 		<key>MTOP</key>
 		<dict>
 			<key>Domain</key>
-			<string>aserver.emas-poc.com</string>
+			<string>aserver-pre1.emas-poc.com</string>
 			<key>APIDomain</key>
-			<string>gw.emas-poc.com</string>
+			<string>47.103.190.71:32480</string>
 		</dict>
 		<key>ZCache</key>
 		<dict>
 			<key>URL</key>
-			<string>http://cdn.emas-poc.com/eweex/</string>
+			<string>https://ceph-pre1.emas-poc.com/emas-cdn/eweex/</string>
 		</dict>
 		<key>HA</key>
 		<dict>
 			<key>RSAPublicKey</key>
-			<string></string>
+			<string>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDRoI0VOQR/+qudSaq5Sv8AlE4K9a8p7UDxpNAbfFbvdfQPXF0KyuwUGjvOp/ZCDzOJCrKrMGfneEqObS+jf+C7VpkJ84TBTIjUx83l4dGU62FFcwzKMOq9rUBBT0fQrPU6HlTJwA2TEC3+VJQ1P+1urNuxxNBcB/g7ST2/VjpBjQIDAQAB</string>
 			<key>OSSBucketName</key>
-			<string>emas-ha-remote-log-poc</string>
+			<string>emas-ha</string>
 			<key>UploadType</key>
-			<string></string>
+			<string>1</string>
 			<key>ServiceID</key>
 			<string>emas-ha</string>
 			<key>UniversalHost</key>
-			<string>adash.emas-poc.com</string>
+			<string>47.103.190.71:32380</string>
 			<key>TimestampHost</key>
-			<string>aserver.emas-poc.com</string>
+			<string>aserver-pre1.emas-poc.com</string>
 		</dict>
 		<key>Hotfix</key>
 		<dict>
 			<key>URL</key>
-			<string>aserver.emas-poc.com</string>
+			<string>47.103.190.71:32280</string>
 		</dict>
 		<key>RemoteConfig</key>
 		<dict>
 			<key>Domain</key>
-			<string>aserver.emas-poc.com</string>
+			<string>47.103.190.71:32280</string>
 		</dict>
 		<key>UseHTTP</key>
-		<true/>
+		<false/>
 	</dict>
 </dict>
 </plist>

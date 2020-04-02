@@ -35,9 +35,11 @@ platform:ios, '8.0'
     # --PUSH(通用库 -> PUSH)
     pod  'PushCenterSDK',     '10.0.9'
     #pod  'PushCenterSDK',  :path=>  '/Users/wuchen.xj/gitemas/pushcentersdk/'
-    
+    # --个税特制推送SDK
+    #pod  'EMASPushSDK'  #个税
+
     # --网关(通用库-> 网关)
-    pod  'MtopSDK',          '10.1.6'
+    pod  'MtopSDK',          '10.1.6-auth'
     pod  'mtopext/MtopCore', '10.1.3'
     
     # --远程配置

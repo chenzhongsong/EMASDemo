@@ -25,8 +25,8 @@
 //#import <NetworkSDK/NetworkCore/NWuserLoger.h>
 //#import <NetworkSDK/AliReachability/NWLog.h>
 
-// --ACCS头文件
-#import <TBAccsSDK/TBAccsManager.h>
+//// --ACCS头文件
+//#import <TBAccsSDK/TBAccsManager.h>
 
 // --PUSH头文件
 #import <PushCenterSDK/TBSDKPushCenterConfiguration.h>
@@ -147,6 +147,7 @@
 
 @interface AppDelegate () <UNUserNotificationCenterDelegate>
 @property(nonatomic,strong) MyPolicyCenter *policyCenter;
+
 @end
 
 @implementation AppDelegate
@@ -162,32 +163,81 @@
     [NWLog setLogLevel:NW_LOG_DEBUG];
     
     // 1. 先初始化基础库
-    [self initCommonConfig];
+//    [self initCommonConfig];
     
     // 2. 初始化高可用，高可用依赖基础库和ACCS，因此高可用的初始化顺序为，基础库->ACCS->高可用
     [self initAccsConfig];
-    [self initHAConfig];
+//    [self initHAConfig];
     
     // 3. 初始化Weex，Weex依赖基础库、网关和高可用，因此Weex的初始化顺序为，基础库->高可用->网关->远程配置->ZCache->Weex
-    [self initRemoteConfig];
-    [self initMtopConfig];
-    [self initZCacheConfig];
-    [self initDyConfig];
+//    [self initRemoteConfig];//影响透传消息
+//    [self initMtopConfig];
+//    [self initZCacheConfig];
+//    [self initDyConfig];
     
-    // 4. 初始化PUSH
-    [self initPushConfig];
+     // 4. 初始化PUSH
+//    [self initPushConfig];//影响透传消息
     
     // 5. 初始化 update SDK
-    [AlicloudUpdate autoInit];
-    
-    
-    [EMASWXSubSDKEngine setup];
-    
-    [EMASWindVaneConfig setUpWindVanePlugin];
+//    [AlicloudUpdate autoInit];
+//
+//    [EMASWXSubSDKEngine setup];
+//
+//    [EMASWindVaneConfig setUpWindVanePlugin];
     
     [self showMainViewController];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(downMassageNotification:) name:@"downMassage" object:nil];
+    
     return YES;
+}
+
+- (void)downMassageNotification:(NSNotification *)notification {
+    NSDictionary *resultDic = [notification userInfo];
+    NSLog(@"downMassageResultDic:%@",resultDic);
+    
+    NSData *originalData = [resultDic objectForKey:@"originalData"];
+    NSString *originalDataText;
+    if (originalData) {
+        originalDataText = [[NSString alloc] initWithData:originalData encoding:NSUTF8StringEncoding];
+    }
+    NSLog(@"originalDataText:%@",originalDataText);
+    
+    NSData *resultData = [resultDic objectForKey:@"resultData"];
+    NSString *resultDataText;
+    if (resultData) {
+        resultDataText = [[NSString alloc] initWithData:resultData encoding:NSUTF8StringEncoding];
+    }
+    NSLog(@"resultDataText:%@",resultDataText);
+    
+//    NSString *resultDatabodyStr = [self base64EncodedWithString:resultDataText];
+    
+    
+//    NSMutableArray *resultDataArr = [NSMutableArray arrayWithObject:resultDataText];
+//    NSDictionary *resultDataDic = resultDataArr[0];
+//    NSString *body_resultDataStr = [resultDataDic objectForKey:@"b"];
+//    NSString *str = @"xgr1ZuURrJOisKbtJoz7xZztSk_byf3wnuoGsULyAAkhELVR1zYnkLB_beEk9uStSnXI_Ry4VMSs\nX_zHthPrbUaYBJy70wW1K9pMwh2khaw=";
+//    NSString *bodyStr = [self base64EncodedWithString:str];
+//    NSLog(@"bodyStr:%@",bodyStr);
+
+
+    NSString *text = [resultDic description];
+    text = [NSString stringWithCString:[text cStringUsingEncoding:NSUTF8StringEncoding] encoding:NSNonLossyASCIIStringEncoding];
+    if ( !text ) {
+        text = @"ACCS消息解析失败!";
+    }
+    NSLog(@">>>>>>> [ACCS MESSAGE]: %@", text);
+    
+    NSString *textStr = [NSString stringWithFormat:@"\n%@\n%@\n%@\n",text,originalDataText,resultDataText];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"ACCS 消息" message:textStr preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+    [alertController addAction:ok];
+    [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
+    
+    NSObject *agooMsg1 = [notification object];
+    
+//    TBSDKAgooMessage *agooMsg = [TBSDKAgooMessage convertFromAccsMessage:resultDic withError:nil];
+//    NSString *bodyStr =agooMsg.body;
 }
 
 #pragma mark -
@@ -284,10 +334,11 @@
     tbAccsSDKSwitchLog(YES); // 打开调试日志
     
     // ACCS 通过配置文件自初始化
-    TBAccsManager *accsManager = [TBAccsManager accsManagerByConfigureName:nil];
-    [accsManager startAccs];
-    
-    [accsManager bindAppWithAppleToken: nil
+    self.accsManager = [TBAccsManager accsManagerByConfigureName:nil];
+    [self.accsManager startAccs];
+   
+    //绑定app
+    [self.accsManager bindAppWithAppleToken: nil
                               callBack:^(NSError *error, NSDictionary *resultsDict) {
                                   if (error) {
                                       NSLog(@"\n\n绑定App出错了 %@\n\n", error);
@@ -296,7 +347,78 @@
                                       NSLog(@"\n\n绑定App成功了\n\n");
                                   }
                               }];
+    
+    //绑定ServeiceId
+    [self bindSeriveId:@"agooKick"];//agooKick、agooTokenReport、AgooDeviceCmd、agooSend、agooAck
+    [self bindSeriveId:@"agooTokenReport"];
+    [self bindSeriveId:@"AgooDeviceCmd"];
+    [self bindSeriveId:@"agooSend"];//这个得要，接收消息回调要用
+    [self bindSeriveId:@"agooSend"];
+    
+    //绑定alias
+    [self bindUser:@"pass"];
 }
+
+
+- (void)bindSeriveId:(NSString *)serviceId {
+    if (!serviceId || serviceId.length == 0) {
+        NSString *txt = [NSString stringWithFormat:@">> [UNBIND SERVICE] The service id is invalid!"];
+        NSLog(@"%@",txt);
+        return;
+    }
+    [self.accsManager bindServiceWithServiceId:serviceId callBack:^(NSError *error, NSDictionary *resultsDict) {
+        if (error) {
+            NSString *txt = [NSString stringWithFormat:@">> [BIND SERVICE] ERROR: %@", error];
+            NSLog(@"%@",txt);
+        } else {
+            NSString *txt = [NSString stringWithFormat:@">> [BIND SERVICE] SUCCESS: %@", serviceId];
+            NSLog(@"%@", txt);
+        }
+        NSLog(@"\n\nbindSeriveId-ResultsDict:%@\n\n",resultsDict);
+    } receviceDataBlock:^(NSError *error, NSDictionary *resultsDict) {//接收下行消息
+        if (error) {
+            NSString *txt = [NSString stringWithFormat:@">> [RECEIVE DATA] ERROR: %@", error];
+            NSLog(@"%@",txt);
+        } else {
+            NSString *dataId = [resultsDict objectForKey:@"dataId"];
+            NSString *serviceId = [resultsDict objectForKey:@"serviceId"];
+            NSData *payload = [resultsDict objectForKey:@"resultData"];
+            NSString *payloadText;
+            if (payload) {
+                payloadText = [[NSString alloc] initWithData:payload encoding:NSUTF8StringEncoding];
+            }
+            NSString *txt = [NSString stringWithFormat:@">> [RECEIVE DATA] : \n\tdataId : %@\n\tserviceId : %@\n\tpayload : %@",
+                             dataId, serviceId, payloadText];
+            
+            NSLog(@"%@", txt);
+            NSLog(@"\n\nreceviceData-ResultsDict:%@\n\n",resultsDict);
+            
+//            TBSDKAgooMessage *agooMsg = [TBSDKAgooMessage convertFromAccsMessage:resultsDict withError:&error];
+//            NSString *bodyStr = agooMsg.body;
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"downMassage" object:nil userInfo:resultsDict];
+        }
+    }];
+}
+
+
+- (void)bindUser:(NSString *)userId {
+    if (!userId || userId.length == 0) {
+        NSString *txt = [NSString stringWithFormat:@">> [BIND USER] The user id is invalid!"];
+        NSLog(@"%@", txt);
+        return;
+    }
+    [self.accsManager bindUserWithUserId:userId callBack:^(NSError *error, NSDictionary *resultsDict) {
+        if (error) {
+            NSString *txt = [NSString stringWithFormat:@">> [BIND USER] ERROR: %@", error];
+            NSLog(@"%@", txt);
+        } else {
+            NSString *txt = [NSString stringWithFormat:@">> [BIND USER] SUCCESS!"];
+            NSLog(@"%@", txt);
+        }
+        NSLog(@"\n\nbindUser-ResultsDict:%@\n\n",resultsDict);
+    }];
+}
+
 
 // PUSH
 - (void)initPushConfig

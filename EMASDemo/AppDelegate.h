@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+// --ACCS头文件
+#import <TBAccsSDK/TBAccsManager.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (copy, nonatomic) NSString *agooDeviceToken;
-
+@property (nonatomic, strong) TBAccsManager *accsManager;
 @end
 
