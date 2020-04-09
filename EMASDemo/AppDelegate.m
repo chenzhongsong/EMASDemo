@@ -76,7 +76,7 @@
 // -- Alicloud Update
 #import <AlicloudUpdate/AlicloudUpdate.h>
 
-#import "TBSDKAgooMessageCopy.h"
+//#import "TBSDKAgooMessageCopy.h"
 
 @interface MyPolicyCenter : NSObject <NWPolicyDelegate>
 @end
@@ -386,9 +386,9 @@
             NSLog(@"%@", txt);
             NSLog(@"\n\nreceviceData-ResultsDict:%@\n\n",resultsDict);
             
-            TBSDKAgooMessageCopy *agooMsg = [TBSDKAgooMessageCopy convertFromAccsMessage:resultsDict withError:&error];
-            NSString *bodyStr = agooMsg.body;
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"downMassage" object:nil userInfo:resultsDict];
+//            TBSDKAgooMessageCopy *agooMsg = [TBSDKAgooMessageCopy convertFromAccsMessage:resultsDict withError:&error];
+//            NSString *bodyStr = agooMsg.body;
+//            [[NSNotificationCenter defaultCenter] postNotificationName:@"downMassage" object:nil userInfo:resultsDict];
         }
     }];
 }
