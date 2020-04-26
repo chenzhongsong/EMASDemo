@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E31FB67E6BF7297F0494EDA /* MPLauncherAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 862CA1606272FFE18DA6F0DE /* MPLauncherAppDelegate.m */; };
 		1A65F6261FF253CF00B4573C /* AliHATestCaseViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A65F6251FF253CF00B4573C /* AliHATestCaseViewController.mm */; };
+		208FAF678C66D0F6CAF9431F /* DTFrameworkInterface+EMASDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FF271EC7D7B6C47743C35F96 /* DTFrameworkInterface+EMASDemo.m */; };
 		3342C6BE21A1AF07006B6A87 /* PushMessageReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3342C6BD21A1AF07006B6A87 /* PushMessageReceiver.m */; };
 		3342C6C121A1AF62006B6A87 /* PushSDKReceiverConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3342C6BF21A1AF61006B6A87 /* PushSDKReceiverConfig.plist */; };
 		3342C6C221A1AF62006B6A87 /* AccsReceiverTable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3342C6C021A1AF62006B6A87 /* AccsReceiverTable.plist */; };
@@ -30,6 +32,7 @@
 		7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6260E81FDA8C8400E856CB /* arp.framework */; };
 		7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */; };
 		7D8394A91FDB902900EBB60F /* fix.lua in Resources */ = {isa = PBXBuildFile; fileRef = 7D8394A81FDB902900EBB60F /* fix.lua */; };
+		844FF8A0D50657AE01725789 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750010E9C233F9AA82A5A574 /* CoreTelephony.framework */; };
 		8601D6BD215F5A2B00BDFC46 /* EMASWindVaneConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8601D6BC215F5A2B00BDFC46 /* EMASWindVaneConfig.m */; };
 		8601D6DB215F611000BDFC46 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6DA215F611000BDFC46 /* CoreBluetooth.framework */; };
 		8601D6DE215F613D00BDFC46 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6DC215F613D00BDFC46 /* AddressBook.framework */; };
@@ -79,6 +82,8 @@
 		8ADA955B1FD9309400C0EF49 /* EMASDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA955A1FD9309400C0EF49 /* EMASDemoTests.m */; };
 		8ADA95661FD9309400C0EF49 /* EMASDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95651FD9309400C0EF49 /* EMASDemoUITests.m */; };
 		8ADA95751FDA3BA300C0EF49 /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADA95741FDA3BA300C0EF49 /* FirstTableViewController.m */; };
+		95A3B8B3027BEF4E295014B3 /* meta.config in Resources */ = {isa = PBXBuildFile; fileRef = 14C351CE26878FB5F81A0F37 /* meta.config */; };
+		95A86A3339994129A600A441 /* yw_1222.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FC3DA009DE5A296EB15AE71 /* yw_1222.jpg */; };
 		980F856820BECC49002156A2 /* OrangeFeatureSecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F855A20BECC48002156A2 /* OrangeFeatureSecondVC.m */; };
 		980F856920BECC49002156A2 /* OrangeRemoteConfigRootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980F855C20BECC48002156A2 /* OrangeRemoteConfigRootVC.xib */; };
 		980F856A20BECC49002156A2 /* OrangeRemotConfigDebugVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F855D20BECC48002156A2 /* OrangeRemotConfigDebugVC.m */; };
@@ -91,6 +96,14 @@
 		980F857120BECC49002156A2 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F856620BECC49002156A2 /* CustomCell.m */; };
 		9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9815F23820A2F73F00F0F70D /* MtopCustomCell.m */; };
 		981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981DC5D720998B53006472AF /* MtopResultViewController.m */; };
+		A492B73EB79B68B6D48FFBC8 /* MobileRuntime.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC8CF8679A1507877E06075C /* MobileRuntime.plist */; };
+		B17967FC1CD1227E9617E162 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F7DA57B0CBDA33B2F28670 /* SystemConfiguration.framework */; };
+		B2330458A6B72F33AF335248 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C12EFF38ADA3DC2D1548BB /* MessageUI.framework */; };
+		B6F743343BC301F12FDF2B72 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1043F3B6625249E991B2804C /* WebKit.framework */; };
+		B7E25E4CAC7FE0E9F79ABFA4 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FEEAB337E30D96CB1C807F /* DemoViewController.m */; };
+		F26194A3971DA36502286B62 /* MPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DE6012000739EB503D189A /* MPTabBarController.m */; };
+		F2DD3EC97256DD1FC6905B03 /* MPaaSInterface+EMASDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B4F6C5360821C60BE47283 /* MPaaSInterface+EMASDemo.m */; };
+		F8EF8BA80AAAAD4E63739411 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8E7AA12D35685CAC7B0F7 /* CoreMotion.framework */; };
 		FF46C4EFA5A002A812E18F53 /* libPods-EMASDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D522707B463174EC727EEF /* libPods-EMASDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +156,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1043F3B6625249E991B2804C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		14C351CE26878FB5F81A0F37 /* meta.config */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = meta.config; sourceTree = "<group>"; };
 		1A65F6241FF253CF00B4573C /* AliHATestCaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliHATestCaseViewController.h; sourceTree = "<group>"; };
 		1A65F6251FF253CF00B4573C /* AliHATestCaseViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AliHATestCaseViewController.mm; sourceTree = "<group>"; };
 		3342C6BC21A1AF07006B6A87 /* PushMessageReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushMessageReceiver.h; sourceTree = "<group>"; };
@@ -163,12 +178,17 @@
 		33D18D6020DA330100ACF0C7 /* WQCodeScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCodeScanner.h; sourceTree = "<group>"; };
 		33E1BA9D21A4275200E81E32 /* clock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clock.wav; sourceTree = "<group>"; };
 		33E1BAA121A4290A00E81E32 /* hongbao.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hongbao.wav; sourceTree = "<group>"; };
+		3A8F7EA422ABC89D7BFAE97A /* MPLauncherAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MPLauncherAppDelegate.h; sourceTree = "<group>"; };
 		4A017CEC21006EC7001FF027 /* BaseUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseUIViewController.h; sourceTree = "<group>"; };
 		4A017CED21006EC7001FF027 /* TestUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUIViewController.m; sourceTree = "<group>"; };
 		4A017CEE21006EC7001FF027 /* BaseUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseUIViewController.m; sourceTree = "<group>"; };
 		4A017CEF21006EC7001FF027 /* MANViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANViewController.m; sourceTree = "<group>"; };
 		4A017CF021006EC7001FF027 /* TestUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUIViewController.h; sourceTree = "<group>"; };
 		4A017CF121006EC7001FF027 /* MANViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANViewController.h; sourceTree = "<group>"; };
+		69DE6012000739EB503D189A /* MPTabBarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MPTabBarController.m; sourceTree = "<group>"; };
+		6FC3DA009DE5A296EB15AE71 /* yw_1222.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = yw_1222.jpg; sourceTree = "<group>"; };
+		73F8D5DFDF3BD18D86F240C5 /* DTFrameworkInterface+EMASDemo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DTFrameworkInterface+EMASDemo.h"; sourceTree = "<group>"; };
+		750010E9C233F9AA82A5A574 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
 		7787F92B2338CEF30055F18C /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = SOURCE_ROOT; };
 		7787F92C2338CEF30055F18C /* AliyunEmasServices-Info-bak.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info-bak.plist"; sourceTree = SOURCE_ROOT; };
 		7D6260E21FDA8C5900E856CB /* HFXTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXTestClass.h; sourceTree = "<group>"; };
@@ -197,6 +217,7 @@
 		8611700E21916D7E00DCAB7F /* WeexContainer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WeexContainer-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8611706321943A5000DCAB7F /* EMASPortalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASPortalViewController.h; sourceTree = "<group>"; };
 		8611706421943A5000DCAB7F /* EMASPortalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASPortalViewController.m; sourceTree = "<group>"; };
+		862CA1606272FFE18DA6F0DE /* MPLauncherAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MPLauncherAppDelegate.m; sourceTree = "<group>"; };
 		8635030B21CF962A00E210DE /* WXNavigationBarDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXNavigationBarDefaultImpl.h; sourceTree = "<group>"; };
 		8635030C21CF962A00E210DE /* WXNavigationBarDefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXNavigationBarDefaultImpl.m; sourceTree = "<group>"; };
 		8635031421D13E5900E210DE /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
@@ -263,7 +284,9 @@
 		8ADA95671FD9309400C0EF49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ADA95731FDA3BA300C0EF49 /* FirstTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstTableViewController.h; sourceTree = "<group>"; };
 		8ADA95741FDA3BA300C0EF49 /* FirstTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewController.m; sourceTree = "<group>"; };
+		8C25F4FDC7DE4760A70E807B /* EMASDemo-mPaaS-Headers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EMASDemo-mPaaS-Headers.h"; sourceTree = "<group>"; };
 		8E3940FA5D2B7CA506DC1A36 /* Pods-EMASDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMASDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8F60C5D65D4FF7A68C0B77FA /* MPaaSInterface+EMASDemo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MPaaSInterface+EMASDemo.h"; sourceTree = "<group>"; };
 		97BD7DEF55A6F7A44C7420EE /* Pods-EMASDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMASDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		980F855820BECC48002156A2 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		980F855920BECC48002156A2 /* OrangeRemoteConfigRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrangeRemoteConfigRootVC.h; sourceTree = "<group>"; };
@@ -286,7 +309,17 @@
 		981DC5D620998B53006472AF /* MtopResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopResultViewController.h; sourceTree = "<group>"; };
 		981DC5D720998B53006472AF /* MtopResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtopResultViewController.m; sourceTree = "<group>"; };
 		9A09D7901FF2721000585632 /* DemoDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoDefine.h; sourceTree = "<group>"; };
+		9C823D6CEEB6465AC236EC0F /* MPTabBarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MPTabBarController.h; sourceTree = "<group>"; };
+		9DB1F9FE91D7A91FA804528B /* DemoViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		A8C12EFF38ADA3DC2D1548BB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		AC8CF8679A1507877E06075C /* MobileRuntime.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = MobileRuntime.plist; sourceTree = "<group>"; };
+		C1FEEAB337E30D96CB1C807F /* DemoViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		C7A8E7AA12D35685CAC7B0F7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		C9D522707B463174EC727EEF /* libPods-EMASDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EMASDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF3F225222E3393CB98B48C3 /* EMASDemo-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EMASDemo-Prefix.pch"; path = "../../../EMASDemo/EMASDemo-Prefix.pch"; sourceTree = "<group>"; };
+		D0F7DA57B0CBDA33B2F28670 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		F2B4F6C5360821C60BE47283 /* MPaaSInterface+EMASDemo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MPaaSInterface+EMASDemo.m"; sourceTree = "<group>"; };
+		FF271EC7D7B6C47743C35F96 /* DTFrameworkInterface+EMASDemo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DTFrameworkInterface+EMASDemo.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +348,11 @@
 				7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */,
 				7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */,
 				FF46C4EFA5A002A812E18F53 /* libPods-EMASDemo.a in Frameworks */,
+				B6F743343BC301F12FDF2B72 /* WebKit.framework in Frameworks */,
+				F8EF8BA80AAAAD4E63739411 /* CoreMotion.framework in Frameworks */,
+				844FF8A0D50657AE01725789 /* CoreTelephony.framework in Frameworks */,
+				B17967FC1CD1227E9617E162 /* SystemConfiguration.framework in Frameworks */,
+				B2330458A6B72F33AF335248 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +391,15 @@
 			path = AliHA;
 			sourceTree = "<group>";
 		};
+		216157141BD9BBDDD92CFDBC /* mPaas */ = {
+			isa = PBXGroup;
+			children = (
+				8F60C5D65D4FF7A68C0B77FA /* MPaaSInterface+EMASDemo.h */,
+				F2B4F6C5360821C60BE47283 /* MPaaSInterface+EMASDemo.m */,
+			);
+			path = mPaas;
+			sourceTree = "<group>";
+		};
 		33A2550B20FDE2EC00C3F673 /* push */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +431,22 @@
 			path = accs;
 			sourceTree = "<group>";
 		};
+		39BFAF1C42C59EEB66E4CA70 /* MPaaS */ = {
+			isa = PBXGroup;
+			children = (
+				4735B70CCB4480D0D77D0D83 /* Targets */,
+			);
+			path = MPaaS;
+			sourceTree = "<group>";
+		};
+		4735B70CCB4480D0D77D0D83 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				BF3CF8EEEDE3DDDBF11381E5 /* EMASDemo */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
 		4A017CEB21006E59001FF027 /* man */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +458,34 @@
 				4A017CEF21006EC7001FF027 /* MANViewController.m */,
 			);
 			path = man;
+			sourceTree = "<group>";
+		};
+		5E04720AB90E4929204C5415 /* APMobileFramework */ = {
+			isa = PBXGroup;
+			children = (
+				73F8D5DFDF3BD18D86F240C5 /* DTFrameworkInterface+EMASDemo.h */,
+				FF271EC7D7B6C47743C35F96 /* DTFrameworkInterface+EMASDemo.m */,
+				AC8CF8679A1507877E06075C /* MobileRuntime.plist */,
+				3A8F7EA422ABC89D7BFAE97A /* MPLauncherAppDelegate.h */,
+				862CA1606272FFE18DA6F0DE /* MPLauncherAppDelegate.m */,
+				9C823D6CEEB6465AC236EC0F /* MPTabBarController.h */,
+				69DE6012000739EB503D189A /* MPTabBarController.m */,
+				9DB1F9FE91D7A91FA804528B /* DemoViewController.h */,
+				C1FEEAB337E30D96CB1C807F /* DemoViewController.m */,
+			);
+			path = APMobileFramework;
+			sourceTree = "<group>";
+		};
+		6761F6F3A46A654E23A073DB /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1043F3B6625249E991B2804C /* WebKit.framework */,
+				C7A8E7AA12D35685CAC7B0F7 /* CoreMotion.framework */,
+				750010E9C233F9AA82A5A574 /* CoreTelephony.framework */,
+				D0F7DA57B0CBDA33B2F28670 /* SystemConfiguration.framework */,
+				A8C12EFF38ADA3DC2D1548BB /* MessageUI.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		7D6260E11FDA8C5900E856CB /* hotfix */ = {
@@ -544,6 +635,7 @@
 				8ADA953C1FD9309400C0EF49 /* Products */,
 				024D3223F0A2D0A415B2F56B /* Pods */,
 				D270D82292708B86B2F528C3 /* Frameworks */,
+				39BFAF1C42C59EEB66E4CA70 /* MPaaS */,
 			);
 			sourceTree = "<group>";
 		};
@@ -642,6 +734,19 @@
 			path = Orange;
 			sourceTree = "<group>";
 		};
+		BF3CF8EEEDE3DDDBF11381E5 /* EMASDemo */ = {
+			isa = PBXGroup;
+			children = (
+				14C351CE26878FB5F81A0F37 /* meta.config */,
+				6FC3DA009DE5A296EB15AE71 /* yw_1222.jpg */,
+				8C25F4FDC7DE4760A70E807B /* EMASDemo-mPaaS-Headers.h */,
+				CF3F225222E3393CB98B48C3 /* EMASDemo-Prefix.pch */,
+				216157141BD9BBDDD92CFDBC /* mPaas */,
+				5E04720AB90E4929204C5415 /* APMobileFramework */,
+			);
+			path = EMASDemo;
+			sourceTree = "<group>";
+		};
 		D270D82292708B86B2F528C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,6 +762,7 @@
 				8AC0CB6D200312CF00FD44E6 /* MobileCoreServices.framework */,
 				8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */,
 				C9D522707B463174EC727EEF /* libPods-EMASDemo.a */,
+				6761F6F3A46A654E23A073DB /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -693,6 +799,7 @@
 				67DAC7CF7E1FB0DDB324BBC0 /* 📦 Copy Pods Resources */,
 				8ABD97BD1FF4D55700469557 /* Embed Watch Content */,
 				33CD22DA21A3E2C10005D834 /* Embed App Extensions */,
+				6B1777DDD5DB3541256F998F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -841,6 +948,9 @@
 				7787F92E2338CEF40055F18C /* AliyunEmasServices-Info-bak.plist in Resources */,
 				980F856E20BECC49002156A2 /* OrangeRemotConfigDebugVC.xib in Resources */,
 				980F856B20BECC49002156A2 /* OrangeFeatureSecondVC.xib in Resources */,
+				95A3B8B3027BEF4E295014B3 /* meta.config in Resources */,
+				95A86A3339994129A600A441 /* yw_1222.jpg in Resources */,
+				A492B73EB79B68B6D48FFBC8 /* MobileRuntime.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,6 +986,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6B1777DDD5DB3541256F998F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-frameworks.sh",
+				"${PODS_ROOT}/FalconLooks/FalconLooks.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FalconLooks.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7E52B87F8848102D355C54FE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -901,16 +1029,58 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh",
+				"${PODS_ROOT}/AOMPDevice/AOMPDevice.framework/AOMPDevice.bundle",
+				"${PODS_ROOT}/APBusinessSchemeHandlers/APBusinessSchemeHandlers.framework/APBusinessSchemeHandlers.bundle",
+				"${PODS_ROOT}/APMCDNImage/APMCDNImage.framework/APMCDNImage.bundle",
+				"${PODS_ROOT}/APMImageProcessing/APMImageProcessing.framework/APMImageProcessing.bundle",
+				"${PODS_ROOT}/APMUtils/APMUtils.framework/APMUtils.bundle",
+				"${PODS_ROOT}/APMap/APMap.framework/APMap.bundle",
+				"${PODS_ROOT}/APMobileFramework/APMobileFramework.framework/APMobileFramework.bundle",
+				"${PODS_ROOT}/APMobileNetwork/APMobileNetwork.framework/APMobileNetwork.bundle",
+				"${PODS_ROOT}/APMultimedia/APMultimedia.framework/APMultimedia.bundle",
+				"${PODS_ROOT}/APRemoteLogging/APRemoteLogging.framework/APRemoteLogging.bundle",
 				"${PODS_ROOT}/AliHAAdapter4poc/AliHAAdapter4poc.framework/alihaadapter4poc_bundle.plist",
 				"${PODS_ROOT}/AliHACore/AliHACore.framework/alihacore_bundle.plist",
 				"${PODS_ROOT}/AliHADeviceEvaluation/AliHADeviceEvaluation.framework/alihadeviceevaluation_bundle.plist",
 				"${PODS_ROOT}/AliHAPerformanceMonitor/AliHAPerformanceMonitor.framework/alihaperformancemonitor_bundle.plist",
 				"${PODS_ROOT}/AliHASecurity/AliHASecurity.framework/alihasecurity_bundle.plist",
+				"${PODS_ROOT}/AntUI/AntUI.framework/APCommonUI.bundle",
+				"${PODS_ROOT}/BEEAudioUtil/BEEAudioUtil.framework/BEEAudioUtil.bundle",
+				"${PODS_ROOT}/BeeCapture/BeeCapture.framework/BeeCapture.bundle",
+				"${PODS_ROOT}/BeeCityPicker/BeeCityPicker.framework/BeeCityPicker.bundle",
+				"${PODS_ROOT}/BeeLocationPicker/BeeLocationPicker.framework/BeeLocationPicker.bundle",
+				"${PODS_ROOT}/BeeMediaPlayer/BeeMediaPlayer.framework/BeeMediaPlayer.bundle",
+				"${PODS_ROOT}/BeePhoto/BeePhoto.framework/BeePhoto.bundle",
+				"${PODS_ROOT}/BeePhotoBrowser/BeePhotoBrowser.framework/BeePhotoBrowser.bundle",
+				"${PODS_ROOT}/BeePhotoPicker/BeePhotoPicker.framework/BeePhotoPicker.bundle",
 				"${PODS_ROOT}/EMASWeex/EMASWeex.framework/EMASWeex-Info.plist",
+				"${PODS_ROOT}/FalconLooks/FalconLooks.framework/FalconLooks.bundle",
 				"${PODS_ROOT}/JDYThreadTrace/JDYThreadTrace.framework/.gitkeep",
 				"${PODS_ROOT}/JDYThreadTrace/JDYThreadTrace.framework/JDYThreadTrace.podspec",
+				"${PODS_ROOT}/MAMapKit/MAMapKit.framework/AMap.bundle",
+				"${PODS_ROOT}/MPBadgeService/MPBadgeService.framework/MPBadgeService.bundle",
+				"${PODS_ROOT}/MPNebulaAdapter/MPNebulaAdapter.framework/MPInternalPlugins.bundle",
+				"${PODS_ROOT}/MPNebulaAdapter/MPNebulaAdapter.framework/MPInternalPresetApps.bundle",
+				"${PODS_ROOT}/MPNebulaAdapter/MPNebulaAdapter.framework/MPNebulaAdapter.bundle",
+				"${PODS_ROOT}/MPShareKit/MPShareKit.framework/MPShareKit.bundle",
+				"${PODS_ROOT}/MPShareKit/MPShareKit.framework/TencentOpenApi_IOS_Bundle.bundle",
+				"${PODS_ROOT}/MPShareKit/MPShareKit.framework/WeiboSDK.bundle",
+				"${PODS_ROOT}/NebulaAppManager/NebulaAppManager.framework/NebulaAppManager.bundle",
+				"${PODS_ROOT}/NebulaBiz/NebulaBiz.framework/NebulaBiz.bundle",
+				"${PODS_ROOT}/NebulaBiz/NebulaBiz.framework/NebulaPoseidon.bundle",
+				"${PODS_ROOT}/NebulaConfig/NebulaConfig.framework/NebulaConfig.bundle",
+				"${PODS_ROOT}/NebulaKernel/NebulaKernel.framework/NebulaKernel.bundle",
+				"${PODS_ROOT}/NebulaLogging/NebulaLogging.framework/NebulaLogging.bundle",
+				"${PODS_ROOT}/NebulaSDK/NebulaSDK.framework/NebulaSDK.bundle",
+				"${PODS_ROOT}/NebulaSDKPlugins/NebulaSDKPlugins.framework/NebulaSDKPlugins.bundle",
+				"${PODS_ROOT}/NebulaTinyapp/NebulaTinyapp.framework/NebulaTinyapp.bundle",
 				"${PODS_ROOT}/TBRest/TBRest.framework/TBRest.podspec",
 				"${PODS_ROOT}/TBRest/TBRest.framework/.gitkeep",
+				"${PODS_ROOT}/TBScanSDK/TBScanSDK.framework/TBScanSDK.bundle",
+				"${PODS_ROOT}/TBScanSDK/TBDecodeSDK.framework/TBDecodeSDK.bundle",
+				"${PODS_ROOT}/Texel/Texel.framework/Texel.bundle",
+				"${PODS_ROOT}/TinyAppCommon/TinyAppCommon.framework/TinyAppCommon.bundle",
+				"${PODS_ROOT}/TinyappService/TinyappService.framework/TinyappService.bundle",
 				"${PODS_ROOT}/UserTrack/UT.framework/Resources/UserTrack-Info.plist",
 				"${PODS_ROOT}/WeexSDK/WeexSDK.framework/native-bundle-main.js",
 				"${PODS_ROOT}/WeexSDK/WeexSDK.framework/weex-main-jsfm.js",
@@ -920,15 +1090,57 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AOMPDevice.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APBusinessSchemeHandlers.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMCDNImage.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMImageProcessing.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMUtils.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMobileFramework.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMobileNetwork.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMultimedia.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APRemoteLogging.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihaadapter4poc_bundle.plist",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihacore_bundle.plist",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihadeviceevaluation_bundle.plist",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihaperformancemonitor_bundle.plist",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihasecurity_bundle.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APCommonUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BEEAudioUtil.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeeCapture.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeeCityPicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeeLocationPicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeeMediaPlayer.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeePhoto.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeePhotoBrowser.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeePhotoPicker.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EMASWeex-Info.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FalconLooks.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/.gitkeep",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JDYThreadTrace.podspec",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPBadgeService.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPInternalPlugins.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPInternalPresetApps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPNebulaAdapter.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPShareKit.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TencentOpenApi_IOS_Bundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaAppManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaBiz.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaPoseidon.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaConfig.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaKernel.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaLogging.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaSDKPlugins.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaTinyapp.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TBRest.podspec",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TBScanSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TBDecodeSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Texel.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TinyAppCommon.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TinyappService.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UserTrack-Info.plist",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/native-bundle-main.js",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/weex-main-jsfm.js",
@@ -1002,6 +1214,11 @@
 				33A2550F20FDE37000C3F673 /* PushViewController.m in Sources */,
 				869B55CF2140068400809084 /* EMASScannerViewController.m in Sources */,
 				980F856D20BECC49002156A2 /* OrangeFeatureFirstVC.m in Sources */,
+				F2DD3EC97256DD1FC6905B03 /* MPaaSInterface+EMASDemo.m in Sources */,
+				208FAF678C66D0F6CAF9431F /* DTFrameworkInterface+EMASDemo.m in Sources */,
+				0E31FB67E6BF7297F0494EDA /* MPLauncherAppDelegate.m in Sources */,
+				F26194A3971DA36502286B62 /* MPTabBarController.m in Sources */,
+				B7E25E4CAC7FE0E9F79ABFA4 /* DemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1236,6 +1453,8 @@
 					"$(PROJECT_DIR)/**",
 					"$(PROJECT_DIR)/Pods/WindVane",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EMASDemo/EMASDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"/**",
@@ -1311,7 +1530,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = poc_emasdemo_develoepr;
+				PROVISIONING_PROFILE_SPECIFIER = emas_pocdemo_developer;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1338,6 +1557,8 @@
 					"$(PROJECT_DIR)/EMASDemo/hotfix",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EMASDemo/EMASDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"/**",
@@ -1413,7 +1634,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = poc_emasdemo_develoepr;
+				PROVISIONING_PROFILE_SPECIFIER = emas_pocdemo_developer;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

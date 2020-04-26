@@ -143,7 +143,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="didH5ShowButtonClicked:" destination="XA3-cB-DiZ" eventType="touchUpInside" id="iWD-iA-N0U"/>
                                     <action selector="showTinyApp:" destination="XA3-cB-DiZ" eventType="touchUpInside" id="Zwe-Im-3PV"/>
                                 </connections>
                             </button>
