@@ -1,3 +1,11 @@
+# mPaaS Pods Begin
+plugin "cocoapods-mPaaS"
+source "https://code.aliyun.com/mpaas-public/podspecs.git"
+mPaaS_baseline '10.1.60'  # 请将 x.x.x 替换成真实基线版本
+mPaaS_version_code 26   # This line is maintained by MPaaS plugin automatically. Please don't modify.
+# mPaaS Pods End
+# ---------------------------------------------------------------------
+
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs-thirdpart.git'
 source 'git@gitlab-ce.emas-poc.com:EMAS-iOS/emas-specs.git'
 source 'git@gitlab.emas-poc.com:root/emas-specs.git'
@@ -19,6 +27,7 @@ target 'EMASDemo' do
 
 platform:ios, '8.0'
 
+    mPaaS_pod "mPaaS_TinyApp"
 
     # --通用库
     pod  'UserTrack',        '6.3.5.100005-poc'

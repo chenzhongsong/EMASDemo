@@ -48,6 +48,10 @@
     
 }
 
+- (IBAction)showTinyApp:(id)sender {
+    
+}
+
 - (IBAction)didWeexShowButtonClicked:(id)sender {
     EMASHostViewController *controller = [[EMASHostViewController alloc] initWithNavigatorURL:[NSURL URLWithString:@"http://cdn.emas-poc.com/material/yanpeicpf/index.html?_wx_tpl=http://cdn.emas-poc.com/app/yanpeicpf-bbb/pages/index/entry.js"]];
     //controller
