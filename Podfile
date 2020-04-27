@@ -57,10 +57,10 @@ platform:ios, '8.0'
     #pod  'ZipArchive', '~> 1.4.0'
 
     # --Weex(通用库-> 高可用 -> 网关 -> Weex)
-    pod 'WeexSDK', '0.20.0.3-EMAS'
+    pod 'WeexSDK', '0.20.0.3-mpaas'
     pod 'ZCache', '10.0.9'
     #pod 'ZipArchive', '~> 1.4.0'
-    pod 'SDWebImage', '3.7.5'
+#    pod 'SDWebImage', '3.7.5'
     pod 'DynamicConfiguration', '10.0.4'
     pod 'DynamicConfigurationAdaptor', '10.0.4'
 
@@ -74,10 +74,12 @@ platform:ios, '8.0'
     #pod 'EmasWeexComponents', '0.0.4'
 
     # EMASWeex
-    pod 'EMASWeex', '1.3.0'
-    pod 'WXDevtool', '0.20.0-EMAS' ,:configurations => ['Debug']
+#    pod 'EMASWeex', '1.3.0'
+    pod 'EMASWeex', '1.3.0-mpaas'
+#    pod 'WXDevtool', '0.20.0-EMAS' ,:configurations => ['Debug']
+    pod 'WXDevtool', '0.20.0-mpaas' ,:configurations => ['Debug']
     pod 'CYLTabBarController', '1.17.22-EMAS'
-    pod 'SocketRocket', '0.5.1'
+#    pod 'SocketRocket', '0.5.1'
     pod 'WeexPluginLoader', '0.0.1.9.1'
 
     # WindVane
