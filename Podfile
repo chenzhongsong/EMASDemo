@@ -17,7 +17,7 @@ platform :ios
 
 target 'EMASDemo' do
 
-platform:ios, '8.0'
+platform:ios, '9.0'
 
 
     # --通用库
@@ -49,7 +49,7 @@ platform:ios, '8.0'
     #pod  'ZipArchive', '~> 1.4.0'
     
     # --Weex(通用库-> 高可用 -> 网关 -> Weex)
-    pod 'WeexSDK', '0.20.0.3-EMAS'
+    pod 'WeexSDK', '0.28.0-EMAS'
     pod 'ZCache', '10.0.9'
     #pod 'ZipArchive', '~> 1.4.0'
     pod 'SDWebImage', '3.7.5'
