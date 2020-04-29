@@ -309,6 +309,7 @@
     
     // register notification setting
     [self registerNotificationSetting];
+    [self registerMsgReceive];
 }
 
 - (void)registerNotificationSetting {
@@ -335,6 +336,25 @@
         
         NSLog(@"[APNS] registerNotificationSetting");
     }
+}
+
+#pragma mark --- 透传消息
+
+- (void) registerMsgReceive {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onMessageReceived:) name:@"EMASACCSReceiveMessageNotification" object:nil]; // 注册
+}
+
+- (void)onMessageReceived:(NSNotification *)notification {
+    NSDictionary *userInfo = notification.userInfo;
+    NSLog(@">>>>>>> [AGOO MESSAGE]: %@", userInfo);
+    NSString *text = [userInfo description];
+    if (!text ) {
+        text = @"消息解析失败!";
+    }
+    
+
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AGOO 消息" message:text delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 //-- 高可用

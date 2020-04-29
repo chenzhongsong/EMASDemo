@@ -1068,8 +1068,8 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_ENTITLEMENTS = "EMASDemo Notification Extension Service/EMASDemo Notification Extension Service.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: kun ling (VD2NZ36RV4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kun ling (VD2NZ36RV4)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VSW2PKYTD7;
 				INFOPLIST_FILE = "EMASDemo Notification Extension Service/Info.plist";
@@ -1092,8 +1092,8 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_ENTITLEMENTS = "EMASDemo Notification Extension Service/EMASDemo Notification Extension Service.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: kun ling (VD2NZ36RV4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kun ling (VD2NZ36RV4)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VSW2PKYTD7;
 				INFOPLIST_FILE = "EMASDemo Notification Extension Service/Info.plist";
@@ -1223,8 +1223,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_ENTITLEMENTS = EMASDemo/EMASDemo.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: kun ling (VD2NZ36RV4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kun ling (VD2NZ36RV4)";
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = VSW2PKYTD7;
@@ -1311,7 +1311,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = poc_emasdemo_develoepr;
+				PROVISIONING_PROFILE_SPECIFIER = emas_pocdemo_developer;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1327,8 +1327,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_ENTITLEMENTS = EMASDemo/EMASDemo.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: kun ling (VD2NZ36RV4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kun ling (VD2NZ36RV4)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VSW2PKYTD7;
 				ENABLE_BITCODE = NO;
@@ -1413,7 +1413,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = poc_emasdemo_develoepr;
+				PROVISIONING_PROFILE_SPECIFIER = emas_pocdemo_developer;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
