@@ -21,7 +21,8 @@ platform:ios, '9.0'
 
 
     # --通用库
-    pod  'UserTrack',        '6.3.5.100005-poc'
+#    pod  'UserTrack',        '6.3.5.100005-poc'
+    pod  'UserTrack',        '6.3.5.44-poc'
     pod  'Reachability',     '3.2'
     pod  'FMDB',             '2.7.2'
     pod  'NetworkSDK',       '10.0.4.6'
@@ -44,8 +45,8 @@ platform:ios, '9.0'
     pod 'orange','10.0.0'
     
     # --高可用(通用库-> ACCS -> 高可用)
-    pod  'AliHAAdapter4poc',   '10.0.5.5'
-#    pod  'AliHAAdapter4poc',   '10.0.5.4'
+#    pod  'AliHAAdapter4poc',   '10.0.5.5'
+    pod  'AliHAAdapter4poc',   '10.0.5.6'  # 去除 UIWebView
     #pod  'ZipArchive', '~> 1.4.0'
     
     # --Weex(通用库-> 高可用 -> 网关 -> Weex)
