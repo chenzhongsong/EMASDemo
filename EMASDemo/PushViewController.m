@@ -139,21 +139,39 @@
     [userDefault synchronize];
     
     TBSDKPushCenterEngine *pce = [TBSDKPushCenterEngine sharedInstanceWithDefaultConfigure];
-    [pce bindUserIntoPushCenterWithAlias:alias userInfo:nil callback:^(NSDictionary *result, NSError *error){
+    [pce addAlias:alias userInfo:nil callback:^(NSDictionary * _Nullable userInfo, NSError * _Nullable error) {
         if (error) {
             [self displayText:[NSString stringWithFormat:@"绑定别名错误:%@", error]];
         } else {
             [self displayText:[NSString stringWithFormat:@"绑定别名成功"]];
         }
     }];
+
+//    [pce bindUserIntoPushCenterWithAlias:alias userInfo:nil callback:^(NSDictionary *result, NSError *error){
+//        if (error) {
+//            [self displayText:[NSString stringWithFormat:@"绑定别名错误:%@", error]];
+//        } else {
+//            [self displayText:[NSString stringWithFormat:@"绑定别名成功"]];
+//        }
+//    }];
 }
 
 - (void)unbindUser {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    [userDefault removeObjectForKey:user_alias];
-    [userDefault synchronize];
-    
+    NSString *alias = [userDefault objectForKey:user_alias];
+        
     TBSDKPushCenterEngine *pce = [TBSDKPushCenterEngine sharedInstanceWithDefaultConfigure];
+    [pce removeAlias:alias userInfo:nil callback:^(NSDictionary * _Nullable userInfo, NSError * _Nullable error) {
+                if (error) {
+            [self displayText:[NSString stringWithFormat:@"解绑别名发生错误: %@", error]];
+        } else {
+            [self displayText:[NSString stringWithFormat:@"解除绑定别名成功"]];
+            [userDefault removeObjectForKey:user_alias];
+            [userDefault synchronize];
+        }
+    }];
+    
+    /*
     [pce unbindUserIntoPushCenterWithPushUserInfo:nil callback:^(NSDictionary *result, NSError *error){
         if (error) {
             [self displayText:[NSString stringWithFormat:@"解绑别名发生错误: %@", error]];
@@ -161,6 +179,7 @@
             [self displayText:[NSString stringWithFormat:@"解除绑定别名成功"]];
         }
     }];
+     */
 }
 
 - (void)displayText:(NSString*)text {
