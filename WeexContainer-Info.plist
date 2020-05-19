@@ -5,13 +5,9 @@
 	<key>ScaffoldType</key>
 	<integer>1</integer>
 	<key>TabSize</key>
-	<integer>2</integer>
+	<integer>-1</integer>
 	<key>JSSource</key>
 	<dict>
-		<key>0</key>
-		<string>https://cdn.emas-poc.com/app/huarun-huarun/pages/detail/entry.js</string>
-		<key>1</key>
-		<string>https://cdn.emas-poc.com/app/huarun-huarun/pages/index/entry.js</string>
 	</dict>
 </dict>
 </plist>
