@@ -30,11 +30,9 @@ platform:ios, '9.0'
     
     # --ACCS(通用库 -> ACCS)
     pod  'TBAccsSDK',         '10.0.11'
-    #pod  'TBAccsSDK',  :path=>  '/Users/wuchen.xj/gitemas/tbaccssdk/'
     
     # --PUSH(通用库 -> PUSH)
-    pod  'PushCenterSDK',     '10.0.10'
-    #pod  'PushCenterSDK',  :path=>  '/Users/wuchen.xj/gitemas/pushcentersdk/'
+    pod  'PushCenterSDK',     '10.0.11'
     
     # --网关(通用库-> 网关)
     pod  'MtopSDK',          '10.1.6'
