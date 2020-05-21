@@ -21,8 +21,7 @@ platform:ios, '9.0'
 
 
     # --通用库
-#    pod  'UserTrack',        '6.3.5.100005-poc'
-    pod  'UserTrack',        '6.3.5.44-poc'
+    pod  'UserTrack',        '6.3.5.44-poc'  # 去除UIWebView
     pod  'Reachability',     '3.2'
     pod  'FMDB',             '2.7.2'
     pod  'NetworkSDK',       '10.0.4.6'
@@ -31,26 +30,23 @@ platform:ios, '9.0'
     
     # --ACCS(通用库 -> ACCS)
     pod  'TBAccsSDK',         '10.0.11'
-    #pod  'TBAccsSDK',  :path=>  '/Users/wuchen.xj/gitemas/tbaccssdk/'
     
     # --PUSH(通用库 -> PUSH)
-    pod  'PushCenterSDK',     '10.0.10'
-    #pod  'PushCenterSDK',  :path=>  '/Users/wuchen.xj/gitemas/pushcentersdk/'
+    pod  'PushCenterSDK',     '10.0.9'
     
     # --网关(通用库-> 网关)
     pod  'MtopSDK',          '10.1.6'
-    pod  'mtopext/MtopCore', '10.1.3'
+    pod  'mtopext/MtopCore', '10.1.4' # 去除UIWebView
     
     # --远程配置
     pod 'orange','10.0.0'
     
     # --高可用(通用库-> ACCS -> 高可用)
-#    pod  'AliHAAdapter4poc',   '10.0.5.5'
     pod  'AliHAAdapter4poc',   '10.0.5.6'  # 去除 UIWebView
     #pod  'ZipArchive', '~> 1.4.0'
     
     # --Weex(通用库-> 高可用 -> 网关 -> Weex)
-    pod 'WeexSDK', '0.28.0-EMAS'
+    pod 'WeexSDK', '0.28.0.2-EMAS'  # 去除 UIWebView
     pod 'ZCache', '10.0.9'
     #pod 'ZipArchive', '~> 1.4.0'
     pod 'SDWebImage', '3.7.5'
@@ -67,7 +63,7 @@ platform:ios, '9.0'
     #pod 'EmasWeexComponents', '0.0.4'
     
     # EMASWeex
-    pod 'EMASWeex', '1.3.0'
+    pod 'EMASWeex', '1.3.1'   # 去除 UIWebView
     pod 'WXDevtool', '0.20.0-EMAS' ,:configurations => ['Debug']
     pod 'CYLTabBarController', '1.17.22-EMAS'
     pod 'SocketRocket', '0.5.1'
