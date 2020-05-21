@@ -54,7 +54,7 @@ platform:ios, '9.0'
     #pod 'ZipArchive', '~> 1.4.0'
     pod 'SDWebImage', '3.7.5'
     pod 'DynamicConfiguration', '10.0.4'
-    pod 'DynamicConfigurationAdaptor', '10.0.4'
+    pod 'DynamicConfigurationAdaptor', '10.0.6'
 
     #weex开源组件
     pod 'BindingX', '1.0.3-EMAS'
