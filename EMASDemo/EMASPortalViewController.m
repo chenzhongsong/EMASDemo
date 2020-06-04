@@ -56,8 +56,8 @@
 
 - (IBAction)didH5ShowButtonClicked:(id)sender {
     EMASWindVaneViewController *controller = [[EMASWindVaneViewController alloc] init];
-    controller.loadUrl = @"http://cdn.emas-poc.com/app/yanpeicpf-aaa/index.html";
-    
+    controller.loadUrl = @"http://cdn.emas-poc.com/app/emas-demo-check-h5_dy_test_module/index.html";
+//    controller.loadUrl = @"http://cdn.emas-poc.com/app/yanpeicpf-aaa/index.html";
     //controller.loadUrl = @"http://wapp.m.taobao.com/app/windvane/jsbridge.html";
     //controller.loadUrl = @"http://chaoshi.m.tmall.com";
     [self.navigationController pushViewController:controller animated:YES];
