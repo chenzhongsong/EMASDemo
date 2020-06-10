@@ -102,13 +102,13 @@
     NSString *ip = [_tfIP text];
     if (ip.length == 0) {
         [self alertTitle:@"错误" message:@"请输入IP!"];
-        return;
+//        return;
     }
     
     NSString *port = [_tfPort text];
     if (port.length == 0) {
         [self alertTitle:@"错误" message:@"请输入Port!"];
-        return;
+//        return;
     }
     
     AccsConfiguration *config = [AccsConfiguration sharedInstance];
