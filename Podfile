@@ -42,7 +42,7 @@ platform:ios, '9.0'
     pod 'orange','10.0.0'
     
     # --高可用(通用库-> ACCS -> 高可用)
-    pod  'AliHAAdapter4poc',   '10.0.5.6'
+    pod  'AliHAAdapter4poc',   '10.0.5.7'
     #pod  'ZipArchive', '~> 1.4.0'
     
     # --Weex(通用库-> 高可用 -> 网关 -> Weex)
@@ -66,7 +66,7 @@ platform:ios, '9.0'
     
     # EMASWeex
     pod 'EMASWeex', '1.3.1'
-    pod 'WXDevtool', '0.20.2-EMAS' ,:configurations => ['Debug']
+    pod 'WXDevtool', '0.20.0-EMAS' ,:configurations => ['Debug']
     pod 'CYLTabBarController', '1.17.22-EMAS'
     pod 'SocketRocket', '0.5.1'
     pod 'WeexPluginLoader', '0.0.1.9.1'
