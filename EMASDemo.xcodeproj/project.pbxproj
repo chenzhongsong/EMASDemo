@@ -23,6 +23,7 @@
 		4A017CF221006EC7001FF027 /* TestUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CED21006EC7001FF027 /* TestUIViewController.m */; };
 		4A017CF321006EC7001FF027 /* BaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CEE21006EC7001FF027 /* BaseUIViewController.m */; };
 		4A017CF421006EC7001FF027 /* MANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CEF21006EC7001FF027 /* MANViewController.m */; };
+		77175F5A24C8300500A9AB79 /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77175F5924C8300500A9AB79 /* PushViewController.xib */; };
 		7787F92D2338CEF40055F18C /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7787F92B2338CEF30055F18C /* AliyunEmasServices-Info.plist */; };
 		7787F92E2338CEF40055F18C /* AliyunEmasServices-Info-bak.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7787F92C2338CEF30055F18C /* AliyunEmasServices-Info-bak.plist */; };
 		7D6260E61FDA8C5A00E856CB /* HFXTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6260E31FDA8C5900E856CB /* HFXTestClass.m */; };
@@ -65,7 +66,6 @@
 		869B55DC21400A2100809084 /* EMASNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55D921400A2100809084 /* EMASNativeViewController.m */; };
 		869B55DD21400A2100809084 /* EMASBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869B55DA21400A2100809084 /* EMASBaseNavigationController.m */; };
 		8783A75521A6E5C900C177A1 /* PushReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8783A75421A6E5C900C177A1 /* PushReporter.m */; };
-		87FA349221A3BA8E0095673C /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87FA349121A3BA8E0095673C /* PushViewController.xib */; };
 		8A0922F2207A4A8500AA71FA /* AppConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */; };
 		8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0922F4207B0B9800AA71FA /* MtopVerifyTableViewController.m */; };
 		8A69B60A200C8F980073756D /* EMASService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69B609200C8F980073756D /* EMASService.m */; };
@@ -169,6 +169,7 @@
 		4A017CEF21006EC7001FF027 /* MANViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANViewController.m; sourceTree = "<group>"; };
 		4A017CF021006EC7001FF027 /* TestUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUIViewController.h; sourceTree = "<group>"; };
 		4A017CF121006EC7001FF027 /* MANViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANViewController.h; sourceTree = "<group>"; };
+		77175F5924C8300500A9AB79 /* PushViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
 		7787F92B2338CEF30055F18C /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = SOURCE_ROOT; };
 		7787F92C2338CEF30055F18C /* AliyunEmasServices-Info-bak.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info-bak.plist"; sourceTree = SOURCE_ROOT; };
 		7D6260E21FDA8C5900E856CB /* HFXTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXTestClass.h; sourceTree = "<group>"; };
@@ -237,7 +238,6 @@
 		869B55DB21400A2100809084 /* EMASNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASNativeViewController.h; sourceTree = "<group>"; };
 		8783A75321A6E5C900C177A1 /* PushReporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushReporter.h; sourceTree = "<group>"; };
 		8783A75421A6E5C900C177A1 /* PushReporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushReporter.m; sourceTree = "<group>"; };
-		87FA349121A3BA8E0095673C /* PushViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
 		8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigTableViewController.h; sourceTree = "<group>"; };
 		8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfigTableViewController.m; sourceTree = "<group>"; };
 		8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopVerifyTableViewController.h; sourceTree = "<group>"; };
@@ -360,7 +360,7 @@
 				3342C6BD21A1AF07006B6A87 /* PushMessageReceiver.m */,
 				33A2550C20FDE37000C3F673 /* PushViewController.h */,
 				33A2550D20FDE37000C3F673 /* PushViewController.m */,
-				87FA349121A3BA8E0095673C /* PushViewController.xib */,
+				77175F5924C8300500A9AB79 /* PushViewController.xib */,
 				8783A75321A6E5C900C177A1 /* PushReporter.h */,
 				8783A75421A6E5C900C177A1 /* PushReporter.m */,
 			);
@@ -831,11 +831,11 @@
 				980F856C20BECC49002156A2 /* OrangeFeatureFirstVC.xib in Resources */,
 				8ADA954B1FD9309400C0EF49 /* Assets.xcassets in Resources */,
 				7D8394A91FDB902900EBB60F /* fix.lua in Resources */,
+				77175F5A24C8300500A9AB79 /* PushViewController.xib in Resources */,
 				980F856920BECC49002156A2 /* OrangeRemoteConfigRootVC.xib in Resources */,
 				8ADA95491FD9309400C0EF49 /* Main.storyboard in Resources */,
 				33D18D5720DA2CFB00ACF0C7 /* ACCSViewController.xib in Resources */,
 				8601D70B216B4A0100BDFC46 /* preload_packageapp.zip in Resources */,
-				87FA349221A3BA8E0095673C /* PushViewController.xib in Resources */,
 				3342C6C121A1AF62006B6A87 /* PushSDKReceiverConfig.plist in Resources */,
 				33E1BAA221A4290A00E81E32 /* hongbao.wav in Resources */,
 				7787F92E2338CEF40055F18C /* AliyunEmasServices-Info-bak.plist in Resources */,
