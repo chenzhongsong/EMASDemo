@@ -21,7 +21,7 @@ platform:ios, '9.0'
 
 
     # --通用库
-    pod  'UserTrack',        '6.3.5.45-poc'
+    pod  'UserTrack',        '6.3.5.46-poc'
     pod  'Reachability',     '3.2'
     pod  'FMDB',             '2.7.2'
     pod  'NetworkSDK',       '10.0.4.6'
