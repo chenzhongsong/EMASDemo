@@ -517,12 +517,12 @@
     }
     NSLog(@">>>>>>> [AGOO MESSAGE]: %@", text);
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AGOO 消息" message:text delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AGOO 消息 （接收）" message:text delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
     [alert show];
     
     NSString *messageId = [userInfo objectForKey:@"m"];
     if (messageId.length > 0) {
-        [PushReporter reportMessageTaped:messageId];
+        [PushReporter reportMessageArrived:messageId];
     }
 }
 
@@ -538,14 +538,15 @@
     }
     NSLog(@">>>>>>> [AGOO MESSAGE]: %@", text);
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AGOO 消息" message:text delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AGOO 消息（点击）" message:text delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
     [alert show];
     
     NSString *messageId = [userInfo objectForKey:@"m"];
     if (messageId.length > 0) {
-        [PushReporter reportMessageArrived:messageId];
+        [PushReporter reportMessageTaped:messageId];
     }
 }
+
 
 
 #pragma mark 注册接收accs推送下来的消息

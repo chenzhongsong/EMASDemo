@@ -21,7 +21,7 @@ platform:ios, '9.0'
 
 
     # --通用库
-    pod  'UserTrack',        '6.3.5.100005-poc'
+    pod  'UserTrack',        '6.3.5.46-poc'
     pod  'Reachability',     '3.2'
     pod  'FMDB',             '2.7.2'
     pod  'NetworkSDK',       '10.0.4.6'
@@ -36,25 +36,24 @@ platform:ios, '9.0'
     
     # --网关(通用库-> 网关)
     pod  'MtopSDK',          '10.1.6'
-    pod  'mtopext/MtopCore', '10.1.3'
+    pod  'mtopext/MtopCore', '10.1.4'
     
     # --远程配置
     pod 'orange','10.0.0'
     
     # --高可用(通用库-> ACCS -> 高可用)
-    pod  'AliHAAdapter4poc',   '10.0.5.5'
-#    pod  'AliHAAdapter4poc',   '10.0.5.4'
+    pod  'AliHAAdapter4poc',   '10.0.5.7'
     #pod  'ZipArchive', '~> 1.4.0'
     
     # --Weex(通用库-> 高可用 -> 网关 -> Weex)
     # pod 'WeexSDK', '0.28.0-EMAS'
     
-    pod 'WeexSDK', '0.20.0.3-EMAS'
+    pod 'WeexSDK', '0.28.0.2-EMAS'
     pod 'ZCache', '10.0.9'
     #pod 'ZipArchive', '~> 1.4.0'
     pod 'SDWebImage', '3.7.5'
     pod 'DynamicConfiguration', '10.0.4'
-    pod 'DynamicConfigurationAdaptor', '10.0.4'
+    pod 'DynamicConfigurationAdaptor', '10.0.6'
 
     #weex开源组件
     pod 'BindingX', '1.0.3-EMAS'
@@ -63,10 +62,10 @@ platform:ios, '9.0'
     #pod 'WeexAceChart'
     
     #weex商业组件
-    #pod 'EmasWeexComponents', '0.0.4'
+    #pod 'EmasWeexComponents', '0.0.6'
     
     # EMASWeex
-    pod 'EMASWeex', '1.3.0'
+    pod 'EMASWeex', '1.3.1'
     pod 'WXDevtool', '0.20.0-EMAS' ,:configurations => ['Debug']
     pod 'CYLTabBarController', '1.17.22-EMAS'
     pod 'SocketRocket', '0.5.1'

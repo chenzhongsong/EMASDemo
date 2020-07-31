@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -167,7 +167,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUS-wK-W1N">
                     <rect key="frame" x="50" y="578" width="275" height="30"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" title="绑定别名"/>
+                    <state key="normal" title="添加别名"/>
                     <connections>
                         <action selector="bindUserAction:" destination="-1" eventType="touchUpInside" id="dc3-CZ-0Qp"/>
                     </connections>
@@ -175,7 +175,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wui-MQ-yL8">
                     <rect key="frame" x="50" y="627" width="275" height="30"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" title="解绑别名"/>
+                    <state key="normal" title="删除别名"/>
                     <connections>
                         <action selector="unbindUserAction:" destination="-1" eventType="touchUpInside" id="5Ls-sA-8QW"/>
                     </connections>
@@ -203,6 +203,14 @@
                         <action selector="deviceToken:" destination="-1" eventType="touchUpInside" id="6i4-1F-Mig"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svT-tE-Ikd">
+                    <rect key="frame" x="50" y="528" width="275" height="30"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="查看别名"/>
+                    <connections>
+                        <action selector="getAliasesList:" destination="-1" eventType="touchUpInside" id="6km-Bs-2PZ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <gestureRecognizers/>
@@ -218,13 +226,17 @@
                 <constraint firstItem="qkj-Le-4op" firstAttribute="top" secondItem="wZO-nX-ZAu" secondAttribute="bottom" constant="18" id="Eas-8p-xZD"/>
                 <constraint firstItem="6t2-Ql-bNg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="FZK-du-cJa"/>
                 <constraint firstItem="5oO-zd-GQc" firstAttribute="top" secondItem="wZO-nX-ZAu" secondAttribute="bottom" constant="18" id="JB1-OG-0N0"/>
+                <constraint firstItem="tUS-wK-W1N" firstAttribute="width" secondItem="svT-tE-Ikd" secondAttribute="width" id="JZK-M6-1Gy"/>
+                <constraint firstItem="tUS-wK-W1N" firstAttribute="leading" secondItem="svT-tE-Ikd" secondAttribute="leading" id="KFX-Ay-rGb"/>
                 <constraint firstItem="paY-uA-32x" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="KZl-qR-PoF"/>
                 <constraint firstItem="cRj-EE-SCX" firstAttribute="centerY" secondItem="4Tt-ap-9c5" secondAttribute="centerY" id="LEc-n5-86c"/>
                 <constraint firstItem="hSU-SJ-rMC" firstAttribute="top" secondItem="oGX-sz-LkE" secondAttribute="bottom" constant="10" id="LZq-W6-RYT"/>
+                <constraint firstItem="tUS-wK-W1N" firstAttribute="height" secondItem="svT-tE-Ikd" secondAttribute="height" id="N7p-Tg-mhQ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sIP-bq-XmO" secondAttribute="trailing" constant="16" id="O0B-Kh-qK8"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SPa-Fu-WTM" secondAttribute="trailing" constant="16" id="ODw-Aa-pah"/>
                 <constraint firstItem="7lP-qy-xwq" firstAttribute="top" secondItem="qkj-Le-4op" secondAttribute="bottom" constant="18" id="Qfw-F9-hVs"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Wui-MQ-yL8" secondAttribute="bottom" constant="10" id="TZ6-HP-xha"/>
+                <constraint firstItem="tUS-wK-W1N" firstAttribute="top" secondItem="svT-tE-Ikd" secondAttribute="bottom" constant="20" id="Tsj-4j-guw"/>
                 <constraint firstItem="tUS-wK-W1N" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="UK3-oI-Rsg"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1aK-00-T3W" secondAttribute="trailing" constant="16" id="UTM-4q-0Wa"/>
                 <constraint firstItem="7lP-qy-xwq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="VJc-Nq-ZL8"/>
@@ -245,6 +257,7 @@
                 <constraint firstItem="Bwd-nR-xw5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="eN2-ks-fBr"/>
                 <constraint firstItem="5pL-Qb-5uq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="eYu-cH-6nc"/>
                 <constraint firstItem="ABH-aI-axx" firstAttribute="top" secondItem="5pL-Qb-5uq" secondAttribute="bottom" constant="8" id="fhW-jP-41c"/>
+                <constraint firstItem="tUS-wK-W1N" firstAttribute="trailing" secondItem="svT-tE-Ikd" secondAttribute="trailing" id="fkn-WH-5sh"/>
                 <constraint firstItem="u5W-lH-CBi" firstAttribute="leading" secondItem="Vv2-7Y-uZR" secondAttribute="trailing" constant="9" id="gJC-g4-vIb"/>
                 <constraint firstItem="u5W-lH-CBi" firstAttribute="top" secondItem="lhg-it-Wvz" secondAttribute="bottom" constant="10" id="gXy-Z1-aov"/>
                 <constraint firstItem="NjP-bS-rlk" firstAttribute="leading" secondItem="u5W-lH-CBi" secondAttribute="trailing" constant="8" id="gtz-o2-7bn"/>

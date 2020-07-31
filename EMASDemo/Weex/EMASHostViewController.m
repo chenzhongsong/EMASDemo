@@ -21,6 +21,9 @@
 #define WX_LOCATION_NOTIFICATION_REPLACE   @"location_replace"
 #endif
 
+
+BOOL WEEX_DYNAMIC_DELETE = NO;
+
 @interface EMASHostViewController()
 
 @property (nonatomic, copy) NSString *resourceUrlString;
@@ -55,7 +58,6 @@
             NSString *bundlePath = [NSBundle mainBundle].bundlePath;
             url = [NSString stringWithFormat:@"file://%@/bundlejs/%@", bundlePath,URL.absoluteString];
         }
-        
         
         self.resourceUrlString = url;
         
@@ -130,17 +132,33 @@
 
 - (void)wxFailCreateInstance:(NSError *)error {
     //Weex Instance创建失败
-    if ([error.localizedDescription containsString:@"404"]) {
-        [[DynamicConfigurationManager sharedInstance] deleteConfigurationForGoalUrl:self.resourceUrlString];
+    NSLog(@"%@", error);
+    if ([error.localizedDescription containsString:@"404"] ||
+        [error.localizedDescription containsString:@"403"]) {
+        NSString *distributionUrl = self.resourceUrlString;
+        NSString *dynamicUrl = [[DynamicConfigurationManager sharedInstance] redirectUrl:distributionUrl];
+        if (![distributionUrl isEqualToString:dynamicUrl]) {
+            [[DynamicConfigurationManager sharedInstance] deleteConfigurationForGoalUrl:self.resourceUrlString];
+            WEEX_DYNAMIC_DELETE = YES;
+        }
     }
 }
 
 - (void)wxFinishRenderInstance {
     //Weex Instance渲染完成
+
 }
 
 - (void)wxDegradeToH5:(NSString *)url
 {
+    // 正式发布，灰度资源被删，阻止 H5 降级
+    if (WEEX_DYNAMIC_DELETE) {
+        self.wxViewController.tplURL = [NSURL URLWithString:self.resourceUrlString];
+        [self.wxViewController refreshWeex];
+        WEEX_DYNAMIC_DELETE = NO;
+        return;
+    }
+    
     dispatch_async(dispatch_get_main_queue(), ^{
 #if 1
         [self.wxViewController.instance destroyInstance];

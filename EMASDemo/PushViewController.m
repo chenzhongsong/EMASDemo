@@ -141,9 +141,9 @@
     TBSDKPushCenterEngine *pce = [TBSDKPushCenterEngine sharedInstanceWithDefaultConfigure];
     [pce addAlias:alias userInfo:nil callback:^(NSDictionary * _Nullable userInfo, NSError * _Nullable error) {
         if (error) {
-            [self displayText:[NSString stringWithFormat:@"绑定别名错误:%@", error]];
+            [self displayText:[NSString stringWithFormat:@"绑定别名 %@ 错误: %@", alias, error]];
         } else {
-            [self displayText:[NSString stringWithFormat:@"绑定别名成功"]];
+            [self displayText:[NSString stringWithFormat:@"绑定别名成功: %@ ", alias]];
         }
     }];
 
@@ -157,17 +157,23 @@
 }
 
 - (void)unbindUser {
-    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    NSString *alias = [userDefault objectForKey:user_alias];
+//    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+//    NSString *alias = [userDefault objectForKey:user_alias];
+    
+    NSString *alias = [self.aliasTextField text];
+    if (alias.length == 0) {
+        [self displayText:@"别名不能为空"];
+        return;
+    }
         
     TBSDKPushCenterEngine *pce = [TBSDKPushCenterEngine sharedInstanceWithDefaultConfigure];
     [pce removeAlias:alias userInfo:nil callback:^(NSDictionary * _Nullable userInfo, NSError * _Nullable error) {
                 if (error) {
-            [self displayText:[NSString stringWithFormat:@"解绑别名发生错误: %@", error]];
+            [self displayText:[NSString stringWithFormat:@"解绑别名 %@ 发生错误: %@",alias, error]];
         } else {
-            [self displayText:[NSString stringWithFormat:@"解除绑定别名成功"]];
-            [userDefault removeObjectForKey:user_alias];
-            [userDefault synchronize];
+            [self displayText:[NSString stringWithFormat:@"解除绑定别名: %@ 成功", alias]];
+//            [userDefault removeObjectForKey:user_alias];
+//            [userDefault synchronize];
         }
     }];
     
@@ -180,6 +186,15 @@
         }
     }];
      */
+}
+
+- (IBAction)getAliasesList:(id)sender {
+    TBSDKPushCenterEngine *pce = [TBSDKPushCenterEngine sharedInstanceWithDefaultConfigure];
+    __weak typeof(self)weakSelf = self;
+    [pce listAliases:nil callback:^(NSDictionary * _Nullable userInfo, NSError * _Nullable error) {
+        NSString *aliasesStr = [NSString stringWithFormat:@"%@", [pce aliasArray]];
+        [weakSelf displayText:aliasesStr];
+    }];
 }
 
 - (void)displayText:(NSString*)text {

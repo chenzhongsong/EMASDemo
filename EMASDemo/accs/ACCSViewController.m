@@ -47,7 +47,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"通道服务";
     [self initDateFormater];
     
     // 打开日志
