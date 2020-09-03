@@ -14,6 +14,8 @@
 #import <BizErrorReporter4iOS/BizErrorReporter.h>
 #import <WeexSDK/WeexSDK.h>
 #import <UT/AppMonitorStat.h>
+#import <TBRest/TBRestSendService.h>
+#import <AliHAAdapter4poc/AliHAAdapter.h>
 
 static NSString* INSTANCE_ID        = @"instanceId";
 static NSString* FRAMEWORK_VERSION  = @"frameWorkVersion";
@@ -78,7 +80,7 @@ TestObjectClass(7)
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 9;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -143,6 +145,10 @@ TestObjectClass(7)
             cell.textLabel.text = @"上报埋点";
         }
             break;
+        case 9:
+        {
+            cell.textLabel.text = @"修改userNick";
+        }
         default:
             break;
     }
@@ -183,15 +189,16 @@ TestObjectClass(7)
         }
             case 4:
         {
-            [kTRDCmdServiceInstance.messageDelegate pullData:kTRDCmdServiceInstance.context.appKey deviceId:kTRDCmdServiceInstance.context.utdid resultsBlock:^(NSError *error, RemoteDebugResponse *response) {
-                if (!error && response) {
-                    RemoteDebugRequest *request = [[RemoteDebugRequest alloc] init];
-                    request.headers = response.headers;
-                    request.data = response.data;
-                    request.appId = response.appId;
-                    request.version = response.version;
-                    [kTRDCmdServiceInstance handleRemoteCommand:request];
-                }
+            
+            [kTRDCmdServiceInstance.messageDelegate pullData:kTRDCmdServiceInstance.context.appKey deviceId:kTRDCmdServiceInstance.context.utdid userNick:kTRDCmdServiceInstance.context.nick  resultsBlock:^(NSError *error, RemoteDebugResponse *response) {
+               if (!error && response) {
+                   RemoteDebugRequest *request = [[RemoteDebugRequest alloc] init];
+                   request.headers = response.headers;
+                   request.data = response.data;
+                   request.appId = response.appId;
+                   request.version = response.version;
+                   [kTRDCmdServiceInstance handleRemoteCommand:request];
+               }
             }];
             break;
         }
@@ -219,6 +226,20 @@ TestObjectClass(7)
             case 8:
         {
             [self testPointReport];
+        }
+            break;
+            case 9:
+        {
+            
+            
+            NSString *newNick = [self modifyUserNick];
+            UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+            cell.textLabel.text = [NSString stringWithFormat:@"修改userNick:%@", newNick];
+            
+            [AliHAAdapter updateNick:newNick];
+            
+            NSLog(@"新的昵称为:%@", newNick);
+            
         }
             break;
         default:
@@ -349,6 +370,21 @@ TestObjectClass(7)
         [AppMonitorStat commitWithModule:@"network_poc" monitorPoint:@"responseTime" dimensionValueSet:dimensionValues measureValueSet:measureValues];
 
     }
+}
+
+
+
+- (NSString *)modifyUserNick {
+    TBRestConfiguration *config = [[TBRestSendService shareInstance] obtainConfiguration];
+    
+    NSString *randomAlphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    NSMutableString *randomString = [NSMutableString stringWithCapacity:10];
+    for (int i = 0; i < 10; i++) {
+        [randomString appendFormat: @"%C", [randomAlphabet characterAtIndex:arc4random_uniform((u_int32_t)[randomAlphabet length])]];
+    }
+    
+    config.usernick = [randomString copy];
+    return config.usernick;
 }
 
 @end
