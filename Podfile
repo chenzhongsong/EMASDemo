@@ -8,8 +8,8 @@ source 'git@gitlab.emas-poc.com:root/emas-specs.git'
 #source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-chart.git'
 
 # WeexComponents
-#source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-common.git'
-#source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-common.git'
+source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/weex-common.git'
+source 'git@gitlab-ce.emas-poc.com:EMAS-Weex-iOS/native-common.git'
 
 #project 'EMASDemo.xcodeproj'
 
