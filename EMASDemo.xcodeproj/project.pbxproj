@@ -20,17 +20,34 @@
 		33D18D6120DA330100ACF0C7 /* WQCodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D18D5F20DA330100ACF0C7 /* WQCodeScanner.m */; };
 		33E1BA9F21A4275300E81E32 /* clock.wav in Resources */ = {isa = PBXBuildFile; fileRef = 33E1BA9D21A4275200E81E32 /* clock.wav */; };
 		33E1BAA221A4290A00E81E32 /* hongbao.wav in Resources */ = {isa = PBXBuildFile; fileRef = 33E1BAA121A4290A00E81E32 /* hongbao.wav */; };
+		404A2A382500D8DD002A0DDE /* MiniAppMarket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404A2A372500D8DD002A0DDE /* MiniAppMarket.framework */; };
+		404A2A392500D8FF002A0DDE /* MiniAppMarket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 404A2A372500D8DD002A0DDE /* MiniAppMarket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4091527F24F3A08D00C0EA94 /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4091527A24F3A08D00C0EA94 /* ListCell.m */; };
+		4091528024F3A08D00C0EA94 /* MiniprogramList.m in Sources */ = {isa = PBXBuildFile; fileRef = 4091527B24F3A08D00C0EA94 /* MiniprogramList.m */; };
+		4091528124F3A08D00C0EA94 /* MiniprogramList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4091527C24F3A08D00C0EA94 /* MiniprogramList.xib */; };
+		4091528224F3A08D00C0EA94 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4091527D24F3A08D00C0EA94 /* ListCell.xib */; };
+		4091528A24F3B28C00C0EA94 /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4091528924F3B28C00C0EA94 /* AliyunEmasServices-Info.plist */; };
+		40FBC18624F3626900A7B3B3 /* DTBootPhase+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FBC18124F3626800A7B3B3 /* DTBootPhase+Category.m */; };
+		40FBC18724F3626900A7B3B3 /* MPDemoTinyScanHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FBC18224F3626800A7B3B3 /* MPDemoTinyScanHelper.m */; };
+		40FBC18824F3626900A7B3B3 /* MPBootLoaderImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FBC18324F3626800A7B3B3 /* MPBootLoaderImpl.m */; };
+		40FBC18D24F3636700A7B3B3 /* TinyAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40FBC18B24F3636700A7B3B3 /* TinyAppViewController.xib */; };
+		40FBC18E24F3636700A7B3B3 /* TinyAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FBC18C24F3636700A7B3B3 /* TinyAppViewController.m */; };
+		447D54FA8608927813628FD1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E42EB38CBCCCB47064B050 /* SystemConfiguration.framework */; };
+		494A354E933B87A7CB1FE5F7 /* yw_1222.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1B124836138420F9E43D55C /* yw_1222.jpg */; };
 		4A017CF221006EC7001FF027 /* TestUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CED21006EC7001FF027 /* TestUIViewController.m */; };
 		4A017CF321006EC7001FF027 /* BaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CEE21006EC7001FF027 /* BaseUIViewController.m */; };
 		4A017CF421006EC7001FF027 /* MANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A017CEF21006EC7001FF027 /* MANViewController.m */; };
+		595627603C9159B5146F5B6C /* MPaaSInterface+EMASDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 73682FFEA1A8840DE87DAB96 /* MPaaSInterface+EMASDemo.m */; };
+		596F2CB7A273184131F6DC97 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08695E654D78C7ABFA474152 /* MessageUI.framework */; };
 		77175F5A24C8300500A9AB79 /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77175F5924C8300500A9AB79 /* PushViewController.xib */; };
-		7787F92D2338CEF40055F18C /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7787F92B2338CEF30055F18C /* AliyunEmasServices-Info.plist */; };
+		7787F92D2338CEF40055F18C /* AliyunEmasServices-Info-emas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7787F92B2338CEF30055F18C /* AliyunEmasServices-Info-emas.plist */; };
 		7787F92E2338CEF40055F18C /* AliyunEmasServices-Info-bak.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7787F92C2338CEF30055F18C /* AliyunEmasServices-Info-bak.plist */; };
 		7D6260E61FDA8C5A00E856CB /* HFXTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6260E31FDA8C5900E856CB /* HFXTestClass.m */; };
 		7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6260E51FDA8C5900E856CB /* HFXViewController.m */; };
 		7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6260E81FDA8C8400E856CB /* arp.framework */; };
 		7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */; };
 		7D8394A91FDB902900EBB60F /* fix.lua in Resources */ = {isa = PBXBuildFile; fileRef = 7D8394A81FDB902900EBB60F /* fix.lua */; };
+		85138DAD645B5E80972C1A75 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094D2C944A93DEBB8800E411 /* DemoViewController.m */; };
 		8601D6BD215F5A2B00BDFC46 /* EMASWindVaneConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8601D6BC215F5A2B00BDFC46 /* EMASWindVaneConfig.m */; };
 		8601D6DB215F611000BDFC46 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6DA215F611000BDFC46 /* CoreBluetooth.framework */; };
 		8601D6DE215F613D00BDFC46 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8601D6DC215F613D00BDFC46 /* AddressBook.framework */; };
@@ -91,6 +108,13 @@
 		980F857120BECC49002156A2 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 980F856620BECC49002156A2 /* CustomCell.m */; };
 		9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9815F23820A2F73F00F0F70D /* MtopCustomCell.m */; };
 		981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981DC5D720998B53006472AF /* MtopResultViewController.m */; };
+		A3C7C82DA542A47832CA25D7 /* meta.config in Resources */ = {isa = PBXBuildFile; fileRef = 25AF94D248239F7F5C91A4CE /* meta.config */; };
+		B7622B318877310DB06E8B0E /* DTFrameworkInterface+EMASDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0219F9ED1A652B17A4D1B10D /* DTFrameworkInterface+EMASDemo.m */; };
+		BAA2D5DA17D177A029414AD7 /* MobileRuntime.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECDB6CD2F85C91562C5BC50E /* MobileRuntime.plist */; };
+		D631DAAF32DA365195C85C88 /* MPLauncherAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 754A01E61838CC04D0E59E93 /* MPLauncherAppDelegate.m */; };
+		E90CBB3A066455E2270A77AB /* MPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F19F2F190E44280E27B404 /* MPTabBarController.m */; };
+		EFF096843D646D3CE186A8D0 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223213782C18B72F435D4C84 /* CoreTelephony.framework */; };
+		FD96A121EDEE70B7B2B4F0BF /* Images_mPaaS.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 826E4F3488171162C7FE60C0 /* Images_mPaaS.xcassets */; };
 		FF46C4EFA5A002A812E18F53 /* libPods-EMASDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D522707B463174EC727EEF /* libPods-EMASDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +154,16 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4091528724F3A68600C0EA94 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				404A2A392500D8FF002A0DDE /* MiniAppMarket.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8ABD97BD1FF4D55700469557 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,8 +177,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0219F9ED1A652B17A4D1B10D /* DTFrameworkInterface+EMASDemo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DTFrameworkInterface+EMASDemo.m"; sourceTree = "<group>"; };
+		08695E654D78C7ABFA474152 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		094D2C944A93DEBB8800E411 /* DemoViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		1A65F6241FF253CF00B4573C /* AliHATestCaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliHATestCaseViewController.h; sourceTree = "<group>"; };
 		1A65F6251FF253CF00B4573C /* AliHATestCaseViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AliHATestCaseViewController.mm; sourceTree = "<group>"; };
+		223213782C18B72F435D4C84 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		22A01D77C06CE0E866242897 /* MPaaSInterface+EMASDemo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MPaaSInterface+EMASDemo.h"; sourceTree = "<group>"; };
+		24E42EB38CBCCCB47064B050 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		25AF94D248239F7F5C91A4CE /* meta.config */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = meta.config; sourceTree = "<group>"; };
 		3342C6BC21A1AF07006B6A87 /* PushMessageReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushMessageReceiver.h; sourceTree = "<group>"; };
 		3342C6BD21A1AF07006B6A87 /* PushMessageReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushMessageReceiver.m; sourceTree = "<group>"; };
 		3342C6BF21A1AF61006B6A87 /* PushSDKReceiverConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = PushSDKReceiverConfig.plist; sourceTree = SOURCE_ROOT; };
@@ -163,14 +204,36 @@
 		33D18D6020DA330100ACF0C7 /* WQCodeScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCodeScanner.h; sourceTree = "<group>"; };
 		33E1BA9D21A4275200E81E32 /* clock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clock.wav; sourceTree = "<group>"; };
 		33E1BAA121A4290A00E81E32 /* hongbao.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hongbao.wav; sourceTree = "<group>"; };
+		404A2A372500D8DD002A0DDE /* MiniAppMarket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MiniAppMarket.framework; sourceTree = "<group>"; };
+		4091527924F3A08D00C0EA94 /* MiniprogramList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiniprogramList.h; sourceTree = "<group>"; };
+		4091527A24F3A08D00C0EA94 /* ListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCell.m; sourceTree = "<group>"; };
+		4091527B24F3A08D00C0EA94 /* MiniprogramList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiniprogramList.m; sourceTree = "<group>"; };
+		4091527C24F3A08D00C0EA94 /* MiniprogramList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniprogramList.xib; sourceTree = "<group>"; };
+		4091527D24F3A08D00C0EA94 /* ListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
+		4091527E24F3A08D00C0EA94 /* ListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
+		4091528924F3B28C00C0EA94 /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = "<group>"; };
+		40FBC18024F3626800A7B3B3 /* MPDemoTinyScanHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPDemoTinyScanHelper.h; sourceTree = "<group>"; };
+		40FBC18124F3626800A7B3B3 /* DTBootPhase+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DTBootPhase+Category.m"; sourceTree = "<group>"; };
+		40FBC18224F3626800A7B3B3 /* MPDemoTinyScanHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPDemoTinyScanHelper.m; sourceTree = "<group>"; };
+		40FBC18324F3626800A7B3B3 /* MPBootLoaderImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPBootLoaderImpl.m; sourceTree = "<group>"; };
+		40FBC18424F3626900A7B3B3 /* MPBootLoaderImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBootLoaderImpl.h; sourceTree = "<group>"; };
+		40FBC18524F3626900A7B3B3 /* DTBootPhase+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTBootPhase+Category.h"; sourceTree = "<group>"; };
+		40FBC18A24F3636700A7B3B3 /* TinyAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TinyAppViewController.h; sourceTree = "<group>"; };
+		40FBC18B24F3636700A7B3B3 /* TinyAppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TinyAppViewController.xib; sourceTree = "<group>"; };
+		40FBC18C24F3636700A7B3B3 /* TinyAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TinyAppViewController.m; sourceTree = "<group>"; };
+		41F19F2F190E44280E27B404 /* MPTabBarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MPTabBarController.m; sourceTree = "<group>"; };
+		46D9AA3A3B72927DE799EC34 /* MPLauncherAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MPLauncherAppDelegate.h; sourceTree = "<group>"; };
 		4A017CEC21006EC7001FF027 /* BaseUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseUIViewController.h; sourceTree = "<group>"; };
 		4A017CED21006EC7001FF027 /* TestUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUIViewController.m; sourceTree = "<group>"; };
 		4A017CEE21006EC7001FF027 /* BaseUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseUIViewController.m; sourceTree = "<group>"; };
 		4A017CEF21006EC7001FF027 /* MANViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANViewController.m; sourceTree = "<group>"; };
 		4A017CF021006EC7001FF027 /* TestUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUIViewController.h; sourceTree = "<group>"; };
 		4A017CF121006EC7001FF027 /* MANViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANViewController.h; sourceTree = "<group>"; };
+		73682FFEA1A8840DE87DAB96 /* MPaaSInterface+EMASDemo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MPaaSInterface+EMASDemo.m"; sourceTree = "<group>"; };
+		754A01E61838CC04D0E59E93 /* MPLauncherAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MPLauncherAppDelegate.m; sourceTree = "<group>"; };
+		768AC81DBDE1574858804894 /* EMASDemo-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EMASDemo-Prefix.pch"; path = "../../../EMASDemo/EMASDemo-Prefix.pch"; sourceTree = "<group>"; };
 		77175F5924C8300500A9AB79 /* PushViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
-		7787F92B2338CEF30055F18C /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = SOURCE_ROOT; };
+		7787F92B2338CEF30055F18C /* AliyunEmasServices-Info-emas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info-emas.plist"; sourceTree = SOURCE_ROOT; };
 		7787F92C2338CEF30055F18C /* AliyunEmasServices-Info-bak.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info-bak.plist"; sourceTree = SOURCE_ROOT; };
 		7D6260E21FDA8C5900E856CB /* HFXTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXTestClass.h; sourceTree = "<group>"; };
 		7D6260E31FDA8C5900E856CB /* HFXTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXTestClass.m; sourceTree = "<group>"; };
@@ -179,6 +242,7 @@
 		7D6260E81FDA8C8400E856CB /* arp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = arp.framework; sourceTree = "<group>"; };
 		7D8394A41FDA954400EBB60F /* AlicloudHotFixEmas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudHotFixEmas.framework; sourceTree = "<group>"; };
 		7D8394A81FDB902900EBB60F /* fix.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fix.lua; sourceTree = "<group>"; };
+		826E4F3488171162C7FE60C0 /* Images_mPaaS.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images_mPaaS.xcassets; sourceTree = "<group>"; };
 		8601D6BB215F5A2B00BDFC46 /* EMASWindVaneConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMASWindVaneConfig.h; sourceTree = "<group>"; };
 		8601D6BC215F5A2B00BDFC46 /* EMASWindVaneConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMASWindVaneConfig.m; sourceTree = "<group>"; };
 		8601D6DA215F611000BDFC46 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -238,6 +302,7 @@
 		869B55DB21400A2100809084 /* EMASNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASNativeViewController.h; sourceTree = "<group>"; };
 		8783A75321A6E5C900C177A1 /* PushReporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushReporter.h; sourceTree = "<group>"; };
 		8783A75421A6E5C900C177A1 /* PushReporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushReporter.m; sourceTree = "<group>"; };
+		89DC75DD2A4E89E8A2813BB5 /* EMASDemo-mPaaS-Headers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EMASDemo-mPaaS-Headers.h"; sourceTree = "<group>"; };
 		8A0922F0207A4A8500AA71FA /* AppConfigTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigTableViewController.h; sourceTree = "<group>"; };
 		8A0922F1207A4A8500AA71FA /* AppConfigTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfigTableViewController.m; sourceTree = "<group>"; };
 		8A0922F3207B0B9800AA71FA /* MtopVerifyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopVerifyTableViewController.h; sourceTree = "<group>"; };
@@ -286,7 +351,12 @@
 		981DC5D620998B53006472AF /* MtopResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtopResultViewController.h; sourceTree = "<group>"; };
 		981DC5D720998B53006472AF /* MtopResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtopResultViewController.m; sourceTree = "<group>"; };
 		9A09D7901FF2721000585632 /* DemoDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoDefine.h; sourceTree = "<group>"; };
+		A1B124836138420F9E43D55C /* yw_1222.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = yw_1222.jpg; sourceTree = "<group>"; };
+		B47305972E6683CEDFCF0761 /* DTFrameworkInterface+EMASDemo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DTFrameworkInterface+EMASDemo.h"; sourceTree = "<group>"; };
 		C9D522707B463174EC727EEF /* libPods-EMASDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EMASDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7163C703C0FD8F2367D2153 /* DemoViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		ECD893CBD7DA531A494B64B0 /* MPTabBarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MPTabBarController.h; sourceTree = "<group>"; };
+		ECDB6CD2F85C91562C5BC50E /* MobileRuntime.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = MobileRuntime.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +378,7 @@
 				8601D6E2215F616400BDFC46 /* Messages.framework in Frameworks */,
 				8601D6E3215F616400BDFC46 /* MessageUI.framework in Frameworks */,
 				8601D6DE215F613D00BDFC46 /* AddressBook.framework in Frameworks */,
+				404A2A382500D8DD002A0DDE /* MiniAppMarket.framework in Frameworks */,
 				8601D6DF215F613D00BDFC46 /* AddressBookUI.framework in Frameworks */,
 				8601D6DB215F611000BDFC46 /* CoreBluetooth.framework in Frameworks */,
 				8AC0CB6E200312CF00FD44E6 /* MobileCoreServices.framework in Frameworks */,
@@ -315,6 +386,9 @@
 				7D6260EA1FDA8C8400E856CB /* arp.framework in Frameworks */,
 				7D8394A51FDA954400EBB60F /* AlicloudHotFixEmas.framework in Frameworks */,
 				FF46C4EFA5A002A812E18F53 /* libPods-EMASDemo.a in Frameworks */,
+				EFF096843D646D3CE186A8D0 /* CoreTelephony.framework in Frameworks */,
+				447D54FA8608927813628FD1 /* SystemConfiguration.framework in Frameworks */,
+				596F2CB7A273184131F6DC97 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +427,14 @@
 			path = AliHA;
 			sourceTree = "<group>";
 		};
+		2F3E72C72D8EF0807A316CCB /* MPaaS */ = {
+			isa = PBXGroup;
+			children = (
+				E3ED3C295A267D48BFE8A292 /* Targets */,
+			);
+			path = MPaaS;
+			sourceTree = "<group>";
+		};
 		33A2550B20FDE2EC00C3F673 /* push */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +466,44 @@
 			path = accs;
 			sourceTree = "<group>";
 		};
+		4091527824F3A08D00C0EA94 /* MiniprogramList */ = {
+			isa = PBXGroup;
+			children = (
+				4091527924F3A08D00C0EA94 /* MiniprogramList.h */,
+				4091527B24F3A08D00C0EA94 /* MiniprogramList.m */,
+				4091527C24F3A08D00C0EA94 /* MiniprogramList.xib */,
+				4091527E24F3A08D00C0EA94 /* ListCell.h */,
+				4091527A24F3A08D00C0EA94 /* ListCell.m */,
+				4091527D24F3A08D00C0EA94 /* ListCell.xib */,
+			);
+			path = MiniprogramList;
+			sourceTree = "<group>";
+		};
+		40FBC17F24F360C600A7B3B3 /* SRmPaas */ = {
+			isa = PBXGroup;
+			children = (
+				40FBC18524F3626900A7B3B3 /* DTBootPhase+Category.h */,
+				40FBC18124F3626800A7B3B3 /* DTBootPhase+Category.m */,
+				40FBC18424F3626900A7B3B3 /* MPBootLoaderImpl.h */,
+				40FBC18324F3626800A7B3B3 /* MPBootLoaderImpl.m */,
+				40FBC18024F3626800A7B3B3 /* MPDemoTinyScanHelper.h */,
+				40FBC18224F3626800A7B3B3 /* MPDemoTinyScanHelper.m */,
+			);
+			path = SRmPaas;
+			sourceTree = "<group>";
+		};
+		40FBC18924F3636700A7B3B3 /* TinyApp */ = {
+			isa = PBXGroup;
+			children = (
+				404A2A372500D8DD002A0DDE /* MiniAppMarket.framework */,
+				4091527824F3A08D00C0EA94 /* MiniprogramList */,
+				40FBC18A24F3636700A7B3B3 /* TinyAppViewController.h */,
+				40FBC18C24F3636700A7B3B3 /* TinyAppViewController.m */,
+				40FBC18B24F3636700A7B3B3 /* TinyAppViewController.xib */,
+			);
+			path = TinyApp;
+			sourceTree = "<group>";
+		};
 		4A017CEB21006E59001FF027 /* man */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +515,26 @@
 				4A017CEF21006EC7001FF027 /* MANViewController.m */,
 			);
 			path = man;
+			sourceTree = "<group>";
+		};
+		6FFD1666397A50BBDA3C4C53 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				223213782C18B72F435D4C84 /* CoreTelephony.framework */,
+				24E42EB38CBCCCB47064B050 /* SystemConfiguration.framework */,
+				08695E654D78C7ABFA474152 /* MessageUI.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7A13170E294C0D8C65F22B08 /* mPaas */ = {
+			isa = PBXGroup;
+			children = (
+				40FBC17F24F360C600A7B3B3 /* SRmPaas */,
+				22A01D77C06CE0E866242897 /* MPaaSInterface+EMASDemo.h */,
+				73682FFEA1A8840DE87DAB96 /* MPaaSInterface+EMASDemo.m */,
+			);
+			path = mPaas;
 			sourceTree = "<group>";
 		};
 		7D6260E11FDA8C5900E856CB /* hotfix */ = {
@@ -544,6 +684,7 @@
 				8ADA953C1FD9309400C0EF49 /* Products */,
 				024D3223F0A2D0A415B2F56B /* Pods */,
 				D270D82292708B86B2F528C3 /* Frameworks */,
+				2F3E72C72D8EF0807A316CCB /* MPaaS */,
 			);
 			sourceTree = "<group>";
 		};
@@ -569,7 +710,8 @@
 				8A69B608200C8F980073756D /* EMASService.h */,
 				8A69B609200C8F980073756D /* EMASService.m */,
 				7787F92C2338CEF30055F18C /* AliyunEmasServices-Info-bak.plist */,
-				7787F92B2338CEF30055F18C /* AliyunEmasServices-Info.plist */,
+				7787F92B2338CEF30055F18C /* AliyunEmasServices-Info-emas.plist */,
+				4091528924F3B28C00C0EA94 /* AliyunEmasServices-Info.plist */,
 				8AA117461FF5E59F004D4D0A /* EMASDemo.entitlements */,
 				869B55BB2140068300809084 /* Categroy */,
 				8601D703216B4A0100BDFC46 /* preload */,
@@ -579,6 +721,7 @@
 				1A65F6231FF2534A00B4573C /* AliHA */,
 				7D6260E11FDA8C5900E856CB /* hotfix */,
 				86FC82EB21ACE47F0052E251 /* Scan */,
+				40FBC18924F3636700A7B3B3 /* TinyApp */,
 				8ADA953E1FD9309400C0EF49 /* AppDelegate.h */,
 				8ADA953F1FD9309400C0EF49 /* AppDelegate.m */,
 				8ADA95471FD9309400C0EF49 /* Main.storyboard */,
@@ -619,6 +762,19 @@
 			path = EMASDemoUITests;
 			sourceTree = "<group>";
 		};
+		8CAC22F9450FE4617AE6984F /* EMASDemo */ = {
+			isa = PBXGroup;
+			children = (
+				89DC75DD2A4E89E8A2813BB5 /* EMASDemo-mPaaS-Headers.h */,
+				768AC81DBDE1574858804894 /* EMASDemo-Prefix.pch */,
+				7A13170E294C0D8C65F22B08 /* mPaas */,
+				F759AEE1F4BCD85E8F16EC5C /* APMobileFramework */,
+				25AF94D248239F7F5C91A4CE /* meta.config */,
+				A1B124836138420F9E43D55C /* yw_1222.jpg */,
+			);
+			path = EMASDemo;
+			sourceTree = "<group>";
+		};
 		980F855720BECB8A002156A2 /* Orange */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,8 +813,34 @@
 				8AC0CB6D200312CF00FD44E6 /* MobileCoreServices.framework */,
 				8AB1A7BE1FFDDE50007C4675 /* UIKit.framework */,
 				C9D522707B463174EC727EEF /* libPods-EMASDemo.a */,
+				6FFD1666397A50BBDA3C4C53 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3ED3C295A267D48BFE8A292 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				8CAC22F9450FE4617AE6984F /* EMASDemo */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		F759AEE1F4BCD85E8F16EC5C /* APMobileFramework */ = {
+			isa = PBXGroup;
+			children = (
+				B47305972E6683CEDFCF0761 /* DTFrameworkInterface+EMASDemo.h */,
+				0219F9ED1A652B17A4D1B10D /* DTFrameworkInterface+EMASDemo.m */,
+				ECDB6CD2F85C91562C5BC50E /* MobileRuntime.plist */,
+				826E4F3488171162C7FE60C0 /* Images_mPaaS.xcassets */,
+				46D9AA3A3B72927DE799EC34 /* MPLauncherAppDelegate.h */,
+				754A01E61838CC04D0E59E93 /* MPLauncherAppDelegate.m */,
+				ECD893CBD7DA531A494B64B0 /* MPTabBarController.h */,
+				41F19F2F190E44280E27B404 /* MPTabBarController.m */,
+				E7163C703C0FD8F2367D2153 /* DemoViewController.h */,
+				094D2C944A93DEBB8800E411 /* DemoViewController.m */,
+			);
+			path = APMobileFramework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -693,6 +875,7 @@
 				67DAC7CF7E1FB0DDB324BBC0 /* 📦 Copy Pods Resources */,
 				8ABD97BD1FF4D55700469557 /* Embed Watch Content */,
 				33CD22DA21A3E2C10005D834 /* Embed App Extensions */,
+				4091528724F3A68600C0EA94 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -822,9 +1005,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ADA954E1FD9309400C0EF49 /* LaunchScreen.storyboard in Resources */,
-				7787F92D2338CEF40055F18C /* AliyunEmasServices-Info.plist in Resources */,
+				7787F92D2338CEF40055F18C /* AliyunEmasServices-Info-emas.plist in Resources */,
 				33D18D5C20DA30DC00ACF0C7 /* ACCSSettingViewController.xib in Resources */,
 				3342C6C221A1AF62006B6A87 /* AccsReceiverTable.plist in Resources */,
+				40FBC18D24F3636700A7B3B3 /* TinyAppViewController.xib in Resources */,
 				33E1BA9F21A4275300E81E32 /* clock.wav in Resources */,
 				8611700F21916D7E00DCAB7F /* WeexContainer-Info.plist in Resources */,
 				980F856F20BECC49002156A2 /* CustomCell.xib in Resources */,
@@ -839,8 +1023,15 @@
 				3342C6C121A1AF62006B6A87 /* PushSDKReceiverConfig.plist in Resources */,
 				33E1BAA221A4290A00E81E32 /* hongbao.wav in Resources */,
 				7787F92E2338CEF40055F18C /* AliyunEmasServices-Info-bak.plist in Resources */,
+				4091528224F3A08D00C0EA94 /* ListCell.xib in Resources */,
+				4091528A24F3B28C00C0EA94 /* AliyunEmasServices-Info.plist in Resources */,
 				980F856E20BECC49002156A2 /* OrangeRemotConfigDebugVC.xib in Resources */,
 				980F856B20BECC49002156A2 /* OrangeFeatureSecondVC.xib in Resources */,
+				4091528124F3A08D00C0EA94 /* MiniprogramList.xib in Resources */,
+				BAA2D5DA17D177A029414AD7 /* MobileRuntime.plist in Resources */,
+				FD96A121EDEE70B7B2B4F0BF /* Images_mPaaS.xcassets in Resources */,
+				A3C7C82DA542A47832CA25D7 /* meta.config in Resources */,
+				494A354E933B87A7CB1FE5F7 /* yw_1222.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -901,16 +1092,56 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EMASDemo/Pods-EMASDemo-resources.sh",
+				"${PODS_ROOT}/AOMPDevice/AOMPDevice.framework/AOMPDevice.bundle",
+				"${PODS_ROOT}/APMCDNImage/APMCDNImage.framework/APMCDNImage.bundle",
+				"${PODS_ROOT}/APMImageProcessing/APMImageProcessing.framework/APMImageProcessing.bundle",
+				"${PODS_ROOT}/APMUtils/APMUtils.framework/APMUtils.bundle",
+				"${PODS_ROOT}/APMap/APMap.framework/APMap.bundle",
+				"${PODS_ROOT}/APMobileFramework/APMobileFramework.framework/APMobileFramework.bundle",
+				"${PODS_ROOT}/APMobileNetwork/APMobileNetwork.framework/APMobileNetwork.bundle",
+				"${PODS_ROOT}/APMultimedia/APMultimedia.framework/APMultimedia.bundle",
+				"${PODS_ROOT}/APRemoteLogging/APRemoteLogging.framework/APRemoteLogging.bundle",
 				"${PODS_ROOT}/AliHAAdapter4poc/AliHAAdapter4poc.framework/alihaadapter4poc_bundle.plist",
 				"${PODS_ROOT}/AliHACore/AliHACore.framework/alihacore_bundle.plist",
 				"${PODS_ROOT}/AliHADeviceEvaluation/AliHADeviceEvaluation.framework/alihadeviceevaluation_bundle.plist",
 				"${PODS_ROOT}/AliHAPerformanceMonitor/AliHAPerformanceMonitor.framework/alihaperformancemonitor_bundle.plist",
 				"${PODS_ROOT}/AliHASecurity/AliHASecurity.framework/alihasecurity_bundle.plist",
+				"${PODS_ROOT}/AntUI/AntUI.framework/APCommonUI.bundle",
+				"${PODS_ROOT}/BEEAudioUtil/BEEAudioUtil.framework/BEEAudioUtil.bundle",
+				"${PODS_ROOT}/BeeCapture/BeeCapture.framework/BeeCapture.bundle",
+				"${PODS_ROOT}/BeeCityPicker/BeeCityPicker.framework/BeeCityPicker.bundle",
+				"${PODS_ROOT}/BeeLocationPicker/BeeLocationPicker.framework/BeeLocationPicker.bundle",
+				"${PODS_ROOT}/BeeMediaPlayer/BeeMediaPlayer.framework/BeeMediaPlayer.bundle",
+				"${PODS_ROOT}/BeePhoto/BeePhoto.framework/BeePhoto.bundle",
+				"${PODS_ROOT}/BeePhotoBrowser/BeePhotoBrowser.framework/BeePhotoBrowser.bundle",
+				"${PODS_ROOT}/BeePhotoPicker/BeePhotoPicker.framework/BeePhotoPicker.bundle",
 				"${PODS_ROOT}/EMASWeex/EMASWeex.framework/EMASWeex-Info.plist",
 				"${PODS_ROOT}/JDYThreadTrace/JDYThreadTrace.framework/.gitkeep",
 				"${PODS_ROOT}/JDYThreadTrace/JDYThreadTrace.framework/JDYThreadTrace.podspec",
+				"${PODS_ROOT}/MAMapKit/MAMapKit.framework/AMap.bundle",
+				"${PODS_ROOT}/MPNebulaAdapter/MPNebulaAdapter.framework/MPInternalPlugins.bundle",
+				"${PODS_ROOT}/MPNebulaAdapter/MPNebulaAdapter.framework/MPInternalPresetApps.bundle",
+				"${PODS_ROOT}/MPNebulaAdapter/MPNebulaAdapter.framework/MPNebulaAdapter.bundle",
+				"${PODS_ROOT}/MPShareKit/MPShareKit.framework/MPShareKit.bundle",
+				"${PODS_ROOT}/MPShareKit/MPShareKit.framework/WeiboSDK.bundle",
+				"${PODS_ROOT}/NebulaAppManager/NebulaAppManager.framework/NebulaAppManager.bundle",
+				"${PODS_ROOT}/NebulaBiz/NebulaBiz.framework/NebulaBiz.bundle",
+				"${PODS_ROOT}/NebulaBiz/NebulaBiz.framework/NebulaPoseidon.bundle",
+				"${PODS_ROOT}/NebulaConfig/NebulaConfig.framework/NebulaConfig.bundle",
+				"${PODS_ROOT}/NebulaKernel/NebulaKernel.framework/NebulaKernel.bundle",
+				"${PODS_ROOT}/NebulaLogging/NebulaLogging.framework/NebulaLogging.bundle",
+				"${PODS_ROOT}/NebulaSDK/NebulaSDK.framework/NebulaSDK.bundle",
+				"${PODS_ROOT}/NebulaSDKPlugins/NebulaSDKPlugins.framework/NebulaSDKPlugins.bundle",
+				"${PODS_ROOT}/NebulaTinyapp/NebulaTinyapp.framework/NebulaTinyapp.bundle",
 				"${PODS_ROOT}/TBRest/TBRest.framework/TBRest.podspec",
 				"${PODS_ROOT}/TBRest/TBRest.framework/.gitkeep",
+				"${PODS_ROOT}/TBScanSDK/TBScanSDK.framework/TBScanSDK.bundle",
+				"${PODS_ROOT}/TBScanSDK/TBDecodeSDK.framework/TBDecodeSDK.bundle",
+				"${PODS_ROOT}/TTTAttributedLabel/TTTAttributedLabel.framework/TTTAttributedLabel.bundle",
+				"${PODS_ROOT}/Texel/Texel.framework/Texel.bundle",
+				"${PODS_ROOT}/TinyAppCommon/TinyAppCommon.framework/TinyAppCommon.bundle",
+				"${PODS_ROOT}/TinyappService/TinyappService.framework/TinyappService.bundle",
+				"${PODS_ROOT}/UserTrack/UT.framework/Resources/UserTrack-Info.plist",
 				"${PODS_ROOT}/WeexSDK/WeexSDK.framework/weex-main-jsfm.js",
 				"${PODS_ROOT}/WeexSDK/WeexSDK.framework/weex-polyfill.js",
 				"${PODS_ROOT}/WeexSDK/WeexSDK.framework/weex-rax-api.js",
@@ -918,15 +1149,55 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AOMPDevice.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMCDNImage.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMImageProcessing.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMUtils.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMobileFramework.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMobileNetwork.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APMultimedia.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APRemoteLogging.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihaadapter4poc_bundle.plist",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihacore_bundle.plist",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihadeviceevaluation_bundle.plist",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihaperformancemonitor_bundle.plist",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/alihasecurity_bundle.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APCommonUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BEEAudioUtil.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeeCapture.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeeCityPicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeeLocationPicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeeMediaPlayer.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeePhoto.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeePhotoBrowser.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeePhotoPicker.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EMASWeex-Info.plist",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/.gitkeep",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JDYThreadTrace.podspec",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPInternalPlugins.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPInternalPresetApps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPNebulaAdapter.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPShareKit.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaAppManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaBiz.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaPoseidon.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaConfig.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaKernel.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaLogging.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaSDKPlugins.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NebulaTinyapp.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TBRest.podspec",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TBScanSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TBDecodeSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TTTAttributedLabel.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Texel.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TinyAppCommon.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TinyappService.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UserTrack-Info.plist",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/weex-main-jsfm.js",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/weex-polyfill.js",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/weex-rax-api.js",
@@ -961,14 +1232,18 @@
 				1A65F6261FF253CF00B4573C /* AliHATestCaseViewController.mm in Sources */,
 				869B55DD21400A2100809084 /* EMASBaseNavigationController.m in Sources */,
 				8676D6F921E5F00100CBD794 /* WXScreenshotModule.m in Sources */,
+				4091528024F3A08D00C0EA94 /* MiniprogramList.m in Sources */,
+				40FBC18724F3626900A7B3B3 /* MPDemoTinyScanHelper.m in Sources */,
 				981DC5D820998B53006472AF /* MtopResultViewController.m in Sources */,
 				980F856820BECC49002156A2 /* OrangeFeatureSecondVC.m in Sources */,
 				8ADA95401FD9309400C0EF49 /* AppDelegate.m in Sources */,
+				40FBC18824F3626900A7B3B3 /* MPBootLoaderImpl.m in Sources */,
 				33D18D5620DA2CFB00ACF0C7 /* ACCSViewController.m in Sources */,
 				4A017CF321006EC7001FF027 /* BaseUIViewController.m in Sources */,
 				869B55DC21400A2100809084 /* EMASNativeViewController.m in Sources */,
 				869B55CE2140068400809084 /* EMASWXNavigationImpl.m in Sources */,
 				9815F23920A2F73F00F0F70D /* MtopCustomCell.m in Sources */,
+				40FBC18624F3626900A7B3B3 /* DTBootPhase+Category.m in Sources */,
 				4A017CF421006EC7001FF027 /* MANViewController.m in Sources */,
 				8611706521943A5000DCAB7F /* EMASPortalViewController.m in Sources */,
 				869B55CA2140068400809084 /* UIViewController+EMASWXNaviBar.m in Sources */,
@@ -976,6 +1251,7 @@
 				33D18D5B20DA30DC00ACF0C7 /* ACCSSettingViewController.m in Sources */,
 				869B55CB2140068400809084 /* EMASHostViewController.m in Sources */,
 				980F857020BECC49002156A2 /* OrangeRemoteConfigRootVC.m in Sources */,
+				4091527F24F3A08D00C0EA94 /* ListCell.m in Sources */,
 				8A0922F5207B0B9800AA71FA /* MtopVerifyTableViewController.m in Sources */,
 				4A017CF221006EC7001FF027 /* TestUIViewController.m in Sources */,
 				7D6260E71FDA8C5A00E856CB /* HFXViewController.m in Sources */,
@@ -998,6 +1274,12 @@
 				33A2550F20FDE37000C3F673 /* PushViewController.m in Sources */,
 				869B55CF2140068400809084 /* EMASScannerViewController.m in Sources */,
 				980F856D20BECC49002156A2 /* OrangeFeatureFirstVC.m in Sources */,
+				595627603C9159B5146F5B6C /* MPaaSInterface+EMASDemo.m in Sources */,
+				40FBC18E24F3636700A7B3B3 /* TinyAppViewController.m in Sources */,
+				B7622B318877310DB06E8B0E /* DTFrameworkInterface+EMASDemo.m in Sources */,
+				D631DAAF32DA365195C85C88 /* MPLauncherAppDelegate.m in Sources */,
+				E90CBB3A066455E2270A77AB /* MPTabBarController.m in Sources */,
+				85138DAD645B5E80972C1A75 /* DemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,7 +1355,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo.notificationextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ideax.xxx.notificationextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = emas_pocdemo_developer_notificationextension;
 				SKIP_INSTALL = YES;
@@ -1096,7 +1378,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo.notificationextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ideax.xxx.notificationextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = emas_pocdemo_developer_notificationextension;
 				SKIP_INSTALL = YES;
@@ -1231,7 +1513,10 @@
 					"$(PROJECT_DIR)/EMASDemo/hotfix",
 					"$(PROJECT_DIR)/**",
 					"$(PROJECT_DIR)/Pods/WindVane",
+					"$(PROJECT_DIR)/EMASDemo/TinyApp",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EMASDemo/EMASDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"/**",
@@ -1305,7 +1590,7 @@
 					"\"${PODS_ROOT}/AlicloudLua/liblua/lib\"",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ideax.xxx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = emas_pocdemo_developer;
@@ -1334,7 +1619,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EMASDemo/hotfix",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/EMASDemo/TinyApp",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EMASDemo/EMASDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"/**",
@@ -1408,7 +1696,7 @@
 					"\"${PODS_ROOT}/AlicloudLua/liblua/lib\"",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aliyun.emas.pocdemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ideax.xxx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = emas_pocdemo_developer;

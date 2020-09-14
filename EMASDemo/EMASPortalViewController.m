@@ -12,6 +12,8 @@
 #import "EMASWeexContainerService.h"
 #import "UIViewController+EMASWXNaviBar.h"
 
+#import "TinyAppViewController.h"
+
 @interface EMASPortalViewController ()
 
 @end
@@ -62,6 +64,13 @@
     //controller.loadUrl = @"http://chaoshi.m.tmall.com";
     [self.navigationController pushViewController:controller animated:YES];
 }
+
+- (IBAction)didTinyAppButtonClicked:(id)sender {
+    TinyAppViewController * tinyAppVC = [[TinyAppViewController alloc]init];
+    [self.navigationController pushViewController:tinyAppVC animated:YES];
+ 
+}
+
 /*
 #pragma mark - Navigation
 

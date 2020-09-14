@@ -7,7 +7,12 @@
 //
 
 #import "EMASWXRenderViewController.h"
-#import <SRWebSocket.h>
+
+// 源代码编译异常
+// #import <SRWebSocket.h>
+// 夕重 修改
+#import <SocketRocket/SocketRocket.h>
+
 
 //宿主容器
 @interface EMASHostViewController : UIViewController <EMASWXViewControllerProtocol,SRWebSocketDelegate>

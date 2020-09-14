@@ -1,0 +1,6 @@
+framework module MiniAppMarket {
+  umbrella header "MiniAppMarket.h"
+
+  export *
+  module * { export * }
+}

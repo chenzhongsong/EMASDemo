@@ -279,14 +279,14 @@
             button.nodeRef = param[@"nodeRef"];
             button.position = position;
             [button addTarget:self action:@selector(onClickBarButton:) forControlEvents:UIControlEventTouchUpInside];
-            
+   
             [[self imageLoader] downloadImageWithURL:icon imageFrame:CGRectMake(0, 0, 25, 25) userInfo:nil completed:^(UIImage *image, NSError *error, BOOL finished) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [button setBackgroundImage:image forState:UIControlStateNormal];
                     [button setBackgroundImage:image forState:UIControlStateHighlighted];
                 });
             }];
-            
+         
             return button;
         }
     }

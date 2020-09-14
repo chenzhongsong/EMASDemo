@@ -151,6 +151,7 @@
 
 @implementation AppDelegate
 
++ (AppDelegate *)sharedInstance { return [UIApplication sharedApplication].delegate; }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -180,10 +181,15 @@
     // 5. 初始化 update SDK
     [AlicloudUpdate autoInit];
     
-    
     [EMASWXSubSDKEngine setup];
     
     [EMASWindVaneConfig setUpWindVanePlugin];
+    
+    // 6. 小程序初始化
+    self.navigationController = self.window.rootViewController;
+    [self.window makeKeyAndVisible];
+    // 说明：启动框架必须在当前应用 window 和 navigationController 初始化完成后调用，否则无法生效。
+    [[DTFrameworkInterface sharedInstance] manualInitMpaasFrameworkWithApplication:application launchOptions:launchOptions];
     
     [self showMainViewController];
     
@@ -219,12 +225,12 @@
         //Native脚手架
         [self showNativeViewController];
     }
+    
 }
 
 - (void)showNativeViewController
 {
-   //storyboard已初始化
-
+   // storyboard已初始化
 }
 
 - (void)showSingleViewController

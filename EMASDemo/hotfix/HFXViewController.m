@@ -109,7 +109,12 @@ static NSCondition *_condition;
 
 /* Cell Num Each Section */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[tableViewCellTitleInSection objectAtIndex:section] count];
+    
+    // 源代码 编译异常
+    // return [[tableViewCellTitleInSection objectAtIndex:section] count];
+    
+    // 夕重修改
+    return 50;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

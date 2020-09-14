@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JMb-dZ-LPL">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JMb-dZ-LPL">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="2304" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,9 +11,9 @@
         <!--EMAS-->
         <scene sceneID="STD-lY-dcQ">
             <objects>
-                <navigationController title="EMAS" id="JMb-dZ-LPL" sceneMemberID="viewController">
+                <navigationController title="EMAS" id="JMb-dZ-LPL" customClass="DFNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3o8-5q-8SO">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -36,7 +34,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="raF-Nw-0qD">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="raF-Nw-0qD" id="SMZ-GI-waW">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -66,14 +64,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_EMAS" translatesAutoresizingMaskIntoConstraints="NO" id="0cY-pJ-H0j">
-                                <rect key="frame" x="97.5" y="111" width="180" height="180"/>
+                                <rect key="frame" x="97.5" y="91" width="180" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="Hoz-8u-SsG"/>
                                     <constraint firstAttribute="width" constant="180" id="VLS-xD-yVK"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0b4-br-qMq">
-                                <rect key="frame" x="97.5" y="417" width="180" height="40"/>
+                                <rect key="frame" x="97.5" y="397" width="180" height="40"/>
                                 <color key="backgroundColor" red="0.094977237280000001" green="0.60384351020000004" blue="0.83685916660000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="edi-Rq-gZN"/>
@@ -92,7 +90,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lh-nB-DC6">
-                                <rect key="frame" x="97.5" y="503" width="180" height="40"/>
+                                <rect key="frame" x="97.5" y="483" width="180" height="40"/>
                                 <color key="backgroundColor" red="0.094977237280000001" green="0.60384351020000004" blue="0.83685916660000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="b6t-HY-KTg"/>
@@ -111,7 +109,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPi-eP-U9n">
-                                <rect key="frame" x="97.5" y="331" width="180" height="40"/>
+                                <rect key="frame" x="97.5" y="311" width="180" height="40"/>
                                 <color key="backgroundColor" red="0.094977237284183502" green="0.60384351015090942" blue="0.83685916662216187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="ZZZ-fF-g1l"/>
@@ -129,12 +127,33 @@
                                     <segue destination="miq-vn-Eat" kind="show" id="8FZ-J8-0eS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yL8-gM-BgW">
+                                <rect key="frame" x="97.5" y="533" width="180" height="40"/>
+                                <color key="backgroundColor" red="0.094977237280000001" green="0.60384351020000004" blue="0.83685916660000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7EG-Gs-EBS"/>
+                                    <constraint firstAttribute="width" constant="180" id="pyH-nm-Ora"/>
+                                </constraints>
+                                <state key="normal" title="小程序 页面演示">
+                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTinyAppButtonClicked:" destination="XA3-cB-DiZ" eventType="touchUpInside" id="PFh-2H-DA8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5Lh-nB-DC6" firstAttribute="top" secondItem="0b4-br-qMq" secondAttribute="bottom" constant="46" id="Fgf-3D-age"/>
                             <constraint firstItem="5Lh-nB-DC6" firstAttribute="centerX" secondItem="h8D-bN-6cd" secondAttribute="centerX" id="Vld-NE-BW6"/>
                             <constraint firstItem="0b4-br-qMq" firstAttribute="top" secondItem="sPi-eP-U9n" secondAttribute="bottom" constant="46" id="Xcu-dK-hml"/>
+                            <constraint firstItem="yL8-gM-BgW" firstAttribute="centerX" secondItem="h8D-bN-6cd" secondAttribute="centerX" id="bIg-iw-bwb"/>
+                            <constraint firstItem="yL8-gM-BgW" firstAttribute="top" secondItem="5Lh-nB-DC6" secondAttribute="bottom" constant="10" id="bVZ-2e-VR3"/>
                             <constraint firstItem="sPi-eP-U9n" firstAttribute="centerX" secondItem="h8D-bN-6cd" secondAttribute="centerX" id="eez-6E-YEo"/>
                             <constraint firstItem="sPi-eP-U9n" firstAttribute="top" secondItem="0cY-pJ-H0j" secondAttribute="bottom" constant="40" id="iLf-2f-YAx"/>
                             <constraint firstItem="0cY-pJ-H0j" firstAttribute="top" secondItem="nPm-bD-K4a" secondAttribute="top" constant="47" id="lhB-Fv-fUy"/>

@@ -13,5 +13,8 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (copy, nonatomic) NSString *agooDeviceToken;
 
+@property (strong, nonatomic) DFNavigationController *navigationController;
++ (AppDelegate *)sharedInstance;
+
 @end
 
